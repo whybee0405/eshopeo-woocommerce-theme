@@ -410,9 +410,9 @@ ul.products {
 .pdp-price ins { text-decoration: none; }
 
 .pdp-callout {
-  border-left: 3px solid var(--yuja);
-  background: #fff;
-  border-radius: 0 var(--r-m) var(--r-m) 0;
+  background: oklch(97% 0.006 88);
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
   padding: 1rem 1.3rem;
   margin-bottom: 1.6rem;
 }
@@ -610,12 +610,12 @@ ul.products {
   padding: 1em 1.3em;
   margin: 0 0 1.5rem;
   font-size: 0.95rem;
-  border-left: 3px solid var(--moss);
-  background: #fff;
+  border: 1px solid oklch(78% 0.03 150);
+  background: var(--seafoam);
   display: flow-root;
 }
 
-.woocommerce-error { border-left-color: var(--yuja-deep); }
+.woocommerce-error { background: var(--petal); border-color: oklch(75% 0.04 20); }
 .woocommerce-error li { margin: 0; }
 
 .woocommerce-message .button,
@@ -825,9 +825,19 @@ ul.products {
   .cart-collaterals .cart_totals { width: 100%; }
 }
 
+@media (max-width: 640px) {
+  .pdp-grid { padding-block: 0 clamp(28px, 5vw, 48px); }
+  .pdp-thumb { width: 60px; height: 60px; }
+  .pdp-thumbs { gap: 0.4rem; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .pdp-thumbs::-webkit-scrollbar { display: none; }
+  .pdp-price { font-size: 1.35rem; }
+}
+
 @media (max-width: 480px) {
+  /* Always surface interactive elements — no hover required */
   .quick-add { transform: translateY(0); font-size: 0.8rem; }
-  .wishlist-btn { opacity: 1; }
+  .wishlist-btn { opacity: 1; width: 44px; height: 44px; }
+
   .woocommerce table.shop_table img { width: 48px; }
   .woocommerce .coupon { flex-wrap: wrap; }
   .woocommerce .coupon .input-text { width: 100%; }

@@ -393,8 +393,8 @@ label {
   align-items: center;
   justify-content: center;
   gap: 0.45em;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--r-pill);
   border: 0;
   background: transparent;
@@ -575,7 +575,9 @@ body.menu-open { overflow: hidden; }
   font-size: 1rem;
   color: var(--rice);
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
   padding-block: 0.4em;
   letter-spacing: 0.04em;
 }
@@ -1301,8 +1303,10 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
 .prose ul, .prose ol { padding-left: 1.3em; margin-bottom: 1.2em; }
 .prose blockquote {
   margin: 1.6em 0;
-  padding: 0.4em 0 0.4em 1.2em;
-  border-left: 3px solid var(--yuja);
+  padding: 0.9em 1.3em;
+  background: var(--rice-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
   font-family: var(--font-display);
   font-size: 1.15rem;
 }
@@ -1644,11 +1648,15 @@ html.js [data-reveal].is-visible {
   .menu-toggle { display: inline-flex; }
   .header-grid { grid-template-columns: auto 1fr auto; }
 
+  /* Hero: product showcase before copy on narrow screens */
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-stage { aspect-ratio: 4 / 3.4; }
+  .hero-stage { aspect-ratio: 4 / 3.4; order: -1; }
+  .hero-copy { order: 0; }
 
+  /* Routine rail: horizontal scroll, hide native scrollbar */
   .routine-rail ol { grid-template-columns: repeat(7, minmax(132px, 1fr)); }
-  .routine-rail { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .routine-rail { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .routine-rail::-webkit-scrollbar { display: none; }
 
   .sourcing-split, .contact-grid, .split-panel { grid-template-columns: 1fr; }
   .sourcing-media { min-height: 300px; }
@@ -1658,15 +1666,70 @@ html.js [data-reveal].is-visible {
 
   .principles { grid-template-columns: 1fr; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+
+  /* Stage meta: allow price to wrap below long product names */
+  .stage-meta { flex-wrap: wrap; gap: 0.5rem; }
+
+  /* Reviews: scale down decorative opening quote */
+  .pull-review blockquote::before { font-size: 3.5rem; }
 }
 
 @media (max-width: 640px) {
+  /* Tighter vertical rhythm on small screens */
+  .section { padding-block: clamp(36px, 8vw, 56px); }
+  .section-tight { padding-block: clamp(24px, 6vw, 36px); }
+  .hero { padding-block: clamp(36px, 8vw, 56px); }
+  .reviews-section { padding-block: clamp(48px, 10vw, 80px); }
+  .newsletter-section { padding-block: clamp(40px, 9vw, 64px); margin-top: clamp(36px, 8vw, 64px); }
+
+  /* Concern list */
   .concern-row { grid-template-columns: 3rem 1fr auto; }
+
+  /* Footer */
   .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+
+  /* Newsletter */
   .newsletter-form { flex-direction: column; }
+  .newsletter-form input[type="email"],
+  .newsletter-form .btn { width: 100%; }
+
+  /* Notice bar */
   .notice-bar .container { gap: 1.2em; font-size: 0.62rem; }
   .notice-bar .notice-extra { display: none; }
-  .hero-ctas .btn { width: 100%; }
+
+  /* Hero */
+  .hero-ctas { gap: 0.6rem; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+  .hero-stage { aspect-ratio: 4 / 4.2; }
+  .hero-footnote { gap: 0.8em; column-gap: 1em; font-size: 0.68rem; }
+
+  /* Mobile menu: better touch targets for sub-links */
+  .mobile-shop-links a { min-height: 48px; }
+
+  /* Search overlay: stack field and button */
+  .search-form-row { flex-direction: column; }
+  .search-form-row .btn { width: 100%; }
+
+  /* Reviews */
+  .pull-quote-text { font-size: clamp(1.2rem, 4.5vw, 1.6rem); }
+  .review-aside-item { padding: 1rem 0; }
+
+  /* Sourcing */
+  .sourcing-media { min-height: 220px; }
+  .sourcing-body { padding: clamp(1.4rem, 5vw, 2rem); }
+
+  /* Ingredient index rows: tighter on small screens */
+  .index-row { padding: 1rem 0.3rem; }
+
+  /* Routine rail: slightly narrower steps on tiny phones */
+  .routine-rail ol { grid-template-columns: repeat(7, minmax(110px, 1fr)); }
+}
+
+/* Disable pointer-only UI on touch devices */
+@media (hover: none) {
+  body.has-custom-cursor { cursor: auto; }
+  .glow-cursor-dot, .glow-cursor-ring { display: none; }
 }
 
 /* 20. 3D & ANIMATION UPGRADES ---------------------------------------------- */
