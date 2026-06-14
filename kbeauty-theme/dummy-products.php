@@ -18,6 +18,10 @@
 
 defined( 'ABSPATH' ) || exit;
 
+// Give the importer enough room — shared hosts often cap at 128 MB / 30 s.
+@ini_set( 'memory_limit', '512M' );
+@set_time_limit( 600 );
+
 if ( ! class_exists( 'WooCommerce' ) ) {
 	echo "WooCommerce is not active — activate it first, then re-run this file.\n";
 	return;
@@ -2080,18 +2084,37 @@ foreach ( $glow_products as $index => $data ) {
 	update_post_meta( $product_id, '_is_cruelty_free', $data['cf'] );
 	update_post_meta( $product_id, '_glow_svg', $data['svg'] );
 
-	// Product thumbnail — sideload the matching step image if not already set.
+	// Product thumbnail — reuse an already-imported step image if present,
+	// otherwise sideload once per unique filename (avoids repeated HTTP calls).
 	if ( ! has_post_thumbnail( $product_id ) && $data['step'] >= 1 && $data['step'] <= 7 ) {
-		require_once ABSPATH . 'wp-admin/includes/media.php';
-		require_once ABSPATH . 'wp-admin/includes/file.php';
-		require_once ABSPATH . 'wp-admin/includes/image.php';
-
 		$img_filename = sprintf( 'product-step-%02d.jpg', (int) $data['step'] );
-		$img_url      = get_template_directory_uri() . '/images/products/' . $img_filename;
-		$attachment_id = media_sideload_image( $img_url, $product_id, $data['name'], 'id' );
 
-		if ( ! is_wp_error( $attachment_id ) ) {
-			set_post_thumbnail( $product_id, $attachment_id );
+		// Look for an existing attachment with this filename before sideloading.
+		$existing_att = get_posts( array(
+			'post_type'      => 'attachment',
+			'post_status'    => 'inherit',
+			'posts_per_page' => 1,
+			'fields'         => 'ids',
+			'meta_query'     => array( array(
+				'key'     => '_wp_attached_file',
+				'value'   => $img_filename,
+				'compare' => 'LIKE',
+			) ),
+		) );
+
+		if ( $existing_att ) {
+			set_post_thumbnail( $product_id, $existing_att[0] );
+		} else {
+			require_once ABSPATH . 'wp-admin/includes/media.php';
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+			require_once ABSPATH . 'wp-admin/includes/image.php';
+
+			$img_url       = get_template_directory_uri() . '/images/products/' . $img_filename;
+			$attachment_id = media_sideload_image( $img_url, $product_id, $data['name'], 'id' );
+
+			if ( ! is_wp_error( $attachment_id ) ) {
+				set_post_thumbnail( $product_id, $attachment_id );
+			}
 		}
 	}
 
@@ -2178,8 +2201,9 @@ foreach ( $glow_products as $index => $data ) {
 	}
 }
 
+// Schedule lookup table rebuild as a background task rather than blocking inline.
 if ( function_exists( 'wc_update_product_lookup_tables' ) ) {
-	wc_update_product_lookup_tables();
+	wp_schedule_single_event( time() + 5, 'wc_update_product_lookup_tables' );
 }
 
 echo "\nDone. {$glow_created} products created, {$glow_updated} updated, across " . count( $glow_categories ) . " categories.\n";
