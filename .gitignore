@@ -1,0 +1,10 @@
+# Dev artifacts
+*.zip
+*.jpeg
+*.png
+preview.html
+preview.php
+docs/
+.playwright-mcp/
+MASTER_PROMPT_*.md
+node_modules/
