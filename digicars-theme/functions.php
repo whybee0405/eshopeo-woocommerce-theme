@@ -840,6 +840,255 @@ function digicars_strip_default_loop_chrome() {
 add_action( 'init', 'digicars_strip_default_loop_chrome' );
 
 /* -------------------------------------------------------------------------
+ * 7b. Faceted catalogue — server-side filter handling.
+ *
+ * One pre_get_posts handler reads the catalogue GET params rendered by
+ * archive-product.php and translates them into meta_query + tax_query +
+ * ordering on the MAIN product-archive query. It is intentionally
+ * self-contained, runs only on the front-end main archive query, and leaves
+ * admin and every other query untouched.
+ *
+ * GET params consumed:
+ *   condition, make, body, fuel, dealer        → tax_query
+ *   search_by (price|monthly), price_min/max,
+ *   pm_min/pm_max, year_min/max, km_max,
+ *   transmission, province                      → meta_query
+ *   orderby                                      → ordering
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Apply the catalogue facets to the main product-archive query.
+ *
+ * @param WP_Query $q The query being prepared.
+ * @return void
+ */
+function digicars_apply_catalogue_filters( \WP_Query $q ): void {
+	// Only touch the front-end main query on a product archive / vehicle tax.
+	if ( is_admin() || ! $q->is_main_query() ) {
+		return;
+	}
+
+	$is_archive = false;
+	if ( function_exists( 'is_post_type_archive' ) && is_post_type_archive( 'product' ) ) {
+		$is_archive = true;
+	} elseif ( function_exists( 'is_tax' ) && is_tax(
+		array( 'product_cat', 'vehicle_make', 'vehicle_condition', 'vehicle_fuel', 'vehicle_dealer' )
+	) ) {
+		$is_archive = true;
+	} elseif ( function_exists( 'is_shop' ) && is_shop() ) {
+		$is_archive = true;
+	}
+
+	if ( ! $is_archive ) {
+		return;
+	}
+
+	// Helper closures for reading sanitized params (no nonce — public GET facets).
+	$get_int = static function ( $key ) {
+		return isset( $_GET[ $key ] ) && '' !== $_GET[ $key ] // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			? intval( wp_unslash( $_GET[ $key ] ) ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			: null;
+	};
+	$get_str = static function ( $key ) {
+		return isset( $_GET[ $key ] ) && '' !== $_GET[ $key ] // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			? sanitize_text_field( wp_unslash( $_GET[ $key ] ) ) // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			: '';
+	};
+
+	/* ------- meta_query --------------------------------------------------- */
+	$meta_query = array();
+
+	$search_by = ( 'monthly' === $get_str( 'search_by' ) ) ? 'monthly' : 'price';
+
+	if ( 'monthly' === $search_by ) {
+		// Monthly instalment range on _vehicle_monthly_from.
+		$pm_min = $get_int( 'pm_min' );
+		$pm_max = $get_int( 'pm_max' );
+		if ( null !== $pm_min && null !== $pm_max ) {
+			$meta_query[] = array(
+				'key'     => '_vehicle_monthly_from',
+				'value'   => array( $pm_min, $pm_max ),
+				'type'    => 'NUMERIC',
+				'compare' => 'BETWEEN',
+			);
+		} elseif ( null !== $pm_min ) {
+			$meta_query[] = array(
+				'key'     => '_vehicle_monthly_from',
+				'value'   => $pm_min,
+				'type'    => 'NUMERIC',
+				'compare' => '>=',
+			);
+		} elseif ( null !== $pm_max ) {
+			$meta_query[] = array(
+				'key'     => '_vehicle_monthly_from',
+				'value'   => $pm_max,
+				'type'    => 'NUMERIC',
+				'compare' => '<=',
+			);
+		}
+	} else {
+		// Cash-price range on _vehicle_price.
+		$price_min = $get_int( 'price_min' );
+		$price_max = $get_int( 'price_max' );
+		if ( null !== $price_min && null !== $price_max ) {
+			$meta_query[] = array(
+				'key'     => '_vehicle_price',
+				'value'   => array( $price_min, $price_max ),
+				'type'    => 'NUMERIC',
+				'compare' => 'BETWEEN',
+			);
+		} elseif ( null !== $price_min ) {
+			$meta_query[] = array(
+				'key'     => '_vehicle_price',
+				'value'   => $price_min,
+				'type'    => 'NUMERIC',
+				'compare' => '>=',
+			);
+		} elseif ( null !== $price_max ) {
+			$meta_query[] = array(
+				'key'     => '_vehicle_price',
+				'value'   => $price_max,
+				'type'    => 'NUMERIC',
+				'compare' => '<=',
+			);
+		}
+	}
+
+	// Year range on _vehicle_year.
+	$year_min = $get_int( 'year_min' );
+	$year_max = $get_int( 'year_max' );
+	if ( null !== $year_min && null !== $year_max ) {
+		$meta_query[] = array(
+			'key'     => '_vehicle_year',
+			'value'   => array( $year_min, $year_max ),
+			'type'    => 'NUMERIC',
+			'compare' => 'BETWEEN',
+		);
+	} elseif ( null !== $year_min ) {
+		$meta_query[] = array(
+			'key'     => '_vehicle_year',
+			'value'   => $year_min,
+			'type'    => 'NUMERIC',
+			'compare' => '>=',
+		);
+	} elseif ( null !== $year_max ) {
+		$meta_query[] = array(
+			'key'     => '_vehicle_year',
+			'value'   => $year_max,
+			'type'    => 'NUMERIC',
+			'compare' => '<=',
+		);
+	}
+
+	// Maximum mileage on _vehicle_mileage.
+	$km_max = $get_int( 'km_max' );
+	if ( null !== $km_max ) {
+		$meta_query[] = array(
+			'key'     => '_vehicle_mileage',
+			'value'   => $km_max,
+			'type'    => 'NUMERIC',
+			'compare' => '<=',
+		);
+	}
+
+	// Transmission (exact).
+	$transmission = $get_str( 'transmission' );
+	if ( '' !== $transmission ) {
+		$meta_query[] = array(
+			'key'     => '_vehicle_transmission',
+			'value'   => $transmission,
+			'compare' => '=',
+		);
+	}
+
+	// Province (exact).
+	$province = $get_str( 'province' );
+	if ( '' !== $province ) {
+		$meta_query[] = array(
+			'key'     => '_vehicle_province',
+			'value'   => $province,
+			'compare' => '=',
+		);
+	}
+
+	if ( ! empty( $meta_query ) ) {
+		if ( count( $meta_query ) > 1 ) {
+			$meta_query['relation'] = 'AND';
+		}
+		// Merge with any existing meta_query rather than clobbering it.
+		$existing = $q->get( 'meta_query' );
+		if ( ! empty( $existing ) && is_array( $existing ) ) {
+			$meta_query = array(
+				'relation' => 'AND',
+				$existing,
+				$meta_query,
+			);
+		}
+		$q->set( 'meta_query', $meta_query );
+	}
+
+	/* ------- tax_query ---------------------------------------------------- */
+	$tax_query = array();
+
+	$facet_taxonomies = array(
+		'condition' => 'vehicle_condition',
+		'make'      => 'vehicle_make',
+		'body'      => 'product_cat',
+		'fuel'      => 'vehicle_fuel',
+		'dealer'    => 'vehicle_dealer',
+	);
+
+	foreach ( $facet_taxonomies as $param => $taxonomy ) {
+		$slug = $get_str( $param );
+		if ( '' === $slug ) {
+			continue;
+		}
+		$tax_query[] = array(
+			'taxonomy' => $taxonomy,
+			'field'    => 'slug',
+			'terms'    => array( sanitize_title( $slug ) ),
+		);
+	}
+
+	if ( ! empty( $tax_query ) ) {
+		if ( count( $tax_query ) > 1 ) {
+			$tax_query['relation'] = 'AND';
+		}
+		$existing = $q->get( 'tax_query' );
+		if ( ! empty( $existing ) && is_array( $existing ) ) {
+			$tax_query = array(
+				'relation' => 'AND',
+				$existing,
+				$tax_query,
+			);
+		}
+		$q->set( 'tax_query', $tax_query );
+	}
+
+	/* ------- ordering ----------------------------------------------------- */
+	$orderby = $get_str( 'orderby' );
+	switch ( $orderby ) {
+		case 'price':
+			$q->set( 'orderby', 'meta_value_num' );
+			$q->set( 'meta_key', '_vehicle_price' );
+			$q->set( 'order', 'ASC' );
+			break;
+		case 'price-desc':
+			$q->set( 'orderby', 'meta_value_num' );
+			$q->set( 'meta_key', '_vehicle_price' );
+			$q->set( 'order', 'DESC' );
+			break;
+		case 'date':
+			$q->set( 'orderby', 'date' );
+			$q->set( 'order', 'DESC' );
+			break;
+		// 'menu_order', 'popularity', 'rating' and the default are left to
+		// WooCommerce's own ordering handler.
+	}
+}
+add_action( 'pre_get_posts', 'digicars_apply_catalogue_filters' );
+
+/* -------------------------------------------------------------------------
  * 8. AJAX handlers.
  * ---------------------------------------------------------------------- */
 

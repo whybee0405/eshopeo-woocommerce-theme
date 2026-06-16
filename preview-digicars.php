@@ -86,6 +86,9 @@ function sanitize_title( $s ) { return strtolower( preg_replace( '/[^a-z0-9\-]/i
  * URLs / theme paths.
  * ---------------------------------------------------------------------- */
 function home_url( $p = '' ) { return '#' . ltrim( (string) $p, '#' ); }
+function get_permalink( $p = 0 ) { if ( is_object( $p ) && method_exists( $p, 'get_permalink' ) ) { return $p->get_permalink(); } $id = is_object( $p ) ? ( $p->ID ?? 0 ) : (int) $p; return home_url( '/vehicle/' . $id ); }
+function the_permalink( $p = 0 ) { echo esc_url( get_permalink( $p ) ); }
+function get_the_permalink( $p = 0 ) { return get_permalink( $p ); }
 function site_url( $p = '' ) { return '#' . ltrim( (string) $p, '#' ); }
 function admin_url( $p = '' ) { return '#' . $p; }
 function get_template_directory() { return $GLOBALS['digicars_theme_dir']; }
@@ -275,7 +278,8 @@ function wc_get_products( $args = array() ) {
 	return array_values( $GLOBALS['digicars_product_store'] );
 }
 function wc_price( $price, $args = array() ) { return 'R' . number_format_i18n( (float) $price ); }
-function wc_get_template_part( ...$a ) {}
+function wc_product_class( $class = '', $product = null ) { $c = trim( 'product ' . ( is_array( $class ) ? implode( ' ', $class ) : (string) $class ) ); echo 'class="' . esc_attr( $c ) . '"'; }
+function wc_get_template_part( $slug, $name = '' ) { $card = $GLOBALS['digicars_theme_dir'] . '/woocommerce/content-product.php'; if ( is_file( $card ) ) { require $card; } }
 
 /* -------------------------------------------------------------------------
  * Dummy vehicle fixtures — ~4 vehicles spanning conditions + body types.
