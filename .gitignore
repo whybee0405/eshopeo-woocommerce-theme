@@ -1,0 +1,4 @@
+.playwright-mcp/
+*-output.png
+preview-digicars.html
+node_modules/
