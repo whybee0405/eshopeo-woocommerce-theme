@@ -298,3 +298,98 @@
   .pdp-panel__cta-row { flex-direction: column; }
   .pdp-panel__cta-row .btn { width: 100%; }
 }
+
+
+/* ==========================================================================
+   STATIC PAGES — finance / sell / service / dealers / about
+   --------------------------------------------------------------------------
+   Page-specific helpers under the `.digicars-` and `.dealer-card` namespaces.
+   Everything else on these pages reuses style.css classes.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Lead forms (finance / trade-in / service)
+   -------------------------------------------------------------------------- */
+.digicars-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-4);
+}
+.digicars-form__grid .field + .field { margin-top: 0; }
+
+.digicars-form__actions {
+  margin-top: var(--s-5);
+  gap: var(--s-4);
+}
+
+.digicars-form__error {
+  margin-top: var(--s-4);
+}
+.digicars-form__error a {
+  color: var(--signal-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .digicars-form__grid { grid-template-columns: 1fr; }
+}
+
+/* --------------------------------------------------------------------------
+   Numbered steps / principles (finance + about)
+   -------------------------------------------------------------------------- */
+.digicars-step,
+.digicars-principle {
+  padding-top: var(--s-4);
+  border-top: 2px solid var(--carbon);
+}
+.surface-soft .digicars-step,
+.surface-soft .digicars-principle { border-top-color: var(--carbon); }
+
+.digicars-step__num {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--signal);
+  letter-spacing: 0.04em;
+}
+
+/* --------------------------------------------------------------------------
+   Dealer cards (find a dealer)
+   -------------------------------------------------------------------------- */
+.dealer-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-3);
+  padding: var(--s-5);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.dealer-card:hover {
+  border-color: var(--carbon);
+  box-shadow: var(--shadow-2);
+}
+.dealer-card__name { margin: 0; }
+.dealer-card__brand { color: var(--signal); }
+
+.dealer-card__meta {
+  margin: 0;
+  display: grid;
+  gap: var(--s-2);
+  font-size: 0.92rem;
+}
+.dealer-card__meta dd { margin: 0; }
+.dealer-card__address { font-style: normal; color: var(--carbon); }
+.dealer-card__hours { font-size: 0.85rem; }
+
+.dealer-card__actions {
+  margin-top: auto;
+  padding-top: var(--s-3);
+  gap: var(--s-5);
+}
+
+/* --------------------------------------------------------------------------
+   Finance partners row
+   -------------------------------------------------------------------------- */
+.digicars-partners { gap: var(--s-3); }
+.digicars-partners .badge { font-size: 0.78rem; padding: 7px 12px; }

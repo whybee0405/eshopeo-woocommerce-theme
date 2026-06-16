@@ -458,6 +458,74 @@
     });
   }
 
+  /* ------------------------------------------------------ inline lead forms */
+  /* Shared handler for finance / trade-in / service lead forms.
+   * Contract: <form data-enquiry-form data-topic="finance|trade-in|service">.
+   * Serializes its fields and POSTs application/x-www-form-urlencoded to
+   * data.ajaxUrl with action=digicars_enquiry, nonce, topic and the fields.
+   * On success: toast + reset. On failure: inline error + tel/mailto fallback.
+   * Degrades: with JS off the form keeps its method="post" and the visible
+   * contact details below it. */
+  function initEnquiryForms() {
+    var forms = $all('[data-enquiry-form]');
+    if (!forms.length) return;
+
+    forms.forEach(function (form) {
+      var errorEl = $('[data-form-error]', form);
+      var submitBtn = form.querySelector('button[type="submit"], [type="submit"]');
+
+      function showError(msg) {
+        if (errorEl) {
+          errorEl.innerHTML = msg +
+            ' <a href="tel:0105951180">010 595 1180</a> ' +
+            '<a href="mailto:info@digicars.co.za">info@digicars.co.za</a>';
+          errorEl.hidden = false;
+        } else {
+          digicarsToast(msg, 'signal');
+        }
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (errorEl) errorEl.hidden = true;
+        if (submitBtn) submitBtn.disabled = true;
+
+        var params = new URLSearchParams();
+        params.set('action', 'digicars_enquiry');
+        params.set('nonce', data.nonce || '');
+        params.set('topic', form.getAttribute('data-topic') || '');
+
+        // Serialize all named fields.
+        $all('input, select, textarea', form).forEach(function (el) {
+          if (!el.name || el.disabled) return;
+          if ((el.type === 'checkbox' || el.type === 'radio') && !el.checked) return;
+          params.set(el.name, el.value);
+        });
+
+        fetch(data.ajaxUrl || '', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: params.toString()
+        }).then(function (res) {
+          return res.json().catch(function () { return { success: false }; });
+        }).then(function (json) {
+          if (json && json.success) {
+            form.reset();
+            digicarsToast('Thanks — a Digicars consultant will be in touch within one working day.', 'success');
+          } else {
+            var msg = (json && json.data && json.data.message) ? json.data.message : 'Something went wrong. Please try again or contact us directly:';
+            showError(msg);
+          }
+        }).catch(function () {
+          showError('Network error. Please try again or contact us directly:');
+        }).then(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
+      });
+    });
+  }
+
   /* ------------------------------------------------------------------ boot */
   function init() {
     initHeader();
@@ -467,6 +535,7 @@
     initFilterDrawer();
     initCompare();
     initEnquiry();
+    initEnquiryForms();
   }
 
   if (document.readyState === 'loading') {
