@@ -771,6 +771,65 @@ function digicars_join_list( array $items ): string {
 	return implode( ', ', $items ) . ' ' . __( 'and', 'digicars' ) . ' ' . $last;
 }
 
+if ( ! function_exists( 'digicars_post_card' ) ) {
+	/**
+	 * Echo a Car Torque blog post card (.post-card) for a given post.
+	 *
+	 * Markup matches the inline cards in index.php so the helper stays visually
+	 * consistent across home.php, archive.php and the homepage Car Torque
+	 * section. Everything is escaped; the post defaults to the current global.
+	 *
+	 * @param WP_Post|null $post Optional post object. Defaults to the global $post.
+	 * @return void
+	 */
+	function digicars_post_card( $post = null ): void {
+		$post = get_post( $post );
+		if ( ! $post ) {
+			return;
+		}
+
+		$id        = $post->ID;
+		$permalink = get_permalink( $id );
+		$cats      = get_the_category( $id );
+
+		// Reading time (best-effort, optional).
+		$content      = get_post_field( 'post_content', $id );
+		$word_count   = str_word_count( wp_strip_all_tags( (string) $content ) );
+		$reading_time = max( 1, (int) ceil( $word_count / 200 ) );
+
+		$excerpt = get_the_excerpt( $id );
+		$excerpt = wp_trim_words( $excerpt, 22 );
+		?>
+		<li class="post-card">
+			<?php if ( has_post_thumbnail( $id ) ) : ?>
+				<a class="post-card__media" href="<?php echo esc_url( $permalink ); ?>"><?php echo get_the_post_thumbnail( $id, 'digicars-card' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+			<?php endif; ?>
+			<div class="post-card__body stack-sm">
+				<?php if ( ! empty( $cats ) ) : ?>
+					<span class="eyebrow"><?php echo esc_html( $cats[0]->name ); ?></span>
+				<?php endif; ?>
+				<h2 class="t-3"><a href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( get_the_title( $id ) ); ?></a></h2>
+				<p class="muted t-mono post-card__meta">
+					<?php echo esc_html( get_the_date( '', $id ) ); ?>
+					<span aria-hidden="true">&middot;</span>
+					<?php
+					printf(
+						/* translators: %d: estimated reading time in minutes. */
+						esc_html( _n( '%d min read', '%d min read', $reading_time, 'digicars' ) ),
+						(int) $reading_time
+					);
+					?>
+				</p>
+				<?php if ( '' !== trim( $excerpt ) ) : ?>
+					<p><?php echo esc_html( $excerpt ); ?></p>
+				<?php endif; ?>
+				<a class="link-arrow" href="<?php echo esc_url( $permalink ); ?>"><?php esc_html_e( 'Read', 'digicars' ); ?></a>
+			</div>
+		</li>
+		<?php
+	}
+}
+
 /* -------------------------------------------------------------------------
  * 7. Disable WooCommerce commerce — enquiry + finance funnel only.
  * ---------------------------------------------------------------------- */

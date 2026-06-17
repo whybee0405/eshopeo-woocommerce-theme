@@ -454,4 +454,35 @@
 .post-card__media img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 240ms var(--ease, ease); }
 .post-card:hover .post-card__media img { transform: scale(1.04); }
 .post-card__body { padding: 18px 18px 22px; }
+.post-card__meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; font-size: 0.78rem; }
 @media (prefers-reduced-motion: reduce) { .post-card__media img { transition: none; } .post-card:hover .post-card__media img { transform: none; } }
+
+/* --------------------------------------------------------------------------
+   Single article (single.php) + branded search form (searchform.php)
+   -------------------------------------------------------------------------- */
+.article-breadcrumb { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: var(--s-5); }
+.article-breadcrumb a { color: var(--slate); text-decoration: none; }
+.article-breadcrumb a:hover { color: var(--signal); }
+.article-breadcrumb .breadcrumb-sep { color: var(--line); }
+
+.article-header { max-width: 72ch; }
+.article-byline { display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+
+.article-media { margin: var(--s-6) 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+.article-media img { width: 100%; height: auto; display: block; }
+
+.article-body { margin-top: var(--s-6); }
+
+.article-tags { margin-top: var(--s-6); gap: 8px; }
+
+.article-nav { margin-top: var(--s-7); padding-top: var(--s-5); border-top: 1px solid var(--line); justify-content: space-between; gap: var(--s-4); }
+.article-nav a { color: var(--carbon); text-decoration: none; font-weight: 600; }
+.article-nav a:hover { color: var(--signal); }
+.article-nav__next { margin-left: auto; text-align: right; }
+
+.page-links { margin-top: var(--s-5); gap: 8px; align-items: baseline; }
+.page-links a, .page-links > span > span { display: inline-flex; min-width: 2em; justify-content: center; padding: 4px 8px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; }
+
+.search-form__row { gap: var(--s-2); align-items: stretch; flex-wrap: nowrap; }
+.search-form__input { flex: 1 1 auto; min-width: 0; }
+.search-form .btn { flex: 0 0 auto; }
