@@ -393,3 +393,65 @@
    -------------------------------------------------------------------------- */
 .digicars-partners { gap: var(--s-3); }
 .digicars-partners .badge { font-size: 0.78rem; padding: 7px 12px; }
+
+/* --------------------------------------------------------------------------
+   Compare table (page-compare.php)
+   -------------------------------------------------------------------------- */
+.compare-scroll { overflow-x: auto; margin-top: var(--s-5); -webkit-overflow-scrolling: touch; }
+.compare-table { border-collapse: collapse; width: 100%; min-width: 640px; }
+.compare-table th,
+.compare-table td {
+	text-align: left;
+	padding: 14px 16px;
+	border-bottom: 1px solid var(--line);
+	vertical-align: top;
+}
+.compare-table thead th { border-bottom: 2px solid var(--carbon); }
+.compare-table__rowhead {
+	font-family: var(--font-mono, 'JetBrains Mono', monospace);
+	font-size: 0.72rem;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--slate);
+	white-space: nowrap;
+	background: var(--paper);
+	position: sticky;
+	left: 0;
+}
+.compare-table__vehicle { min-width: 200px; }
+.compare-table__media { display: block; margin-bottom: 10px; border-radius: 10px; overflow: hidden; }
+.compare-table__media img { width: 100%; height: auto; display: block; }
+.compare-table__name { display: block; font-weight: 600; margin-bottom: 8px; }
+.cluster--tight { gap: 6px; flex-wrap: wrap; }
+
+/* --------------------------------------------------------------------------
+   Body-type browse tiles (404.php, front-page.php)
+   -------------------------------------------------------------------------- */
+.bodytype-grid { list-style: none; padding: 0; margin: var(--s-4) 0 0; }
+.bodytype-tile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	padding: 22px 12px;
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	background: var(--paper);
+	text-align: center;
+	transition: border-color 180ms var(--ease, ease), transform 180ms var(--ease, ease);
+}
+.bodytype-tile:hover { border-color: var(--signal); transform: translateY(-2px); }
+.bodytype-tile__icon { width: 48px; height: 32px; object-fit: contain; }
+.bodytype-tile__label { font-size: 0.85rem; font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .bodytype-tile { transition: none; } .bodytype-tile:hover { transform: none; } }
+
+/* --------------------------------------------------------------------------
+   Blog post cards (index.php, home.php, archive.php, front-page Car Torque)
+   -------------------------------------------------------------------------- */
+.post-list { list-style: none; padding: 0; margin: var(--s-5) 0 0; }
+.post-card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--paper); }
+.post-card__media { display: block; overflow: hidden; }
+.post-card__media img { width: 100%; height: auto; display: block; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 240ms var(--ease, ease); }
+.post-card:hover .post-card__media img { transform: scale(1.04); }
+.post-card__body { padding: 18px 18px 22px; }
+@media (prefers-reduced-motion: reduce) { .post-card__media img { transition: none; } .post-card:hover .post-card__media img { transform: none; } }
