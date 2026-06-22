@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#EDE9DF"/>
+  <!-- Floor -->
+  <rect x="0" y="420" width="800" height="180" fill="#D4C9B5"/>
+  <!-- Back wall -->
+  <rect x="0" y="0" width="800" height="420" fill="#F0EBE2"/>
+  <!-- Wall shadow -->
+  <rect x="0" y="415" width="800" height="8" fill="#C8BDAA" opacity="0.5"/>
+  <!-- Kitchen counter -->
+  <rect x="480" y="280" width="280" height="12" rx="3" fill="#363B47"/>
+  <rect x="490" y="292" width="260" height="128" rx="2" fill="#4A4F5A"/>
+  <!-- Coffee machine silhouette -->
+  <rect x="520" y="220" width="55" height="60" rx="4" fill="#F0EDE8"/>
+  <rect x="540" y="215" width="20" height="8" rx="2" fill="#363B47"/>
+  <circle cx="532" cy="265" r="5" fill="#E07B35"/>
+  <!-- Kettle silhouette -->
+  <ellipse cx="640" cy="258" rx="22" ry="26" fill="#F0EDE8"/>
+  <rect x="628" y="233" width="24" height="5" rx="2" fill="#363B47"/>
+  <!-- Air purifier -->
+  <rect x="80" y="270" width="56" height="150" rx="28" fill="#F0EDE8"/>
+  <rect x="90" y="300" width="36" height="6" rx="3" fill="#2DB89A" opacity="0.8"/>
+  <!-- Washing machine -->
+  <rect x="80" y="305" width="90" height="115" rx="6" fill="#F0EDE8"/>
+  <circle cx="125" cy="360" r="28" fill="none" stroke="#888EA0" stroke-width="3"/>
+  <circle cx="125" cy="360" r="18" fill="#C8CDD8" opacity="0.5"/>
+  <!-- Floor shadow -->
+  <ellipse cx="125" cy="418" rx="52" ry="6" fill="#C8BDAA" opacity="0.5"/>
+  <ellipse cx="648" cy="418" rx="45" ry="5" fill="#C8BDAA" opacity="0.4"/>
+</svg>
