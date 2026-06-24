@@ -117,18 +117,6 @@ function cove_enqueue() {
 		);
 	}
 
-	// Three.js hero — front page only (module script).
-	if ( is_front_page() ) {
-		$hero_path = get_theme_file_path( 'js/hero-room.js' );
-		wp_enqueue_script(
-			'cove-hero-room',
-			get_theme_file_uri( 'js/hero-room.js' ),
-			array(),
-			file_exists( $hero_path ) ? filemtime( $hero_path ) : COVE_VERSION,
-			true
-		);
-	}
-
 	// Three.js PDP viewer — single product only (module script).
 	if ( is_singular( 'product' ) ) {
 		$pdp_path = get_theme_file_path( 'js/pdp-3d.js' );
@@ -143,9 +131,9 @@ function cove_enqueue() {
 }
 add_action( 'wp_enqueue_scripts', 'cove_enqueue' );
 
-// Make cove-hero-room and cove-pdp-3d load as type="module".
+// Make cove-pdp-3d load as type="module".
 function cove_module_script_type( $tag, $handle, $src ) {
-	$modules = array( 'cove-hero-room', 'cove-pdp-3d' );
+	$modules = array( 'cove-pdp-3d' );
 	if ( in_array( $handle, $modules, true ) ) {
 		return '<script type="module" src="' . esc_url( $src ) . '"></script>' . "\n";
 	}
@@ -155,7 +143,7 @@ add_filter( 'script_loader_tag', 'cove_module_script_type', 10, 3 );
 
 // Importmap — required before any type="module" that bare-imports "three".
 function cove_importmap() {
-	if ( is_front_page() || is_singular( 'product' ) ) {
+	if ( is_singular( 'product' ) ) {
 		echo '<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>' . "\n";
 	}
 }

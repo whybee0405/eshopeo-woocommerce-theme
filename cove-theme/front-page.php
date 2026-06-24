@@ -15,37 +15,125 @@ $cove_cats = function_exists( 'cove_categories' ) ? cove_categories() : array();
 
 <main id="main">
 
-	<!-- 1. Hero — Three.js Room Environment -->
-	<section class="home-hero" aria-label="<?php esc_attr_e( 'Homepage hero', 'cove' ); ?>">
-		<canvas class="home-hero__canvas" id="cove-hero-canvas" aria-hidden="true"></canvas>
-		<img class="home-hero__fallback"
-			src="<?php echo esc_url( get_theme_file_uri( 'images/hero/hero-room.svg' ) ); ?>"
-			alt="<?php esc_attr_e( 'Modern home interior with COVE appliances', 'cove' ); ?>"
-			width="1200" height="600">
+	<!-- 1. Product Spotlight Hero -->
+<?php
+// Query a featured or best-saving product for the hero spotlight.
+$hero_product = null;
+if ( function_exists( 'wc_get_products' ) ) {
+	// Try featured first
+	$featured = wc_get_products( array(
+		'status'   => 'publish',
+		'limit'    => 1,
+		'featured' => true,
+		'orderby'  => 'rand',
+	) );
+	if ( ! empty( $featured ) ) {
+		$hero_product = $featured[0];
+	} else {
+		// Fall back to biggest saving (via meta)
+		$saving_ids = get_posts( array(
+			'post_type'   => 'product',
+			'post_status' => 'publish',
+			'numberposts' => 1,
+			'meta_key'    => '_cove_saving',
+			'orderby'     => 'meta_value_num',
+			'order'       => 'DESC',
+			'fields'      => 'ids',
+		) );
+		if ( ! empty( $saving_ids ) ) {
+			$hero_product = wc_get_product( $saving_ids[0] );
+		}
+	}
+	// Final fallback: latest product
+	if ( ! $hero_product ) {
+		$latest = wc_get_products( array( 'status' => 'publish', 'limit' => 1, 'orderby' => 'date', 'order' => 'DESC' ) );
+		if ( ! empty( $latest ) ) { $hero_product = $latest[0]; }
+	}
+}
+?>
+<?php if ( $hero_product ) :
+	$hp_id        = $hero_product->get_id();
+	$hp_permalink = get_permalink( $hp_id );
+	$hp_name      = $hero_product->get_name();
+	$hp_brand     = function_exists( 'cove_meta' ) ? (string) cove_meta( $hp_id, '_cove_brand' ) : '';
+	$hp_condition = function_exists( 'cove_product_condition' ) ? cove_product_condition( $hp_id ) : 'new';
+	$hp_cond_lbl  = function_exists( 'cove_condition_label' )   ? cove_condition_label( $hp_condition ) : 'New';
+	$hp_cond_cls  = function_exists( 'cove_condition_class' )   ? cove_condition_class( $hp_condition ) : 'badge-new';
+	$hp_saving    = function_exists( 'cove_saving' )            ? cove_saving( $hp_id ) : 0;
+	$hp_rrp       = function_exists( 'cove_meta' )              ? (float) cove_meta( $hp_id, '_cove_rrp' ) : 0;
+	$hp_desc      = wp_trim_words( $hero_product->get_short_description() ?: $hero_product->get_description(), 20 );
+?>
+<section class="hero-spotlight" aria-label="<?php esc_attr_e( 'Featured product', 'cove' ); ?>">
+	<div class="container hero-spotlight__inner">
 
-		<!-- Tooltip card (positioned by JS) -->
-		<div class="hero-tooltip" id="cove-hero-tooltip" role="tooltip" aria-live="polite">
-			<span class="hero-tooltip__badge badge"></span>
-			<span class="hero-tooltip__name"></span>
-			<span class="hero-tooltip__price"></span>
-			<a class="hero-tooltip__link" href="#"><?php esc_html_e( 'Shop now', 'cove' ); ?></a>
+		<!-- Image panel -->
+		<div class="hero-spotlight__media">
+			<?php if ( has_post_thumbnail( $hp_id ) ) : ?>
+				<?php echo get_the_post_thumbnail( $hp_id, 'large', array( 'alt' => esc_attr( $hp_name ), 'loading' => 'eager' ) ); // phpcs:ignore ?>
+			<?php else : ?>
+				<img src="<?php echo esc_url( get_theme_file_uri( 'images/hero/hero-room.svg' ) ); ?>"
+					alt="<?php esc_attr_e( 'COVE Home Appliances', 'cove' ); ?>"
+					width="800" height="600">
+			<?php endif; ?>
 		</div>
 
-		<div class="container">
-			<div class="home-hero__content">
-				<p class="eyebrow eyebrow--amber home-hero__eyebrow"><?php esc_html_e( 'New & certified demo stock', 'cove' ); ?></p>
-				<h1 class="home-hero__title">
-					<?php esc_html_e( 'Every room.', 'cove' ); ?><br>
-					<?php esc_html_e( 'Every budget.', 'cove' ); ?>
-				</h1>
-				<p class="home-hero__lead"><?php esc_html_e( 'Premium appliances, honest prices. Shop new stock or save up to 40% on Grade A, B and C demo units — every one tested and described honestly.', 'cove' ); ?></p>
-				<div class="home-hero__cta cluster">
-					<a class="btn btn--primary btn--lg" href="<?php echo esc_url( $cove_shop ); ?>"><?php esc_html_e( 'Shop all products', 'cove' ); ?></a>
-					<a class="btn btn--ghost btn--lg" href="<?php echo esc_url( home_url( '/grades' ) ); ?>"><?php esc_html_e( 'Explore Grade deals', 'cove' ); ?></a>
-				</div>
+		<!-- Info panel -->
+		<div class="hero-spotlight__info">
+			<div class="hero-spotlight__badges cluster">
+				<span class="badge <?php echo esc_attr( $hp_cond_cls ); ?>"><?php echo esc_html( $hp_cond_lbl ); ?></span>
+				<?php if ( $hp_saving > 0 ) : ?>
+					<span class="saving-badge">
+						<?php printf( esc_html__( 'Save R%s', 'cove' ), esc_html( number_format_i18n( $hp_saving ) ) ); ?>
+					</span>
+				<?php endif; ?>
 			</div>
+
+			<?php if ( '' !== $hp_brand ) : ?>
+				<p class="hero-spotlight__brand eyebrow"><?php echo esc_html( $hp_brand ); ?></p>
+			<?php endif; ?>
+
+			<h1 class="hero-spotlight__title"><?php echo esc_html( $hp_name ); ?></h1>
+
+			<?php if ( '' !== $hp_desc ) : ?>
+				<p class="hero-spotlight__desc"><?php echo esc_html( $hp_desc ); ?></p>
+			<?php endif; ?>
+
+			<div class="hero-spotlight__price">
+				<?php if ( $hp_rrp > 0 && (float) $hero_product->get_price() < $hp_rrp ) : ?>
+					<s class="hero-spotlight__rrp"><?php echo wp_kses_post( wc_price( $hp_rrp ) ); ?></s>
+				<?php endif; ?>
+				<span class="hero-spotlight__current"><?php echo $hero_product->get_price_html(); // phpcs:ignore ?></span>
+			</div>
+
+			<div class="hero-spotlight__cta cluster">
+				<?php
+				// Add to cart form for single product
+				echo do_shortcode( '[add_to_cart id="' . esc_attr( $hp_id ) . '" show_price="false" style="" class="btn btn--primary btn--lg"]' );
+				?>
+				<a class="btn btn--outline btn--lg" href="<?php echo esc_url( $hp_permalink ); ?>">
+					<?php esc_html_e( 'View details', 'cove' ); ?>
+				</a>
+			</div>
+
+			<a class="hero-spotlight__browse link-arrow" href="<?php echo esc_url( $cove_shop ); ?>">
+				<?php esc_html_e( 'Browse all products', 'cove' ); ?>
+			</a>
 		</div>
-	</section>
+	</div>
+</section>
+<?php else : ?>
+<section class="hero-spotlight hero-spotlight--fallback" aria-label="<?php esc_attr_e( 'Welcome to COVE', 'cove' ); ?>">
+	<div class="container hero-spotlight__inner hero-spotlight__inner--centered">
+		<p class="eyebrow eyebrow--amber"><?php esc_html_e( 'New & certified demo stock', 'cove' ); ?></p>
+		<h1 class="t-hero"><?php esc_html_e( 'Every room. Every budget.', 'cove' ); ?></h1>
+		<p class="t-lead"><?php esc_html_e( 'Premium appliances, honest prices.', 'cove' ); ?></p>
+		<div class="cluster" style="justify-content:center; margin-top: var(--s-5);">
+			<a class="btn btn--primary btn--lg" href="<?php echo esc_url( $cove_shop ); ?>"><?php esc_html_e( 'Shop all products', 'cove' ); ?></a>
+			<a class="btn btn--outline btn--lg" href="<?php echo esc_url( home_url( '/grades' ) ); ?>"><?php esc_html_e( 'Explore grades', 'cove' ); ?></a>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
 
 	<!-- 2. Shop by category -->
 	<section class="section section--tight surface-white" data-reveal>
@@ -57,20 +145,17 @@ $cove_cats = function_exists( 'cove_categories' ) ? cove_categories() : array();
 				</div>
 				<a class="link-arrow" href="<?php echo esc_url( $cove_shop ); ?>"><?php esc_html_e( 'All products', 'cove' ); ?></a>
 			</div>
-			<div class="category-grid">
+			<div class="category-strip">
 				<?php foreach ( $cove_cats as $slug => $cat ) :
 					$cat_url = add_query_arg( 'cat', $slug, $cove_shop );
-					$count   = 0;
-					if ( function_exists( 'wc_get_products' ) ) {
-						$term = get_term_by( 'slug', $slug, 'product_cat' );
-						if ( $term ) { $count = $term->count; }
-					}
+					$term    = get_term_by( 'slug', $slug, 'product_cat' );
+					$count   = $term ? (int) $term->count : 0;
 					?>
 					<a class="category-tile" href="<?php echo esc_url( $cat_url ); ?>">
 						<img class="category-tile__icon" src="<?php echo esc_url( $cat['icon'] ); ?>" alt="" aria-hidden="true" width="48" height="48" loading="lazy">
 						<span class="category-tile__label"><?php echo esc_html( $cat['label'] ); ?></span>
 						<?php if ( $count > 0 ) : ?>
-							<span class="category-tile__count"><?php printf( esc_html( _n( '%d product', '%d products', $count, 'cove' ) ), (int) $count ); ?></span>
+							<span class="category-tile__count"><?php printf( esc_html( _n( '%d product', '%d products', $count, 'cove' ) ), $count ); ?></span>
 						<?php endif; ?>
 					</a>
 				<?php endforeach; ?>
