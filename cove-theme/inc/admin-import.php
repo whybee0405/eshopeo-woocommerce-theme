@@ -152,6 +152,21 @@ function cove_run_import(): array|\WP_Error {
 		$saving = ( $data['rrp'] > $data['price'] ) ? round( $data['rrp'] - $data['price'] ) : 0;
 		update_post_meta( $pid, '_cove_saving', $saving );
 
+		// Sideload product image from URL into WP media library.
+		if ( ! empty( $data['image'] ) ) {
+			if ( ! function_exists( 'media_sideload_image' ) ) {
+				require_once ABSPATH . 'wp-admin/includes/media.php';
+				require_once ABSPATH . 'wp-admin/includes/file.php';
+				require_once ABSPATH . 'wp-admin/includes/image.php';
+			}
+			$att_id = media_sideload_image( $data['image'], $pid, $data['name'], 'id' );
+			if ( $att_id && ! is_wp_error( $att_id ) ) {
+				set_post_thumbnail( $pid, $att_id );
+				// Add to WC product gallery.
+				update_post_meta( $pid, '_product_image_gallery', '' );
+			}
+		}
+
 		$created++;
 	}
 

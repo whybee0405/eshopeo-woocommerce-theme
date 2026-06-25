@@ -23,6 +23,7 @@ function cove_dummy_products(): array {
 			'weight'     => 4.2,
 			'grade_note' => '',
 			'desc'       => 'Professional 15-bar pressure system. Built-in grinder, steam wand, and 2L water tank.',
+			'image'      => 'https://images.pexels.com/photos/4350049/pexels-photo-4350049.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		array(
 			'name'       => 'Variable Temp Kettle 1.7L',
@@ -38,6 +39,7 @@ function cove_dummy_products(): array {
 			'weight'     => 1.1,
 			'grade_note' => '',
 			'desc'       => '5 preset temperatures from 60°C to 100°C. Keep-warm function for 30 minutes.',
+			'image'      => 'https://images.pexels.com/photos/7019235/pexels-photo-7019235.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		array(
 			'name'       => 'Air Fryer 5.5L XXL',
@@ -53,6 +55,7 @@ function cove_dummy_products(): array {
 			'weight'     => 5.8,
 			'grade_note' => '',
 			'desc'       => 'Twin TurboStar technology. Up to 90% less fat. Digital touchscreen.',
+			'image'      => 'https://images.pexels.com/photos/8293756/pexels-photo-8293756.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Kitchen — Grade A
 		array(
@@ -69,6 +72,7 @@ function cove_dummy_products(): array {
 			'weight'     => 11.3,
 			'grade_note' => 'Open box — returned unused. Original packaging, all attachments included. No cosmetic marks.',
 			'desc'       => '800W motor with 10-speed control. Includes flat beater, dough hook and wire whisk.',
+			'image'      => 'https://images.pexels.com/photos/6287302/pexels-photo-6287302.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Kitchen — Grade B
 		array(
@@ -85,6 +89,7 @@ function cove_dummy_products(): array {
 			'weight'     => 13.5,
 			'grade_note' => 'Small scratch on left side panel — not visible when installed under a counter. Functionality 100%.',
 			'desc'       => '30L capacity. Convection + grill + microwave combination. Auto-cook programs.',
+			'image'      => 'https://images.pexels.com/photos/6996069/pexels-photo-6996069.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Kitchen — Grade C
 		array(
@@ -101,6 +106,7 @@ function cove_dummy_products(): array {
 			'weight'     => 5.4,
 			'grade_note' => 'Dent on right side of base. Lid handle has minor crack (functional). Motor and blades work perfectly.',
 			'desc'       => '2L container. 6 hardened stainless-steel blades. 10 variable speeds + pulse.',
+			'image'      => 'https://images.pexels.com/photos/3735213/pexels-photo-3735213.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Laundry — New
 		array(
@@ -117,6 +123,7 @@ function cove_dummy_products(): array {
 			'weight'     => 71,
 			'grade_note' => '',
 			'desc'       => 'EcoBubble technology. 1400 RPM spin. 15 wash programmes. Child lock.',
+			'image'      => 'https://images.pexels.com/photos/5591583/pexels-photo-5591583.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Laundry — Grade B
 		array(
@@ -133,6 +140,7 @@ function cove_dummy_products(): array {
 			'weight'     => 68,
 			'grade_note' => 'Scuff mark on top panel — invisible when in position. Drum, motor and all wash programmes fully functional.',
 			'desc'       => '7kg capacity. 6 Motion technology. 1400 RPM. Turbowash60.',
+			'image'      => 'https://images.pexels.com/photos/5591584/pexels-photo-5591584.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Laundry — Grade C
 		array(
@@ -149,6 +157,7 @@ function cove_dummy_products(): array {
 			'weight'     => 44,
 			'grade_note' => 'Visible dent on back panel and light rust spotting on lid hinge. All wash functions work correctly. Ideal for utility room.',
 			'desc'       => '12kg capacity. 8 wash programmes. Delay start. Anti-bacterial tub.',
+			'image'      => 'https://images.pexels.com/photos/5591585/pexels-photo-5591585.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Climate — New
 		array(
@@ -165,6 +174,7 @@ function cove_dummy_products(): array {
 			'weight'     => 4.8,
 			'grade_note' => '',
 			'desc'       => 'True HEPA H13 filter. Covers 45m². PM2.5 sensor. App controlled. Ultra-quiet 30dB.',
+			'image'      => 'https://images.pexels.com/photos/7641840/pexels-photo-7641840.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Climate — Grade A
 		array(
@@ -181,6 +191,7 @@ function cove_dummy_products(): array {
 			'weight'     => 3.0,
 			'grade_note' => 'Open box, never used. Display model removed from packaging for customer demonstration only.',
 			'desc'       => 'Air Multiplier technology. 10 airflow settings. Sleep timer. Oscillation 90°.',
+			'image'      => 'https://images.pexels.com/photos/5490333/pexels-photo-5490333.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Floor Care — New
 		array(
@@ -197,6 +208,7 @@ function cove_dummy_products(): array {
 			'weight'     => 3.5,
 			'grade_note' => '',
 			'desc'       => 'LiDAR navigation. 4500Pa suction. Auto-empty dock. Mop with intelligent water control.',
+			'image'      => 'https://images.pexels.com/photos/4513923/pexels-photo-4513923.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Floor Care — Grade B
 		array(
@@ -213,6 +225,7 @@ function cove_dummy_products(): array {
 			'weight'     => 2.6,
 			'grade_note' => 'Light scratch on handle. Suction, battery, all attachments work perfectly. 40-min runtime confirmed.',
 			'desc'       => '40-minute fade-free runtime. Whole-machine HEPA filtration. 5-layer filtration.',
+			'image'      => 'https://images.pexels.com/photos/4098369/pexels-photo-4098369.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Personal Care — New
 		array(
@@ -229,6 +242,7 @@ function cove_dummy_products(): array {
 			'weight'     => 0.58,
 			'grade_note' => '',
 			'desc'       => '2400W AC motor. Ionic technology. 3 heat + 2 speed settings. Cool shot button.',
+			'image'      => 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Personal Care — Grade A
 		array(
@@ -245,6 +259,7 @@ function cove_dummy_products(): array {
 			'weight'     => 0.19,
 			'grade_note' => 'Open box. Used once for demo. Fully cleaned, heads replaced. Indistinguishable from new.',
 			'desc'       => 'Series 9 Pro. 5-sync foil system. AutoSense motor. 60 min battery. Wet & dry.',
+			'image'      => 'https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 		// Personal Care — Grade C
 		array(
@@ -261,6 +276,7 @@ function cove_dummy_products(): array {
 			'weight'     => 0.44,
 			'grade_note' => 'Scuff marks on plates surround and faded logo on one plate. Plates are undamaged and heat to correct temperature. Battery holds full charge.',
 			'desc'       => 'Cordless ceramic plates. USB-C charging. 185°C in under 30 seconds. 30-min auto-off.',
+			'image'      => 'https://images.pexels.com/photos/3993466/pexels-photo-3993466.jpeg?auto=compress&cs=tinysrgb&w=800',
 		),
 	);
 }
