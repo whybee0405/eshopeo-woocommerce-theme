@@ -14,7 +14,7 @@ Build an award-calibre ecommerce theme for a South African K-beauty store. It mu
 - Ship with SEO baked in: persona-driven meta descriptions, Open Graph, and JSON-LD schema (Organization, WebSite+SearchAction, Product, BreadcrumbList, FAQPage).
 - Work out of the box with the bundled dummy data (20 products, SVG assets).
 
-Theme slug / text domain: `glow-kbeauty`. Version: `2.0.0`. Author: CloudIA.
+Theme slug / text domain: `glow-glow`. Version: `2.0.0`. Author: CloudIA.
 
 ---
 
@@ -140,7 +140,7 @@ Journey: orient (breadcrumb + STEP badge) → assess (brand, title, stars, price
 
 ### 5.1 File structure
 ```
-kbeauty-theme/
+glow-theme/
 ├── style.css                 # header + full design system (tokens, base, components)
 ├── functions.php             # setup, enqueue, routine steps, taxonomies, AJAX, helpers
 ├── inc/seo.php               # persona docs, meta, OG, JSON-LD, glow_faq_items()
@@ -188,7 +188,7 @@ kbeauty-theme/
 
 ### 5.6 Installation (document in output)
 1. Zip theme folder → WP Admin → Appearance → Themes → Upload → Activate.
-2. Ensure WooCommerce active. Run `wp eval-file wp-content/themes/kbeauty-theme/dummy-products.php`.
+2. Ensure WooCommerce active. Run `wp eval-file wp-content/themes/glow-theme/dummy-products.php`.
 3. Settings → Reading → static front page (create "Home").
 4. Create pages About, Contact, Help (slug `help` or `faq`) and assign their templates.
 5. Optionally upload `images/products/*.svg` to Media and attach as product images.

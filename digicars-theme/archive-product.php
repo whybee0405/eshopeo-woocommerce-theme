@@ -405,7 +405,7 @@ if ( $digicars_term instanceof WP_Term && ! empty( $digicars_term->name ) ) {
 			</p>
 		</header>
 
-		<?php echo do_shortcode( '[helix_search]' ); ?>
+		<?php echo do_shortcode( '[eshopeo_search]' ); ?>
 
 	</div><!-- /.container -->
 </div><!-- /.catalogue__intro -->

@@ -6,8 +6,8 @@
 
 A standalone WooCommerce theme for **Digicars Group**, a multi-brand "phygital" automotive
 marketplace in South Africa. Mirrors the architectural approach of the existing
-`kbeauty-theme/` so the same Helix AI plugin can plug in later via standard WooCommerce hooks.
-Built into a new, isolated folder `digicars-theme/` — do **not** mix with the kbeauty file tree.
+`glow-theme/` so the same Helix AI plugin can plug in later via standard WooCommerce hooks.
+Built into a new, isolated folder `digicars-theme/` — do **not** mix with the glow file tree.
 
 ---
 
@@ -71,7 +71,7 @@ workhorse, the Concierge is the signature interaction.
 - **Body/UI:** Hanken Grotesk (400/500/600/700).
 - **Data/telemetry voice:** JetBrains Mono — prices, "From R X pm", spec readouts, stock
   numbers, result counts, eyebrows, the Concierge readout.
-- **Never use** Inter, Poppins, Montserrat, or the kbeauty trio (Young Serif, Schibsted Grotesk,
+- **Never use** Inter, Poppins, Montserrat, or the glow trio (Young Serif, Schibsted Grotesk,
   Spline Sans Mono) — the two themes must not look related.
 - Type scale: `.t-hero` clamp(2.6rem→5.2rem), `.t-1` clamp(2rem→3.2rem),
   `.t-2` clamp(1.4rem→1.9rem), body 16px / 1.6.
@@ -96,7 +96,7 @@ The homepage hero is a conversational match engine, not a static banner.
 - Prompt input ("Tell us how you drive") + guided chips:
   *Under R5k pm · Family SUV · First car · EV · Bakkie for work · Trade-in welcome*.
 - Selecting chips / typing assembles a query → a live **match count** (mono) + a small stage of
-  matched vehicle cards updates beside it (the analogue of kbeauty's hero-stage swap),
+  matched vehicle cards updates beside it (the analogue of glow's hero-stage swap),
   180ms fade/translate.
 - **Works out of the box** on the local catalogue: deterministic mapping from chips/keywords to
   vehicle attributes + taxonomies, served by a theme AJAX endpoint.
@@ -115,7 +115,7 @@ but **cart/checkout is fully disabled**. Add-to-cart is replaced by: **Enquire**
 affordability**, **Apply for finance**, **Add to compare**.
 
 ### 5.1 Vehicle attribute schema (the Helix embedding substrate)
-kbeauty's attributes (actives, skin types, routine step) do **not** transfer — vehicles need a
+glow's attributes (actives, skin types, routine step) do **not** transfer — vehicles need a
 vehicle-specific set. Every `_vehicle_*` meta is registered with `register_post_meta(...,
 show_in_rest => true)` so Helix can read it through the WC/WP REST API, and the seven core facets
 are also registered as WC global product attributes (`pa_make`, `pa_model`, `pa_body`,
@@ -129,7 +129,7 @@ are also registered as WC global product attributes (`pa_make`, `pa_model`, `pa_
 - **Practicality:** doors, seats, boot_litres, towing_capacity, colour.
 - **Safety:** safety_rating (NCAP), features (structured comfort/tech/safety list).
 - **Location:** dealer, province.
-- **Helix semantic fields (no kbeauty equivalent):** `_vehicle_lifestyle_tags` (use-case tags —
+- **Helix semantic fields (no glow equivalent):** `_vehicle_lifestyle_tags` (use-case tags —
   family, commuter, first-car, off-road, fleet, luxury, performance, eco — power Concierge chips
   and give Helix intent signal) and `_vehicle_ai_summary` (a clean 2–4 sentence natural-language
   description Helix embeds; auto-composed from structured fields when absent).
@@ -137,7 +137,7 @@ are also registered as WC global product attributes (`pa_make`, `pa_model`, `pa_
 Helpers `digicars_meta($id,$key)` and `digicars_build_ai_summary($id)`.
 
 ### 5.2 Taxonomies
-- `product_cat` = **body type** (primary browse — mirrors kbeauty's routine-step categories):
+- `product_cat` = **body type** (primary browse — mirrors glow's routine-step categories):
   SUV, Hatch, Sedan, Coupe, Convertible, Double Cab, Single Cab Bakkie, MPV, Minibus/Kombi.
   (Electric is handled by the `vehicle_fuel` taxonomy, not as a body type.)
 - Custom public taxonomies: `vehicle_make`, `vehicle_condition`, `vehicle_fuel`,
@@ -197,7 +197,7 @@ Documented in `inc/seo.php`; every meta description maps to one persona's search
 
 ---
 
-## 8. Technical structure (mirrors kbeauty)
+## 8. Technical structure (mirrors glow)
 
 ```
 digicars-theme/
@@ -270,7 +270,7 @@ renders bundled in `images/` so the catalogue and Concierge work before any real
 - [ ] Helix integration seam documented; no custom `do_action` hooks; no AI branding in code.
 
 ### 8.6 Deliverables
-1. `MASTER_PROMPT_digicars.md` — the full build spec (analogous to `MASTER_PROMPT_glow-kbeauty.md`).
+1. `MASTER_PROMPT_digicars.md` — the full build spec (analogous to `MASTER_PROMPT_glow-glow.md`).
 2. The built `digicars-theme/` with generated assets and bundled dummy data.
 
 ---

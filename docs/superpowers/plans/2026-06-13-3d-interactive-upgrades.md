@@ -28,8 +28,8 @@
 ## Task 1: Enqueue Infrastructure
 
 **Files:**
-- Modify: `kbeauty-theme/functions.php` (around line 59 — `glow_enqueue`)
-- Modify: `kbeauty-theme/style.css` (append new sections)
+- Modify: `glow-theme/functions.php` (around line 59 — `glow_enqueue`)
+- Modify: `glow-theme/style.css` (append new sections)
 
 - [ ] **Step 1.1 — Add Three.js importmap to `wp_head`**
 
@@ -127,7 +127,7 @@ function glow_enqueue() {
 
 - [ ] **Step 1.4 — Append CSS for new features to `style.css`**
 
-Append this block to the END of `kbeauty-theme/style.css`:
+Append this block to the END of `glow-theme/style.css`:
 
 ```css
 /* 20. 3D & ANIMATION UPGRADES ---------------------------------------------- */
@@ -229,7 +229,7 @@ Open browser console on the site. Confirm no 404s for new JS paths (files don't 
 ## Task 2: Hero 3D Scene (`js/hero-3d.js`)
 
 **Files:**
-- Create: `kbeauty-theme/js/hero-3d.js`
+- Create: `glow-theme/js/hero-3d.js`
 
 The Three.js bottle lives inside `.hero-stage`. The static `.stage-item .stage-media` images are hidden with the `.is-3d` class. The iridescent bottle scale and rotation respond to `.rail-step` hover via `document` event delegation (matching main.js's approach).
 
@@ -392,7 +392,7 @@ Navigate to the local WordPress homepage (e.g. `http://localhost:10000` or your 
 ## Task 3: Ambient Particle Field (`js/particles.js`)
 
 **Files:**
-- Create: `kbeauty-theme/js/particles.js`
+- Create: `glow-theme/js/particles.js`
 
 A 2D canvas (NOT Three.js) particle system is simpler and cheaper for the ambient field. Uses a single `<canvas id="glow-particles">` injected into `document.body`.
 
@@ -509,7 +509,7 @@ Particles should be visible as soft white specks floating upward across the full
 ## Task 4: GSAP ScrollTrigger Reveals (`js/scroll-animations.js`)
 
 **Files:**
-- Create: `kbeauty-theme/js/scroll-animations.js`
+- Create: `glow-theme/js/scroll-animations.js`
 
 **Key detail:** This script is enqueued with `strategy:'defer'`. Deferred scripts execute in order after DOM is parsed. `glow-scroll-anim` is enqueued BEFORE `glow-main`, so it runs first. It pre-marks all `[data-reveal]` elements as `is-visible` so `main.js`'s IntersectionObserver is a no-op. GSAP then drives the visual animation independently via inline style overrides.
 
@@ -618,7 +618,7 @@ Scroll the homepage. Headings should do a clip-path wipe from right to left. Con
 ## Task 5: Lenis Smooth Scroll (`js/smooth-scroll.js`)
 
 **Files:**
-- Create: `kbeauty-theme/js/smooth-scroll.js`
+- Create: `glow-theme/js/smooth-scroll.js`
 
 - [ ] **Step 5.1 — Create `js/smooth-scroll.js`**
 
@@ -671,8 +671,8 @@ Scroll the homepage. Movement should feel weighted and have a slight deceleratio
 ## Task 6: 3D PDP Viewer (`js/pdp-3d.js` + `single-product.php`)
 
 **Files:**
-- Create: `kbeauty-theme/js/pdp-3d.js`
-- Modify: `kbeauty-theme/single-product.php` (lines 45–64 — `.pdp-gallery` block)
+- Create: `glow-theme/js/pdp-3d.js`
+- Modify: `glow-theme/single-product.php` (lines 45–64 — `.pdp-gallery` block)
 
 - [ ] **Step 6.1 — Modify `.pdp-main-image` in `single-product.php`**
 
@@ -698,7 +698,7 @@ Replace with:
                 <?php glow_product_image( $product, 'woocommerce_single' ); ?>
             </figure>
             <button class="btn-view-3d" id="glow-view-3d-btn" type="button">
-                <?php esc_html_e( 'View 3D', 'glow-kbeauty' ); ?>
+                <?php esc_html_e( 'View 3D', 'glow-glow' ); ?>
             </button>
         <?php endif; ?>
         <canvas id="glow-pdp-3d" aria-hidden="true" role="presentation"
@@ -879,7 +879,7 @@ A single product page should show either the product photo (if imported) with a 
 ## Task 7: Custom Cursor (`js/cursor.js`)
 
 **Files:**
-- Create: `kbeauty-theme/js/cursor.js`
+- Create: `glow-theme/js/cursor.js`
 
 - [ ] **Step 7.1 — Create `js/cursor.js`**
 

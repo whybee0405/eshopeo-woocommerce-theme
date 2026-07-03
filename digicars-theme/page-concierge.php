@@ -34,7 +34,7 @@ get_header();
 	<div class="container">
 		<div class="concierge-page">
 			<div class="concierge-page__inner">
-				<?php echo do_shortcode( '[helix_search]' ); ?>
+				<?php echo do_shortcode( '[eshopeo_search]' ); ?>
 			</div>
 		</div>
 	</div>

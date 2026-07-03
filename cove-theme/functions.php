@@ -570,3 +570,18 @@ $cove_import = get_theme_file_path( 'inc/admin-import.php' );
 
 if ( file_exists( $cove_seo ) ) { require_once $cove_seo; }
 if ( is_admin() && file_exists( $cove_import ) ) { require_once $cove_import; }
+
+/* -------------------------------------------------------------------------
+ * 11. Auto-create brand-kit page on theme activation
+ *     page-brand-kit.php is auto-selected by WordPress slug matching.
+ * ---------------------------------------------------------------------- */
+add_action( 'after_switch_theme', function () {
+	if ( ! get_page_by_path( 'brand-kit' ) ) {
+		wp_insert_post( array(
+			'post_title'  => 'Brand Kit',
+			'post_name'   => 'brand-kit',
+			'post_status' => 'publish',
+			'post_type'   => 'page',
+		) );
+	}
+} );

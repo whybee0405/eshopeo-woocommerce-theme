@@ -4,7 +4,7 @@
 
 **Goal:** Build a standalone, production-ready WooCommerce theme for Digicars Group — a multi-brand "phygital" SA car marketplace — in `digicars-theme/`, with an AI-Concierge signature, a no-checkout enquiry/finance funnel, generated imagery, and a Helix-ready integration seam.
 
-**Architecture:** Vehicles are WooCommerce products (so Helix can embed catalogue + attributes), but cart/checkout is fully disabled — CTAs are Enquire / Check affordability / Apply for finance / Compare. A self-contained "Concierge" discovery feature (guided chips → deterministic match over vehicle meta/taxonomies via theme AJAX) is the homepage signature, isolated behind one documented contract so Helix can later power it with no theme dependency and no custom `do_action` hooks. File structure mirrors `kbeauty-theme/`.
+**Architecture:** Vehicles are WooCommerce products (so Helix can embed catalogue + attributes), but cart/checkout is fully disabled — CTAs are Enquire / Check affordability / Apply for finance / Compare. A self-contained "Concierge" discovery feature (guided chips → deterministic match over vehicle meta/taxonomies via theme AJAX) is the homepage signature, isolated behind one documented contract so Helix can later power it with no theme dependency and no custom `do_action` hooks. File structure mirrors `glow-theme/`.
 
 **Tech Stack:** WordPress + WooCommerce, PHP, vanilla JS (no framework), CSS custom properties. Google Fonts: Archivo Expanded, Hanken Grotesk, JetBrains Mono. Imagery via higgsfield / replicate MCP. Verification via `php -l`, a `preview-digicars.php` WP-stub harness, and Playwright screenshots.
 
@@ -28,7 +28,7 @@ If `php` is not on PATH, install/locate it first; do not skip lint.
 
 **Text domain / slug:** `digicars`  ·  **Folder:** `digicars-theme/`  ·  **Version:** `1.0.0`
 
-**Vehicle attribute schema for Helix (the embedding substrate).** kbeauty's attributes do **not**
+**Vehicle attribute schema for Helix (the embedding substrate).** glow's attributes do **not**
 transfer; this is a vehicle-specific set. Every `_vehicle_*` meta MUST be registered with
 `register_post_meta(..., ['show_in_rest'=>true, 'single'=>true, ...])` so Helix can read it via the
 WooCommerce/WP REST API, and the seven core facets are **also** registered as WC global product
@@ -47,7 +47,7 @@ attributes (`pa_make`, `pa_model`, `pa_body`, `pa_condition`, `pa_fuel`, `pa_tra
   `_vehicle_towing_capacity`, `_vehicle_colour`.
 - **Safety:** `_vehicle_safety_rating` (NCAP), `_vehicle_features` (structured list: comfort/tech/safety).
 - **Location:** `_vehicle_dealer`, `_vehicle_province`.
-- **Helix semantic fields (the differentiators — kbeauty had no equivalent):**
+- **Helix semantic fields (the differentiators — glow had no equivalent):**
   - `_vehicle_lifestyle_tags` — explicit use-case tags (`family, commuter, first-car, off-road,
     fleet, luxury, performance, eco`) that power Concierge chips **and** give Helix strong intent signal.
   - `_vehicle_ai_summary` — a clean 2–4 sentence natural-language description in customer terms
@@ -104,7 +104,7 @@ only the chips/text → query-args translation; request/response shape is unchan
 
 ### Task 1.1: Author `MASTER_PROMPT_digicars.md`
 
-**Files:** Create `MASTER_PROMPT_digicars.md` (repo root), structured like `MASTER_PROMPT_glow-kbeauty.md`: §1 Brief, §2 Design system, §3 Personas, §4 Pages & journeys, §5 Technical spec, §6 Voice. Fold in every Shared Contract above verbatim so the master prompt is self-sufficient.
+**Files:** Create `MASTER_PROMPT_digicars.md` (repo root), structured like `MASTER_PROMPT_glow-glow.md`: §1 Brief, §2 Design system, §3 Personas, §4 Pages & journeys, §5 Technical spec, §6 Voice. Fold in every Shared Contract above verbatim so the master prompt is self-sufficient.
 
 - [ ] **Step 1:** Write the file using spec §1–§9 as source; ensure meta keys, taxonomies, helper signatures, AJAX actions and the Concierge contract appear exactly as locked above.
 - [ ] **Step 2:** Self-check: no AI/Helix branding in the "code" rules; no `do_action`; ZAR + SA context present.

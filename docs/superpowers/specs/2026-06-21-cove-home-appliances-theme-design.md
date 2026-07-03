@@ -2,7 +2,7 @@
 
 **Date:** 2026-06-21
 **Branch target:** `feat/cove-theme`
-**Reference themes:** `digicars-theme` (structure, taxonomies, admin importer, faceted catalogue), `kbeauty-theme` (full cart/checkout, Three.js 3D, GSAP animations, importmap pattern)
+**Reference themes:** `digicars-theme` (structure, taxonomies, admin importer, faceted catalogue), `glow-theme` (full cart/checkout, Three.js 3D, GSAP animations, importmap pattern)
 
 ---
 

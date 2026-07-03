@@ -1510,3 +1510,18 @@ if ( is_admin() ) {
 		require_once $digicars_import;
 	}
 }
+
+/* --------------------------------------------------------------------------
+ * Auto-create brand-kit page on theme activation
+ * page-brand-kit.php is auto-selected by WordPress slug matching.
+ * ------------------------------------------------------------------------ */
+add_action( 'after_switch_theme', function () {
+	if ( ! get_page_by_path( 'brand-kit' ) ) {
+		wp_insert_post( array(
+			'post_title'  => 'Brand Kit',
+			'post_name'   => 'brand-kit',
+			'post_status' => 'publish',
+			'post_type'   => 'page',
+		) );
+	}
+} );

@@ -1,16 +1,5 @@
 # Dev artifacts
 *.zip
-*.jpeg
-*.png
-preview.html
-preview.php
-preview-digicars.html
-*-output.png
 docs/
-.playwright-mcp/
-MASTER_PROMPT_*.md
 node_modules/
-
-# Deploy credentials — never commit
-.deploy-config.ps1
-deploy.log
+.agents/

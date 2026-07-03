@@ -47,7 +47,7 @@ $digicars_hero = get_theme_file_uri( 'images/hero/hero-showroom.svg' );
 				<p class="t-lead home-hero__lead"><?php esc_html_e( 'Browse verified vehicles from South Africa\'s best dealers, get a real monthly figure, and let the Concierge shortlist cars that actually match how you drive.', 'digicars' ); ?></p>
 			</div>
 
-			<?php echo do_shortcode( '[helix_search]' ); ?>
+			<?php echo do_shortcode( '[eshopeo_search]' ); ?>
 
 			<?php /* Secondary CTAs */ ?>
 			<div class="cluster home-hero__cta">

@@ -1,6 +1,6 @@
 # MASTER_PROMPT — Digicars WooCommerce Theme (v1)
 
-You are a senior WordPress/WooCommerce theme developer and design lead. Build a complete, production-ready WooCommerce theme called **Digicars** from this specification alone. Do not deviate from the design system. Do not add features not specified here. When a decision is not covered, choose the option that best serves the customer journeys in Section 4. This theme is unrelated to any other theme in this repository — it must not look like, borrow tokens from, or share fonts with the kbeauty theme.
+You are a senior WordPress/WooCommerce theme developer and design lead. Build a complete, production-ready WooCommerce theme called **Digicars** from this specification alone. Do not deviate from the design system. Do not add features not specified here. When a decision is not covered, choose the option that best serves the customer journeys in Section 4. This theme is unrelated to any other theme in this repository — it must not look like, borrow tokens from, or share fonts with the glow theme.
 
 ---
 
@@ -57,7 +57,7 @@ Orange is **signal only** — CTAs, active states, accents, used sparingly. Volt
 - **Display:** **Archivo Expanded** (700/800) — wide, engineered, automotive-strong. Headlines, accordion summaries, footer wordmark.
 - **Body/UI:** **Hanken Grotesk** (400/500/600/700).
 - **Data/telemetry voice:** **JetBrains Mono** — prices, "From R X pm", spec readouts, stock numbers, result counts, eyebrows, the Concierge readout. This is the "telemetry" voice.
-- **Never use** Inter, Poppins, Montserrat, or the kbeauty trio (Young Serif, Schibsted Grotesk, Spline Sans Mono). The two themes must not look related.
+- **Never use** Inter, Poppins, Montserrat, or the glow trio (Young Serif, Schibsted Grotesk, Spline Sans Mono). The two themes must not look related.
 
 Type scale: `.t-hero` clamp(2.6rem→5.2rem), `.t-1` clamp(2rem→3.2rem), `.t-2` clamp(1.4rem→1.9rem), body 16px / 1.6.
 
@@ -171,7 +171,7 @@ digicars-theme/
 - **Enqueue:** Google Fonts (Archivo Expanded 700/800; Hanken Grotesk 400–700; JetBrains Mono), `style.css`, `css/woocommerce.css` (only `if (class_exists('WooCommerce'))`), and the three JS files (`js/main.js`, `js/concierge.js`, `js/affordability.js`); `wp_localize_script` → **`digicarsData = {ajaxUrl, nonce}`**.
 
 #### 5.2.1 Vehicle attribute schema (the integration embedding substrate) — LOCKED
-This is a vehicle-specific set; kbeauty's attributes (actives, skin types, routine step) do **not** transfer. **Every `_vehicle_*` meta MUST be registered** with `register_post_meta('product', $key, ['show_in_rest'=>true, 'single'=>true, 'type'=>..., 'auth_callback'=>...])` so a future integration can read it via the WooCommerce/WP REST API. The **seven core facets are also** registered as WC global product attributes (`pa_make`, `pa_model`, `pa_body`, `pa_condition`, `pa_fuel`, `pa_transmission`, `pa_drivetrain`) for native filtering + REST exposure. Document this block as the integration seam — **with no plugin name in code.** Grouped:
+This is a vehicle-specific set; glow's attributes (actives, skin types, routine step) do **not** transfer. **Every `_vehicle_*` meta MUST be registered** with `register_post_meta('product', $key, ['show_in_rest'=>true, 'single'=>true, 'type'=>..., 'auth_callback'=>...])` so a future integration can read it via the WooCommerce/WP REST API. The **seven core facets are also** registered as WC global product attributes (`pa_make`, `pa_model`, `pa_body`, `pa_condition`, `pa_fuel`, `pa_transmission`, `pa_drivetrain`) for native filtering + REST exposure. Document this block as the integration seam — **with no plugin name in code.** Grouped:
 
 - **Identity:** `_vehicle_make`, `_vehicle_model`, `_vehicle_variant`, `_vehicle_year`, `_vehicle_body_type`, `_vehicle_condition` (new|demo|used), `_vehicle_stock_no`, `_vehicle_vin` (optional).
 - **Pricing & finance:** `_vehicle_price`, `_vehicle_monthly_from`, `_vehicle_availability` (in_stock|in_transit|sold).
@@ -180,7 +180,7 @@ This is a vehicle-specific set; kbeauty's attributes (actives, skin types, routi
 - **Practicality:** `_vehicle_doors`, `_vehicle_seats`, `_vehicle_boot_litres`, `_vehicle_towing_capacity`, `_vehicle_colour`.
 - **Safety:** `_vehicle_safety_rating` (NCAP), `_vehicle_features` (structured list: comfort/tech/safety).
 - **Location:** `_vehicle_dealer`, `_vehicle_province`.
-- **Semantic fields (the differentiators — kbeauty had no equivalent):**
+- **Semantic fields (the differentiators — glow had no equivalent):**
   - `_vehicle_lifestyle_tags` — explicit use-case tags (`family, commuter, first-car, off-road, fleet, luxury, performance, eco`) that power the Concierge chips **and** give a future integration strong intent signal.
   - `_vehicle_ai_summary` — a clean 2–4 sentence natural-language description in customer terms (who it suits, strengths, finance angle). This is the primary text a future integration embeds; keep it factual and persona-aware, never marketing fluff. Auto-buildable from the structured fields when absent.
 
