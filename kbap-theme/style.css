@@ -143,15 +143,10 @@ button, input, textarea, select { font: inherit; }
 }
 .site-logo { display: inline-flex; align-items: center; gap: 0.7rem; font-weight: 950; letter-spacing: -0.02em; }
 .site-logo__mark {
-	display: grid;
-	place-items: center;
 	width: 42px;
 	height: 42px;
 	border-radius: 50%;
-	background: var(--kimchi);
-	color: var(--white);
-	font-family: var(--font-display);
-	font-size: 1.05rem;
+	object-fit: contain;
 }
 .site-logo__word { font-family: var(--font-display); font-size: 1.25rem; }
 .primary-nav { display: flex; justify-content: center; gap: clamp(0.7rem, 2vw, 1.5rem); font-size: 0.93rem; font-weight: 750; }
