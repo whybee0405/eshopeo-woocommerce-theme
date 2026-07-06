@@ -15,29 +15,46 @@ $shop_url     = kbap_wc_active() && function_exists( 'wc_get_page_permalink' ) ?
 	<div class="container hero-grid">
 		<div class="hero-copy reveal">
 			<p class="eyebrow"><?php esc_html_e( 'Johannesburg Korean catering', 'kbap' ); ?></p>
-			<h1 class="t-hero"><?php esc_html_e( 'Korean food with proof behind it.', 'kbap' ); ?></h1>
-			<p class="lead"><?php esc_html_e( 'K-BAP caters Korean fried chicken, gimbap, tteokbokki, bulgogi, japchae, short rib stew, kimchi and event tables for South African guests who want the real thing.', 'kbap' ); ?></p>
+			<h1 class="t-hero"><?php esc_html_e( 'Authentic Korean catering for South African tables.', 'kbap' ); ?></h1>
+			<p class="lead"><?php esc_html_e( 'K-BAP serves Korean fried chicken, gimbap, tteokbokki, bulgogi, japchae, short rib stew and loved kimchi for events that need food people trust.', 'kbap' ); ?></p>
 			<div class="hero-cta">
 				<a class="btn btn--primary" href="<?php echo esc_url( $catering_url ); ?>"><?php esc_html_e( 'Request catering', 'kbap' ); ?></a>
 				<a class="btn" href="<?php echo esc_url( $menu_url ); ?>"><?php esc_html_e( 'Explore the menu', 'kbap' ); ?></a>
 			</div>
-			<div class="proof-strip" aria-label="<?php esc_attr_e( 'Trust proof', 'kbap' ); ?>">
-				<span><?php esc_html_e( 'Korean Embassy events', 'kbap' ); ?></span>
-				<span><?php esc_html_e( 'Korean Association events', 'kbap' ); ?></span>
-				<span><?php esc_html_e( 'Korean Cultural Centre events', 'kbap' ); ?></span>
-				<span><?php esc_html_e( 'KFFF participant', 'kbap' ); ?></span>
+			<div class="hero-proof-grid" aria-label="<?php esc_attr_e( 'K-BAP proof points', 'kbap' ); ?>">
+				<div>
+					<span><?php esc_html_e( 'Trusted by', 'kbap' ); ?></span>
+					<strong><?php esc_html_e( 'Korean institutions in South Africa', 'kbap' ); ?></strong>
+				</div>
+				<div>
+					<span><?php esc_html_e( 'Known for', 'kbap' ); ?></span>
+					<strong><?php esc_html_e( 'Fried chicken, gimbap and kimchi', 'kbap' ); ?></strong>
+				</div>
+				<div>
+					<span><?php esc_html_e( 'Growing into', 'kbap' ); ?></span>
+					<strong><?php esc_html_e( 'Kimchi, meal kits and market products', 'kbap' ); ?></strong>
+				</div>
 			</div>
 		</div>
 		<div class="hero-media reveal">
 			<img src="<?php echo esc_url( get_theme_file_uri( 'images/hero-catering.png' ) ); ?>" alt="<?php esc_attr_e( 'Korean catering spread with fried chicken, gimbap, tteokbokki, japchae and kimchi.', 'kbap' ); ?>">
-			<div class="hero-ticket">
+			<div class="hero-ticket" aria-label="<?php esc_attr_e( 'Signature catering table', 'kbap' ); ?>">
 				<div>
-					<strong><?php esc_html_e( 'Catering now, products next.', 'kbap' ); ?></strong>
-					<span><?php esc_html_e( 'K-BAP Kimchi, meal kits and local market stock are built into the shop path.', 'kbap' ); ?></span>
+					<span><?php esc_html_e( 'Signature table', 'kbap' ); ?></span>
+					<strong><?php esc_html_e( 'Chicken, gimbap, tteokbokki, japchae, bulgogi, kimchi.', 'kbap' ); ?></strong>
 				</div>
 				<a class="btn btn--primary" href="<?php echo esc_url( $shop_url ); ?>"><?php esc_html_e( 'Future shop', 'kbap' ); ?></a>
 			</div>
 		</div>
+	</div>
+</section>
+
+<section class="trust-band" aria-label="<?php esc_attr_e( 'Trusted catering proof', 'kbap' ); ?>">
+	<div class="container trust-band__inner reveal">
+		<span><?php esc_html_e( 'Korean Embassy events', 'kbap' ); ?></span>
+		<span><?php esc_html_e( 'Korean Association events', 'kbap' ); ?></span>
+		<span><?php esc_html_e( 'Korean Cultural Centre events', 'kbap' ); ?></span>
+		<span><?php esc_html_e( 'KFFF participant', 'kbap' ); ?></span>
 	</div>
 </section>
 
@@ -51,8 +68,8 @@ $shop_url     = kbap_wc_active() && function_exists( 'wc_get_page_permalink' ) ?
 			<p class="lead"><?php esc_html_e( 'The menu works for Korean guests looking for familiar flavours and South African guests meeting Korean food properly for the first time.', 'kbap' ); ?></p>
 		</div>
 		<div class="dish-grid">
-			<?php foreach ( kbap_featured_dishes() as $dish ) : ?>
-				<article class="dish-card reveal">
+			<?php foreach ( kbap_featured_dishes() as $index => $dish ) : ?>
+				<article class="dish-card <?php echo 0 === $index ? 'dish-card--feature' : ''; ?> reveal">
 					<a class="dish-card__media" href="<?php echo esc_url( $menu_url ); ?>">
 						<img src="<?php echo esc_url( get_theme_file_uri( $dish['image'] ) ); ?>" alt="<?php echo esc_attr( $dish['title'] ); ?>">
 					</a>
