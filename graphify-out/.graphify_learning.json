@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-07-06T12:30:28.891828+00:00",
+  "nodes": {
+    "agents": {
+      "code_fingerprint": "cf64c9c9ff4c189adbd97061d8e54a252149523fe16d00886024d04ce89562f4",
+      "label": "AGENTS.md",
+      "last": "2026-07-06T09:41:36.570484+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-06T09:41:36.570484+00:00",
+          "outcome": "useful",
+          "q": "Is Obra Superpowers installed for this machine and repo workflow?"
+        },
+        {
+          "date": "2026-07-06T09:34:39.822097+00:00",
+          "outcome": "useful",
+          "q": "How is Graphify configured as shared memory for this WooCommerce theme repo?"
+        }
+      ],
+      "score": 1.994477069,
+      "source_file": "AGENTS.md",
+      "status": "preferred",
+      "uses": 2
+    }
+  },
+  "version": 1
+}
