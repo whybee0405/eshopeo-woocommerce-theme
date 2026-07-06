@@ -1113,5 +1113,10 @@
     "mtime": 1783340601.8955965,
     "ast_hash": "abf50a4b050189c7858f114a913fdb7a",
     "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_123042_how_was_the_k_bap_interactive_homepage_hero_implem.md": {
+    "mtime": 1783341042.523476,
+    "ast_hash": "f5fbbaf21917f6ae4f7ff9994b9c833e",
+    "semantic_hash": ""
   }
 }

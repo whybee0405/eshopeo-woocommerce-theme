@@ -1,16 +1,16 @@
 # Graph Report - cosmetics-woocommerce-theme  (2026-07-06)
 
 ## Corpus Check
-- 144 files · ~1,317,913 words
+- 145 files · ~1,318,033 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 691 nodes · 769 edges · 142 communities (122 shown, 20 thin omitted)
+- 695 nodes · 772 edges · 143 communities (123 shown, 20 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 39 edges (avg confidence: 0.76)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4a0c65d0`
+- Built from commit: `2982754d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -75,17 +75,18 @@
 - [[_COMMUNITY_Q What was the first approved K-BAP refactor increment|Q: What was the first approved K-BAP refactor increment?]]
 - [[_COMMUNITY_Q What K-BAP refactor implementation was completed with the multi-agent method|Q: What K-BAP refactor implementation was completed with the multi-agent method?]]
 - [[_COMMUNITY_Q What did the Playwright visual review find for the K-BAP homepage and what changed|Q: What did the Playwright visual review find for the K-BAP homepage and what changed?]]
+- [[_COMMUNITY_Q How was the K-BAP interactive homepage hero implemented|Q: How was the K-BAP interactive homepage hero implemented?]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `glow_wc_active()` - 20 edges
 2. `What You Must Do When Invoked` - 12 edges
 3. `What You Must Do When Invoked` - 12 edges
-4. `digicars_seo_build_meta()` - 11 edges
-5. `/graphify` - 11 edges
-6. `digicars_json_ld()` - 10 edges
-7. `$all()` - 10 edges
-8. `init()` - 10 edges
-9. `/graphify` - 10 edges
+4. `/graphify` - 11 edges
+5. `digicars_seo_build_meta()` - 11 edges
+6. `/graphify` - 10 edges
+7. `digicars_json_ld()` - 10 edges
+8. `$all()` - 10 edges
+9. `init()` - 10 edges
 10. `5. TECHNICAL SPEC` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -103,7 +104,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (142 total, 20 thin omitted)
+## Communities (143 total, 20 thin omitted)
 
 ### Community 0 - "functions.php"
 Cohesion: 0.08
@@ -265,15 +266,19 @@ Nodes (3): Answer, Outcome, Q: What K-BAP refactor implementation was completed 
 Cohesion: 0.50
 Nodes (3): Answer, Outcome, Q: What did the Playwright visual review find for the K-BAP homepage and what changed?
 
+### Community 142 - "Q: How was the K-BAP interactive homepage hero implemented?"
+Cohesion: 0.50
+Nodes (3): Answer, Outcome, Q: How was the K-BAP interactive homepage hero implemented?
+
 ## Knowledge Gaps
-- **169 isolated node(s):** `graphify`, `Usage`, `What graphify is for`, `Step 0 - GitHub repos and multi-path merge (only if a URL or several paths)`, `Step 1 - Ensure graphify is installed` (+164 more)
+- **171 isolated node(s):** `graphify`, `Usage`, `What graphify is for`, `Step 0 - GitHub repos and multi-path merge (only if a URL or several paths)`, `Step 1 - Ensure graphify is installed` (+166 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `AGENTS.md` (2× useful, score=1.995742144)
+- `AGENTS.md` (2× useful, score=1.994477069)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -289,6 +294,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 3 inferred relationships involving `digicars_seo_build_meta()` (e.g. with `digicars_build_ai_summary()` and `digicars_meta()`) actually correct?**
   _`digicars_seo_build_meta()` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `graphify`, `Usage`, `What graphify is for` to the rest of the system?**
-  _169 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _171 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `functions.php` be split into smaller, more focused modules?**
   _Cohesion score 0.07575757575757576 - nodes in this community are weakly interconnected._

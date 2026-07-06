@@ -1,16 +1,16 @@
 # Graph Report - cosmetics-woocommerce-theme  (2026-07-06)
 
 ## Corpus Check
-- 144 files · ~1,300,907 words
+- 144 files · ~1,317,913 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 688 nodes · 762 edges · 142 communities (122 shown, 20 thin omitted)
+- 691 nodes · 769 edges · 142 communities (122 shown, 20 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 39 edges (avg confidence: 0.76)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `18006826`
+- Built from commit: `4a0c65d0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -91,14 +91,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `glow_setup_page()` --calls--> `glow_wc_active()`  [INFERRED]
   glow-theme/inc/admin-setup.php → glow-theme/functions.php
-- `cove_run_import()` --calls--> `cove_dummy_products()`  [INFERRED]
-  cove-theme/inc/admin-import.php → cove-theme/dummy-products.php
-- `digicars_render_filters()` --calls--> `digicars_body_types()`  [INFERRED]
-  digicars-theme/archive-product.php → digicars-theme/functions.php
-- `digicars_render_filters()` --calls--> `digicars_makes()`  [INFERRED]
-  digicars-theme/archive-product.php → digicars-theme/functions.php
-- `digicars_seo_build_meta()` --calls--> `digicars_meta()`  [INFERRED]
-  digicars-theme/inc/seo.php → digicars-theme/functions.php
+- `kbap_meta_tags()` --calls--> `kbap_wc_active()`  [INFERRED]
+  kbap-theme/inc/seo.php → kbap-theme/functions.php
+- `kbap_og_image()` --calls--> `kbap_wc_active()`  [INFERRED]
+  kbap-theme/inc/seo.php → kbap-theme/functions.php
+- `kbap_schema_product()` --calls--> `kbap_wc_active()`  [INFERRED]
+  kbap-theme/inc/seo.php → kbap-theme/functions.php
+- `kbap_seo_description()` --calls--> `kbap_wc_active()`  [INFERRED]
+  kbap-theme/inc/seo.php → kbap-theme/functions.php
 
 ## Import Cycles
 - None detected.
@@ -226,12 +226,12 @@ Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
 ### Community 117 - "functions.php"
-Cohesion: 0.11
-Nodes (18): kbap_enqueue(), kbap_faq_items(), kbap_menu_sections(), kbap_meta_definitions(), kbap_nav_items(), kbap_register_meta(), kbap_wc_active(), kbap_current_url() (+10 more)
+Cohesion: 0.10
+Nodes (20): kbap_enqueue(), kbap_faq_items(), kbap_hero_table_dishes(), kbap_menu_sections(), kbap_meta_definitions(), kbap_nav_items(), kbap_product_or_menu_url(), kbap_register_meta() (+12 more)
 
 ### Community 118 - "main.js"
-Cohesion: 0.54
-Nodes (7): initForms(), initHeader(), initMenu(), initMenuNav(), initReveal(), qs(), qsa()
+Cohesion: 0.50
+Nodes (8): initForms(), initHeader(), initMenu(), initMenuNav(), initReveal(), initTableHero(), qs(), qsa()
 
 ### Community 119 - "kbap_run_import"
 Cohesion: 0.38

@@ -960,13 +960,13 @@
     "semantic_hash": ""
   },
   "kbap-theme/front-page.php": {
-    "mtime": 1783338493.0566206,
-    "ast_hash": "484c58b9f511fc89b84bbb6538310c69",
+    "mtime": 1783340746.584109,
+    "ast_hash": "5995f3f2273e6cab88251fd314d3d642",
     "semantic_hash": ""
   },
   "kbap-theme/functions.php": {
-    "mtime": 1783337335.39531,
-    "ast_hash": "588dce7dd8cae2f1332dd0ef7bb5a101",
+    "mtime": 1783340624.9479208,
+    "ast_hash": "100d4fa718131edb0c0b71ddc847ab68",
     "semantic_hash": ""
   },
   "kbap-theme/header.php": {
@@ -990,8 +990,8 @@
     "semantic_hash": ""
   },
   "kbap-theme/js/main.js": {
-    "mtime": 1783333795.8666534,
-    "ast_hash": "dd9bdaa04f60d03f814fc0720bf8fbf6",
+    "mtime": 1783340560.649707,
+    "ast_hash": "ea845777ae336783a33625250d653105",
     "semantic_hash": ""
   },
   "kbap-theme/page-about.php": {
@@ -1107,6 +1107,11 @@
   "graphify-out/memory/query_20260706_115107_what_did_the_playwright_visual_review_find_for_the.md": {
     "mtime": 1783338667.4278889,
     "ast_hash": "46553d0dfd5bc5b43e40896d081f29fe",
+    "semantic_hash": ""
+  },
+  "kbap-theme/images/interactive-table.jpg": {
+    "mtime": 1783340601.8955965,
+    "ast_hash": "abf50a4b050189c7858f114a913fdb7a",
     "semantic_hash": ""
   }
 }
