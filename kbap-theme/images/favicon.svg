@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="32" fill="#b73324"/>
-  <text x="15" y="39" font-family="Arial, sans-serif" font-size="19" font-weight="900" fill="#fffaf0">KB</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="K-BAP gimbap slice">
+  <circle cx="32" cy="32" r="30" fill="#231F20"/>
+  <circle cx="32" cy="32" r="22" fill="#FAF7F2"/>
+  <path d="M27 16h10l5 14-10 6-10-6z" fill="#58A64B"/>
+  <path d="M17 35c4-8 11-9 17-4 4 4 3 10-2 14-7 5-14 0-15-10z" fill="#F25B3C"/>
+  <path d="M36 33c6-6 15-3 16 5 1 7-6 12-13 9-5-3-7-10-3-14z" fill="#9B6546"/>
+  <circle cx="32" cy="32" r="7" fill="#E8E5E0"/>
 </svg>
