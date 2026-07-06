@@ -123,6 +123,70 @@
     });
   }
 
+  function initTableHero() {
+    var root = qs('[data-table-hero]');
+    if (!root) {
+      return;
+    }
+
+    var panel = qs('[data-dish-panel]', root);
+    if (!panel) {
+      return;
+    }
+
+    var title = qs('[data-dish-title]', panel);
+    var desc = qs('[data-dish-desc]', panel);
+    var price = qs('[data-dish-price]', panel);
+    var meta = qs('[data-dish-meta]', panel);
+    var link = qs('[data-dish-link]', panel);
+    var controls = qsa('[data-dish-hotspot], [data-dish-rail]', root);
+    var resetTimer = null;
+
+    function setActive(control) {
+      if (!control) {
+        return;
+      }
+
+      controls.forEach(function (item) {
+        item.classList.toggle('is-active', item.getAttribute('data-dish-id') === control.getAttribute('data-dish-id'));
+      });
+
+      panel.classList.add('is-updating');
+      window.clearTimeout(resetTimer);
+      resetTimer = window.setTimeout(function () {
+        panel.classList.remove('is-updating');
+      }, 140);
+
+      if (title) {
+        title.textContent = control.getAttribute('data-title') || '';
+      }
+      if (desc) {
+        desc.textContent = control.getAttribute('data-desc') || '';
+      }
+      if (price) {
+        price.textContent = control.getAttribute('data-price') || '';
+      }
+      if (meta) {
+        meta.textContent = control.getAttribute('data-meta') || '';
+      }
+      if (link) {
+        link.setAttribute('href', control.getAttribute('href') || '#');
+      }
+    }
+
+    controls.forEach(function (control) {
+      control.addEventListener('mouseenter', function () {
+        setActive(control);
+      });
+      control.addEventListener('focus', function () {
+        setActive(control);
+      });
+      control.addEventListener('touchstart', function () {
+        setActive(control);
+      }, { passive: true });
+    });
+  }
+
   function initForms() {
     qsa('[data-kbap-form]').forEach(function (form) {
       form.addEventListener('submit', function (event) {
@@ -174,6 +238,7 @@
     initMenu();
     initReveal();
     initMenuNav();
+    initTableHero();
     initForms();
   });
 }());

@@ -9,42 +9,71 @@ get_header();
 $menu_url     = home_url( '/menu/' );
 $catering_url = home_url( '/catering/' );
 $shop_url     = kbap_wc_active() && function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'shop' ) : home_url( '/shop/' );
+$hero_dishes  = kbap_hero_table_dishes();
 ?>
 
-<section class="hero">
-	<div class="container hero-grid">
-		<div class="hero-copy reveal">
+<section class="hero hero--table" data-table-hero>
+	<div class="container table-hero">
+		<div class="table-hero__copy reveal">
 			<p class="eyebrow"><?php esc_html_e( 'Johannesburg Korean catering', 'kbap' ); ?></p>
-			<h1 class="t-hero"><?php esc_html_e( 'Authentic Korean catering for South African tables.', 'kbap' ); ?></h1>
-			<p class="lead"><?php esc_html_e( 'K-BAP serves Korean fried chicken, gimbap, tteokbokki, bulgogi, japchae, short rib stew and loved kimchi for events that need food people trust.', 'kbap' ); ?></p>
+			<h1 class="t-hero"><?php esc_html_e( 'Meet the table before you book it.', 'kbap' ); ?></h1>
+			<p class="lead"><?php esc_html_e( 'Tap or hover over the dishes to see serving notes, starting prices and what belongs on a K-BAP catering table.', 'kbap' ); ?></p>
 			<div class="hero-cta">
 				<a class="btn btn--primary" href="<?php echo esc_url( $catering_url ); ?>"><?php esc_html_e( 'Request catering', 'kbap' ); ?></a>
 				<a class="btn" href="<?php echo esc_url( $menu_url ); ?>"><?php esc_html_e( 'Explore the menu', 'kbap' ); ?></a>
 			</div>
-			<div class="hero-proof-grid" aria-label="<?php esc_attr_e( 'K-BAP proof points', 'kbap' ); ?>">
-				<div>
-					<span><?php esc_html_e( 'Trusted by', 'kbap' ); ?></span>
-					<strong><?php esc_html_e( 'Korean institutions in South Africa', 'kbap' ); ?></strong>
-				</div>
-				<div>
-					<span><?php esc_html_e( 'Known for', 'kbap' ); ?></span>
-					<strong><?php esc_html_e( 'Fried chicken, gimbap and kimchi', 'kbap' ); ?></strong>
-				</div>
-				<div>
-					<span><?php esc_html_e( 'Growing into', 'kbap' ); ?></span>
-					<strong><?php esc_html_e( 'Kimchi, meal kits and market products', 'kbap' ); ?></strong>
-				</div>
-			</div>
 		</div>
-		<div class="hero-media reveal">
-			<img src="<?php echo esc_url( get_theme_file_uri( 'images/hero-catering.png' ) ); ?>" alt="<?php esc_attr_e( 'Korean catering spread with fried chicken, gimbap, tteokbokki, japchae and kimchi.', 'kbap' ); ?>">
-			<div class="hero-ticket" aria-label="<?php esc_attr_e( 'Signature catering table', 'kbap' ); ?>">
-				<div>
-					<span><?php esc_html_e( 'Signature table', 'kbap' ); ?></span>
-					<strong><?php esc_html_e( 'Chicken, gimbap, tteokbokki, japchae, bulgogi, kimchi.', 'kbap' ); ?></strong>
-				</div>
-				<a class="btn btn--primary" href="<?php echo esc_url( $shop_url ); ?>"><?php esc_html_e( 'Future shop', 'kbap' ); ?></a>
+
+		<div class="table-stage reveal">
+			<div class="table-stage__image">
+				<img src="<?php echo esc_url( get_theme_file_uri( 'images/interactive-table.jpg' ) ); ?>" alt="<?php esc_attr_e( 'Overhead Korean catering table with fried chicken, gimbap, samgak gimbap, tteokbokki, japchae, bulgogi, short rib stew and kimchi.', 'kbap' ); ?>">
+				<?php foreach ( $hero_dishes as $index => $dish ) : ?>
+					<a
+						class="dish-hotspot <?php echo 0 === $index ? 'is-active' : ''; ?>"
+						href="<?php echo esc_url( $dish['url'] ); ?>"
+						style="--x: <?php echo esc_attr( $dish['x'] ); ?>%; --y: <?php echo esc_attr( $dish['y'] ); ?>%;"
+						data-dish-hotspot
+						data-dish-id="<?php echo esc_attr( $dish['id'] ); ?>"
+						data-title="<?php echo esc_attr( $dish['title'] ); ?>"
+						data-desc="<?php echo esc_attr( $dish['desc'] ); ?>"
+						data-price="<?php echo esc_attr( $dish['price'] ); ?>"
+						data-meta="<?php echo esc_attr( $dish['meta'] ); ?>"
+						aria-describedby="hero-dish-panel"
+					>
+						<span><?php echo esc_html( $index + 1 ); ?></span>
+						<span class="screen-reader-text"><?php echo esc_html( $dish['title'] ); ?></span>
+					</a>
+				<?php endforeach; ?>
 			</div>
+
+			<aside class="dish-panel" id="hero-dish-panel" data-dish-panel aria-live="polite">
+				<p class="dish-panel__kicker"><?php esc_html_e( 'On the table', 'kbap' ); ?></p>
+				<h2 data-dish-title><?php echo esc_html( $hero_dishes[0]['title'] ); ?></h2>
+				<p data-dish-desc><?php echo esc_html( $hero_dishes[0]['desc'] ); ?></p>
+				<div class="dish-panel__meta">
+					<span data-dish-price><?php echo esc_html( $hero_dishes[0]['price'] ); ?></span>
+					<span data-dish-meta><?php echo esc_html( $hero_dishes[0]['meta'] ); ?></span>
+				</div>
+				<a class="dish-panel__link" href="<?php echo esc_url( $hero_dishes[0]['url'] ); ?>" data-dish-link><?php esc_html_e( 'View details', 'kbap' ); ?></a>
+			</aside>
+		</div>
+
+		<div class="dish-rail reveal" aria-label="<?php esc_attr_e( 'Signature dishes', 'kbap' ); ?>">
+			<?php foreach ( $hero_dishes as $index => $dish ) : ?>
+				<a
+					class="dish-rail__item <?php echo 0 === $index ? 'is-active' : ''; ?>"
+					href="<?php echo esc_url( $dish['url'] ); ?>"
+					data-dish-rail
+					data-dish-id="<?php echo esc_attr( $dish['id'] ); ?>"
+					data-title="<?php echo esc_attr( $dish['title'] ); ?>"
+					data-desc="<?php echo esc_attr( $dish['desc'] ); ?>"
+					data-price="<?php echo esc_attr( $dish['price'] ); ?>"
+					data-meta="<?php echo esc_attr( $dish['meta'] ); ?>"
+				>
+					<span><?php echo esc_html( $dish['title'] ); ?></span>
+					<strong><?php echo esc_html( $dish['price'] ); ?></strong>
+				</a>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>

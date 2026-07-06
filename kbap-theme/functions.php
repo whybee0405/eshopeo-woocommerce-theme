@@ -158,6 +158,102 @@ function kbap_featured_dishes() {
 	);
 }
 
+function kbap_product_or_menu_url( $product_slug, $menu_anchor ) {
+	if ( kbap_wc_active() ) {
+		$product = get_page_by_path( $product_slug, OBJECT, 'product' );
+		if ( $product ) {
+			return get_permalink( $product );
+		}
+	}
+
+	return home_url( '/menu/#' . ltrim( $menu_anchor, '#' ) );
+}
+
+function kbap_hero_table_dishes() {
+	return array(
+		array(
+			'id'     => 'fried-chicken',
+			'title'  => __( 'Korean Fried Chicken', 'kbap' ),
+			'desc'   => __( 'Double-fried chicken with soy garlic or yangnyeom glaze, built for event trays.', 'kbap' ),
+			'price'  => __( 'from R145', 'kbap' ),
+			'meta'   => __( 'party trays, mild to medium', 'kbap' ),
+			'x'      => 49,
+			'y'      => 43,
+			'url'    => kbap_product_or_menu_url( 'korean-fried-chicken-party-tray', 'chicken' ),
+		),
+		array(
+			'id'     => 'gimbap',
+			'title'  => __( 'Classic Gimbap', 'kbap' ),
+			'desc'   => __( 'Rice, seaweed, vegetables and savoury fillings, sliced for sharing.', 'kbap' ),
+			'price'  => __( 'from R88', 'kbap' ),
+			'meta'   => __( 'platters, lunch friendly', 'kbap' ),
+			'x'      => 34,
+			'y'      => 72,
+			'url'    => kbap_product_or_menu_url( 'classic-gimbap-platter', 'gimbap' ),
+		),
+		array(
+			'id'     => 'samgak',
+			'title'  => __( 'Samgak Gimbap', 'kbap' ),
+			'desc'   => __( 'Triangle rice pockets with kimchi tuna or bulgogi filling for markets and lunch boxes.', 'kbap' ),
+			'price'  => __( 'from R48', 'kbap' ),
+			'meta'   => __( 'new hit, portable', 'kbap' ),
+			'x'      => 67,
+			'y'      => 16,
+			'url'    => kbap_product_or_menu_url( 'kimchi-tuna-samgak-gimbap-box', 'gimbap' ),
+		),
+		array(
+			'id'     => 'tteokbokki',
+			'title'  => __( 'Tteokbokki Tray', 'kbap' ),
+			'desc'   => __( 'Chewy rice cakes in warm gochujang sauce with fish cake and spring onion.', 'kbap' ),
+			'price'  => __( 'quote', 'kbap' ),
+			'meta'   => __( 'catering tray, medium heat', 'kbap' ),
+			'x'      => 13,
+			'y'      => 67,
+			'url'    => kbap_product_or_menu_url( 'tteokbokki-catering-tray', 'street' ),
+		),
+		array(
+			'id'     => 'japchae',
+			'title'  => __( 'Japchae', 'kbap' ),
+			'desc'   => __( 'Sweet potato noodles with vegetables, sesame oil and optional beef.', 'kbap' ),
+			'price'  => __( 'from R118', 'kbap' ),
+			'meta'   => __( 'vegetarian option', 'kbap' ),
+			'x'      => 15,
+			'y'      => 18,
+			'url'    => kbap_product_or_menu_url( 'japchae-noodle-tray', 'mains' ),
+		),
+		array(
+			'id'     => 'bulgogi',
+			'title'  => __( 'Bulgogi Beef', 'kbap' ),
+			'desc'   => __( 'Thin-sliced beef with pear-soy marinade, onion, spring onion and sesame.', 'kbap' ),
+			'price'  => __( 'from R165', 'kbap' ),
+			'meta'   => __( 'signature main', 'kbap' ),
+			'x'      => 84,
+			'y'      => 43,
+			'url'    => kbap_product_or_menu_url( 'bulgogi-beef-meal-kit', 'mains' ),
+		),
+		array(
+			'id'     => 'short-rib',
+			'title'  => __( 'Korean Short Rib Stew', 'kbap' ),
+			'desc'   => __( 'Slow-braised short rib, radish, potato and soy broth for fuller tables.', 'kbap' ),
+			'price'  => __( 'quote', 'kbap' ),
+			'meta'   => __( 'event special', 'kbap' ),
+			'x'      => 66,
+			'y'      => 74,
+			'url'    => kbap_product_or_menu_url( 'korean-short-rib-stew-kit', 'mains' ),
+		),
+		array(
+			'id'     => 'kimchi',
+			'title'  => __( 'K-BAP Kimchi', 'kbap' ),
+			'desc'   => __( 'House napa cabbage kimchi for rice, stews, fried chicken and everyday meals.', 'kbap' ),
+			'price'  => __( 'from R75', 'kbap' ),
+			'meta'   => __( 'future online product', 'kbap' ),
+			'x'      => 93,
+			'y'      => 12,
+			'url'    => kbap_product_or_menu_url( 'kbap-kimchi-500g', 'kimchi' ),
+		),
+	);
+}
+
 function kbap_catering_packages() {
 	return array(
 		array(
