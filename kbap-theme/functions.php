@@ -42,7 +42,7 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 function kbap_enqueue() {
 	wp_enqueue_style(
 		'kbap-fonts',
-		'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Manrope:wght@400..900&family=Noto+Sans+KR:wght@500;700;900&display=swap',
+		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap',
 		array(),
 		null
 	);
@@ -79,7 +79,7 @@ add_action( 'wp_head', 'kbap_js_flag', 0 );
 
 function kbap_logo() {
 	?>
-	<span class="site-logo__mark" aria-hidden="true">KB</span>
+	<img class="site-logo__mark" src="<?php echo esc_url( get_theme_file_uri( 'images/favicon.svg' ) ); ?>" alt="" aria-hidden="true">
 	<span class="site-logo__word">K-BAP</span>
 	<?php
 }
