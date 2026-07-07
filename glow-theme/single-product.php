@@ -102,29 +102,37 @@ while ( have_posts() ) :
 
 					<?php if ( $product->get_short_description() ) : ?>
 						<div class="pdp-callout">
+							<p class="pdp-panel-label mono"><?php esc_html_e( 'Why this product', 'glow-glow' ); ?></p>
 							<?php echo wp_kses_post( wpautop( $product->get_short_description() ) ); ?>
 						</div>
 					<?php endif; ?>
 
-					<?php if ( $glow_actives ) : ?>
-						<div class="pdp-chips">
-							<h2 class="filter-label mono"><?php esc_html_e( 'Actives', 'glow-glow' ); ?></h2>
-							<ul class="chip-list">
-								<?php foreach ( array_map( 'trim', explode( ',', $glow_actives ) ) as $glow_active ) : ?>
-									<li class="chip"><?php echo esc_html( $glow_active ); ?></li>
-								<?php endforeach; ?>
-							</ul>
-						</div>
-					<?php endif; ?>
+					<?php if ( $glow_actives || $glow_fits || $glow_step ) : ?>
+						<div class="pdp-clarity-strip" aria-label="<?php esc_attr_e( 'Product fit summary', 'glow-glow' ); ?>">
+							<?php if ( $glow_fits ) : ?>
+								<div class="pdp-clarity-item">
+									<h2 class="filter-label mono"><?php esc_html_e( 'Skin fit', 'glow-glow' ); ?></h2>
+									<p><?php echo esc_html( $glow_fits ); ?></p>
+								</div>
+							<?php endif; ?>
 
-					<?php if ( $glow_fits ) : ?>
-						<div class="pdp-chips">
-							<h2 class="filter-label mono"><?php esc_html_e( 'Skin fit', 'glow-glow' ); ?></h2>
-							<ul class="chip-list">
-								<?php foreach ( array_map( 'trim', explode( ',', $glow_fits ) ) as $glow_fit ) : ?>
-									<li class="chip"><?php echo esc_html( $glow_fit ); ?></li>
-								<?php endforeach; ?>
-							</ul>
+							<?php if ( $glow_actives ) : ?>
+								<div class="pdp-clarity-item">
+									<h2 class="filter-label mono"><?php esc_html_e( 'Key ingredients', 'glow-glow' ); ?></h2>
+									<ul class="chip-list">
+										<?php foreach ( array_map( 'trim', explode( ',', $glow_actives ) ) as $glow_active ) : ?>
+											<li class="chip"><?php echo esc_html( $glow_active ); ?></li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
+							<?php endif; ?>
+
+							<?php if ( $glow_step ) : ?>
+								<div class="pdp-clarity-item">
+									<h2 class="filter-label mono"><?php esc_html_e( 'Daily care step', 'glow-glow' ); ?></h2>
+									<p><?php echo esc_html( sprintf( '%s %s', $glow_step['no'], $glow_step['name'] ) ); ?></p>
+								</div>
+							<?php endif; ?>
 						</div>
 					<?php endif; ?>
 
@@ -136,12 +144,14 @@ while ( have_posts() ) :
 					<?php endif; ?>
 
 					<div class="pdp-buy-panel">
+						<?php add_filter( 'woocommerce_product_single_add_to_cart_text', 'glow_pdp_add_to_routine_text', 20 ); ?>
 						<?php woocommerce_template_single_add_to_cart(); ?>
+						<?php remove_filter( 'woocommerce_product_single_add_to_cart_text', 'glow_pdp_add_to_routine_text', 20 ); ?>
 
 						<ul class="assurance">
-							<li><?php esc_html_e( 'Ships from Joburg within one working day', 'glow-glow' ); ?></li>
-							<li><?php esc_html_e( 'Free delivery over R500, tracked everywhere', 'glow-glow' ); ?></li>
-							<li><?php esc_html_e( 'Reacted to it? We refund opened products', 'glow-glow' ); ?></li>
+							<li><?php esc_html_e( 'Authentic Korean skincare, batch records kept', 'glow-glow' ); ?></li>
+							<li><?php esc_html_e( 'Ships from Joburg with tracked delivery', 'glow-glow' ); ?></li>
+							<li><?php esc_html_e( 'Need help choosing? Ask before you buy', 'glow-glow' ); ?></li>
 						</ul>
 					</div>
 

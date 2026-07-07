@@ -23,7 +23,7 @@ if ( is_search() ) {
 } elseif ( $glow_term && ! empty( $glow_term->description ) ) {
 	$glow_intro = $glow_term->description;
 } elseif ( ! is_tax() ) {
-	$glow_intro = __( 'Everything we stock, in routine order. Filter by step, skin type or concern — or search by ingredient if you already know what you\'re after.', 'glow-glow' );
+	$glow_intro = __( 'Modern Korean skincare, curated by skin need, ingredient and daily care step. Use filters when you want structure, or search when you already know what your skin is asking for.', 'glow-glow' );
 }
 
 $glow_total = (int) $GLOBALS['wp_query']->found_posts;

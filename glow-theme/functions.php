@@ -457,6 +457,13 @@ function glow_wc_adjustments() {
 add_action( 'init', 'glow_wc_adjustments' );
 
 /**
+ * Single-product CTA wording for the v2 Korean skincare flow.
+ */
+function glow_pdp_add_to_routine_text() {
+	return __( 'Add to routine', 'glow-glow' );
+}
+
+/**
  * Live cart count in the header, kept fresh by WooCommerce fragments.
  */
 function glow_cart_count_fragment( $fragments ) {
@@ -696,6 +703,11 @@ function glow_footer_columns() {
 			array( __( 'My account', 'glow-glow' ), glow_wc_active() ? wc_get_page_permalink( 'myaccount' ) : home_url( '/' ) ),
 			array( __( 'Cart', 'glow-glow' ), glow_wc_active() ? wc_get_cart_url() : home_url( '/' ) ),
 		),
+		__( 'Policies', 'glow-glow' ) => array(
+			array( __( 'Privacy Policy', 'glow-glow' ), home_url( '/privacy-policy/' ) ),
+			array( __( 'Refunds Policy', 'glow-glow' ), home_url( '/refunds-policy/' ) ),
+			array( __( 'Terms of Service', 'glow-glow' ), home_url( '/terms-of-service/' ) ),
+		),
 	);
 }
 
@@ -772,16 +784,42 @@ add_action( 'wp_head', 'glow_elementor_widget_css', 5 );
 require get_template_directory() . '/inc/seo.php';
 
 /* --------------------------------------------------------------------------
- * Auto-create brand-kit page on theme activation
- * page-brand-kit.php is auto-selected by WordPress slug matching.
+ * Ensure theme-managed pages exist.
+ * page-{slug}.php is auto-selected by WordPress slug matching.
  * ------------------------------------------------------------------------ */
-add_action( 'after_switch_theme', function () {
-	if ( ! get_page_by_path( 'brand-kit' ) ) {
-		wp_insert_post( array(
-			'post_title'  => 'Brand Kit',
-			'post_name'   => 'brand-kit',
-			'post_status' => 'publish',
-			'post_type'   => 'page',
-		) );
+function glow_ensure_static_page( $slug, $title ) {
+	$page = get_page_by_path( $slug, OBJECT, 'page' );
+
+	if ( $page instanceof WP_Post ) {
+		if ( 'publish' !== $page->post_status ) {
+			wp_update_post( array(
+				'ID'          => $page->ID,
+				'post_status' => 'publish',
+			) );
+		}
+
+		return;
 	}
-} );
+
+	wp_insert_post( array(
+		'post_title'  => $title,
+		'post_name'   => $slug,
+		'post_status' => 'publish',
+		'post_type'   => 'page',
+	) );
+}
+
+function glow_ensure_theme_pages() {
+	$pages = array(
+		'brand-kit'        => 'Brand Kit',
+		'privacy-policy'   => 'Privacy Policy',
+		'refunds-policy'   => 'Refunds Policy',
+		'terms-of-service' => 'Terms of Service',
+	);
+
+	foreach ( $pages as $slug => $title ) {
+		glow_ensure_static_page( $slug, $title );
+	}
+}
+add_action( 'after_switch_theme', 'glow_ensure_theme_pages' );
+add_action( 'admin_init', 'glow_ensure_theme_pages' );

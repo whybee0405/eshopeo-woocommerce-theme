@@ -44,8 +44,8 @@ function glow_customizer_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'glow_hero_shortcode',
 		array(
-			'label'       => __( 'Shortcode above hero', 'glow-glow' ),
-			'description' => __( 'Leave blank to hide. Example: [eshopeo_search]', 'glow-glow' ),
+			'label'       => __( 'Hero search shortcode', 'glow-glow' ),
+			'description' => __( 'Renders inside the homepage hero. Leave blank to hide. Example: [eshopeo_search]', 'glow-glow' ),
 			'section'     => 'glow_homepage',
 			'type'        => 'text',
 		)

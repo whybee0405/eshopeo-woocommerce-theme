@@ -141,6 +141,18 @@ function glow_meta_description() {
 		return __( 'Talk to a person about your skin — WhatsApp, email, or Korean-language consultation. Johannesburg-based, replies within one working day, SAST hours.', 'glow-glow' );
 	}
 
+	if ( is_page_template( 'page-privacy-policy.php' ) ) {
+		return __( 'How Glow collects, uses and protects personal information for Korean skincare orders, accounts, delivery, support, cookies and marketing in South Africa.', 'glow-glow' );
+	}
+
+	if ( is_page_template( 'page-refunds-policy.php' ) ) {
+		return __( 'Glow returns and refunds for unopened skincare, online cooling-off returns, damaged parcels, incorrect items and genuine skin reactions.', 'glow-glow' );
+	}
+
+	if ( is_page_template( 'page-terms-of-service.php' ) ) {
+		return __( 'The terms for using Glow, placing skincare orders, receiving routine guidance, payments, delivery, accounts, returns and acceptable website use.', 'glow-glow' );
+	}
+
 	if ( is_search() ) {
 		return sprintf(
 			/* translators: %s: search query. */

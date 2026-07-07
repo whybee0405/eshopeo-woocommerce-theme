@@ -1,16 +1,16 @@
-# Graph Report - cosmetics-woocommerce-theme  (2026-07-06)
+# Graph Report - cosmetics-woocommerce-theme  (2026-07-07)
 
 ## Corpus Check
-- 145 files · ~1,318,033 words
+- 164 files · ~1,509,555 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 695 nodes · 772 edges · 143 communities (123 shown, 20 thin omitted)
+- 754 nodes · 813 edges · 162 communities (142 shown, 20 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 39 edges (avg confidence: 0.76)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2982754d`
+- Built from commit: `a8b987c3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -76,43 +76,51 @@
 - [[_COMMUNITY_Q What K-BAP refactor implementation was completed with the multi-agent method|Q: What K-BAP refactor implementation was completed with the multi-agent method?]]
 - [[_COMMUNITY_Q What did the Playwright visual review find for the K-BAP homepage and what changed|Q: What did the Playwright visual review find for the K-BAP homepage and what changed?]]
 - [[_COMMUNITY_Q How was the K-BAP interactive homepage hero implemented|Q: How was the K-BAP interactive homepage hero implemented?]]
+- [[_COMMUNITY_Q Why did brand-kit 404 in glow-theme|Q: Why did /brand-kit 404 in glow-theme?]]
+- [[_COMMUNITY_GLOW Brand Kit Guidelines|GLOW Brand Kit Guidelines]]
+- [[_COMMUNITY_Q What is the Glow brand refactor v2 direction|Q: What is the Glow brand refactor v2 direction?]]
+- [[_COMMUNITY_Q What changed in the Glow v2 product-card and shop archive increment|Q: What changed in the Glow v2 product-card and shop archive increment?]]
+- [[_COMMUNITY_Q What changed in the Glow v2 PDP increment|Q: What changed in the Glow v2 PDP increment?]]
+- [[_COMMUNITY_Q What changed in the Glow hero correction after adding eShopeo search|Q: What changed in the Glow hero correction after adding eShopeo search?]]
+- [[_COMMUNITY_Q How should Glow hero height be reduced without changing the animated product slider size|Q: How should Glow hero height be reduced without changing the animated product slider size?]]
+- [[_COMMUNITY_Q What policy pages were added for Glow ecommerce|Q: What policy pages were added for Glow ecommerce?]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `glow_wc_active()` - 20 edges
-2. `What You Must Do When Invoked` - 12 edges
+2. `GLOW Brand Kit Guidelines` - 16 edges
 3. `What You Must Do When Invoked` - 12 edges
-4. `/graphify` - 11 edges
+4. `What You Must Do When Invoked` - 12 edges
 5. `digicars_seo_build_meta()` - 11 edges
-6. `/graphify` - 10 edges
+6. `/graphify` - 11 edges
 7. `digicars_json_ld()` - 10 edges
 8. `$all()` - 10 edges
 9. `init()` - 10 edges
-10. `5. TECHNICAL SPEC` - 9 edges
+10. `/graphify` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `glow_setup_page()` --calls--> `glow_wc_active()`  [INFERRED]
   glow-theme/inc/admin-setup.php → glow-theme/functions.php
-- `kbap_meta_tags()` --calls--> `kbap_wc_active()`  [INFERRED]
-  kbap-theme/inc/seo.php → kbap-theme/functions.php
-- `kbap_og_image()` --calls--> `kbap_wc_active()`  [INFERRED]
-  kbap-theme/inc/seo.php → kbap-theme/functions.php
-- `kbap_schema_product()` --calls--> `kbap_wc_active()`  [INFERRED]
-  kbap-theme/inc/seo.php → kbap-theme/functions.php
-- `kbap_seo_description()` --calls--> `kbap_wc_active()`  [INFERRED]
-  kbap-theme/inc/seo.php → kbap-theme/functions.php
+- `digicars_render_filters()` --calls--> `digicars_body_types()`  [INFERRED]
+  digicars-theme/archive-product.php → digicars-theme/functions.php
+- `digicars_render_filters()` --calls--> `digicars_makes()`  [INFERRED]
+  digicars-theme/archive-product.php → digicars-theme/functions.php
+- `glow_jsonld()` --calls--> `glow_wc_active()`  [INFERRED]
+  glow-theme/inc/seo.php → glow-theme/functions.php
+- `glow_meta_description()` --calls--> `glow_wc_active()`  [INFERRED]
+  glow-theme/inc/seo.php → glow-theme/functions.php
 
 ## Import Cycles
 - None detected.
 
-## Communities (143 total, 20 thin omitted)
+## Communities (162 total, 20 thin omitted)
 
 ### Community 0 - "functions.php"
-Cohesion: 0.08
-Nodes (23): glow_enqueue(), glow_footer_columns(), glow_meta(), glow_primary_menu_fallback(), glow_product_badges(), glow_product_image(), glow_quick_add(), glow_routine_rail() (+15 more)
+Cohesion: 0.07
+Nodes (25): glow_enqueue(), glow_ensure_static_page(), glow_ensure_theme_pages(), glow_footer_columns(), glow_meta(), glow_primary_menu_fallback(), glow_product_badges(), glow_product_image() (+17 more)
 
 ### Community 1 - "functions.php"
 Cohesion: 0.08
-Nodes (18): checked(), digicars_filter_val(), digicars_render_filters(), digicars_shop_base_url(), sanitize_html_class(), selected(), digicars_ajax_concierge_match(), digicars_apply_catalogue_filters() (+10 more)
+Nodes (35): digicars_ajax_concierge_match(), digicars_apply_catalogue_filters(), digicars_body_types(), digicars_build_ai_summary(), digicars_concierge_chips(), digicars_join_list(), digicars_keyword_match_ids(), digicars_makes() (+27 more)
 
 ### Community 2 - "5. TECHNICAL SPEC"
 Cohesion: 0.06
@@ -135,8 +143,8 @@ Cohesion: 0.08
 Nodes (24): 1. PROJECT BRIEF, 2.1 Concept, 2.2 The signature element: The Routine Rail, 2.3 Palette — drawn from Korean skincare ingredients (rice water, mugwort, yuja citron, seafoam algae, clay). NOT the pink/mint K-beauty cliché., 2.4 Typography (Google Fonts), 2.5 Cultural grounding, 2.6 Layout & motion rules, 2. DESIGN SYSTEM (non-negotiable) (+16 more)
 
 ### Community 7 - "seo.php"
-Cohesion: 0.21
-Nodes (23): digicars_build_ai_summary(), digicars_meta(), digicars_monthly_from(), digicars_faq_items(), digicars_json_ld(), digicars_meta_tags(), digicars_seo_blogposting_schema(), digicars_seo_breadcrumb() (+15 more)
+Cohesion: 0.52
+Nodes (6): checked(), digicars_filter_val(), digicars_render_filters(), digicars_shop_base_url(), sanitize_html_class(), selected()
 
 ### Community 8 - "functions.php"
 Cohesion: 0.09
@@ -270,30 +278,62 @@ Nodes (3): Answer, Outcome, Q: What did the Playwright visual review find for th
 Cohesion: 0.50
 Nodes (3): Answer, Outcome, Q: How was the K-BAP interactive homepage hero implemented?
 
+### Community 144 - "Q: Why did /brand-kit 404 in glow-theme?"
+Cohesion: 0.50
+Nodes (3): Answer, Outcome, Q: Why did /brand-kit 404 in glow-theme?
+
+### Community 145 - "GLOW Brand Kit Guidelines"
+Cohesion: 0.12
+Nodes (16): Brand Position, Color System, Core Values, Developer Reference, Emotional Position, GLOW Brand Kit Guidelines, Homepage Direction, Iconography (+8 more)
+
+### Community 148 - "Q: What is the Glow brand refactor v2 direction?"
+Cohesion: 0.50
+Nodes (3): Answer, Outcome, Q: What is the Glow brand refactor v2 direction?
+
+### Community 150 - "Q: What changed in the Glow v2 product-card and shop archive increment?"
+Cohesion: 0.50
+Nodes (3): Answer, Outcome, Q: What changed in the Glow v2 product-card and shop archive increment?
+
+### Community 152 - "Q: What changed in the Glow v2 PDP increment?"
+Cohesion: 0.50
+Nodes (3): Answer, Outcome, Q: What changed in the Glow v2 PDP increment?
+
+### Community 153 - "Q: What changed in the Glow hero correction after adding eShopeo search?"
+Cohesion: 0.50
+Nodes (3): Answer, Outcome, Q: What changed in the Glow hero correction after adding eShopeo search?
+
+### Community 154 - "Q: How should Glow hero height be reduced without changing the animated product slider size?"
+Cohesion: 0.50
+Nodes (3): Answer, Outcome, Q: How should Glow hero height be reduced without changing the animated product slider size?
+
+### Community 155 - "Q: What policy pages were added for Glow ecommerce?"
+Cohesion: 0.50
+Nodes (3): Answer, Outcome, Q: What policy pages were added for Glow ecommerce?
+
 ## Knowledge Gaps
-- **171 isolated node(s):** `graphify`, `Usage`, `What graphify is for`, `Step 0 - GitHub repos and multi-path merge (only if a URL or several paths)`, `Step 1 - Ensure graphify is installed` (+166 more)
+- **200 isolated node(s):** `Brand Position`, `Core Values`, `Emotional Position`, `Personality`, `Language` (+195 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `AGENTS.md` (2× useful, score=1.994477069)
+- `AGENTS.md` (2× useful, score=1.983723558)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `glow_wc_active()` connect `functions.php` to `Glow_Sourcing_Split_Widget`, `Glow_Best_Sellers_Widget`, `Glow_Ingredient_Index_Widget`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `Glow_Hero_Stage_Widget` connect `elementor-widgets.php` to `functions.php`, `Glow_Concern_Tiles_Widget`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `Glow_Ingredient_Index_Widget` connect `Glow_Ingredient_Index_Widget` to `elementor-widgets.php`, `Glow_Concern_Tiles_Widget`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Are the 10 inferred relationships involving `glow_wc_active()` (e.g. with `glow_setup_page()` and `.render()`) actually correct?**
   _`glow_wc_active()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `digicars_seo_build_meta()` (e.g. with `digicars_build_ai_summary()` and `digicars_meta()`) actually correct?**
   _`digicars_seo_build_meta()` has 3 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `graphify`, `Usage`, `What graphify is for` to the rest of the system?**
-  _171 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Brand Position`, `Core Values`, `Emotional Position` to the rest of the system?**
+  _200 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `functions.php` be split into smaller, more focused modules?**
-  _Cohesion score 0.07575757575757576 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0700354609929078 - nodes in this community are weakly interconnected._

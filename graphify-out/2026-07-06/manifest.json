@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "glow-theme/archive-product.php": {
-    "mtime": 1783071977.99431,
-    "ast_hash": "ede2a2b1f87a4522f1523baa597137af",
+    "mtime": 1783366162.6810656,
+    "ast_hash": "891fd2870bebc11fffe352889d266b5a",
     "semantic_hash": ""
   },
   "glow-theme/dummy-products.php": {
@@ -325,13 +325,13 @@
     "semantic_hash": ""
   },
   "glow-theme/front-page.php": {
-    "mtime": 1783071977.9990535,
-    "ast_hash": "ca900d9cac6ef18e55d8806183cd3c16",
+    "mtime": 1783363735.2534318,
+    "ast_hash": "77588e4dba6c43ec9f64712d6ce5bdbb",
     "semantic_hash": ""
   },
   "glow-theme/functions.php": {
-    "mtime": 1783071978.000054,
-    "ast_hash": "6446f3317a779afe279ec4ddef3adb17",
+    "mtime": 1783366488.7442477,
+    "ast_hash": "e77cd255e2863df8969a7727d6a2b930",
     "semantic_hash": ""
   },
   "glow-theme/header.php": {
@@ -350,13 +350,13 @@
     "semantic_hash": ""
   },
   "glow-theme/inc/customizer.php": {
-    "mtime": 1783071978.0399444,
-    "ast_hash": "44f1617f40ef1d94e40042b400469e37",
+    "mtime": 1783362871.497716,
+    "ast_hash": "78a33d95a0dd7cff71920b019d59f9a3",
     "semantic_hash": ""
   },
   "glow-theme/inc/elementor-widgets.php": {
-    "mtime": 1783071978.0399444,
-    "ast_hash": "24a40c77dc14b1e63fdaca9bec255a89",
+    "mtime": 1783364345.1990883,
+    "ast_hash": "0593f099bb628d08ddb36ca2e4cf4f9a",
     "semantic_hash": ""
   },
   "glow-theme/inc/seo.php": {
@@ -415,8 +415,8 @@
     "semantic_hash": ""
   },
   "glow-theme/page-brand-kit.php": {
-    "mtime": 1783071978.051985,
-    "ast_hash": "05b503e08f7be84fe1c4b0b0b01537c3",
+    "mtime": 1783363675.8628254,
+    "ast_hash": "1a6f574ff7401401f3037f6f21604322",
     "semantic_hash": ""
   },
   "glow-theme/page-contact.php": {
@@ -440,13 +440,13 @@
     "semantic_hash": ""
   },
   "glow-theme/single-product.php": {
-    "mtime": 1783071978.0565028,
-    "ast_hash": "fbd1cadd014dcb7ab579dfab6f8d0e5b",
+    "mtime": 1783366483.5539212,
+    "ast_hash": "dd0f988837d6e3df165a49e3ec295f98",
     "semantic_hash": ""
   },
   "glow-theme/woocommerce/content-product.php": {
-    "mtime": 1783071978.057696,
-    "ast_hash": "0466adef301ef3e430ea81a5fa48fa17",
+    "mtime": 1783365720.5093675,
+    "ast_hash": "93bb775740d7b63d9ec8a0ad83d0a32d",
     "semantic_hash": ""
   },
   "skills-lock.json": {
@@ -1112,6 +1112,76 @@
   "kbap-theme/images/interactive-table.jpg": {
     "mtime": 1783340601.8955965,
     "ast_hash": "abf50a4b050189c7858f114a913fdb7a",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_123042_how_was_the_k_bap_interactive_homepage_hero_implem.md": {
+    "mtime": 1783341042.523476,
+    "ast_hash": "f5fbbaf21917f6ae4f7ff9994b9c833e",
+    "semantic_hash": ""
+  },
+  "tests/glow-brand-kit-route.test.ps1": {
+    "mtime": 1783361900.4392674,
+    "ast_hash": "5f305c4193638c7f60e27cc8dc467038",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_181903_why_did__brand_kit_404_in_glow_theme.md": {
+    "mtime": 1783361943.925779,
+    "ast_hash": "ef7eeb4dfc92b83b0ae79b600b9fcde5",
+    "semantic_hash": ""
+  },
+  "glow-theme/BRAND_GUIDELINES.md": {
+    "mtime": 1783363837.4173088,
+    "ast_hash": "57fcce46d6852008335791354ee00f03",
+    "semantic_hash": ""
+  },
+  "tests/glow-hero-search-background.test.ps1": {
+    "mtime": 1783368313.6562629,
+    "ast_hash": "b3743783261a4b35a0c4784adf6a26ce",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/hero/hero-skin-community.png": {
+    "mtime": 1783362809.5585513,
+    "ast_hash": "9656f160e651573090069b33a91bfc52",
+    "semantic_hash": ""
+  },
+  "tests/glow-brand-v2-guidelines.test.ps1": {
+    "mtime": 1783363837.4173088,
+    "ast_hash": "f7d59f7db25d4fb5cc80ce32e5b6f4c4",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/hero/hero-korean-beauty.png": {
+    "mtime": 1783363515.255272,
+    "ast_hash": "4152f29c98183f3f85179370a693e527",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_185834_what_is_the_glow_brand_refactor_v2_direction.md": {
+    "mtime": 1783364314.8659804,
+    "ast_hash": "f4c0ecfc7a1d6639c3c5d670a0872403",
+    "semantic_hash": ""
+  },
+  "tests/glow-shop-v2-cards.test.ps1": {
+    "mtime": 1783365473.3441644,
+    "ast_hash": "1954e72e55afb91e5370075e3b961071",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_193141_what_changed_in_the_glow_v2_product_card_and_shop.md": {
+    "mtime": 1783366301.5742486,
+    "ast_hash": "c8a6ca4aa0ba34325d5ba064c513b95c",
+    "semantic_hash": ""
+  },
+  "tests/glow-pdp-v2.test.ps1": {
+    "mtime": 1783366745.9975479,
+    "ast_hash": "46c33d13c2b241fa60a99ba6ba1b4271",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_194351_what_changed_in_the_glow_v2_pdp_increment.md": {
+    "mtime": 1783367031.3793738,
+    "ast_hash": "0a45a053aad132eacf9429e9de9210b7",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/hero/hero-korean-beauty-faces.png": {
+    "mtime": 1783368374.5079274,
+    "ast_hash": "5c312fdc641ebe19578f6e70095e39ba",
     "semantic_hash": ""
   }
 }

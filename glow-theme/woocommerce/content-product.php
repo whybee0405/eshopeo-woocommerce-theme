@@ -15,10 +15,13 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 $glow_brand   = glow_meta( $product->get_id(), '_product_brand' );
 $glow_step_no = glow_meta( $product->get_id(), '_product_routine_step' );
+$glow_skin    = glow_meta( $product->get_id(), '_skin_types' );
+$glow_actives = glow_meta( $product->get_id(), '_key_ingredients' );
 $glow_badges  = glow_product_badges( $product );
 $glow_quick   = $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock();
 ?>
 <li <?php wc_product_class( 'product-card', $product ); ?>>
+	<div class="product-card-shell">
 	<div class="card-media">
 		<?php if ( $glow_badges ) : ?>
 			<div class="card-badges">
@@ -44,7 +47,7 @@ $glow_quick   = $product->is_type( 'simple' ) && $product->is_purchasable() && $
 
 		<?php if ( $glow_quick ) : ?>
 			<button class="quick-add" type="button" data-quick-add="<?php echo esc_attr( $product->get_id() ); ?>">
-				<?php esc_html_e( 'Add to bag', 'glow-glow' ); ?>
+				<?php esc_html_e( 'Add to routine', 'glow-glow' ); ?>
 				<span class="mono"><?php echo wp_kses_post( $product->get_price_html() ); ?></span>
 			</button>
 		<?php else : ?>
@@ -64,6 +67,17 @@ $glow_quick   = $product->is_type( 'simple' ) && $product->is_purchasable() && $
 
 		<h3 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
+		<?php if ( $glow_skin || $glow_actives ) : ?>
+			<p class="card-skin-fit">
+				<?php if ( $glow_skin ) : ?>
+					<span><?php echo esc_html( $glow_skin ); ?></span>
+				<?php endif; ?>
+				<?php if ( $glow_actives ) : ?>
+					<span><?php echo esc_html( $glow_actives ); ?></span>
+				<?php endif; ?>
+			</p>
+		<?php endif; ?>
+
 		<div class="card-foot">
 			<?php if ( $product->get_review_count() > 0 ) : ?>
 				<span class="card-rating">
@@ -73,5 +87,6 @@ $glow_quick   = $product->is_type( 'simple' ) && $product->is_purchasable() && $
 			<?php endif; ?>
 			<span class="card-price mono"><?php echo wp_kses_post( $product->get_price_html() ); ?></span>
 		</div>
+	</div>
 	</div>
 </li>

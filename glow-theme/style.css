@@ -3,7 +3,7 @@ Theme Name: Glow K-Beauty
 Theme URI: https://glow-glow.example.com
 Author: CloudIA
 Author URI: https://cloudia.example.com
-Description: An editorial WooCommerce theme for a South African K-beauty store, organised around the 7-step Korean skincare routine. The routine is the navigation: a signature Routine Rail drives wayfinding on the homepage, shop archives and the 404 page. Ingredient-derived palette (rice water, mugwort, yuja citron, seafoam algae, clay), persona-driven SEO and structured data baked in.
+Description: A premium Korean skincare WooCommerce theme for South Africa, built around clear education, authentic sourcing, ingredient transparency and routine-based shopping.
 Version: 2.0.0
 Requires at least: 6.0
 Tested up to: 6.7
@@ -40,17 +40,17 @@ WC tested up to: 9.5
 
 /* 1. TOKENS ---------------------------------------------------------------- */
 :root {
-  --rice:      #F3F2ED;
-  --rice-deep: #EBEAE2;
-  --moss:      #2E4636;
-  --moss-soft: #3D5847;
-  --ink:       #23281F;
+  --rice:      #F7F4EE;
+  --rice-deep: #EEE8DC;
+  --moss:      #4F6F5B;
+  --moss-soft: #6F8A78;
+  --ink:       #252922;
   --yuja:      #F2B63C;
   --yuja-deep: #DB9F23;
-  --seafoam:   #C9DCD2;
-  --petal:     #E8D5CE;
-  --line:      #D9D7CC;
-  --muted:     #6F7468;
+  --seafoam:   #DDE8DF;
+  --petal:     #EFE1D8;
+  --line:      #DED8CC;
+  --muted:     #72786D;
 
   --font-display: "Young Serif", "Iowan Old Style", Georgia, serif;
   --font-body: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
@@ -750,38 +750,102 @@ body.search-open .search-overlay {
 
 /* 10. HERO & HERO STAGE ------------------------------------------------------ */
 .hero {
-  background: var(--ink);
-  color: var(--rice);
-  padding-block: clamp(64px, 8vw, 110px);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--rice);
+  color: var(--ink);
+  padding-block: clamp(24px, 3.6vw, 52px);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero::before {
+  z-index: -2;
+  background:
+    linear-gradient(90deg, oklch(97% 0.011 88 / 0.98) 0%, oklch(97% 0.011 88 / 0.91) 42%, oklch(97% 0.011 88 / 0.28) 100%),
+    url("images/hero/hero-korean-beauty-faces.png") center / cover no-repeat;
+  opacity: 1;
+  filter: saturate(0.94) contrast(1.01);
+}
+
+.hero::after {
+  z-index: -1;
+  background:
+    linear-gradient(180deg, oklch(98% 0.01 88 / 0.18), oklch(95% 0.014 96 / 0.78));
 }
 
 .hero-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: clamp(2.5rem, 5vw, 6rem);
+  gap: clamp(1.8rem, 4vw, 4.2rem);
   align-items: center;
 }
 
-/* All text inside the dark hero reads in rice */
+/* Bright v2 hero: dark text on rice/ivory with yuja used as a small signal */
 .hero .t-hero,
-.hero h1 { color: var(--rice); }
-.hero .t-hero em { color: var(--yuja); font-style: italic; }
-.hero .eyebrow { color: var(--seafoam); }
-.hero .lead { color: oklch(78% 0.009 88); }
-.hero .hero-footnote { color: oklch(55% 0.02 150); }
-.hero a { color: var(--rice); }
+.hero h1 { color: var(--ink); }
+.hero .t-hero {
+  font-size: clamp(2rem, 4vw, 3.85rem);
+  line-height: 1.06;
+}
+.hero .t-hero em { color: var(--yuja-deep); font-style: normal; }
+.hero .eyebrow { color: var(--moss); }
+.hero .lead { color: oklch(42% 0.02 120); }
+.hero .hero-footnote { color: var(--muted); }
+.hero a { color: var(--ink); }
 
 .hero-copy .t-hero { margin-bottom: 0.55em; }
+
+.hero-search {
+  max-width: 43rem;
+  margin-top: clamp(1rem, 2vw, 1.45rem);
+}
+
+.hero-search form,
+.hero-search .search-form,
+.hero-search [role="search"] {
+  display: flex;
+  align-items: stretch;
+  gap: 0.55rem;
+  width: 100%;
+}
+
+.hero-search input[type="search"],
+.hero-search input[type="text"],
+.hero-search input:not([type]),
+.hero-search textarea {
+  width: 100%;
+  min-height: 3.55rem;
+  border: 1px solid oklch(92% 0.012 92 / 0.42);
+  border-radius: 999px;
+  background: oklch(99% 0.008 92 / 0.96);
+  color: var(--ink);
+  box-shadow: 0 1.1rem 2.8rem oklch(40% 0.03 92 / 0.13);
+}
+
+.hero-search input::placeholder,
+.hero-search textarea::placeholder {
+  color: oklch(42% 0.023 145 / 0.72);
+}
 
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-top: 2rem;
+  margin-top: 1.05rem;
 }
 
 .hero-footnote {
-  margin-top: 2.2rem;
+  margin-top: 1.45rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
@@ -1083,15 +1147,16 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   grid-template-columns: 1fr 1fr;
   border-radius: var(--r-l);
   overflow: hidden;
-  background: #fff;
+  background: color-mix(in srgb, var(--rice) 58%, #FBF8F2);
   border: 1px solid var(--line);
+  box-shadow: 0 18px 50px -36px rgba(37, 41, 34, 0.28);
 }
 
 .sourcing-media {
-  background-color: var(--moss);
+  background-color: var(--seafoam);
   background-size: cover;
   background-position: center;
-  color: var(--rice);
+  color: var(--ink);
   padding: clamp(2rem, 4vw, 3.5rem);
   position: relative;
   display: flex;
@@ -1106,9 +1171,11 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(35,40,31,0.9) 0%, rgba(46,70,54,0.5) 100%);
+  background: linear-gradient(to top, rgba(247, 244, 238, 0.92) 0%, rgba(247, 244, 238, 0.62) 56%, rgba(247, 244, 238, 0.22) 100%);
   pointer-events: none;
 }
+
+.sourcing-media--bright { background-position: 62% center; }
 
 .supply-line { list-style: none; margin: 0; padding: 0; position: relative; z-index: 1; }
 
@@ -1117,13 +1184,13 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   align-items: baseline;
   gap: 1em;
   padding-block: 0.7em;
-  border-top: 1px solid rgba(243, 242, 237, 0.18);
+  border-top: 1px solid rgba(37, 41, 34, 0.12);
   font-size: 0.93rem;
 }
 
 .supply-line li:first-child { border-top: 0; }
 
-.supply-line .mono { color: var(--yuja); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; flex-shrink: 0; width: 7.5em; }
+.supply-line .mono { color: var(--moss); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; flex-shrink: 0; width: 7.5em; }
 
 .sourcing-body {
   padding: clamp(2rem, 4vw, 3.5rem);
@@ -1168,8 +1235,8 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
 
 /* Reviews — dark editorial section */
 .reviews-section {
-  background: var(--ink);
-  color: var(--rice);
+  background: var(--seafoam);
+  color: var(--ink);
   padding-block: clamp(80px, 10vw, 130px);
 }
 
@@ -1206,10 +1273,11 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
 }
 
 .pull-quote-text {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
+  font-weight: 500;
   font-size: clamp(1.45rem, 2.4vw, 2rem);
   line-height: 1.35;
-  color: var(--rice);
+  color: var(--ink);
   margin: 0 0 1.6rem;
 }
 
@@ -1249,7 +1317,7 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
 .pull-name {
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--rice);
+  color: var(--ink);
 }
 
 .pull-detail {
@@ -1257,7 +1325,7 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: oklch(50% 0.014 150);
+  color: var(--muted);
 }
 
 .review-aside {
@@ -1267,15 +1335,15 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
 }
 
 .review-aside-item {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid color-mix(in srgb, var(--moss) 20%, transparent);
   padding: 1.4rem 0;
   font-size: 0.93rem;
-  color: oklch(68% 0.007 88);
+  color: color-mix(in srgb, var(--ink) 68%, var(--muted));
   line-height: 1.6;
   margin: 0;
 }
 
-.review-aside-item:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.review-aside-item:last-child { border-bottom: 1px solid color-mix(in srgb, var(--moss) 20%, transparent); }
 
 .review-aside-item cite {
   font-style: normal;
@@ -1283,15 +1351,15 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--seafoam);
+  color: var(--moss);
   display: block;
   margin-top: 0.6rem;
 }
 
 /* Newsletter — full-width dark section, no card boxing */
 .newsletter-section {
-  background: var(--moss);
-  color: var(--rice);
+  background: var(--rice-deep);
+  color: var(--ink);
   padding-block: clamp(64px, 9vw, 110px);
   margin-top: clamp(56px, 8vw, 110px);
 }
@@ -1299,7 +1367,7 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
 .newsletter-inner { max-width: 580px; }
 
 .newsletter-inner h2 {
-  color: var(--rice);
+  color: var(--ink);
   margin-bottom: 1.6rem;
 }
 
@@ -1323,7 +1391,7 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   font-size: 0.65rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: oklch(50% 0.016 150);
+  color: var(--moss);
   margin: 0 0 1rem;
 }
 
@@ -1333,13 +1401,13 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   font-size: 0.6rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: oklch(46% 0.012 150);
+  color: var(--muted);
 }
 
 /* Lifestyle band — full-width image strip between best-sellers and sourcing */
 .lifestyle-band {
   position: relative;
-  background: var(--ink);
+  background: #FBF8F2;
   min-height: 340px;
   display: flex;
   align-items: center;
@@ -1352,14 +1420,14 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   inset: 0;
   background-size: cover;
   background-position: center 30%;
-  opacity: 0.4;
+  opacity: 0.24;
 }
 
 .lifestyle-band::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(35,40,31,0.85) 0%, rgba(35,40,31,0.15) 100%);
+  background: linear-gradient(90deg, rgba(247,244,238,0.96) 0%, rgba(247,244,238,0.72) 46%, rgba(247,244,238,0.22) 100%);
   pointer-events: none;
 }
 
@@ -1378,20 +1446,21 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   font-size: 0.66rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--yuja);
+  color: var(--moss);
   margin: 0 0 0.9rem;
 }
 
 .lifestyle-stat {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
+  font-weight: 600;
   font-size: clamp(1.9rem, 4vw, 3.2rem);
-  color: var(--rice);
+  color: var(--ink);
   line-height: 1.2;
   margin: 0;
   max-width: 16em;
 }
 
-.lifestyle-stat strong { color: var(--yuja); font-weight: 400; }
+.lifestyle-stat strong { color: var(--yuja-deep); font-weight: 600; }
 
 /* 12. PAGE HEROES, PROSE & STATIC PAGE COMPONENTS ----------------------------- */
 .page-hero {
@@ -1774,8 +1843,22 @@ html.js [data-reveal].is-visible {
 
   /* Hero: product showcase before copy on narrow screens */
   .hero-grid { grid-template-columns: 1fr; }
+  .hero::before {
+    background:
+      linear-gradient(180deg, oklch(97% 0.01 88 / 0.66) 0%, oklch(97% 0.01 88 / 0.9) 42%, oklch(96% 0.012 88 / 0.98) 100%),
+      url("images/hero/hero-korean-beauty-faces.png") center top / cover no-repeat;
+  }
   .hero-stage { aspect-ratio: 4 / 3.4; order: -1; }
   .hero-copy { order: 0; }
+
+  .brand-loop-shell {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .brand-loop-label {
+    max-width: none;
+  }
 
   /* Routine rail: horizontal scroll, hide native scrollbar */
   .routine-rail ol { grid-template-columns: repeat(7, minmax(132px, 1fr)); }
@@ -1810,7 +1893,12 @@ html.js [data-reveal].is-visible {
   /* Tighter vertical rhythm on small screens */
   .section { padding-block: clamp(36px, 8vw, 56px); }
   .section-tight { padding-block: clamp(24px, 6vw, 36px); }
-  .hero { padding-block: clamp(36px, 8vw, 56px); }
+  .hero { padding-block: clamp(24px, 5vw, 36px); }
+  .hero-search form,
+  .hero-search .search-form,
+  .hero-search [role="search"] {
+    flex-direction: column;
+  }
   .reviews-section { padding-block: clamp(48px, 10vw, 80px); }
   .newsletter-section { padding-block: clamp(40px, 9vw, 64px); margin-top: clamp(36px, 8vw, 64px); }
 
@@ -1934,6 +2022,141 @@ body.has-custom-cursor button { cursor: none; }
 
 /* When 3D is active, hide the static product images inside .stage-item */
 .hero-stage.is-3d .stage-media { visibility: hidden; }
+
+/* Korean brand logo loop */
+.brand-loop-section {
+  background: var(--rice);
+  border-top: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+}
+
+.brand-loop-shell {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.34fr) minmax(0, 1fr);
+  gap: clamp(1.2rem, 3vw, 3rem);
+  align-items: center;
+  padding-block: clamp(1.05rem, 2vw, 1.6rem);
+}
+
+.brand-loop-label {
+  margin: 0;
+  max-width: 19rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.brand-loop {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  padding-block: 0.55rem;
+  --brand-loop-fade: var(--rice);
+}
+
+.brand-loop::before,
+.brand-loop::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: clamp(2rem, 9vw, 7rem);
+  pointer-events: none;
+}
+
+.brand-loop::before {
+  left: 0;
+  background: linear-gradient(to right, var(--brand-loop-fade), rgba(247, 244, 238, 0));
+}
+
+.brand-loop::after {
+  right: 0;
+  background: linear-gradient(to left, var(--brand-loop-fade), rgba(247, 244, 238, 0));
+}
+
+.brand-loop-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: glow-logo-loop var(--brand-loop-duration, 42s) linear infinite;
+}
+
+.brand-loop-track:hover { animation-play-state: paused; }
+
+.brand-loop-list {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2rem);
+  list-style: none;
+  margin: 0;
+  padding: 0 clamp(1rem, 2.4vw, 2rem) 0 0;
+}
+
+.brand-loop-item {
+  flex: 0 0 auto;
+}
+
+.brand-loop-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.45rem;
+  padding: 0.58rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--moss) 14%, transparent);
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, #fff 62%, var(--rice));
+  color: color-mix(in srgb, var(--ink) 86%, var(--moss));
+  font-family: var(--font-body);
+  font-size: clamp(0.86rem, 1.25vw, 1.02rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.035em;
+  text-decoration: none;
+  box-shadow: 0 14px 30px -26px rgba(37, 41, 34, 0.38);
+  transition: transform var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
+}
+
+.brand-loop-mark:hover,
+.brand-loop-mark:focus-visible {
+  border-color: color-mix(in srgb, var(--yuja) 68%, var(--moss));
+  background: color-mix(in srgb, var(--yuja) 10%, #fff);
+  color: var(--ink);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@keyframes glow-logo-loop {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-loop-track {
+    animation: none;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .brand-loop {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .brand-loop::-webkit-scrollbar { display: none; }
+}
+
+@media (max-width: 900px) {
+  .brand-loop-shell {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .brand-loop-label {
+    max-width: none;
+  }
+}
 
 /* PDP 3D viewer */
 .pdp-3d-wrap {

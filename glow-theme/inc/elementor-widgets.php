@@ -30,22 +30,22 @@ class Glow_Hero_Stage_Widget extends \Elementor\Widget_Base {
 		$this->add_control( 'eyebrow_text', array(
 			'label'   => __( 'Eyebrow text', 'glow-glow' ),
 			'type'    => \Elementor\Controls_Manager::TEXT,
-			'default' => __( 'The K-beauty method', 'glow-glow' ),
+			'default' => __( 'Modern Korean Beauty', 'glow-glow' ),
 		) );
 		$this->add_control( 'heading', array(
 			'label'   => __( 'Heading (use <em> for yuja underline)', 'glow-glow' ),
 			'type'    => \Elementor\Controls_Manager::WYSIWYG,
-			'default' => __( 'The glow is in the <em>method,</em> not the miracle.', 'glow-glow' ),
+			'default' => __( 'Premium Korean skincare, <em>made simple.</em>', 'glow-glow' ),
 		) );
 		$this->add_control( 'lead', array(
 			'label'   => __( 'Lead paragraph', 'glow-glow' ),
 			'type'    => \Elementor\Controls_Manager::TEXTAREA,
-			'default' => __( 'Korean skincare works because of the order you apply it in, not the logo on the bottle. So we organised the whole store the way you\'ll actually use it — seven steps, cleanse to SPF.', 'glow-glow' ),
+			'default' => __( 'Authentic Korean skincare, thoughtfully curated and clearly explained. Search by ingredient, concern or product type, then build daily care with confidence.', 'glow-glow' ),
 		) );
 		$this->add_control( 'cta1_text', array(
 			'label'   => __( 'Primary CTA label', 'glow-glow' ),
 			'type'    => \Elementor\Controls_Manager::TEXT,
-			'default' => __( 'Shop all products', 'glow-glow' ),
+			'default' => __( 'Shop Korean skincare', 'glow-glow' ),
 		) );
 		$this->add_control( 'cta1_url', array(
 			'label'   => __( 'Primary CTA URL', 'glow-glow' ),
@@ -55,7 +55,7 @@ class Glow_Hero_Stage_Widget extends \Elementor\Widget_Base {
 		$this->add_control( 'cta2_text', array(
 			'label'   => __( 'Secondary CTA label', 'glow-glow' ),
 			'type'    => \Elementor\Controls_Manager::TEXT,
-			'default' => __( 'Build my routine', 'glow-glow' ),
+			'default' => __( 'Find your daily care', 'glow-glow' ),
 		) );
 		$this->add_control( 'cta2_anchor', array(
 			'label'   => __( 'Secondary CTA anchor (e.g. #routine)', 'glow-glow' ),
@@ -65,12 +65,12 @@ class Glow_Hero_Stage_Widget extends \Elementor\Widget_Base {
 		$this->add_control( 'trust_1', array(
 			'label'   => __( 'Trust signal 1', 'glow-glow' ),
 			'type'    => \Elementor\Controls_Manager::TEXT,
-			'default' => get_theme_mod( 'glow_trust_1', __( 'Batch-verified imports', 'glow-glow' ) ),
+			'default' => get_theme_mod( 'glow_trust_1', __( 'Authentic Korean skincare', 'glow-glow' ) ),
 		) );
 		$this->add_control( 'trust_2', array(
 			'label'   => __( 'Trust signal 2', 'glow-glow' ),
 			'type'    => \Elementor\Controls_Manager::TEXT,
-			'default' => get_theme_mod( 'glow_trust_2', __( 'Free shipping over R500', 'glow-glow' ) ),
+			'default' => get_theme_mod( 'glow_trust_2', __( 'Ingredient-focused guidance', 'glow-glow' ) ),
 		) );
 		$this->add_control( 'trust_3', array(
 			'label'   => __( 'Trust signal 3', 'glow-glow' ),

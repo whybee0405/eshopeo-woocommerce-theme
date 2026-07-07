@@ -85,33 +85,52 @@ $glow_stages = array(
 
 $glow_steps    = glow_routine_steps();
 $glow_shop_url = glow_wc_active() ? wc_get_page_permalink( 'shop' ) : home_url( '/' );
+$glow_brand_logos = array(
+	'COSRX',
+	'Laneige',
+	'Innisfree',
+	'Beauty of Joseon',
+	'Dr.Jart+',
+	'Sulwhasoo',
+	'Anua',
+	'Round Lab',
+	'Skin1004',
+	'Klairs',
+	'Etude',
+	'Missha',
+	'Banila Co',
+	'Mediheal',
+	'Torriden',
+);
 ?>
 
 <main id="main">
-
-	<?php
-	$glow_hero_sc = get_theme_mod( 'glow_hero_shortcode', '' );
-	if ( $glow_hero_sc ) {
-		echo '<div class="pre-hero">' . do_shortcode( wp_kses_post( $glow_hero_sc ) ) . '</div>';
-	}
-	?>
 
 	<!-- 1. Hero -->
 	<section class="hero">
 		<div class="container hero-grid">
 
 			<div class="hero-copy">
-				<h1 class="t-hero"><?php echo wp_kses( __( 'The glow is in the <em>method,</em> not the miracle.', 'glow-glow' ), array( 'em' => array() ) ); ?></h1>
-				<p class="lead"><?php esc_html_e( 'Korean skincare works because of the order you apply it. We organised the whole store that way: seven steps, cleanse to SPF. Each product earns its place.', 'glow-glow' ); ?></p>
+				<h1 class="t-hero"><?php echo wp_kses( __( 'Premium Korean skincare, <em>made simple.</em>', 'glow-glow' ), array( 'em' => array() ) ); ?></h1>
+				<p class="lead"><?php esc_html_e( 'Authentic Korean skincare, thoughtfully curated and clearly explained. Search by ingredient, concern or product type, then build daily care with confidence.', 'glow-glow' ); ?></p>
+
+				<?php
+				$glow_hero_sc = get_theme_mod( 'glow_hero_shortcode', '[eshopeo_search]' );
+				if ( $glow_hero_sc ) :
+					?>
+					<div class="hero-search" aria-label="<?php esc_attr_e( 'AI skincare search', 'glow-glow' ); ?>">
+						<?php echo do_shortcode( wp_kses_post( $glow_hero_sc ) ); ?>
+					</div>
+				<?php endif; ?>
 
 				<div class="hero-ctas">
-					<a class="btn btn-yuja" href="<?php echo esc_url( $glow_shop_url ); ?>"><?php esc_html_e( 'Shop all products', 'glow-glow' ); ?></a>
-					<a class="btn btn-ghost-light" href="#routine"><?php esc_html_e( 'Build my routine', 'glow-glow' ); ?></a>
+					<a class="btn btn-yuja" href="<?php echo esc_url( $glow_shop_url ); ?>"><?php esc_html_e( 'Shop Korean skincare', 'glow-glow' ); ?></a>
+					<a class="btn btn-outline" href="#routine"><?php esc_html_e( 'Find your daily care', 'glow-glow' ); ?></a>
 				</div>
 
 				<p class="hero-footnote">
-					<span><?php echo esc_html( get_theme_mod( 'glow_trust_1', __( 'Batch-verified imports', 'glow-glow' ) ) ); ?></span>
-					<span><?php echo esc_html( get_theme_mod( 'glow_trust_2', __( 'Free shipping over R500', 'glow-glow' ) ) ); ?></span>
+					<span><?php echo esc_html( get_theme_mod( 'glow_trust_1', __( 'Authentic Korean skincare', 'glow-glow' ) ) ); ?></span>
+					<span><?php echo esc_html( get_theme_mod( 'glow_trust_2', __( 'Ingredient-focused guidance', 'glow-glow' ) ) ); ?></span>
 					<span><?php echo esc_html( get_theme_mod( 'glow_trust_3', __( 'Ships from Joburg', 'glow-glow' ) ) ); ?></span>
 				</p>
 			</div>
@@ -141,6 +160,39 @@ $glow_shop_url = glow_wc_active() ? wc_get_page_permalink( 'shop' ) : home_url( 
 				</button>
 			</div>
 
+		</div>
+	</section>
+
+	<!-- 1.5 Brand logo loop -->
+	<section class="brand-loop-section" aria-label="<?php esc_attr_e( 'Korean beauty brands featured on Glow', 'glow-glow' ); ?>">
+		<div class="container">
+			<div class="brand-loop-shell" data-reveal>
+				<p class="brand-loop-label"><?php esc_html_e( 'Cult Korean skincare names, one routine-first edit.', 'glow-glow' ); ?></p>
+				<div class="brand-loop" style="--brand-loop-duration: 42s;">
+					<div class="brand-loop-track">
+						<?php for ( $copy = 0; $copy < 2; $copy++ ) : ?>
+							<ul class="brand-loop-list" <?php echo $copy > 0 ? 'aria-hidden="true"' : ''; ?>>
+								<?php foreach ( $glow_brand_logos as $glow_brand_name ) : ?>
+									<?php
+									$glow_brand_url = add_query_arg(
+										array(
+											's'         => rawurlencode( $glow_brand_name ),
+											'post_type' => 'product',
+										),
+										home_url( '/' )
+									);
+									?>
+									<li class="brand-loop-item">
+										<a class="brand-loop-mark" href="<?php echo esc_url( $glow_brand_url ); ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Shop %s products', 'glow-glow' ), $glow_brand_name ) ); ?>">
+											<?php echo esc_html( $glow_brand_name ); ?>
+										</a>
+									</li>
+								<?php endforeach; ?>
+							</ul>
+						<?php endfor; ?>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -246,8 +298,8 @@ $glow_shop_url = glow_wc_active() ? wc_get_page_permalink( 'shop' ) : home_url( 
 	<section class="lifestyle-band" data-reveal>
 		<div class="lifestyle-band-bg" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/images/people/lifestyle.jpg' ); ?>')"></div>
 		<div class="lifestyle-band-content">
-			<p class="lifestyle-eyebrow"><?php esc_html_e( 'Real skin. Real routines. Joburg.', 'glow-glow' ); ?></p>
-			<p class="lifestyle-stat"><?php echo wp_kses( __( '<strong>4 200+</strong> routines built and still on refills.', 'glow-glow' ), array( 'strong' => array() ) ); ?></p>
+			<p class="lifestyle-eyebrow"><?php esc_html_e( 'Healthy skin, clearly understood.', 'glow-glow' ); ?></p>
+			<p class="lifestyle-stat"><?php echo wp_kses( __( '<strong>4 200+</strong> customers guided toward calmer daily care.', 'glow-glow' ), array( 'strong' => array() ) ); ?></p>
 		</div>
 	</section>
 
@@ -255,7 +307,7 @@ $glow_shop_url = glow_wc_active() ? wc_get_page_permalink( 'shop' ) : home_url( 
 	<section class="section">
 		<div class="container">
 			<div class="sourcing-split" data-reveal>
-				<div class="sourcing-media" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/images/people/sourcing.jpg' ); ?>')">
+				<div class="sourcing-media sourcing-media--bright" style="background-image: url('<?php echo esc_url( get_template_directory_uri() . '/images/hero/hero-korean-beauty.png' ); ?>')">
 					<ul class="supply-line">
 						<li><span class="mono"><?php esc_html_e( 'Seoul', 'glow-glow' ); ?></span> <?php esc_html_e( 'Bought directly from brands and licensed distributors', 'glow-glow' ); ?></li>
 						<li><span class="mono"><?php esc_html_e( 'In transit', 'glow-glow' ); ?></span> <?php esc_html_e( 'Temperature-stable air freight, never sea containers', 'glow-glow' ); ?></li>
@@ -264,8 +316,8 @@ $glow_shop_url = glow_wc_active() ? wc_get_page_permalink( 'shop' ) : home_url( 
 					</ul>
 				</div>
 				<div class="sourcing-body">
-					<h2 class="t-1"><?php esc_html_e( 'Every batch verified. Every ingredient listed.', 'glow-glow' ); ?></h2>
-					<p class="lead"><?php esc_html_e( 'Grey-market K-beauty is a real problem in South Africa: old stock, heat-damaged formulas, outright fakes. We buy direct, in Korean, from the source, and keep the paperwork for every unit we sell. Ask for it any time.', 'glow-glow' ); ?></p>
+					<h2 class="t-1"><?php esc_html_e( 'Authentic Korean skincare, without the guesswork.', 'glow-glow' ); ?></h2>
+					<p class="lead"><?php esc_html_e( 'We buy from Korean brands and licensed distributors, keep batch records, and explain ingredients in plain language. You get clarity before you commit.', 'glow-glow' ); ?></p>
 					<a class="btn btn-outline" href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'How we source', 'glow-glow' ); ?></a>
 				</div>
 			</div>
@@ -318,7 +370,7 @@ $glow_shop_url = glow_wc_active() ? wc_get_page_permalink( 'shop' ) : home_url( 
 			<figure class="pull-review" data-reveal>
 				<blockquote>
 					<p class="pull-stars" aria-label="<?php esc_attr_e( '5 stars', 'glow-glow' ); ?>">★★★★★</p>
-					<p class="pull-quote-text"><?php esc_html_e( '"I\'d been buying random products off TikTok for a year. The step-by-step layout finally made it click. I built a 5-step routine in one evening and my skin stopped arguing with me."', 'glow-glow' ); ?></p>
+					<p class="pull-quote-text"><?php esc_html_e( '"I had tried Korean skincare before, but never knew what went with what. Glow made the ingredients and order feel simple enough to trust."', 'glow-glow' ); ?></p>
 					<footer class="pull-who">
 						<div class="pull-avatar" aria-hidden="true">
 							<?php
@@ -329,7 +381,7 @@ $glow_shop_url = glow_wc_active() ? wc_get_page_permalink( 'shop' ) : home_url( 
 						</div>
 						<div class="pull-who-text">
 							<span class="pull-name"><?php esc_html_e( 'Naledi M.', 'glow-glow' ); ?></span>
-							<span class="pull-detail"><?php esc_html_e( 'Sandton · First routine, now on refills', 'glow-glow' ); ?></span>
+							<span class="pull-detail"><?php esc_html_e( 'Sandton · First Korean skincare routine', 'glow-glow' ); ?></span>
 						</div>
 					</footer>
 				</blockquote>
@@ -352,7 +404,7 @@ $glow_shop_url = glow_wc_active() ? wc_get_page_permalink( 'shop' ) : home_url( 
 		<div class="container">
 			<div class="newsletter-inner" data-reveal>
 				<p class="newsletter-eyebrow"><?php esc_html_e( 'The Glow Dispatch', 'glow-glow' ); ?></p>
-				<h2 class="t-1"><?php esc_html_e( 'One email a month. Skin science, no noise.', 'glow-glow' ); ?></h2>
+				<h2 class="t-1"><?php esc_html_e( 'Korean skincare, explained calmly.', 'glow-glow' ); ?></h2>
 
 				<form class="newsletter-form" data-ajax-form="glow_newsletter">
 					<label class="screen-reader-text" for="glow-newsletter-email"><?php esc_html_e( 'Email address', 'glow-glow' ); ?></label>

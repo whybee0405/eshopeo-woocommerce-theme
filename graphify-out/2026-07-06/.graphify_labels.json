@@ -140,5 +140,16 @@
   "138": "Q: What was added for the K-BAP WooCommerce theme?",
   "139": "Q: What was the first approved K-BAP refactor increment?",
   "140": "Q: What K-BAP refactor implementation was completed with the multi-agent method?",
-  "141": "Q: What did the Playwright visual review find for the K-BAP homepage and what changed?"
+  "141": "Q: What did the Playwright visual review find for the K-BAP homepage and what changed?",
+  "142": "Q: How was the K-BAP interactive homepage hero implemented?",
+  "143": "glow-brand-kit-route.test.ps1",
+  "144": "Q: Why did /brand-kit 404 in glow-theme?",
+  "145": "GLOW Brand Kit Guidelines",
+  "146": "glow-hero-search-background.test.ps1",
+  "147": "glow-brand-v2-guidelines.test.ps1",
+  "148": "Q: What is the Glow brand refactor v2 direction?",
+  "149": "glow-shop-v2-cards.test.ps1",
+  "150": "Q: What changed in the Glow v2 product-card and shop archive increment?",
+  "151": "glow-pdp-v2.test.ps1",
+  "152": "Q: What changed in the Glow v2 PDP increment?"
 }
