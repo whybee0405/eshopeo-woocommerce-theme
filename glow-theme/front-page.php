@@ -86,21 +86,19 @@ $glow_stages = array(
 $glow_steps    = glow_routine_steps();
 $glow_shop_url = glow_wc_active() ? wc_get_page_permalink( 'shop' ) : home_url( '/' );
 $glow_brand_logos = array(
-	'COSRX',
-	'Laneige',
-	'Innisfree',
-	'Beauty of Joseon',
-	'Dr.Jart+',
-	'Sulwhasoo',
-	'Anua',
-	'Round Lab',
-	'Skin1004',
-	'Klairs',
-	'Etude',
-	'Missha',
-	'Banila Co',
-	'Mediheal',
-	'Torriden',
+	array( 'name' => 'Anua', 'file' => 'anua.png' ),
+	array( 'name' => 'Banila Co', 'file' => 'banila co.png' ),
+	array( 'name' => 'Beauty of Joseon', 'file' => 'beauty of joseon.png' ),
+	array( 'name' => 'COSRX', 'file' => 'cosrx.png' ),
+	array( 'name' => 'Etude', 'file' => 'etude.png' ),
+	array( 'name' => 'Innisfree', 'file' => 'innisfree.png' ),
+	array( 'name' => 'Klairs', 'file' => 'klairs.png' ),
+	array( 'name' => 'Laneige', 'file' => 'laneige.png' ),
+	array( 'name' => 'Mediheal', 'file' => 'mediheal.png' ),
+	array( 'name' => 'Missha', 'file' => 'missha.png' ),
+	array( 'name' => 'Round Lab', 'file' => 'round lab.png' ),
+	array( 'name' => 'Skin1004', 'file' => 'skin1004.png' ),
+	array( 'name' => 'Torriden', 'file' => 'torriden.png' ),
 );
 ?>
 
@@ -172,8 +170,9 @@ $glow_brand_logos = array(
 					<div class="brand-loop-track">
 						<?php for ( $copy = 0; $copy < 2; $copy++ ) : ?>
 							<ul class="brand-loop-list" <?php echo $copy > 0 ? 'aria-hidden="true"' : ''; ?>>
-								<?php foreach ( $glow_brand_logos as $glow_brand_name ) : ?>
+								<?php foreach ( $glow_brand_logos as $glow_brand ) : ?>
 									<?php
+									$glow_brand_name = $glow_brand['name'];
 									$glow_brand_url = add_query_arg(
 										array(
 											's'         => rawurlencode( $glow_brand_name ),
@@ -184,7 +183,12 @@ $glow_brand_logos = array(
 									?>
 									<li class="brand-loop-item">
 										<a class="brand-loop-mark" href="<?php echo esc_url( $glow_brand_url ); ?>" aria-label="<?php echo esc_attr( sprintf( __( 'Shop %s products', 'glow-glow' ), $glow_brand_name ) ); ?>">
-											<?php echo esc_html( $glow_brand_name ); ?>
+											<span
+												class="brand-loop-logo"
+												style="--brand-logo: url('<?php echo esc_url( get_template_directory_uri() . '/images/product brands/' . $glow_brand['file'] ); ?>');"
+												role="img"
+												aria-label="<?php echo esc_attr( $glow_brand_name ); ?>"
+											></span>
 										</a>
 									</li>
 								<?php endforeach; ?>
@@ -208,6 +212,9 @@ $glow_brand_logos = array(
 				<li>
 					<a class="concern-row" href="<?php echo esc_url( glow_tax_url( 'dehydrated-dull', 'skin_concern' ) ); ?>">
 						<span class="concern-no" aria-hidden="true">01</span>
+						<span class="concern-image" aria-hidden="true">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/images/products/product-step-05.jpg' ); ?>" alt="" width="600" height="600" loading="lazy" decoding="async" />
+						</span>
 						<span>
 							<span class="concern-name"><?php esc_html_e( 'Dehydrated & dull', 'glow-glow' ); ?></span>
 							<span class="concern-desc"><?php esc_html_e( 'Skin that drinks moisturiser and still looks tired by 3pm. Humectants and rice extract first.', 'glow-glow' ); ?></span>
@@ -218,6 +225,9 @@ $glow_brand_logos = array(
 				<li>
 					<a class="concern-row" href="<?php echo esc_url( glow_tax_url( 'breakouts-texture', 'skin_concern' ) ); ?>">
 						<span class="concern-no" aria-hidden="true">02</span>
+						<span class="concern-image" aria-hidden="true">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/images/products/product-step-02.jpg' ); ?>" alt="" width="600" height="600" loading="lazy" decoding="async" />
+						</span>
 						<span>
 							<span class="concern-name"><?php esc_html_e( 'Breakouts & texture', 'glow-glow' ); ?></span>
 							<span class="concern-desc"><?php esc_html_e( 'Congestion, bumps and marks that overstay. BHA, tea tree and patience, in that order.', 'glow-glow' ); ?></span>
@@ -228,6 +238,9 @@ $glow_brand_logos = array(
 				<li>
 					<a class="concern-row" href="<?php echo esc_url( glow_tax_url( 'fine-lines-firmness', 'skin_concern' ) ); ?>">
 						<span class="concern-no" aria-hidden="true">03</span>
+						<span class="concern-image" aria-hidden="true">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/images/products/product-step-03.jpg' ); ?>" alt="" width="600" height="600" loading="lazy" decoding="async" />
+						</span>
 						<span>
 							<span class="concern-name"><?php esc_html_e( 'Fine lines & firmness', 'glow-glow' ); ?></span>
 							<span class="concern-desc"><?php esc_html_e( 'Peptides, snail mucin and daily SPF. The long game.', 'glow-glow' ); ?></span>
@@ -238,6 +251,9 @@ $glow_brand_logos = array(
 				<li>
 					<a class="concern-row" href="<?php echo esc_url( glow_tax_url( 'sensitive-reactive', 'skin_concern' ) ); ?>">
 						<span class="concern-no" aria-hidden="true">04</span>
+						<span class="concern-image" aria-hidden="true">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/images/products/product-step-04.jpg' ); ?>" alt="" width="600" height="600" loading="lazy" decoding="async" />
+						</span>
 						<span>
 							<span class="concern-name"><?php esc_html_e( 'Sensitive & reactive', 'glow-glow' ); ?></span>
 							<span class="concern-desc"><?php esc_html_e( 'Everything here is fragrance-checked. Full ingredient lists, no guessing.', 'glow-glow' ); ?></span>

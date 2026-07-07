@@ -94,7 +94,7 @@
         ease: 'power3.out',
         stagger: 0.07,
         clearProps: 'transform,opacity',
-        scrollTrigger: { trigger: '.category-grid', start: 'top 87%', once: true },
+        scrollTrigger: { trigger: '.category-strip', start: 'top 87%', once: true },
       });
     }
 

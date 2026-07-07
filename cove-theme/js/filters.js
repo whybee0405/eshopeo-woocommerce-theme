@@ -107,12 +107,12 @@
   }
 
   /* ------------------------------------------------------------------
-   * Auto-submit filter form on checkbox change
+   * Auto-submit filter form on single-select filter change
    * ------------------------------------------------------------------ */
   var filterForm = qs('[data-filter-form]');
   if (filterForm) {
-    qsa('input[type="checkbox"]', filterForm).forEach(function (cb) {
-      cb.addEventListener('change', function () {
+    qsa('input[type="radio"]', filterForm).forEach(function (control) {
+      control.addEventListener('change', function () {
         filterForm.submit();
       });
     });

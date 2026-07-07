@@ -216,7 +216,7 @@ Important files:
 - `glow-theme/front-page.php` - homepage hero, eShopeo search placement, and homepage copy.
 - `glow-theme/css/woocommerce.css` - next increment for product card, archive, PDP, checkout, and account refinements.
 - `glow-theme/functions.php` - routine helper, brand-kit page creation, WooCommerce helpers.
-- `glow-theme/images/logo.svg` and `glow-theme/images/favicon.svg` - should be aligned with the future O-led logo direction.
+- `glow-theme/images/Glow K-Beauty - Logo.png` and `glow-theme/images/Glow K-Beauty - Favicon.png` - current production logo and favicon assets.
 
 When adding new UI:
 

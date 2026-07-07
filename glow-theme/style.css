@@ -318,7 +318,7 @@ label {
 
 .notice-ticker-inner {
   display: flex;
-  width: max-content;
+  width: 200%;
   animation: glow-notice-ticker 28s linear infinite;
   will-change: transform;
 }
@@ -326,11 +326,14 @@ label {
 .notice-ticker:hover .notice-ticker-inner { animation-play-state: paused; }
 
 .notice-ticker-track {
+  flex: 0 0 50%;
   display: flex;
   align-items: center;
-  gap: 1.6em;
+  justify-content: space-around;
+  gap: clamp(1.2rem, 4vw, 4rem);
   padding-block: 0.55em;
-  padding-right: 1.6em;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+  box-sizing: border-box;
   font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.12em;
@@ -341,6 +344,11 @@ label {
 .notice-ticker-dot { color: var(--yuja); }
 
 @keyframes glow-notice-ticker {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes glow-notice-ticker-mobile {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(-50%, 0, 0); }
 }
@@ -381,7 +389,14 @@ label {
   gap: 0.5em;
   line-height: 1;
 }
-.brand svg { display: block; width: 118px; height: 42px; overflow: visible; flex-shrink: 0; }
+.brand-logo {
+  display: block;
+  width: 124px;
+  height: auto;
+  aspect-ratio: 354 / 126;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
 .brand .brand-hangul {
   font-family: var(--font-mono);
@@ -466,12 +481,18 @@ label {
 .mobile-menu {
   position: fixed;
   inset: 0;
+  height: 100vh;
+  height: 100dvh;
   z-index: 90;
   background: var(--moss);
   color: var(--rice);
   display: flex;
   flex-direction: column;
   padding: var(--gutter);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--t-med) var(--ease), visibility 0s var(--t-med);
@@ -483,7 +504,13 @@ body.menu-open .mobile-menu {
   transition: opacity var(--t-med) var(--ease);
 }
 
-body.menu-open { overflow: hidden; }
+body.menu-open {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  overflow: hidden;
+  touch-action: none;
+}
 
 /* ------------------------------------------------------------------
  * Nav shop trigger + flyout
@@ -1122,7 +1149,7 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
 
 .concern-row {
   display: grid;
-  grid-template-columns: 4.5rem 1fr auto;
+  grid-template-columns: 4.5rem clamp(76px, 9vw, 112px) 1fr auto;
   align-items: center;
   gap: clamp(1rem, 3vw, 2.5rem);
   padding: clamp(1.2rem, 2.2vw, 1.8rem) 0;
@@ -1134,6 +1161,7 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
 
 .concern-row:hover { color: var(--ink); }
 .concern-row:hover .concern-no { color: var(--moss); }
+.concern-row:hover .concern-image img { transform: scale(1.045); }
 .concern-row:hover .concern-arrow { transform: translateX(5px); color: var(--ink); }
 
 .concern-no {
@@ -1152,6 +1180,22 @@ a.stage-meta, a.stage-meta:visited { color: var(--ink); text-decoration: none; }
   display: block;
   line-height: 1.2;
   margin-bottom: 0.3em;
+}
+
+.concern-image {
+  display: block;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--r-s);
+  overflow: hidden;
+  background: var(--rice-deep);
+  border: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+}
+
+.concern-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--t-med) var(--ease);
 }
 
 .concern-desc {
@@ -1937,7 +1981,7 @@ html.js [data-reveal].is-visible {
   .site-nav { display: none; }
   .menu-toggle { display: inline-flex; }
   .header-grid { grid-template-columns: auto 1fr auto; gap: 0.75rem; }
-  .brand svg { width: 96px; height: 34px; }
+  .brand-logo { width: 104px; }
   /* Account icon accessible via WC pages — hide in header to fit narrow screens */
   .header-utils .util-btn:not(.search-toggle):not(.cart-link):not(.menu-toggle) { display: none; }
   /* When site-nav is display:none it vacates column 2, which would shift utils into the 1fr middle column.
@@ -1963,6 +2007,25 @@ html.js [data-reveal].is-visible {
     max-width: none;
   }
 
+  .notice-bar {
+    min-height: 28px;
+  }
+
+  .notice-ticker-inner {
+    width: max-content;
+    animation: glow-notice-ticker-mobile 18s linear infinite;
+  }
+
+  .notice-ticker-track {
+    flex: 0 0 auto;
+    justify-content: flex-start;
+    gap: 0.9rem;
+    padding-block: 0.38rem;
+    padding-inline: 0 0.9rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.08em;
+  }
+
   /* Routine rail: horizontal scroll, hide native scrollbar */
   .routine-rail ol { grid-template-columns: repeat(7, minmax(132px, 1fr)); }
   .routine-rail {
@@ -1986,6 +2049,10 @@ html.js [data-reveal].is-visible {
   .principles { grid-template-columns: 1fr; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
 
+  .concern-row {
+    grid-template-columns: 2.8rem 84px minmax(0, 1fr) auto;
+  }
+
   /* Stage meta: allow price to wrap below long product names */
   .stage-meta { flex-wrap: wrap; gap: 0.5rem; }
 
@@ -2007,7 +2074,18 @@ html.js [data-reveal].is-visible {
   .newsletter-section { padding-block: clamp(40px, 9vw, 64px); margin-top: clamp(36px, 8vw, 64px); }
 
   /* Concern list */
-  .concern-row { grid-template-columns: 3rem 1fr auto; }
+  .concern-row {
+    grid-template-columns: 2.4rem 72px minmax(0, 1fr) auto;
+    gap: 0.8rem;
+  }
+
+  .concern-no { font-size: 1.2rem; }
+  .concern-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 
   /* Footer */
   .footer-grid { grid-template-columns: 1fr; }
@@ -2020,7 +2098,7 @@ html.js [data-reveal].is-visible {
 
   /* Header */
   .header-grid { gap: 0.4rem; }
-  .brand svg { width: 80px; height: 28px; }
+  .brand-logo { width: 88px; }
   .header-utils { gap: 0.4rem; }
   .cart-link { padding-inline: 0.5em; }
 
@@ -2159,6 +2237,7 @@ body.has-custom-cursor button { cursor: none; }
   min-width: 0;
   padding-block: 0.55rem;
   --brand-loop-fade: var(--rice);
+  --brand-loop-logo-color: color-mix(in srgb, var(--ink) 48%, var(--muted));
 }
 
 .brand-loop::before,
@@ -2208,31 +2287,46 @@ body.has-custom-cursor button { cursor: none; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.45rem;
-  padding: 0.58rem 1rem;
+  width: clamp(6.2rem, 9vw, 8.4rem);
+  min-height: 3rem;
+  padding: 0.62rem 1rem;
   border: 1px solid color-mix(in srgb, var(--moss) 14%, transparent);
   border-radius: var(--r-pill);
   background: color-mix(in srgb, #fff 62%, var(--rice));
-  color: color-mix(in srgb, var(--ink) 86%, var(--moss));
-  font-family: var(--font-body);
-  font-size: clamp(0.86rem, 1.25vw, 1.02rem);
-  font-weight: 700;
   line-height: 1;
-  letter-spacing: 0.035em;
   text-decoration: none;
   box-shadow: 0 14px 30px -26px rgba(37, 41, 34, 0.38);
-  transition: transform var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
+  transition: transform var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
+}
+
+.brand-loop-logo {
+  display: block;
+  width: 100%;
+  height: 1.28rem;
+  background: var(--brand-loop-logo-color);
+  -webkit-mask-image: var(--brand-logo);
+  mask-image: var(--brand-logo);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
 .brand-loop-mark:hover,
 .brand-loop-mark:focus-visible {
   border-color: color-mix(in srgb, var(--yuja) 68%, var(--moss));
   background: color-mix(in srgb, var(--yuja) 10%, #fff);
-  color: var(--ink);
   transform: translateY(-2px) scale(1.04);
 }
 
 @keyframes glow-logo-loop {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes glow-logo-loop-mobile {
   from { transform: translate3d(0, 0, 0); }
   to { transform: translate3d(-50%, 0, 0); }
 }
@@ -2259,6 +2353,25 @@ body.has-custom-cursor button { cursor: none; }
 
   .brand-loop-label {
     max-width: none;
+  }
+
+  .brand-loop {
+    padding-block: 0.35rem;
+  }
+
+  .brand-loop-track {
+    animation: glow-logo-loop-mobile 26s linear infinite;
+  }
+
+  .brand-loop-list {
+    gap: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .brand-loop-mark {
+    width: 6.4rem;
+    min-height: 2.55rem;
+    padding: 0.52rem 0.82rem;
   }
 }
 

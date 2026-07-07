@@ -53,19 +53,25 @@ function glow_wc_active() {
 	return class_exists( 'WooCommerce' );
 }
 
+function glow_logo_url() {
+	return get_template_directory_uri() . '/images/Glow K-Beauty - Logo.png';
+}
+
+function glow_favicon_url() {
+	return get_template_directory_uri() . '/images/Glow K-Beauty - Favicon.png';
+}
+
 function glow_inline_logo() {
 	?>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 118 42" width="118" height="42" overflow="visible" aria-hidden="true" focusable="false">
-		<path d="M 12 2 C 0 9 0 25 12 34 C 24 25 24 9 12 2 Z" fill="#6B8F5E"/>
-		<text x="30" y="27" font-family="'Young Serif', Georgia, serif" font-size="22" fill="currentColor" letter-spacing="5">GLOW</text>
-	</svg>
+	<img class="brand-logo" src="<?php echo esc_url( glow_logo_url() ); ?>" alt="<?php esc_attr_e( 'Glow K-Beauty', 'glow-glow' ); ?>" width="354" height="126" decoding="async" />
 	<?php
 }
 
 add_action( 'wp_head', function () {
 	if ( ! has_site_icon() ) {
 		?>
-		<link rel="icon" href="<?php echo esc_url( get_template_directory_uri() . '/images/favicon.svg' ); ?>" type="image/svg+xml"/>
+		<link rel="icon" href="<?php echo esc_url( glow_favicon_url() ); ?>" type="image/png" sizes="50x50"/>
+		<link rel="apple-touch-icon" href="<?php echo esc_url( glow_favicon_url() ); ?>"/>
 		<?php
 	}
 } );
@@ -460,7 +466,7 @@ add_action( 'init', 'glow_wc_adjustments' );
  * Single-product CTA wording for the v2 Korean skincare flow.
  */
 function glow_pdp_add_to_routine_text() {
-	return __( 'Add to routine', 'glow-glow' );
+	return __( 'Add to cart', 'glow-glow' );
 }
 
 /**

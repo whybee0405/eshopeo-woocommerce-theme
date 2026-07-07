@@ -12,8 +12,12 @@ if ($card -notmatch 'card-skin-fit') {
     throw 'Product cards should expose skin-fit metadata for clearer Korean skincare selection.'
 }
 
-if ($card -notmatch 'Add to routine') {
-    throw 'Product card CTA should use the calmer v2 Add to routine language.'
+if ($card -notmatch 'Add to cart') {
+    throw 'Product card CTA should use standard Add to cart language.'
+}
+
+if ($card -match 'Add to routine') {
+    throw 'Product card CTA should not use Add to routine language.'
 }
 
 if ($css -notmatch 'product-card-shell') {

@@ -122,11 +122,21 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
     renderer.render(scene, camera);
   }
 
+  function startRenderer() {
+    if (!animId) { animate(); }
+  }
+
+  function stopRenderer() {
+    if (animId) {
+      cancelAnimationFrame(animId);
+      animId = null;
+    }
+  }
+
   /* Toggle 3D / photo */
   var showing3d = false;
 
   if (hasImage && toggleBtn) {
-    animate(); /* start loop even while hidden so it's ready */
     if (canvas) { canvas.hidden = true; }
 
     toggleBtn.addEventListener('click', function () {
@@ -134,6 +144,7 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
       if (showing3d) {
         if (pdpMain) { pdpMain.hidden = true; }
         canvas.hidden = false;
+        startRenderer();
         toggleBtn.textContent = 'View photo';
         controls.autoRotate = !REDUCED;
       } else {
@@ -141,11 +152,13 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
         if (pdpMain) { pdpMain.hidden = false; }
         toggleBtn.textContent = 'View 3D';
         controls.autoRotate = false;
+        stopRenderer();
       }
     });
   } else {
     /* No product image — show 3D immediately */
-    animate();
+    showing3d = true;
+    startRenderer();
   }
 
   /* Resize */
@@ -159,8 +172,8 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
   /* Pause when hidden */
   document.addEventListener('visibilitychange', function () {
-    if (document.hidden) { cancelAnimationFrame(animId); animId = null; }
-    else if (!animId) { animate(); }
+    if (document.hidden) { stopRenderer(); }
+    else if (showing3d) { startRenderer(); }
   });
 
 })();

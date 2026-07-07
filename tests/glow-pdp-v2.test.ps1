@@ -20,8 +20,12 @@ if ($template -notmatch 'Skin fit' -or $template -notmatch 'Key ingredients') {
     throw 'PDP should keep skin fit and key ingredients visible in the assessment area.'
 }
 
-if (($template + $functions) -notmatch 'Add to routine') {
-    throw 'PDP add-to-cart button should be relabelled to Add to routine.'
+if (($template + $functions) -notmatch 'Add to cart') {
+    throw 'PDP add-to-cart button should use standard Add to cart wording.'
+}
+
+if (($template + $functions) -match 'Add to routine') {
+    throw 'PDP add-to-cart button should not use Add to routine wording.'
 }
 
 if ($template -match 'Reacted to it\?') {

@@ -111,8 +111,8 @@ ul.products {
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.8em;
+  justify-content: center;
+  gap: 0.5em;
   width: auto;
   margin: 0;
   background: var(--ink);
@@ -123,6 +123,8 @@ ul.products {
   font-size: 0.88rem;
   font-weight: 600;
   padding: 0.82em 1em;
+  min-height: 42px;
+  white-space: nowrap;
   cursor: pointer;
   text-decoration: none;
   transform: translateY(0);
@@ -130,10 +132,6 @@ ul.products {
 }
 
 .quick-add:hover { background: var(--moss); border-color: var(--moss); color: var(--rice); }
-
-.quick-add .mono { font-size: 0.8rem; color: color-mix(in srgb, var(--rice) 86%, var(--seafoam)); }
-.quick-add .mono del { opacity: 0.55; margin-right: 0.4em; }
-.quick-add .mono ins { text-decoration: none; }
 
 .quick-add[aria-busy="true"] { opacity: 0.6; pointer-events: none; }
 
@@ -178,14 +176,20 @@ ul.products {
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.35;
+  max-height: 2.28rem;
+  overflow: hidden;
 }
 
 .card-skin-fit span {
+  min-width: 0;
   max-width: 100%;
   padding: 0.42em 0.68em;
   border-radius: var(--r-pill);
   background: color-mix(in srgb, var(--seafoam) 62%, #FBF8F2);
   color: color-mix(in srgb, var(--ink) 72%, var(--moss));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-foot {
@@ -949,10 +953,6 @@ ul.products {
 
   .card-title {
     font-size: 0.88rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .card-foot {
@@ -966,7 +966,22 @@ ul.products {
 
 @media (max-width: 480px) {
   /* Always surface interactive elements — no hover required */
-  .quick-add { transform: translateY(0); font-size: 0.8rem; min-height: 44px; }
+  .quick-add {
+    justify-content: center;
+    transform: translateY(0);
+    font-size: 0.78rem;
+    min-height: 40px;
+    padding: 0.72em 0.78em;
+  }
+
+  .card-skin-fit {
+    gap: 0.3rem;
+    font-size: 0.68rem;
+    max-height: 2rem;
+  }
+
+  .card-skin-fit span { padding: 0.34em 0.58em; }
+
   .wishlist-btn { opacity: 1; width: 44px; height: 44px; }
 
   .woocommerce table.shop_table img { width: 48px; }

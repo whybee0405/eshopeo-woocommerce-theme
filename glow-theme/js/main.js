@@ -419,6 +419,13 @@
 	var menuClose = qs('[data-menu-close]');
 	if (menuClose) { menuClose.addEventListener('click', closeMenu); }
 
+	if (menu) {
+		menu.addEventListener('click', function (event) {
+			var link = event.target.closest && event.target.closest('a');
+			if (link) { closeMenu(); }
+		});
+	}
+
 	/* ------------------------------------------------------------------
 	 * Search overlay
 	 * ------------------------------------------------------------------ */

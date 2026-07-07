@@ -161,5 +161,10 @@
   "159": "glow-home-logo-loop.test.ps1",
   "160": "glow-policy-pages.test.ps1",
   "161": "glow-notice-ticker-loyalty.test.ps1",
-  "162": "page-loyalty-program.php"
+  "162": "page-loyalty-program.php",
+  "163": "glow-mobile-product-card-ui.test.ps1",
+  "164": "COVE Design System",
+  "165": "cove-premium-refresh.test.ps1",
+  "166": "glow-png-logo-favicon.test.ps1",
+  "167": "glow-brand-loop-concern-images.test.ps1"
 }

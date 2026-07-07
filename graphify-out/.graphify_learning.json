@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T09:06:54.055097+00:00",
+  "generated_at": "2026-07-07T14:22:50.720791+00:00",
   "nodes": {
     "agents": {
       "code_fingerprint": "cf64c9c9ff4c189adbd97061d8e54a252149523fe16d00886024d04ce89562f4",
@@ -17,7 +17,7 @@
           "q": "How is Graphify configured as shared memory for this WooCommerce theme repo?"
         }
       ],
-      "score": 1.955299649,
+      "score": 1.945412629,
       "source_file": "AGENTS.md",
       "status": "preferred",
       "uses": 2

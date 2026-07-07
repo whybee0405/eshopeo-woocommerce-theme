@@ -46,13 +46,9 @@ $glow_notice_items = array(
 	<div class="container header-grid">
 
 		<div class="header-brand">
-			<?php if ( has_custom_logo() ) : ?>
-				<?php the_custom_logo(); ?>
-			<?php else : ?>
-				<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php esc_attr_e( 'Glow home', 'glow-glow' ); ?>">
-					<?php glow_inline_logo(); ?>
-				</a>
-			<?php endif; ?>
+			<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php esc_attr_e( 'Glow home', 'glow-glow' ); ?>">
+				<?php glow_inline_logo(); ?>
+			</a>
 		</div>
 
 		<nav class="site-nav" aria-label="<?php esc_attr_e( 'Primary', 'glow-glow' ); ?>">

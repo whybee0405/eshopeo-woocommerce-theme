@@ -118,6 +118,34 @@ while ( have_posts() ) :
 						</p>
 					<?php endif; ?>
 
+					<section class="inspection-passport" aria-label="<?php esc_attr_e( 'Inspection Passport', 'cove' ); ?>">
+						<div class="inspection-passport__head">
+							<p class="inspection-passport__kicker"><?php esc_html_e( 'Inspection Passport', 'cove' ); ?></p>
+							<p class="inspection-passport__status"><?php esc_html_e( 'Ready to ship', 'cove' ); ?></p>
+						</div>
+						<dl class="inspection-passport__grid">
+							<div>
+								<dt><?php esc_html_e( 'Grade', 'cove' ); ?></dt>
+								<dd><?php echo esc_html( $cond_label ); ?></dd>
+							</div>
+							<div>
+								<dt><?php esc_html_e( 'Function test', 'cove' ); ?></dt>
+								<dd><?php esc_html_e( 'Passed', 'cove' ); ?></dd>
+							</div>
+							<div>
+								<dt><?php esc_html_e( 'Warranty', 'cove' ); ?></dt>
+								<dd><?php echo '' !== $warranty ? esc_html( $warranty ) : esc_html__( 'Included', 'cove' ); ?></dd>
+							</div>
+							<div>
+								<dt><?php esc_html_e( 'Returns', 'cove' ); ?></dt>
+								<dd><?php esc_html_e( '30 days', 'cove' ); ?></dd>
+							</div>
+						</dl>
+						<?php if ( '' !== $grade_note && 'new' !== $condition ) : ?>
+							<p class="inspection-passport__note"><?php echo esc_html( $grade_note ); ?></p>
+						<?php endif; ?>
+					</section>
+
 					<!-- Add to cart -->
 					<div class="pdp-atc-bar">
 						<?php if ( function_exists( 'woocommerce_template_single_add_to_cart' ) ) {
@@ -209,7 +237,7 @@ while ( have_posts() ) :
 	</main>
 
 	<!-- Sticky buy bar (appears on scroll) -->
-	<div class="pdp-sticky-bar" aria-hidden="true">
+	<div class="pdp-sticky-bar" role="region" aria-label="<?php esc_attr_e( 'Quick add to cart', 'cove' ); ?>">
 		<div class="pdp-sticky-bar__product">
 			<span class="pdp-sticky-bar__name"><?php echo esc_html( $product->get_name() ); ?></span>
 			<span class="pdp-sticky-bar__price"><?php echo $product->get_price_html(); // phpcs:ignore ?></span>

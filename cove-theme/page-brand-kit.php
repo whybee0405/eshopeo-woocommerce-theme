@@ -22,7 +22,7 @@ add_action( 'wp_enqueue_scripts', function () {
 <?php wp_head(); ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --cream:       #F7F4EE;
@@ -39,9 +39,9 @@ add_action( 'wp_enqueue_scripts', function () {
   --grade-a:     #2DB89A;
   --grade-b:     #4A8FD4;
   --grade-c:     #BFB4A2;
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body:    "Plus Jakarta Sans", system-ui, sans-serif;
-  --font-mono:    "DM Mono", monospace;
+  --font-display: "Geist", "Aptos Display", system-ui, sans-serif;
+  --font-body:    "Geist", "Aptos", system-ui, sans-serif;
+  --font-mono:    "Geist Mono", monospace;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 *, *::before, *::after { box-sizing: border-box; }
@@ -127,9 +127,9 @@ img { max-width: 100%; display: block; }
 .typeface-meta { display: flex; align-items: baseline; gap: 24px; margin-bottom: 24px; }
 .typeface-name { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 .typeface-role { font-family: var(--font-mono); font-size: 0.7rem; color: var(--amber); letter-spacing: 0.05em; }
-.fraunces-specimen { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--slate); margin-bottom: 16px; }
-.fraunces-sub { font-family: var(--font-display); font-size: 1.1rem; font-style: italic; font-weight: 300; color: var(--muted); }
-.fraunces-alpha { font-family: var(--font-display); font-size: 0.95rem; color: var(--sand); letter-spacing: 0.05em; margin-top: 16px; font-weight: 400; }
+.display-specimen { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.05; letter-spacing: 0; color: var(--slate); margin-bottom: 16px; }
+.display-sub { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; color: var(--muted); }
+.display-alpha { font-family: var(--font-display); font-size: 0.95rem; color: var(--sand); letter-spacing: 0.02em; margin-top: 16px; font-weight: 500; }
 .jakarta-specimen { font-family: var(--font-body); font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 700; color: var(--slate); margin-bottom: 12px; }
 .jakarta-sub { font-size: 1rem; color: var(--muted); max-width: 580px; line-height: 1.7; }
 .mono-specimen { font-family: var(--font-mono); font-size: clamp(1.1rem, 2.5vw, 1.8rem); color: var(--amber); letter-spacing: 0.04em; margin-bottom: 12px; }
@@ -180,7 +180,7 @@ img { max-width: 100%; display: block; }
 .comp-block:last-child { margin-bottom: 0; }
 .comp-block__label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 0.75em 1.5em; border-radius: 999px; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; text-decoration: none; cursor: pointer; border: 2px solid transparent; white-space: nowrap; transition: all 160ms; min-height: 44px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 0.75em 1.5em; border-radius: 999px; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; text-decoration: none; cursor: pointer; border: 2px solid transparent; white-space: nowrap; transition: background 160ms var(--ease), color 160ms var(--ease), border-color 160ms var(--ease), transform 160ms var(--ease); min-height: 44px; }
 .btn--primary { background: var(--amber); color: #fff; border-color: var(--amber); }
 .btn--primary:hover { background: var(--amber-deep); border-color: var(--amber-deep); }
 .btn--outline { background: transparent; color: var(--slate); border-color: var(--line); }
@@ -360,25 +360,25 @@ img { max-width: 100%; display: block; }
 <section id="typography">
   <div class="section">
     <p class="section-label">04 — Typography</p>
-    <div class="type-intro"><h2>Three voices. One personality.</h2><p>Each font has a specific job. Fraunces earns authority and warmth for big statements. Plus Jakarta Sans handles clarity at every size. DM Mono anchors numbers and spec data with precision.</p></div>
+    <div class="type-intro"><h2>One precise voice. Two instruments.</h2><p>Geist carries the showroom voice: architectural, direct, and engineered. Geist Mono is reserved for prices, measurements, grade labels, and inspection facts.</p></div>
     <div class="typeface-row">
-      <div class="typeface-meta"><span class="typeface-name">Fraunces</span><span class="typeface-role">Display / Headings / Emotional statements</span></div>
-      <p class="fraunces-specimen">Home, done<br><em style="color:var(--amber);">right.</em></p>
-      <p class="fraunces-sub">A slow-draw, optical-size serif with warmth and personality. Variable weight and optical size axes let it work from 9pt to 90pt.</p>
-      <p class="fraunces-alpha">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z — 0 1 2 3 4 5 6 7 8 9</p>
-      <div style="margin-top:20px;padding:16px 20px;background:var(--cream-deep);border-radius:10px;border-left:3px solid var(--amber);"><p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--slate);">Why Fraunces:</strong> Luxury appliance brands use cold sans-serifs. COVE uses a warm serif to signal "considered" rather than "corporate". Fraunces has editorial credibility without the stuffiness of traditional serif faces like Garamond.</p></div>
+      <div class="typeface-meta"><span class="typeface-name">Geist</span><span class="typeface-role">Display / UI / Navigation / Product naming</span></div>
+      <p class="display-specimen">Home, done<br><span style="color:var(--amber);">right.</span></p>
+      <p class="display-sub">A precise sans-serif with enough warmth for home commerce and enough structure for technical specifications.</p>
+      <p class="display-alpha">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z — 0 1 2 3 4 5 6 7 8 9</p>
+      <div style="margin-top:20px;padding:16px 20px;background:var(--cream-deep);border-radius:10px;border:1px solid var(--line);"><p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--slate);">Why Geist:</strong> Appliance retail needs precision first. The type should feel like a calibrated product label, not an editorial campaign.</p></div>
     </div>
     <div class="typeface-row">
-      <div class="typeface-meta"><span class="typeface-name">Plus Jakarta Sans</span><span class="typeface-role">Body / UI / Navigation / Labels</span></div>
+      <div class="typeface-meta"><span class="typeface-name">Geist Mono</span><span class="typeface-role">Prices / Specs / Badges / Inspection facts</span></div>
       <p class="jakarta-specimen">Every room. Every budget.</p>
-      <p class="jakarta-sub">Clean, geometric sans-serif with a friendly rounded character. The workhorse of the system — handles everything Fraunces doesn't touch.</p>
-      <div style="margin-top:20px;padding:16px 20px;background:var(--cream-deep);border-radius:10px;border-left:3px solid var(--grade-a);"><p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--slate);">Why Plus Jakarta Sans:</strong> Chosen over Inter (too neutral) and Poppins (too friendly). Jakarta has just enough warmth to pair with Fraunces without competing. The COVE wordmark is set in Jakarta Bold.</p></div>
+      <p class="jakarta-sub">Used where the customer needs facts: price, saving, grade, dimensions, energy rating, warranty, and inspection status.</p>
+      <div style="margin-top:20px;padding:16px 20px;background:var(--cream-deep);border-radius:10px;border:1px solid var(--line);"><p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--slate);">Why mono is limited:</strong> It marks evidence, not decoration. When COVE uses mono, the customer is looking at a fact.</p></div>
     </div>
     <div class="typeface-row">
-      <div class="typeface-meta"><span class="typeface-name">DM Mono</span><span class="typeface-role">Prices / Specs / Badges / Eyebrows</span></div>
+      <div class="typeface-meta"><span class="typeface-name">Inspection Passport</span><span class="typeface-role">Trust pattern / Product evidence</span></div>
       <p class="mono-specimen">R 2,199 — Grade A — A+++ Energy</p>
-      <p class="mono-sub">Used exclusively for numbers, prices, specs, grade labels, category eyebrows, and section numbers. Monospace ensures all price columns align perfectly.</p>
-      <div style="margin-top:20px;padding:16px 20px;background:var(--cream-deep);border-radius:10px;border-left:3px solid var(--grade-b);"><p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--slate);">Why DM Mono:</strong> Prices need to feel precise and trustworthy. When you see mono, you're looking at a fact, not marketing copy.</p></div>
+      <p class="mono-sub">Every PDP should make the grade, inspection, cosmetic note, warranty, and return promise visible before hesitation sets in.</p>
+      <div style="margin-top:20px;padding:16px 20px;background:var(--cream-deep);border-radius:10px;border:1px solid var(--line);"><p style="font-size:0.82rem;color:var(--muted);line-height:1.6;"><strong style="color:var(--slate);">Why it matters:</strong> COVE sells confidence in graded appliances. The evidence system is the brand.</p></div>
     </div>
     <div class="type-scale">
       <h3>Type Scale</h3>
@@ -423,7 +423,7 @@ img { max-width: 100%; display: block; }
       <div class="badge-row"><span class="saving-badge">Save R700</span><span class="saving-badge">Save R2,500</span><span class="saving-badge">Save R3,100</span></div>
     </div>
     <div class="comp-block">
-      <p class="comp-block__label">Price Display — DM Mono, amber-deep on white</p>
+      <p class="comp-block__label">Price Display — Geist Mono, copper-deep on light surfaces</p>
       <div class="price-demo"><span class="price-rrp">R 5,599</span><span class="price-current">R 2,499</span><span class="saving-badge" style="margin-left:4px;">Save R3,100</span></div>
       <p style="font-family:var(--font-mono);font-size:0.7rem;color:var(--muted);letter-spacing:0.05em;">Prices use amber-deep (#C4621F) — not amber (#E07B35) — on white/cream. Achieves 4:1 contrast (WCAG large text). RRP always crossed out.</p>
     </div>
@@ -484,7 +484,7 @@ img { max-width: 100%; display: block; }
   <div class="logo-usage-inner">
     <p class="section-label section-label--light">08 — Logo Usage</p>
     <h2>The arch mark.</h2>
-    <p class="logo-usage-intro">The COVE logo is an arch — a doorway, a frame, a sheltered space. It pairs with the COVE wordmark set in Plus Jakarta Sans 800, wide letter-spacing (0.2em).</p>
+    <p class="logo-usage-intro">The COVE logo is an arch — a doorway, a frame, a sheltered space. It pairs with the COVE wordmark set in Geist 800, wide letter-spacing (0.2em).</p>
     <div class="logo-demo-grid">
       <div class="logo-demo-card logo-demo-card--on-cream">
         <div class="logo-lockup"><svg width="36" height="36" viewBox="0 0 72 72" fill="none" style="color:var(--amber);"><path d="M14 58 L14 36 A22 22 0 0 1 58 36 L58 58" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="58" x2="66" y2="58" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/></svg><span class="logo-lockup__wordmark">COVE</span></div>
@@ -511,7 +511,7 @@ img { max-width: 100%; display: block; }
     <svg viewBox="0 0 72 72" fill="none"><path d="M14 58 L14 36 A22 22 0 0 1 58 36 L58 58" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="6" y1="58" x2="66" y2="58" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/></svg>
     <span class="colophon-brand__name">COVE</span>
   </div>
-  <p class="colophon-meta">Brand Guidelines v1.0 · 2026<br>Fraunces · Plus Jakarta Sans · DM Mono<br>Cream #F7F4EE · Amber #E07B35 · Slate #252830</p>
+  <p class="colophon-meta">Brand Guidelines v2.0 · 2026<br>Geist · Geist Mono<br>Cream #F8F5EF · Copper #B96A3C · Graphite #23262D</p>
 </footer>
 
 <?php wp_footer(); ?>

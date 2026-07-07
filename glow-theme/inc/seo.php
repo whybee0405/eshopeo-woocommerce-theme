@@ -217,7 +217,7 @@ function glow_og_image() {
 		}
 	}
 
-	return get_template_directory_uri() . '/screenshot.png';
+	return glow_logo_url();
 }
 
 function glow_seo_meta() {

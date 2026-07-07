@@ -16,9 +16,23 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 $glow_brand   = glow_meta( $product->get_id(), '_product_brand' );
 $glow_step_no = glow_meta( $product->get_id(), '_product_routine_step' );
 $glow_skin    = glow_meta( $product->get_id(), '_skin_types' );
-$glow_actives = glow_meta( $product->get_id(), '_key_ingredients' );
 $glow_badges  = glow_product_badges( $product );
 $glow_quick   = $product->is_type( 'simple' ) && $product->is_purchasable() && $product->is_in_stock();
+$glow_card_chips = array();
+
+if ( $glow_skin ) {
+	$glow_chip_parts = preg_split( '/[,|]+/', wp_strip_all_tags( $glow_skin ) );
+	if ( $glow_chip_parts ) {
+		foreach ( $glow_chip_parts as $glow_chip ) {
+			$glow_chip = trim( $glow_chip );
+			if ( '' !== $glow_chip ) {
+				$glow_card_chips[] = $glow_chip;
+			}
+		}
+	}
+}
+
+$glow_card_chips = array_values( array_unique( $glow_card_chips ) );
 ?>
 <li <?php wc_product_class( 'product-card', $product ); ?>>
 	<div class="product-card-shell">
@@ -47,8 +61,7 @@ $glow_quick   = $product->is_type( 'simple' ) && $product->is_purchasable() && $
 
 		<?php if ( $glow_quick ) : ?>
 			<button class="quick-add" type="button" data-quick-add="<?php echo esc_attr( $product->get_id() ); ?>">
-				<?php esc_html_e( 'Add to routine', 'glow-glow' ); ?>
-				<span class="mono"><?php echo wp_kses_post( $product->get_price_html() ); ?></span>
+				<?php esc_html_e( 'Add to cart', 'glow-glow' ); ?>
 			</button>
 		<?php else : ?>
 			<a class="quick-add" href="<?php the_permalink(); ?>"><?php esc_html_e( 'View product', 'glow-glow' ); ?></a>
@@ -67,14 +80,11 @@ $glow_quick   = $product->is_type( 'simple' ) && $product->is_purchasable() && $
 
 		<h3 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-		<?php if ( $glow_skin || $glow_actives ) : ?>
-			<p class="card-skin-fit">
-				<?php if ( $glow_skin ) : ?>
-					<span><?php echo esc_html( $glow_skin ); ?></span>
-				<?php endif; ?>
-				<?php if ( $glow_actives ) : ?>
-					<span><?php echo esc_html( $glow_actives ); ?></span>
-				<?php endif; ?>
+		<?php if ( $glow_card_chips ) : ?>
+			<p class="card-skin-fit" aria-label="<?php esc_attr_e( 'Product skin types', 'glow-glow' ); ?>">
+				<?php foreach ( $glow_card_chips as $glow_chip ) : ?>
+					<span><?php echo esc_html( $glow_chip ); ?></span>
+				<?php endforeach; ?>
 			</p>
 		<?php endif; ?>
 

@@ -44,28 +44,29 @@ WC tested up to: 9.5
    ========================================================================== */
 :root {
   /* Brand palette */
-  --cream:       #F7F4EE;
-  --cream-deep:  #EDE9DF;
-  --slate:       #252830;
-  --slate-soft:  #363B47;
-  --amber:       #E07B35;
-  --amber-deep:  #C4621F;
-  --amber-light: #F5C49A;
-  --sand:        #BFB4A2;
-  --muted:       #5E5850;
-  --line:        #DDD8CE;
+  --cream:       #F8F5EF;
+  --cream-deep:  #ECE5DA;
+  --surface:     #FDFBF7;
+  --slate:       #23262D;
+  --slate-soft:  #353A44;
+  --amber:       #B96A3C;
+  --amber-deep:  #96512D;
+  --amber-light: #E7B283;
+  --sand:        #9C8871;
+  --muted:       #625B51;
+  --line:        #DED7CC;
   --line-dark:   rgba(247,244,238,0.12);
 
   /* Condition grade colours */
   --grade-new:   var(--amber);
-  --grade-a:     #2DB89A;
-  --grade-b:     #4A8FD4;
+  --grade-a:     #208C75;
+  --grade-b:     #376FAD;
   --grade-c:     var(--sand);
 
   /* Typography */
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --font-body:    "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
-  --font-mono:    "DM Mono", "SFMono-Regular", Consolas, monospace;
+  --font-display: "Geist", "Aptos Display", "Segoe UI", system-ui, sans-serif;
+  --font-body:    "Geist", "Aptos", "Segoe UI", system-ui, sans-serif;
+  --font-mono:    "Geist Mono", "SFMono-Regular", Consolas, monospace;
 
   /* Spacing (4px base) */
   --s-1:  4px;
@@ -1146,6 +1147,27 @@ input[type="range"].range-thumb::-webkit-slider-thumb:active { cursor: grabbing;
   overflow: hidden;
 }
 
+.product-card__evidence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-1);
+}
+
+.product-card__evidence span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0.2em 0.55em;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--cream) 72%, var(--surface));
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+}
+
 .product-card__price {
   display: flex;
   align-items: baseline;
@@ -1411,11 +1433,73 @@ input[type="range"].range-thumb::-webkit-slider-thumb:active { cursor: grabbing;
 
 .pdp-grade-note {
   background: var(--cream-deep);
-  border-left: 3px solid var(--amber);
+  border: 1.5px solid color-mix(in srgb, var(--amber) 38%, var(--line));
   padding: var(--s-4);
-  border-radius: 0 var(--r-m) var(--r-m) 0;
+  border-radius: var(--r-m);
   font-size: 0.88rem;
   color: var(--muted);
+  line-height: 1.65;
+}
+
+.inspection-passport {
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-l);
+  background: var(--surface);
+  padding: var(--s-5);
+  box-shadow: 0 18px 40px -30px rgba(35, 38, 45, 0.35);
+}
+
+.inspection-passport__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid var(--line);
+}
+
+.inspection-passport__kicker,
+.inspection-passport__status {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.inspection-passport__kicker { color: var(--slate); font-weight: 700; }
+.inspection-passport__status { color: var(--grade-a); }
+
+.inspection-passport__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s-4);
+  margin: var(--s-4) 0 0;
+}
+
+.inspection-passport__grid div {
+  min-width: 0;
+}
+
+.inspection-passport dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  margin-bottom: var(--s-1);
+}
+
+.inspection-passport dd {
+  margin: 0;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.inspection-passport__note {
+  margin-top: var(--s-4);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.86rem;
   line-height: 1.65;
 }
 

@@ -28,6 +28,18 @@ if ($style -notmatch '@keyframes\s+glow-notice-ticker') {
     throw 'Notice ticker must define a keyframe animation.'
 }
 
+if ($style -notmatch '\.notice-ticker-inner\s*\{[\s\S]*?width:\s*200%' -or $style -notmatch '\.notice-ticker-track\s*\{[\s\S]*?flex:\s*0 0 50%' -or $style -notmatch '\.notice-ticker-track\s*\{[\s\S]*?justify-content:\s*space-around') {
+    throw 'Notice ticker tracks must each span the viewport and distribute items evenly.'
+}
+
+if ($style -notmatch '@media\s*\(max-width:\s*900px\)[\s\S]*?\.notice-ticker-inner\s*\{[\s\S]*?width:\s*max-content[\s\S]*?animation:\s*glow-notice-ticker-mobile' -or $style -notmatch '@media\s*\(max-width:\s*900px\)[\s\S]*?\.notice-ticker-track\s*\{[\s\S]*?flex:\s*0 0 auto[\s\S]*?justify-content:\s*flex-start') {
+    throw 'Notice ticker needs compact mobile marquee rules so it keeps moving and does not become thick.'
+}
+
+if ($style -notmatch '@keyframes\s+glow-notice-ticker-mobile') {
+    throw 'Notice ticker must define a mobile marquee keyframe for content-width tracks.'
+}
+
 if ($style -notmatch '\.notice-ticker:hover\s+\.notice-ticker-inner\s*\{[\s\S]*?animation-play-state:\s*paused') {
     throw 'Notice ticker must pause on hover.'
 }

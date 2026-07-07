@@ -16,6 +16,8 @@ $condition = function_exists( 'cove_product_condition' ) ? cove_product_conditio
 $cond_label= function_exists( 'cove_condition_label' ) ? cove_condition_label( $condition ) : 'New';
 $cond_class= function_exists( 'cove_condition_class' ) ? cove_condition_class( $condition ) : 'badge-new';
 $grade_note= function_exists( 'cove_meta' ) ? (string) cove_meta( $pid, '_cove_grade_notes' ) : '';
+$warranty  = function_exists( 'cove_meta' ) ? (string) cove_meta( $pid, '_cove_warranty' ) : '';
+$energy    = function_exists( 'cove_meta' ) ? (string) cove_meta( $pid, '_cove_energy_rating' ) : '';
 $saving    = function_exists( 'cove_saving' ) ? cove_saving( $pid ) : 0;
 $rrp       = function_exists( 'cove_meta' ) ? (float) cove_meta( $pid, '_cove_rrp' ) : 0;
 $has_sale  = $product->is_on_sale() || ( $rrp > 0 && (float) $product->get_price() < $rrp );
@@ -54,6 +56,16 @@ $has_sale  = $product->is_on_sale() || ( $rrp > 0 && (float) $product->get_price
 		<?php if ( '' !== $grade_note && 'new' !== $condition ) : ?>
 			<p class="product-card__grade-note"><?php echo esc_html( $grade_note ); ?></p>
 		<?php endif; ?>
+
+		<div class="product-card__evidence" aria-label="<?php esc_attr_e( 'Inspection evidence', 'cove' ); ?>">
+			<span><?php esc_html_e( 'Tested', 'cove' ); ?></span>
+			<?php if ( '' !== $warranty ) : ?>
+				<span><?php echo esc_html( $warranty ); ?></span>
+			<?php endif; ?>
+			<?php if ( '' !== $energy ) : ?>
+				<span><?php echo esc_html( $energy ); ?></span>
+			<?php endif; ?>
+		</div>
 
 		<div class="product-card__price">
 			<?php if ( $has_sale && $rrp > 0 ) : ?>

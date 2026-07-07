@@ -48,6 +48,10 @@ $brands = is_wp_error( $brands ) ? array() : $brands;
 					<div class="filter-group">
 						<span class="filter-group__label"><?php esc_html_e( 'Condition', 'cove' ); ?></span>
 						<div class="filter-options">
+							<label class="check-label">
+								<input type="radio" name="condition" value="" <?php checked( $active_condition, '' ); ?>>
+								<?php esc_html_e( 'All conditions', 'cove' ); ?>
+							</label>
 							<?php
 							$conditions = array(
 								'new'     => __( 'New', 'cove' ),
@@ -59,7 +63,7 @@ $brands = is_wp_error( $brands ) ? array() : $brands;
 								$grade_key = str_replace( '-', '', $slug );
 								?>
 								<label class="check-label filter-grade-<?php echo esc_attr( $grade_key ); ?>">
-									<input type="checkbox" name="condition" value="<?php echo esc_attr( $slug ); ?>" <?php checked( $active_condition, $slug ); ?>>
+									<input type="radio" name="condition" value="<?php echo esc_attr( $slug ); ?>" <?php checked( $active_condition, $slug ); ?>>
 									<?php echo esc_html( $label ); ?>
 								</label>
 							<?php endforeach; ?>
@@ -70,12 +74,16 @@ $brands = is_wp_error( $brands ) ? array() : $brands;
 					<div class="filter-group">
 						<span class="filter-group__label"><?php esc_html_e( 'Category', 'cove' ); ?></span>
 						<div class="filter-options">
+							<label class="check-label">
+								<input type="radio" name="cat" value="" <?php checked( $active_cat, '' ); ?>>
+								<?php esc_html_e( 'All rooms', 'cove' ); ?>
+							</label>
 							<?php
 							$filter_cats = function_exists( 'cove_categories' ) ? cove_categories() : array();
 							foreach ( $filter_cats as $slug => $cat ) :
 								?>
 								<label class="check-label">
-									<input type="checkbox" name="cat" value="<?php echo esc_attr( $slug ); ?>" <?php checked( $active_cat, $slug ); ?>>
+									<input type="radio" name="cat" value="<?php echo esc_attr( $slug ); ?>" <?php checked( $active_cat, $slug ); ?>>
 									<?php echo esc_html( $cat['label'] ); ?>
 								</label>
 							<?php endforeach; ?>
@@ -109,9 +117,13 @@ $brands = is_wp_error( $brands ) ? array() : $brands;
 						<div class="filter-group">
 							<span class="filter-group__label"><?php esc_html_e( 'Brand', 'cove' ); ?></span>
 							<div class="filter-options">
+								<label class="check-label">
+									<input type="radio" name="brand" value="" <?php checked( $active_brand, '' ); ?>>
+									<?php esc_html_e( 'All brands', 'cove' ); ?>
+								</label>
 								<?php foreach ( $brands as $brand_term ) : ?>
 									<label class="check-label">
-										<input type="checkbox" name="brand" value="<?php echo esc_attr( $brand_term->slug ); ?>" <?php checked( $active_brand, $brand_term->slug ); ?>>
+										<input type="radio" name="brand" value="<?php echo esc_attr( $brand_term->slug ); ?>" <?php checked( $active_brand, $brand_term->slug ); ?>>
 										<?php echo esc_html( $brand_term->name ); ?>
 									</label>
 								<?php endforeach; ?>

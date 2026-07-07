@@ -49,10 +49,10 @@ add_action( 'after_setup_theme', 'cove_setup' );
  * 2. Enqueue assets
  * ---------------------------------------------------------------------- */
 function cove_enqueue() {
-	// Google Fonts — Fraunces, Plus Jakarta Sans, DM Mono.
+	// Google Fonts — Geist and Geist Mono.
 	wp_enqueue_style(
 		'cove-fonts',
-		'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap',
+		'https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap',
 		array(),
 		null
 	);
