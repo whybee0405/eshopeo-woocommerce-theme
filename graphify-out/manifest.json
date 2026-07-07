@@ -330,13 +330,13 @@
     "semantic_hash": ""
   },
   "glow-theme/functions.php": {
-    "mtime": 1783410630.4496365,
-    "ast_hash": "9517efb3457b6c8b3d54870d4fb6c9d6",
+    "mtime": 1783415527.7518587,
+    "ast_hash": "175d700f11141a328b452361b50391e3",
     "semantic_hash": ""
   },
   "glow-theme/header.php": {
-    "mtime": 1783071978.000618,
-    "ast_hash": "063c3977142e016b9a18809da03bcd90",
+    "mtime": 1783415300.1869793,
+    "ast_hash": "d9cce045d5465ffdaddaec534603f23c",
     "semantic_hash": ""
   },
   "glow-theme/inc/admin-import.php": {
@@ -360,8 +360,8 @@
     "semantic_hash": ""
   },
   "glow-theme/inc/seo.php": {
-    "mtime": 1783410690.0514562,
-    "ast_hash": "775199f55cec056d7c54c134c1f3fb5a",
+    "mtime": 1783415604.59031,
+    "ast_hash": "0ed9565559cbc4f01d56b38e7f7891e2",
     "semantic_hash": ""
   },
   "glow-theme/index.php": {
@@ -1225,8 +1225,13 @@
     "semantic_hash": ""
   },
   "tests/glow-notice-ticker-loyalty.test.ps1": {
-    "mtime": 1783415073.4321973,
-    "ast_hash": "e3b1e10a087f525ea87990af79348587",
+    "mtime": 1783415537.8619146,
+    "ast_hash": "a495f24ebc5f8710298ec071d6e7b54e",
+    "semantic_hash": ""
+  },
+  "glow-theme/page-loyalty-program.php": {
+    "mtime": 1783415413.786305,
+    "ast_hash": "75f52a7495ae6c58d8e0a7a9623a9e4d",
     "semantic_hash": ""
   }
 }

@@ -473,6 +473,186 @@ function glow_cart_count_fragment( $fragments ) {
 add_filter( 'woocommerce_add_to_cart_fragments', 'glow_cart_count_fragment' );
 
 /* --------------------------------------------------------------------------
+ * Loyalty program
+ * ------------------------------------------------------------------------ */
+
+function glow_loyalty_points_for_user( $user_id = 0 ) {
+	$user_id = $user_id ? absint( $user_id ) : get_current_user_id();
+	if ( ! $user_id ) {
+		return 0;
+	}
+
+	return max( 0, (int) get_user_meta( $user_id, '_glow_loyalty_points', true ) );
+}
+
+function glow_loyalty_reward_points_required() {
+	return 250;
+}
+
+function glow_loyalty_reward_amount() {
+	return 25;
+}
+
+function glow_loyalty_add_points( $user_id, $points ) {
+	$user_id = absint( $user_id );
+	$points  = max( 0, (int) $points );
+
+	if ( ! $user_id || ! $points ) {
+		return 0;
+	}
+
+	$total = glow_loyalty_points_for_user( $user_id ) + $points;
+	update_user_meta( $user_id, '_glow_loyalty_points', $total );
+
+	return $total;
+}
+
+function glow_loyalty_deduct_points( $user_id, $points ) {
+	$user_id = absint( $user_id );
+	$points  = max( 0, (int) $points );
+
+	if ( ! $user_id || ! $points ) {
+		return glow_loyalty_points_for_user( $user_id );
+	}
+
+	$total = max( 0, glow_loyalty_points_for_user( $user_id ) - $points );
+	update_user_meta( $user_id, '_glow_loyalty_points', $total );
+
+	return $total;
+}
+
+function glow_loyalty_points_for_order( $order ) {
+	if ( ! $order || ! is_a( $order, 'WC_Order' ) ) {
+		return 0;
+	}
+
+	return max( 0, (int) floor( (float) $order->get_subtotal() ) );
+}
+
+function glow_loyalty_award_order_points( $order_id ) {
+	if ( ! glow_wc_active() ) {
+		return;
+	}
+
+	$order = wc_get_order( $order_id );
+	if ( ! $order || ! $order->get_user_id() ) {
+		return;
+	}
+
+	if ( $order->get_meta( '_glow_loyalty_points_awarded' ) ) {
+		return;
+	}
+
+	$points = glow_loyalty_points_for_order( $order );
+	if ( ! $points ) {
+		return;
+	}
+
+	glow_loyalty_add_points( $order->get_user_id(), $points );
+	$order->update_meta_data( '_glow_loyalty_points_awarded', $points );
+	$order->add_order_note(
+		sprintf(
+			/* translators: %d: points awarded. */
+			__( 'Glow Rewards: awarded %d loyalty points.', 'glow-glow' ),
+			$points
+		)
+	);
+	$order->save();
+}
+add_action( 'woocommerce_order_status_completed', 'glow_loyalty_award_order_points' );
+
+function glow_loyalty_account_endpoint() {
+	add_rewrite_endpoint( 'glow-loyalty', EP_ROOT | EP_PAGES );
+}
+add_action( 'init', 'glow_loyalty_account_endpoint' );
+
+function glow_loyalty_account_menu_item( $items ) {
+	$logout = array();
+	if ( isset( $items['customer-logout'] ) ) {
+		$logout['customer-logout'] = $items['customer-logout'];
+		unset( $items['customer-logout'] );
+	}
+
+	$items['glow-loyalty'] = __( 'Glow Rewards', 'glow-glow' );
+
+	return array_merge( $items, $logout );
+}
+add_filter( 'woocommerce_account_menu_items', 'glow_loyalty_account_menu_item' );
+
+function glow_loyalty_account_endpoint_content() {
+	$user_id = get_current_user_id();
+	$points  = glow_loyalty_points_for_user( $user_id );
+	$needed  = max( 0, glow_loyalty_reward_points_required() - $points );
+	?>
+	<div class="glow-loyalty-account">
+		<p class="eyebrow"><?php esc_html_e( 'Glow Rewards', 'glow-glow' ); ?></p>
+		<h2><?php esc_html_e( 'Your loyalty balance', 'glow-glow' ); ?></h2>
+		<p class="loyalty-points"><strong><?php echo esc_html( number_format_i18n( $points ) ); ?></strong> <?php esc_html_e( 'points', 'glow-glow' ); ?></p>
+		<p><?php esc_html_e( 'Earn 1 point for every R1 spent on product subtotal when an order is completed.', 'glow-glow' ); ?></p>
+		<?php if ( $needed > 0 ) : ?>
+			<p><?php echo esc_html( sprintf( __( '%d more points unlock your next R25 reward coupon.', 'glow-glow' ), $needed ) ); ?></p>
+		<?php else : ?>
+			<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+				<input type="hidden" name="action" value="glow_redeem_loyalty" />
+				<?php wp_nonce_field( 'glow_redeem_loyalty', 'glow_redeem_loyalty_nonce' ); ?>
+				<button class="button" type="submit"><?php esc_html_e( 'Create my R25 coupon', 'glow-glow' ); ?></button>
+			</form>
+		<?php endif; ?>
+	</div>
+	<?php
+}
+add_action( 'woocommerce_account_glow-loyalty_endpoint', 'glow_loyalty_account_endpoint_content' );
+
+function glow_loyalty_redeem_points() {
+	if ( ! is_user_logged_in() || ! glow_wc_active() ) {
+		wp_safe_redirect( wc_get_page_permalink( 'myaccount' ) );
+		exit;
+	}
+
+	if ( ! isset( $_POST['glow_redeem_loyalty_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['glow_redeem_loyalty_nonce'] ) ), 'glow_redeem_loyalty' ) ) {
+		wp_safe_redirect( wc_get_account_endpoint_url( 'glow-loyalty' ) );
+		exit;
+	}
+
+	$user_id  = get_current_user_id();
+	$required = glow_loyalty_reward_points_required();
+
+	if ( glow_loyalty_points_for_user( $user_id ) < $required || ! class_exists( 'WC_Coupon' ) ) {
+		wc_add_notice( __( 'You need more points before creating a Glow Rewards coupon.', 'glow-glow' ), 'error' );
+		wp_safe_redirect( wc_get_account_endpoint_url( 'glow-loyalty' ) );
+		exit;
+	}
+
+	$user   = wp_get_current_user();
+	$code   = 'GLOW-' . strtoupper( wp_generate_password( 8, false, false ) );
+	$coupon = new WC_Coupon();
+	$coupon->set_code( $code );
+	$coupon->set_discount_type( 'fixed_cart' );
+	$coupon->set_amount( glow_loyalty_reward_amount() );
+	$coupon->set_individual_use( true );
+	$coupon->set_usage_limit( 1 );
+	$coupon->set_description( __( 'Glow Rewards loyalty coupon.', 'glow-glow' ) );
+	if ( $user && $user->user_email ) {
+		$coupon->set_email_restrictions( array( $user->user_email ) );
+	}
+	$coupon->save();
+
+	glow_loyalty_deduct_points( $user_id, $required );
+	wc_add_notice(
+		sprintf(
+			/* translators: %s: coupon code. */
+			__( 'Your Glow Rewards coupon is ready: %s', 'glow-glow' ),
+			$code
+		),
+		'success'
+	);
+
+	wp_safe_redirect( wc_get_account_endpoint_url( 'glow-loyalty' ) );
+	exit;
+}
+add_action( 'admin_post_glow_redeem_loyalty', 'glow_loyalty_redeem_points' );
+
+/* --------------------------------------------------------------------------
  * AJAX: quick add, newsletter, contact
  * ------------------------------------------------------------------------ */
 
@@ -695,6 +875,7 @@ function glow_footer_columns() {
 		__( 'Learn', 'glow-glow' )   => array(
 			array( __( 'The 7-step routine', 'glow-glow' ), home_url( '/#routine' ) ),
 			array( __( 'Ingredient index', 'glow-glow' ), home_url( '/#ingredients' ) ),
+			array( __( 'Loyalty Program', 'glow-glow' ), home_url( '/loyalty-program/' ) ),
 			array( __( 'About us', 'glow-glow' ), home_url( '/about/' ) ),
 		),
 		__( 'Support', 'glow-glow' ) => array(
@@ -812,6 +993,7 @@ function glow_ensure_static_page( $slug, $title ) {
 function glow_ensure_theme_pages() {
 	$pages = array(
 		'brand-kit'        => 'Brand Kit',
+		'loyalty-program'  => 'Loyalty Program',
 		'privacy-policy'   => 'Privacy Policy',
 		'refunds-policy'   => 'Refunds Policy',
 		'terms-of-service' => 'Terms of Service',
@@ -823,3 +1005,9 @@ function glow_ensure_theme_pages() {
 }
 add_action( 'after_switch_theme', 'glow_ensure_theme_pages' );
 add_action( 'admin_init', 'glow_ensure_theme_pages' );
+
+function glow_flush_rewrites_on_switch() {
+	glow_loyalty_account_endpoint();
+	flush_rewrite_rules();
+}
+add_action( 'after_switch_theme', 'glow_flush_rewrites_on_switch', 20 );

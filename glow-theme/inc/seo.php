@@ -141,6 +141,14 @@ function glow_meta_description() {
 		return __( 'Talk to a person about your skin — WhatsApp, email, or Korean-language consultation. Johannesburg-based, replies within one working day, SAST hours.', 'glow-glow' );
 	}
 
+	if ( is_page_template( 'page-loyalty-program.php' ) ) {
+		return __( 'Join Glow Rewards to earn WooCommerce loyalty points on completed Korean skincare orders and redeem them for account-linked reward coupons.', 'glow-glow' );
+	}
+
+	if ( is_page_template( 'page-loyalty-program.php' ) ) {
+		return __( 'Join Glow Rewards to earn points on Korean skincare orders, track your balance in My Account and redeem rewards on future routines.', 'glow-glow' );
+	}
+
 	if ( is_page_template( 'page-privacy-policy.php' ) ) {
 		return __( 'How Glow collects, uses and protects personal information for Korean skincare orders, accounts, delivery, support, cookies and marketing in South Africa.', 'glow-glow' );
 	}

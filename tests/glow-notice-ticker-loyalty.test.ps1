@@ -67,6 +67,10 @@ if ($functions -notmatch 'add_rewrite_endpoint\(\s*''glow-loyalty''') {
     throw 'WooCommerce My Account must register a Glow loyalty endpoint.'
 }
 
+if ($functions -notmatch 'glow_flush_rewrites_on_switch' -or $functions -notmatch 'flush_rewrite_rules\(\)') {
+    throw 'Theme activation must flush rewrites so the Glow loyalty account endpoint resolves.'
+}
+
 foreach ($hook in @(
     'woocommerce_account_menu_items',
     'woocommerce_account_glow-loyalty_endpoint',

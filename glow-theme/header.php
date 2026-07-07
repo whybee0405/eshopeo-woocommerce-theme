@@ -1,6 +1,6 @@
 <?php
 /**
- * Site header: notice bar, sticky header, mobile menu, search overlay.
+ * Site header: notice ticker, sticky header, mobile menu, search overlay.
  *
  * @package Glow_KBeauty
  */
@@ -16,13 +16,29 @@
 
 <a class="skip-link" href="#main"><?php esc_html_e( 'Skip to content', 'glow-glow' ); ?></a>
 
+<?php
+$glow_notice_items = array(
+	get_theme_mod( 'glow_notice_1', __( 'Free shipping over R500', 'glow-glow' ) ),
+	get_theme_mod( 'glow_notice_2', __( 'Every batch verified', 'glow-glow' ) ),
+	get_theme_mod( 'glow_notice_3', __( 'Authentic K-beauty', 'glow-glow' ) ),
+);
+?>
 <div class="notice-bar">
-	<div class="container">
-		<span><?php echo esc_html( get_theme_mod( 'glow_notice_1', __( 'Free shipping over R500', 'glow-glow' ) ) ); ?></span>
-		<span class="dot" aria-hidden="true">·</span>
-		<span class="notice-extra"><?php echo esc_html( get_theme_mod( 'glow_notice_2', __( 'Every batch verified', 'glow-glow' ) ) ); ?></span>
-		<span class="dot notice-extra" aria-hidden="true">·</span>
-		<span class="notice-extra"><?php echo esc_html( get_theme_mod( 'glow_notice_3', __( 'Authentic K-beauty', 'glow-glow' ) ) ); ?></span>
+	<div class="notice-ticker" aria-label="<?php esc_attr_e( 'Store notices', 'glow-glow' ); ?>">
+		<div class="notice-ticker-inner">
+			<div class="notice-ticker-track">
+				<?php foreach ( $glow_notice_items as $glow_notice ) : ?>
+					<span class="notice-ticker-item"><?php echo esc_html( $glow_notice ); ?></span>
+					<span class="notice-ticker-dot" aria-hidden="true">&middot;</span>
+				<?php endforeach; ?>
+			</div>
+			<div class="notice-ticker-track" aria-hidden="true">
+				<?php foreach ( $glow_notice_items as $glow_notice ) : ?>
+					<span class="notice-ticker-item"><?php echo esc_html( $glow_notice ); ?></span>
+					<span class="notice-ticker-dot" aria-hidden="true">&middot;</span>
+				<?php endforeach; ?>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -33,7 +49,7 @@
 			<?php if ( has_custom_logo() ) : ?>
 				<?php the_custom_logo(); ?>
 			<?php else : ?>
-				<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php esc_attr_e( 'Glow — home', 'glow-glow' ); ?>">
+				<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php esc_attr_e( 'Glow home', 'glow-glow' ); ?>">
 					<?php glow_inline_logo(); ?>
 				</a>
 			<?php endif; ?>
@@ -47,6 +63,7 @@
 						<svg class="nav-caret" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m1 1 4 4 4-4"/></svg>
 					</button>
 				</li>
+				<li><a href="<?php echo esc_url( home_url( '/loyalty-program/' ) ); ?>"><?php esc_html_e( 'Loyalty', 'glow-glow' ); ?></a></li>
 				<li><a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"><?php esc_html_e( 'FAQ', 'glow-glow' ); ?></a></li>
 				<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Contact', 'glow-glow' ); ?></a></li>
 				<li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About', 'glow-glow' ); ?></a></li>
@@ -76,7 +93,6 @@
 
 	</div>
 
-	<!-- Shop mega-menu flyout — full width, positioned from .site-header -->
 	<div class="nav-flyout" hidden data-flyout>
 		<div class="container flyout-inner">
 
@@ -97,10 +113,10 @@
 			<div class="flyout-col">
 				<p class="flyout-label"><?php esc_html_e( 'By Concern', 'glow-glow' ); ?></p>
 				<ul class="flyout-list">
-					<li><a href="<?php echo esc_url( glow_tax_url( 'dehydrated-dull', 'skin_concern' ) ); ?>"><?php esc_html_e( 'Dehydrated & dull', 'glow-glow' ); ?></a></li>
-					<li><a href="<?php echo esc_url( glow_tax_url( 'breakouts-texture', 'skin_concern' ) ); ?>"><?php esc_html_e( 'Breakouts & texture', 'glow-glow' ); ?></a></li>
-					<li><a href="<?php echo esc_url( glow_tax_url( 'fine-lines-firmness', 'skin_concern' ) ); ?>"><?php esc_html_e( 'Fine lines & firmness', 'glow-glow' ); ?></a></li>
-					<li><a href="<?php echo esc_url( glow_tax_url( 'sensitive-reactive', 'skin_concern' ) ); ?>"><?php esc_html_e( 'Sensitive & reactive', 'glow-glow' ); ?></a></li>
+					<li><a href="<?php echo esc_url( glow_tax_url( 'dehydrated-dull', 'skin_concern' ) ); ?>"><?php esc_html_e( 'Dehydrated and dull', 'glow-glow' ); ?></a></li>
+					<li><a href="<?php echo esc_url( glow_tax_url( 'breakouts-texture', 'skin_concern' ) ); ?>"><?php esc_html_e( 'Breakouts and texture', 'glow-glow' ); ?></a></li>
+					<li><a href="<?php echo esc_url( glow_tax_url( 'fine-lines-firmness', 'skin_concern' ) ); ?>"><?php esc_html_e( 'Fine lines and firmness', 'glow-glow' ); ?></a></li>
+					<li><a href="<?php echo esc_url( glow_tax_url( 'sensitive-reactive', 'skin_concern' ) ); ?>"><?php esc_html_e( 'Sensitive and reactive', 'glow-glow' ); ?></a></li>
 				</ul>
 			</div>
 
@@ -117,7 +133,7 @@
 					);
 					foreach ( $glow_flyout_ings as $ing ) :
 						$ing_url = add_query_arg( array( 's' => rawurlencode( $ing[1] ), 'post_type' => 'product' ), home_url( '/' ) );
-					?>
+						?>
 						<li><a href="<?php echo esc_url( $ing_url ); ?>"><?php echo esc_html( $ing[0] ); ?></a></li>
 					<?php endforeach; ?>
 				</ul>
@@ -129,7 +145,7 @@
 
 <div class="mobile-menu" data-mobile-menu hidden>
 	<div class="mobile-menu-top">
-		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php esc_attr_e( 'Glow — home', 'glow-glow' ); ?>">
+		<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" aria-label="<?php esc_attr_e( 'Glow home', 'glow-glow' ); ?>">
 			<?php glow_inline_logo(); ?>
 		</a>
 		<button class="mobile-menu-close" type="button" aria-label="<?php esc_attr_e( 'Close menu', 'glow-glow' ); ?>" data-menu-close>
@@ -146,23 +162,24 @@
 			<li><a href="<?php echo esc_url( home_url( '/#ingredients' ) ); ?>"><?php esc_html_e( 'By Ingredient', 'glow-glow' ); ?></a></li>
 		</ul>
 		<ul>
+			<li><a href="<?php echo esc_url( home_url( '/loyalty-program/' ) ); ?>"><?php esc_html_e( 'Loyalty', 'glow-glow' ); ?></a></li>
 			<li><a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"><?php esc_html_e( 'FAQ', 'glow-glow' ); ?></a></li>
 			<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Contact', 'glow-glow' ); ?></a></li>
 			<li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About', 'glow-glow' ); ?></a></li>
 		</ul>
 	</nav>
 
-	<p class="mobile-menu-foot"><?php esc_html_e( 'Free shipping over R500 · Johannesburg, SA', 'glow-glow' ); ?></p>
+	<p class="mobile-menu-foot"><?php esc_html_e( 'Free shipping over R500. Johannesburg, SA', 'glow-glow' ); ?></p>
 </div>
 
 <div class="search-overlay" data-search-overlay hidden>
 	<div class="search-panel" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e( 'Search products', 'glow-glow' ); ?>">
 		<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="search-form-row">
 			<label class="screen-reader-text" for="glow-search-field"><?php esc_html_e( 'Search products', 'glow-glow' ); ?></label>
-			<input type="search" id="glow-search-field" name="s" placeholder="<?php esc_attr_e( 'Try “snail mucin” or “sunscreen”', 'glow-glow' ); ?>" data-search-field />
+			<input type="search" id="glow-search-field" name="s" placeholder="<?php esc_attr_e( 'Try snail mucin or sunscreen', 'glow-glow' ); ?>" data-search-field />
 			<input type="hidden" name="post_type" value="product" />
 			<button class="btn btn-solid" type="submit"><?php esc_html_e( 'Search', 'glow-glow' ); ?></button>
 		</form>
-		<p class="search-hint"><?php esc_html_e( 'Searching by ingredient works — we index actives', 'glow-glow' ); ?></p>
+		<p class="search-hint"><?php esc_html_e( 'Searching by ingredient works because we index actives', 'glow-glow' ); ?></p>
 	</div>
 </div>

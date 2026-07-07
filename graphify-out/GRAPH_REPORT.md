@@ -1,16 +1,16 @@
 # Graph Report - cosmetics-woocommerce-theme  (2026-07-07)
 
 ## Corpus Check
-- 164 files · ~1,509,555 words
+- 165 files · ~1,510,613 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 754 nodes · 813 edges · 162 communities (142 shown, 20 thin omitted)
+- 767 nodes · 838 edges · 163 communities (143 shown, 20 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 39 edges (avg confidence: 0.76)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a8b987c3`
+- Built from commit: `4189db77`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -86,7 +86,7 @@
 - [[_COMMUNITY_Q What policy pages were added for Glow ecommerce|Q: What policy pages were added for Glow ecommerce?]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `glow_wc_active()` - 20 edges
+1. `glow_wc_active()` - 22 edges
 2. `GLOW Brand Kit Guidelines` - 16 edges
 3. `What You Must Do When Invoked` - 12 edges
 4. `What You Must Do When Invoked` - 12 edges
@@ -98,25 +98,25 @@
 10. `/graphify` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `glow_setup_page()` --calls--> `glow_wc_active()`  [INFERRED]
-  glow-theme/inc/admin-setup.php → glow-theme/functions.php
 - `digicars_render_filters()` --calls--> `digicars_body_types()`  [INFERRED]
   digicars-theme/archive-product.php → digicars-theme/functions.php
 - `digicars_render_filters()` --calls--> `digicars_makes()`  [INFERRED]
   digicars-theme/archive-product.php → digicars-theme/functions.php
-- `glow_jsonld()` --calls--> `glow_wc_active()`  [INFERRED]
-  glow-theme/inc/seo.php → glow-theme/functions.php
-- `glow_meta_description()` --calls--> `glow_wc_active()`  [INFERRED]
-  glow-theme/inc/seo.php → glow-theme/functions.php
+- `glow_setup_page()` --calls--> `glow_wc_active()`  [INFERRED]
+  glow-theme/inc/admin-setup.php → glow-theme/functions.php
+- `cove_run_import()` --calls--> `cove_dummy_products()`  [INFERRED]
+  cove-theme/inc/admin-import.php → cove-theme/dummy-products.php
+- `digicars_seo_build_meta()` --calls--> `digicars_meta()`  [INFERRED]
+  digicars-theme/inc/seo.php → digicars-theme/functions.php
 
 ## Import Cycles
 - None detected.
 
-## Communities (162 total, 20 thin omitted)
+## Communities (163 total, 20 thin omitted)
 
 ### Community 0 - "functions.php"
-Cohesion: 0.07
-Nodes (25): glow_enqueue(), glow_ensure_static_page(), glow_ensure_theme_pages(), glow_footer_columns(), glow_meta(), glow_primary_menu_fallback(), glow_product_badges(), glow_product_image() (+17 more)
+Cohesion: 0.06
+Nodes (36): glow_enqueue(), glow_ensure_static_page(), glow_ensure_theme_pages(), glow_flush_rewrites_on_switch(), glow_footer_columns(), glow_loyalty_account_endpoint(), glow_loyalty_account_endpoint_content(), glow_loyalty_add_points() (+28 more)
 
 ### Community 1 - "functions.php"
 Cohesion: 0.08
@@ -311,29 +311,29 @@ Cohesion: 0.50
 Nodes (3): Answer, Outcome, Q: What policy pages were added for Glow ecommerce?
 
 ## Knowledge Gaps
-- **200 isolated node(s):** `Brand Position`, `Core Values`, `Emotional Position`, `Personality`, `Language` (+195 more)
+- **200 isolated node(s):** `graphify`, `Usage`, `What graphify is for`, `Step 0 - GitHub repos and multi-path merge (only if a URL or several paths)`, `Step 1 - Ensure graphify is installed` (+195 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Work-memory lessons
 
 **Preferred sources** — corroborated by past sessions; start here.
-- `AGENTS.md` (2× useful, score=1.983723558)
+- `AGENTS.md` (2× useful, score=1.955299649)
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `glow_wc_active()` connect `functions.php` to `Glow_Sourcing_Split_Widget`, `Glow_Best_Sellers_Widget`, `Glow_Ingredient_Index_Widget`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `Glow_Hero_Stage_Widget` connect `elementor-widgets.php` to `functions.php`, `Glow_Concern_Tiles_Widget`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Glow_Ingredient_Index_Widget` connect `Glow_Ingredient_Index_Widget` to `elementor-widgets.php`, `Glow_Concern_Tiles_Widget`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `Glow_Best_Sellers_Widget` connect `Glow_Best_Sellers_Widget` to `elementor-widgets.php`, `Glow_Concern_Tiles_Widget`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Are the 10 inferred relationships involving `glow_wc_active()` (e.g. with `glow_setup_page()` and `.render()`) actually correct?**
   _`glow_wc_active()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `digicars_seo_build_meta()` (e.g. with `digicars_build_ai_summary()` and `digicars_meta()`) actually correct?**
   _`digicars_seo_build_meta()` has 3 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Brand Position`, `Core Values`, `Emotional Position` to the rest of the system?**
+- **What connects `graphify`, `Usage`, `What graphify is for` to the rest of the system?**
   _200 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `functions.php` be split into smaller, more focused modules?**
-  _Cohesion score 0.0700354609929078 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05875706214689266 - nodes in this community are weakly interconnected._
