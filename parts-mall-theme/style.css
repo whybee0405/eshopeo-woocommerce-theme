@@ -655,6 +655,12 @@ summary { cursor: pointer; }
   gap: .5rem;
   margin-bottom: .75rem;
 }
+.branch-spotlight__actions {
+  align-items: stretch;
+}
+.branch-spotlight__actions .link-arrow {
+  min-height: 40px;
+}
 
 .global-network {
   background: var(--navy-deep);
@@ -1036,6 +1042,11 @@ ul.products {
 .branch-card { padding: 1rem; display: grid; gap: .75rem; }
 .branch-card__meta { color: var(--steel); font-size: .95rem; }
 .branch-card__links { display: grid; gap: .4rem; }
+.branch-card__links a {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
+}
 .branch-finder__intro {
   display: grid;
   gap: 1rem;
@@ -1417,6 +1428,17 @@ ul.products {
   .branch-finder-toolbar { grid-template-columns: 1fr; }
   .agent-stats-grid > div { border-top: 1px solid var(--line); }
   .agent-stats-grid > div:first-child { padding-top: 0; border-top: 0; }
+}
+
+@media (pointer: coarse) {
+  .link-arrow,
+  .branch-card__links a {
+    min-height: 44px;
+  }
+
+  .link-arrow {
+    padding-block: .45rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

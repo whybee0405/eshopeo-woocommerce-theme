@@ -128,7 +128,7 @@ if ( function_exists( 'cloudia_hero_slider_render' ) ) {
 					</div>
 					<h3 class="t-3"><?php echo esc_html( $branch['name'] ); ?></h3>
 					<p class="muted"><?php echo esc_html( $branch['address'] ); ?></p>
-					<div class="cluster">
+					<div class="cluster branch-spotlight__actions">
 						<a class="link-arrow" href="<?php echo esc_url( partsmall_branch_url( $branch ) ); ?>"><?php esc_html_e( 'View branch page', 'parts-mall' ); ?></a>
 						<a class="link-arrow" href="tel:<?php echo esc_attr( partsmall_normalize_phone( $branch['phone'] ) ); ?>"><?php esc_html_e( 'Call', 'parts-mall' ); ?></a>
 					</div>

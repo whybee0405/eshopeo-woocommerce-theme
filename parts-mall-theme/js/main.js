@@ -157,7 +157,8 @@
   function initReveals() {
     var items = $all('[data-reveal]');
     if (!items.length) return;
-    if (reduceMotion || !('IntersectionObserver' in window)) {
+    var mobileRevealBypass = window.matchMedia && (window.matchMedia('(max-width: 780px)').matches || window.matchMedia('(hover: none)').matches);
+    if (reduceMotion || mobileRevealBypass || !('IntersectionObserver' in window)) {
       items.forEach(function (item) { item.classList.add('is-visible'); });
       return;
     }
