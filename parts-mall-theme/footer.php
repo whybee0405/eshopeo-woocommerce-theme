@@ -13,8 +13,13 @@ unset( $brands['oem-genuine'] );
 	<div class="container site-footer__inner">
 		<div class="footer-grid">
 			<div class="footer-brand">
+				<p class="footer-brand__eyebrow"><?php esc_html_e( 'Parts-Mall Africa', 'parts-mall' ); ?></p>
 				<img src="<?php echo esc_url( get_theme_file_uri( 'images/logo.svg' ) ); ?>" alt="<?php esc_attr_e( 'Parts-Mall Africa', 'parts-mall' ); ?>">
-				<p><?php echo esc_html( $profile['hero_copy'] ); ?></p>
+				<p class="footer-brand__lead"><?php echo esc_html( $profile['hero_copy'] ); ?></p>
+				<div class="footer-brand__actions">
+					<a class="btn btn--signal btn--sm" href="<?php echo esc_url( home_url( '/find-a-branch' ) ); ?>"><?php esc_html_e( 'Find a branch', 'parts-mall' ); ?></a>
+					<a class="btn btn--outline btn--sm" href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php esc_html_e( 'Contact head office', 'parts-mall' ); ?></a>
+				</div>
 				<div class="footer-socials">
 					<?php foreach ( $profile['socials'] as $social ) : ?>
 						<a class="footer-social" href="<?php echo esc_url( $social['url'] ); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr( $social['label'] ); ?>"><?php echo esc_html( $social['label'] ); ?></a>
@@ -51,14 +56,19 @@ unset( $brands['oem-genuine'] );
 				</div>
 			</div>
 
-			<div class="footer-col">
+			<div class="footer-col footer-col--contact">
 				<h2 class="footer-col__title"><?php esc_html_e( 'Head Office', 'parts-mall' ); ?></h2>
-				<div class="footer-links">
+				<div class="footer-links footer-contact-list">
+					<span class="footer-contact-list__name"><?php echo esc_html( $profile['head_office_name'] ); ?></span>
 					<a href="mailto:<?php echo esc_attr( $profile['head_office_email'] ); ?>"><?php echo esc_html( $profile['head_office_email'] ); ?></a>
 					<?php foreach ( array_slice( $profile['head_office_address'], 0, 4 ) as $line ) : ?>
 						<span><?php echo esc_html( $line ); ?></span>
 					<?php endforeach; ?>
 					<span><?php esc_html_e( 'Mon-Fri, 08:00-17:00 SAST', 'parts-mall' ); ?></span>
+				</div>
+				<div class="footer-contact-actions">
+					<a class="btn btn--outline btn--sm" href="<?php echo esc_url( partsmall_head_office_map_url() ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Directions', 'parts-mall' ); ?></a>
+					<a class="btn btn--outline btn--sm" href="mailto:<?php echo esc_attr( $profile['head_office_email'] ); ?>"><?php esc_html_e( 'Email team', 'parts-mall' ); ?></a>
 				</div>
 			</div>
 		</div>
@@ -70,8 +80,8 @@ unset( $brands['oem-genuine'] );
 		</div>
 
 		<div class="footer-bottom">
-			<div><?php echo esc_html( gmdate( 'Y' ) ); ?> &copy; <?php esc_html_e( 'Parts-Mall Africa. All rights reserved.', 'parts-mall' ); ?></div>
-			<div><?php esc_html_e( 'Built for branch-led enquiries, wholesale growth, and corporate aftermarket authority.', 'parts-mall' ); ?></div>
+			<div class="footer-bottom__legal"><?php echo esc_html( gmdate( 'Y' ) ); ?> &copy; <?php esc_html_e( 'Parts-Mall Africa. All rights reserved.', 'parts-mall' ); ?></div>
+			<div class="footer-bottom__credit"><?php esc_html_e( 'Built for branch-led enquiries, wholesale growth, and corporate aftermarket authority.', 'parts-mall' ); ?></div>
 		</div>
 	</div>
 	<div class="footer-wordmark" aria-hidden="true">Parts-Mall</div>
