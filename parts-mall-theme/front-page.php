@@ -28,7 +28,7 @@ foreach ( $branches as $province => $items ) {
 }
 
 $branch_index = array_values( partsmall_flatten_branches() );
-$branch_preview = array_slice( $branch_index, 0, 6 );
+$branch_preview = array_slice( $branch_index, 0, 4 );
 $cloudia_slider = '';
 if ( function_exists( 'cloudia_hero_slider_render' ) ) {
 	$cloudia_slider = cloudia_hero_slider_render(

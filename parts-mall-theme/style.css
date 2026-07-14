@@ -1429,20 +1429,24 @@ ul.products {
 }
 
 @media (max-width: 780px) {
+  :root {
+    --section: clamp(40px, 9vw, 56px);
+    --section-tight: clamp(24px, 6vw, 36px);
+  }
   .site-header__inner { grid-template-columns: auto 1fr auto; }
   .branch-shortcut { display: none; }
   .header-cta { display: none; }
   .hero__stats, .footprint__stats, .form-grid, .branch-group__cards, .branch-cta-grid, .branch-gallery__grid, .agent-stats-grid { grid-template-columns: 1fr; }
   .part-grid, ul.products, .category-grid, .make-strip, .brand-strip { grid-template-columns: 1fr; }
+  .insight-grid,
+  .proof-grid { grid-template-columns: 1fr; }
   .trust-band__metrics,
   .locator-preview__cards,
   .brand-story-grid,
   .timeline-grid,
   .review-grid,
   .category-authority__list,
-  .insight-grid,
-  .global-network__list,
-  .proof-grid { grid-template-columns: 1fr; }
+  .global-network__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-search .catalogue-search__fields,
   .catalogue-search__fields,
   .footer-bottom { grid-template-columns: 1fr; display: grid; }
@@ -1452,7 +1456,50 @@ ul.products {
   .header-search { inset-inline: 12px; width: auto; }
   .hero--brand { min-height: auto; }
   .hero__layout--brand { min-height: auto; }
-  .promo-slider__viewport { min-height: 360px; }
+  .hero {
+    padding-block: 34px 28px;
+  }
+  .hero__layout {
+    gap: 1.35rem;
+  }
+  .hero__copy > * + * {
+    margin-top: .9rem;
+  }
+  .hero-actions {
+    margin-top: 1.1rem;
+  }
+  .hero-proof-list {
+    gap: .42rem;
+    margin-top: .8rem;
+  }
+  .hero-card {
+    padding: 1.1rem;
+  }
+  .trust-band__metrics div,
+  .proof-stat {
+    padding-top: .75rem;
+  }
+  .promo-slider {
+    padding: 1rem;
+  }
+  .promo-slider__viewport { min-height: 300px; }
+  .promo-slider__controls {
+    margin-top: .8rem;
+  }
+  .review-card,
+  .insight-card,
+  .branch-spotlight,
+  .brand-story {
+    padding: .9rem;
+  }
+  .authority-chip {
+    min-height: 60px;
+    padding: .75rem .85rem;
+  }
+  .contact-band__layout {
+    gap: 1rem;
+    padding: 1rem;
+  }
   .branch-finder-toolbar { grid-template-columns: 1fr; }
   .branch-group {
     padding: .85rem;
@@ -1479,6 +1526,36 @@ ul.products {
   }
   .agent-stats-grid > div { border-top: 1px solid var(--line); }
   .agent-stats-grid > div:first-child { padding-top: 0; border-top: 0; }
+}
+
+@media (max-width: 480px) {
+  .trust-band__metrics,
+  .locator-preview__cards,
+  .brand-story-grid,
+  .timeline-grid,
+  .review-grid,
+  .category-authority__list,
+  .global-network__list { grid-template-columns: 1fr; }
+
+  .proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .proof-stat strong {
+    font-size: 1.45rem;
+  }
+
+  .timeline-item,
+  .review-card,
+  .branch-spotlight,
+  .brand-story,
+  .insight-card {
+    padding: .8rem;
+  }
+
+  .timeline-item strong {
+    font-size: 1.2rem;
+  }
 }
 
 @media (pointer: coarse) {
