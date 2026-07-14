@@ -75,7 +75,7 @@ get_header();
 						<dd><?php echo esc_html( $branch['hours'] ); ?></dd>
 					</div>
 				</dl>
-				<a class="link-arrow" href="<?php echo esc_url( $map_url ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Open in Google Maps', 'parts-mall' ); ?> -></a>
+				<a class="link-arrow" href="<?php echo esc_url( $map_url ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Open in Google Maps', 'parts-mall' ); ?> &rarr;</a>
 			</section>
 
 			<section class="form-card" data-reveal>

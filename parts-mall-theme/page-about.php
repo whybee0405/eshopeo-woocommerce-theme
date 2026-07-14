@@ -13,6 +13,7 @@ $profile   = partsmall_site_profile();
 $timeline  = partsmall_group_timeline();
 $locations = partsmall_global_locations();
 $faqs      = partsmall_faq_items();
+$facts     = array_slice( $profile['corporate_facts'], 0, 4 );
 ?>
 
 <div class="page-shell">
@@ -22,6 +23,18 @@ $faqs      = partsmall_faq_items();
 			<h1 class="t-1"><?php the_title(); ?></h1>
 			<p class="lead"><?php echo esc_html( $profile['hero_copy'] ); ?></p>
 		</header>
+
+		<section class="surface about-facts-strip" aria-label="<?php esc_attr_e( 'Corporate facts', 'parts-mall' ); ?>" data-reveal>
+			<div class="about-facts-grid">
+				<?php foreach ( $facts as $fact ) : ?>
+					<div class="about-fact">
+						<strong><?php echo esc_html( $fact['value'] ); ?></strong>
+						<span><?php echo esc_html( $fact['label'] ); ?></span>
+						<small><?php echo esc_html( $fact['note'] ); ?></small>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</section>
 
 		<div class="about-grid">
 			<div class="editorial__content" data-reveal>
@@ -67,6 +80,19 @@ $faqs      = partsmall_faq_items();
 				</details>
 			<?php endforeach; ?>
 		</div>
+
+		<section class="surface contact-band" data-reveal>
+			<div class="contact-band__layout">
+				<div>
+					<h2 class="t-2"><?php esc_html_e( 'Ready to work with Parts-Mall Africa?', 'parts-mall' ); ?></h2>
+					<p class="muted"><?php esc_html_e( 'Find your nearest branch for immediate support, or contact head office for wholesale, campaigns, and routed commercial enquiries.', 'parts-mall' ); ?></p>
+				</div>
+				<div class="contact-band__actions">
+					<a class="btn btn--signal" href="<?php echo esc_url( home_url( '/find-a-branch' ) ); ?>"><?php esc_html_e( 'Find a branch', 'parts-mall' ); ?></a>
+					<a class="btn btn--outline" href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php esc_html_e( 'Contact head office', 'parts-mall' ); ?></a>
+				</div>
+			</div>
+		</section>
 	</div>
 </div>
 
