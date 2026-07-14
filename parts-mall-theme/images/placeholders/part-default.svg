@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+<rect width="1200" height="900" fill="#F5F6F8"/>
+<rect x="72" y="72" width="1056" height="756" rx="24" fill="white" stroke="#D8DCE2" stroke-width="4"/>
+<rect x="132" y="132" width="936" height="268" rx="18" fill="#E8EAEE"/>
+<path d="M282 350c54-72 102-116 184-116h255c78 0 136 34 194 116" stroke="#0F2F73" stroke-width="24" stroke-linecap="round"/>
+<circle cx="412" cy="474" r="62" fill="white" stroke="#081B47" stroke-width="18"/>
+<circle cx="800" cy="474" r="62" fill="white" stroke="#081B47" stroke-width="18"/>
+<rect x="198" y="560" width="366" height="22" rx="11" fill="#0F2F73" fill-opacity="0.16"/>
+<rect x="198" y="604" width="230" height="18" rx="9" fill="#0F9D58" fill-opacity="0.22"/>
+<rect x="198" y="664" width="140" height="44" rx="8" fill="#0F2F73"/>
+<text x="268" y="693" text-anchor="middle" fill="white" font-family="'Public Sans', Arial, sans-serif" font-size="20" font-weight="700">Parts-Mall</text>
+<text x="198" y="748" fill="#5B6472" font-family="'IBM Plex Mono', monospace" font-size="26">OEM ? aftermarket ? branch network</text>
+</svg>

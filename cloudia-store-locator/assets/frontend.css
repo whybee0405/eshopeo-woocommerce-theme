@@ -1,0 +1,158 @@
+.csl-locator {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.csl-toolbar,
+.csl-layout,
+.csl-card,
+.csl-featured {
+  border: 1px solid rgba(15, 47, 115, .12);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.csl-toolbar {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+}
+
+.csl-eyebrow {
+  margin: 0 0 .35rem;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #5b6b87;
+}
+
+.csl-title,
+.csl-featured__name,
+.csl-card__title {
+  margin: 0;
+  color: #081b47;
+}
+
+.csl-toolbar__controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: .75rem;
+}
+
+.csl-search {
+  min-height: 48px;
+  padding: 0 .95rem;
+  border: 1px solid rgba(15, 47, 115, .16);
+  border-radius: 999px;
+}
+
+.csl-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 1rem;
+  border-radius: 999px;
+  border: 1px solid #f2b600;
+  background: #f2b600;
+  color: #081b47;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.csl-button--secondary,
+.csl-button--ghost {
+  border-color: rgba(15, 47, 115, .2);
+  background: #fff;
+  color: #081b47;
+}
+
+.csl-status {
+  font-size: .95rem;
+  color: #3b4759;
+}
+
+.csl-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.1fr) minmax(0, .9fr);
+  overflow: hidden;
+}
+
+.csl-map-panel {
+  min-height: 560px;
+}
+
+.csl-map {
+  min-height: 100%;
+  width: 100%;
+}
+
+.csl-results-panel {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  max-height: 560px;
+  overflow: auto;
+}
+
+.csl-featured {
+  padding: 1rem;
+}
+
+.csl-featured__meta,
+.csl-card__meta,
+.csl-card__distance {
+  margin: .45rem 0 0;
+  color: #4b5565;
+}
+
+.csl-featured__actions,
+.csl-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: .9rem;
+}
+
+.csl-results {
+  display: grid;
+  gap: .9rem;
+}
+
+.csl-card {
+  display: grid;
+  gap: .8rem;
+  padding: 1rem;
+}
+
+.csl-card__eyebrow {
+  margin: 0 0 .3rem;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #5b6b87;
+}
+
+@media (max-width: 1024px) {
+  .csl-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .csl-map-panel {
+    min-height: 420px;
+  }
+
+  .csl-results-panel {
+    max-height: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .csl-toolbar__controls {
+    grid-template-columns: 1fr;
+  }
+}
