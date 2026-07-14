@@ -79,13 +79,18 @@ $featured_branch = ! empty( $all_branches ) ? $all_branches[0] : null;
 
 		<div class="branches-grid">
 			<?php foreach ( $branches as $province => $items ) : ?>
-				<section class="branch-group" data-reveal data-branch-group>
-					<div class="branch-group__header">
-						<div>
+				<details class="branch-group branch-group--collapsible" data-reveal data-branch-group open>
+					<summary class="branch-group__summary">
+						<div class="branch-group__header">
+							<div>
 								<h2 class="t-2"><?php echo esc_html( $province ); ?></h2>
 							</div>
-						<span class="result-count" data-branch-group-count><?php echo esc_html( number_format_i18n( count( $items ) ) ); ?> <?php esc_html_e( 'locations', 'parts-mall' ); ?></span>
-					</div>
+							<div class="branch-group__meta">
+								<span class="result-count" data-branch-group-count><?php echo esc_html( number_format_i18n( count( $items ) ) ); ?> <?php esc_html_e( 'locations', 'parts-mall' ); ?></span>
+								<span class="branch-group__toggle" data-branch-group-toggle-label><?php esc_html_e( 'Open', 'parts-mall' ); ?></span>
+							</div>
+						</div>
+					</summary>
 					<div class="branch-group__cards">
 						<?php foreach ( $items as $branch ) : ?>
 							<?php $branch = partsmall_prepare_branch( $branch, (string) $province ); ?>
@@ -102,17 +107,22 @@ $featured_branch = ! empty( $all_branches ) ? $all_branches[0] : null;
 							</article>
 						<?php endforeach; ?>
 					</div>
-				</section>
+				</details>
 			<?php endforeach; ?>
 
 			<?php if ( ! empty( $pan_africa ) ) : ?>
-				<section class="branch-group" id="pan-africa" data-reveal data-branch-group>
-					<div class="branch-group__header">
-						<div>
+				<details class="branch-group branch-group--collapsible" id="pan-africa" data-reveal data-branch-group open>
+					<summary class="branch-group__summary">
+						<div class="branch-group__header">
+							<div>
 								<h2 class="t-2"><?php esc_html_e( 'Pan-Africa', 'parts-mall' ); ?></h2>
 							</div>
-						<span class="result-count" data-branch-group-count><?php echo esc_html( number_format_i18n( count( $pan_africa ) ) ); ?> <?php esc_html_e( 'country points', 'parts-mall' ); ?></span>
-					</div>
+							<div class="branch-group__meta">
+								<span class="result-count" data-branch-group-count><?php echo esc_html( number_format_i18n( count( $pan_africa ) ) ); ?> <?php esc_html_e( 'country points', 'parts-mall' ); ?></span>
+								<span class="branch-group__toggle" data-branch-group-toggle-label><?php esc_html_e( 'Open', 'parts-mall' ); ?></span>
+							</div>
+						</div>
+					</summary>
 					<div class="branch-group__cards">
 						<?php foreach ( $pan_africa as $branch ) : ?>
 							<?php $branch = partsmall_prepare_branch( $branch, 'Pan-Africa' ); ?>
@@ -129,7 +139,7 @@ $featured_branch = ! empty( $all_branches ) ? $all_branches[0] : null;
 							</article>
 						<?php endforeach; ?>
 					</div>
-				</section>
+				</details>
 			<?php endif; ?>
 		</div>
 	</div>

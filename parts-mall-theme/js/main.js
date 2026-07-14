@@ -218,6 +218,27 @@
       var featured = $('[data-branch-featured]', root);
       if (!input || !cards.length) return;
 
+      function syncGroupDisclosure(term) {
+        var isCompact = window.matchMedia && window.matchMedia('(max-width: 780px)').matches;
+        groups.forEach(function (group) {
+          if (group.tagName !== 'DETAILS') return;
+          var toggleLabel = $('[data-branch-group-toggle-label]', group);
+          if (!isCompact) {
+            group.open = true;
+            if (toggleLabel) toggleLabel.textContent = '';
+            return;
+          }
+
+          if (term) {
+            group.open = group.style.display !== 'none';
+          } else if (group.style.display === 'none') {
+            group.open = false;
+          }
+
+          if (toggleLabel) toggleLabel.textContent = group.open ? 'Close' : 'Open';
+        });
+      }
+
       function updateFeatured(card) {
         if (!featured || !card) return;
         var name = $('[data-branch-featured-name]', featured);
@@ -255,6 +276,20 @@
             countNode.textContent = visibleInGroup + ' ' + (group.id === 'pan-africa' ? 'country points' : 'locations');
           }
         });
+
+        if (!term) {
+          var firstVisibleGroupHandled = false;
+          if (window.matchMedia && window.matchMedia('(max-width: 780px)').matches) {
+            groups.forEach(function (group) {
+              if (group.tagName !== 'DETAILS' || group.style.display === 'none') return;
+              group.open = !firstVisibleGroupHandled;
+              firstVisibleGroupHandled = true;
+            });
+          }
+        }
+
+        syncGroupDisclosure(term);
+
         if (resultNode) {
           resultNode.textContent = visibleCount ? (visibleCount + ' branch points currently visible') : 'No branch points currently visible';
         }
@@ -264,6 +299,9 @@
       }
 
       input.addEventListener('input', render);
+      window.addEventListener('resize', function () {
+        syncGroupDisclosure(input.value.trim().toLowerCase());
+      }, { passive: true });
       render();
     });
   }

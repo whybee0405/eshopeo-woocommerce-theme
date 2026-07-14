@@ -1037,9 +1037,37 @@ ul.products {
 .accordion-card__content { padding: 0 1.1rem 1.1rem; color: var(--steel); }
 
 .branches-grid { display: grid; gap: 1.25rem; }
-.branch-group__header { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: .85rem; }
+.branch-group {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-12);
+  background: var(--white);
+  padding: 1rem;
+}
+.branch-group__summary {
+  list-style: none;
+  cursor: pointer;
+}
+.branch-group__summary::-webkit-details-marker { display: none; }
+.branch-group__header { display: flex; justify-content: space-between; align-items: end; gap: 1rem; }
+.branch-group__meta {
+  display: grid;
+  justify-items: end;
+  gap: .35rem;
+}
+.branch-group__toggle {
+  display: none;
+  font: 600 .72rem/1 var(--font-mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--brand-primary);
+}
 .branch-group__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-.branch-card { padding: 1rem; display: grid; gap: .75rem; }
+.branch-group__cards {
+  margin-top: .95rem;
+  padding-top: .95rem;
+  border-top: 1px solid var(--line);
+}
+.branch-card { padding: 1rem; display: grid; gap: .75rem; border: 1px solid var(--line); border-radius: var(--radius-8); }
 .branch-card__meta { color: var(--steel); font-size: .95rem; }
 .branch-card__links { display: grid; gap: .4rem; }
 .branch-card__links a {
@@ -1426,6 +1454,29 @@ ul.products {
   .hero__layout--brand { min-height: auto; }
   .promo-slider__viewport { min-height: 360px; }
   .branch-finder-toolbar { grid-template-columns: 1fr; }
+  .branch-group {
+    padding: .85rem;
+  }
+  .branch-group__summary {
+    margin: -.1rem 0 0;
+  }
+  .branch-group__header {
+    align-items: center;
+  }
+  .branch-group__meta {
+    justify-items: end;
+  }
+  .branch-group__toggle {
+    display: inline-flex;
+  }
+  .branch-group__cards {
+    margin-top: .8rem;
+    padding-top: .8rem;
+  }
+  .branch-card {
+    padding: .9rem;
+    gap: .6rem;
+  }
   .agent-stats-grid > div { border-top: 1px solid var(--line); }
   .agent-stats-grid > div:first-child { padding-top: 0; border-top: 0; }
 }
