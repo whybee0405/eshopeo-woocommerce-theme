@@ -101,8 +101,11 @@ get_header();
 
 		<section class="branch-gallery" aria-label="<?php esc_attr_e( 'Branch media', 'parts-mall' ); ?>" data-reveal>
 			<div class="branch-gallery__head">
-				<h2 class="t-2"><?php esc_html_e( 'Branch gallery', 'parts-mall' ); ?></h2>
-				<p class="result-count"><?php esc_html_e( 'Show real branch photography here so customers can recognise the location, team, and service environment before they arrive.', 'parts-mall' ); ?></p>
+				<div class="stack">
+					<h2 class="t-2"><?php esc_html_e( 'Branch gallery', 'parts-mall' ); ?></h2>
+					<p class="result-count"><?php esc_html_e( 'Use this page to confirm the branch location, contact the team directly, and plan your visit with confidence.', 'parts-mall' ); ?></p>
+				</div>
+				<a class="btn btn--outline btn--sm" href="<?php echo esc_url( $directions ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Open directions', 'parts-mall' ); ?></a>
 			</div>
 			<?php if ( ! empty( $gallery ) ) : ?>
 				<div class="branch-gallery__grid">
@@ -115,17 +118,17 @@ get_header();
 			<?php else : ?>
 				<div class="branch-media-checklist">
 					<article class="branch-media-card">
-						<strong><?php esc_html_e( 'Exterior storefront photo', 'parts-mall' ); ?></strong>
-						<p><?php esc_html_e( 'Use a clear street-facing image that helps customers recognise the branch on arrival.', 'parts-mall' ); ?></p>
+						<strong><?php esc_html_e( 'Before you arrive', 'parts-mall' ); ?></strong>
+						<p><?php esc_html_e( 'Confirm the suburb, trading hours, and direct phone number above before travelling to the branch.', 'parts-mall' ); ?></p>
 					</article>
 					<article class="branch-media-card">
-						<strong><?php esc_html_e( 'Counter or team photo', 'parts-mall' ); ?></strong>
-						<p><?php esc_html_e( 'Show the branch environment, support desk, or stocked counter to make the page feel local and trustworthy.', 'parts-mall' ); ?></p>
+						<strong><?php esc_html_e( 'What to have ready', 'parts-mall' ); ?></strong>
+						<p><?php esc_html_e( 'Have your part number, vehicle make and model, VIN, or OEM reference ready for faster assistance from the branch team.', 'parts-mall' ); ?></p>
 					</article>
 					<article class="branch-media-card">
-						<strong><?php esc_html_e( 'Local route and service area', 'parts-mall' ); ?></strong>
-						<p><?php esc_html_e( 'Support the gallery with suburb, city, and province-specific content that reflects how this branch serves its local market.', 'parts-mall' ); ?></p>
-						<a class="link-arrow" href="<?php echo esc_url( $directions ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Open directions', 'parts-mall' ); ?> &rarr;</a>
+						<strong><?php esc_html_e( 'Local support area', 'parts-mall' ); ?></strong>
+						<p><?php echo esc_html( sprintf( __( 'The %s branch supports nearby motorists, workshops, and trade buyers across its local area.', 'parts-mall' ), $branch['name'] ) ); ?></p>
+						<a class="link-arrow" href="<?php echo esc_url( home_url( '/find-a-branch' ) ); ?>"><?php esc_html_e( 'View full network', 'parts-mall' ); ?> &rarr;</a>
 					</article>
 				</div>
 			<?php endif; ?>
