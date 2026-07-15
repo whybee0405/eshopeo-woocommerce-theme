@@ -15,8 +15,8 @@ get_header();
 <section class="page-hero">
 	<div class="container">
 		<span class="eyebrow eyebrow--amber"><?php esc_html_e( 'Our story', 'cove' ); ?></span>
-		<h1 class="t-1"><?php esc_html_e( 'Home, done right.', 'cove' ); ?></h1>
-		<p class="t-lead"><?php esc_html_e( 'COVE was built on a simple idea: excellent home appliances should not require a retail markup. We source certified demo and b-stock units directly, inspect every one, and pass the savings to you.', 'cove' ); ?></p>
+		<h1 class="t-1"><?php esc_html_e( 'Appliances made clear.', 'cove' ); ?></h1>
+		<p class="t-lead"><?php esc_html_e( 'COVE was built on a simple idea: premium appliances should be easy to compare, clearly graded, and better priced. We source new, demo, and graded units directly, then inspect every one.', 'cove' ); ?></p>
 	</div>
 </section>
 
@@ -26,11 +26,11 @@ get_header();
 		<div class="prose" data-reveal>
 
 			<h2 class="t-2"><?php esc_html_e( 'Why COVE?', 'cove' ); ?></h2>
-			<p><?php esc_html_e( 'South African households spend more on home appliances than almost any other discretionary category &mdash; and that spend has been rising steadily. COVE exists because we believe the smartest move is not to buy cheaper junk; it is to buy the same quality product for less. That is what b-stock makes possible.', 'cove' ); ?></p>
+			<p><?php esc_html_e( 'South African households spend more on home appliances than almost any other discretionary category, and that spend has been rising steadily. COVE exists because smart buyers should be able to choose trusted brands with clearer condition information and better prices.', 'cove' ); ?></p>
 			<p><?php esc_html_e( 'We started by working with a handful of appliance brands to offload their certified demo stock. Brands needed a home for units that had toured showrooms or been used at expos. We needed inventory. Customers needed a trustworthy source. The fit was obvious.', 'cove' ); ?></p>
 
-			<h2 class="t-2"><?php esc_html_e( 'The b-stock advantage', 'cove' ); ?></h2>
-			<p><?php esc_html_e( 'B-stock is not second-hand in the flea-market sense. It is manufacturer-adjacent inventory: units that left the factory in perfect condition but did not complete a standard retail journey. A fridge that stood on a showroom floor for three months. A washing machine used as a display model at a trade fair. A dishwasher returned unopened after a kitchen renovation was cancelled.', 'cove' ); ?></p>
+			<h2 class="t-2"><?php esc_html_e( 'The graded-stock advantage', 'cove' ); ?></h2>
+			<p><?php esc_html_e( 'Demo and graded stock is manufacturer-adjacent inventory: units that left the factory correctly but did not complete a standard retail journey. A fridge that stood on a showroom floor for three months. A washing machine used as a display model at a trade fair. A dishwasher returned unopened after a kitchen renovation was cancelled.', 'cove' ); ?></p>
 			<p><?php esc_html_e( 'Because these units bypassed the full retail chain, the margin savings are real &mdash; 30% to 65% depending on grade and age. We pass that saving to you directly, with full transparency about what you are buying.', 'cove' ); ?></p>
 
 			<h2 class="t-2"><?php esc_html_e( 'Our promise', 'cove' ); ?></h2>

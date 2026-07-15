@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Microwave oven">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="250" cy="214" r="180" fill="#bfe5df" opacity=".32"/>
+  <rect x="190" y="288" width="520" height="280" rx="34" fill="#102a43"/>
+  <rect x="230" y="326" width="320" height="204" rx="22" fill="#eef1f3"/>
+  <circle cx="390" cy="428" r="76" fill="#a9d8f5" opacity=".58"/>
+  <path d="M340 428c34-26 66 26 100 0" fill="none" stroke="#fefffe" stroke-width="10" stroke-linecap="round"/>
+  <rect x="590" y="326" width="78" height="204" rx="18" fill="#171a1c"/>
+  <circle cx="628" cy="374" r="16" fill="#a9d8f5"/>
+  <path d="M612 430h32M612 474h32" stroke="#fefffe" stroke-width="9" stroke-linecap="round" opacity=".72"/>
+  <ellipse cx="450" cy="616" rx="280" ry="30" fill="#102a43" opacity=".12"/>
+  <text x="450" y="690" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">MICROWAVE</text>
+</svg>

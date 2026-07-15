@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Air fryer">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="240" cy="210" r="185" fill="#bfe5df" opacity=".32"/>
+  <rect x="304" y="174" width="292" height="430" rx="72" fill="#102a43"/>
+  <rect x="356" y="244" width="188" height="70" rx="24" fill="#eef1f3"/>
+  <rect x="338" y="384" width="224" height="112" rx="34" fill="#171a1c"/>
+  <path d="M382 440h136" stroke="#a9d8f5" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="450" cy="280" r="18" fill="#1e88c8"/>
+  <ellipse cx="450" cy="654" rx="230" ry="28" fill="#102a43" opacity=".12"/>
+  <text x="450" y="730" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">AIR FRYER</text>
+</svg>

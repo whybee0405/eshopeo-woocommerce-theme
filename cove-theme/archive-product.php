@@ -76,7 +76,7 @@ $brands = is_wp_error( $brands ) ? array() : $brands;
 						<div class="filter-options">
 							<label class="check-label">
 								<input type="radio" name="cat" value="" <?php checked( $active_cat, '' ); ?>>
-								<?php esc_html_e( 'All rooms', 'cove' ); ?>
+								<?php esc_html_e( 'All categories', 'cove' ); ?>
 							</label>
 							<?php
 							$filter_cats = function_exists( 'cove_categories' ) ? cove_categories() : array();

@@ -118,6 +118,12 @@ while ( have_posts() ) :
 						</p>
 					<?php endif; ?>
 
+					<div class="pdp-clarity-strip" aria-label="<?php esc_attr_e( 'COVE clarity promises', 'cove' ); ?>">
+						<span><?php esc_html_e( 'Grade clarity', 'cove' ); ?></span>
+						<span><?php esc_html_e( 'Condition verified', 'cove' ); ?></span>
+						<span><?php esc_html_e( 'Simple delivery', 'cove' ); ?></span>
+					</div>
+
 					<section class="inspection-passport" aria-label="<?php esc_attr_e( 'Inspection Passport', 'cove' ); ?>">
 						<div class="inspection-passport__head">
 							<p class="inspection-passport__kicker"><?php esc_html_e( 'Inspection Passport', 'cove' ); ?></p>

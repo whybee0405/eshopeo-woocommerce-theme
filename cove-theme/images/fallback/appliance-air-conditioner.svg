@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Air conditioner">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="650" cy="230" r="200" fill="#a9d8f5" opacity=".34"/>
+  <rect x="180" y="266" width="540" height="180" rx="44" fill="#fefffe" stroke="#d9dee3" stroke-width="8"/>
+  <rect x="230" y="374" width="440" height="34" rx="17" fill="#eef1f3"/>
+  <path d="M272 408c24 34 24 70 0 108M450 408c24 34 24 70 0 108M628 408c24 34 24 70 0 108" fill="none" stroke="#1e88c8" stroke-width="12" stroke-linecap="round" opacity=".7"/>
+  <circle cx="664" cy="326" r="12" fill="#1e88c8"/>
+  <ellipse cx="450" cy="574" rx="250" ry="28" fill="#102a43" opacity=".1"/>
+  <text x="450" y="662" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">AIR CONDITIONER</text>
+</svg>

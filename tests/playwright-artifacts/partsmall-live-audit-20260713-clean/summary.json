@@ -1,0 +1,130 @@
+[
+  {
+    "page": "home",
+    "viewport": "mobile-clean",
+    "cookieAccepted": "Accept All",
+    "overflowX": 0,
+    "hiddenRevealCount": 3,
+    "headingNums": [
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10"
+    ],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\home-mobile-clean.png"
+  },
+  {
+    "page": "about",
+    "viewport": "mobile-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\about-mobile-clean.png"
+  },
+  {
+    "page": "contact",
+    "viewport": "mobile-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\contact-mobile-clean.png"
+  },
+  {
+    "page": "agent",
+    "viewport": "mobile-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\agent-mobile-clean.png"
+  },
+  {
+    "page": "branches",
+    "viewport": "mobile-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\branches-mobile-clean.png"
+  },
+  {
+    "page": "branch-alberton",
+    "viewport": "mobile-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\branch-alberton-mobile-clean.png"
+  },
+  {
+    "page": "home",
+    "viewport": "narrow-clean",
+    "cookieAccepted": "Accept All",
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10"
+    ],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\home-narrow-clean.png"
+  },
+  {
+    "page": "about",
+    "viewport": "narrow-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\about-narrow-clean.png"
+  },
+  {
+    "page": "contact",
+    "viewport": "narrow-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\contact-narrow-clean.png"
+  },
+  {
+    "page": "agent",
+    "viewport": "narrow-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\agent-narrow-clean.png"
+  },
+  {
+    "page": "branches",
+    "viewport": "narrow-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\branches-narrow-clean.png"
+  },
+  {
+    "page": "branch-alberton",
+    "viewport": "narrow-clean",
+    "cookieAccepted": null,
+    "overflowX": 0,
+    "hiddenRevealCount": 0,
+    "headingNums": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713-clean\\branch-alberton-narrow-clean.png"
+  }
+]

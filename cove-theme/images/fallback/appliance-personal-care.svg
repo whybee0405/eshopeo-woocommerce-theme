@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Personal care appliance">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="246" cy="210" r="185" fill="#a9d8f5" opacity=".3"/>
+  <path d="M328 250h272c38 0 68 30 68 68s-30 68-68 68H328c-38 0-68-30-68-68s30-68 68-68z" fill="#102a43"/>
+  <path d="M352 386l-74 222" stroke="#102a43" stroke-width="34" stroke-linecap="round"/>
+  <path d="M402 386l-28 244" stroke="#102a43" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="592" cy="318" r="18" fill="#a9d8f5"/>
+  <path d="M466 318h58" stroke="#fefffe" stroke-width="12" stroke-linecap="round" opacity=".78"/>
+  <ellipse cx="450" cy="690" rx="230" ry="28" fill="#102a43" opacity=".12"/>
+  <text x="450" y="766" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">PERSONAL CARE</text>
+</svg>

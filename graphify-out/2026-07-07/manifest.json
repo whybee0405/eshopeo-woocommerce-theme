@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "cove-theme/archive-product.php": {
-    "mtime": 1783427836.2780995,
-    "ast_hash": "4e6f2043ffa44d9222a3731b8b5b4b3c",
+    "mtime": 1783436674.5821917,
+    "ast_hash": "7db67452c1ee89c0f3d66999cf2de512",
     "semantic_hash": ""
   },
   "cove-theme/archive.php": {
@@ -30,23 +30,23 @@
     "semantic_hash": ""
   },
   "cove-theme/footer.php": {
-    "mtime": 1783071977.95405,
-    "ast_hash": "d5b3fa46ed3bae633c681253091043fc",
+    "mtime": 1783436264.6579294,
+    "ast_hash": "57a3076a67a7c64e0761caea6170a6f6",
     "semantic_hash": ""
   },
   "cove-theme/front-page.php": {
-    "mtime": 1783071977.95505,
-    "ast_hash": "7bb5ffc30ca59a889e59ceb8f49bb2bd",
+    "mtime": 1783450075.0147414,
+    "ast_hash": "61522e3e2d2e2d3d953e4c5f29cb68f9",
     "semantic_hash": ""
   },
   "cove-theme/functions.php": {
-    "mtime": 1783427793.8555572,
-    "ast_hash": "5730b6567e4e51ec5991342bfe4b57d8",
+    "mtime": 1783449521.5089126,
+    "ast_hash": "45e8c5067c409c2fdcc8f3040f5d7680",
     "semantic_hash": ""
   },
   "cove-theme/header.php": {
-    "mtime": 1783071977.95656,
-    "ast_hash": "4e348179f418505e5eeaca3f10e14e72",
+    "mtime": 1783436264.6579294,
+    "ast_hash": "93397c92f5e5ddbf48aa38cce8a3b364",
     "semantic_hash": ""
   },
   "cove-theme/inc/admin-import.php": {
@@ -75,8 +75,8 @@
     "semantic_hash": ""
   },
   "cove-theme/js/main.js": {
-    "mtime": 1783071977.9687946,
-    "ast_hash": "bcbea3486cb19446d0aadc00e5b7b272",
+    "mtime": 1783436515.5855448,
+    "ast_hash": "2d637967032de3596a54f25b95dcb944",
     "semantic_hash": ""
   },
   "cove-theme/js/pdp-3d.js": {
@@ -90,13 +90,13 @@
     "semantic_hash": ""
   },
   "cove-theme/page-about.php": {
-    "mtime": 1783071977.972155,
-    "ast_hash": "7a9182e3312478784751e3b8552e8246",
+    "mtime": 1783436773.063517,
+    "ast_hash": "77b497351c231a2fd905deb89fa14143",
     "semantic_hash": ""
   },
   "cove-theme/page-brand-kit.php": {
-    "mtime": 1783427912.5811033,
-    "ast_hash": "12b60df0c5a9ca49b5c1a03ca56fa68e",
+    "mtime": 1783436773.0645201,
+    "ast_hash": "8ef1b3def70dfe6c3b3976420fe4834f",
     "semantic_hash": ""
   },
   "cove-theme/page-contact.php": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "cove-theme/single-product.php": {
-    "mtime": 1783427875.6849122,
-    "ast_hash": "c0eda8501fc224fff0bf982a37df8581",
+    "mtime": 1783436376.4060004,
+    "ast_hash": "06e25c7c9a1882acaf9e4d991ffcccce",
     "semantic_hash": ""
   },
   "cove-theme/single.php": {
@@ -135,8 +135,8 @@
     "semantic_hash": ""
   },
   "cove-theme/woocommerce/content-product.php": {
-    "mtime": 1783427875.681756,
-    "ast_hash": "8e7c21e571e41d441988c8456acea8b7",
+    "mtime": 1783447832.3764505,
+    "ast_hash": "c468a53dceb0ff127c06508c692f0f3f",
     "semantic_hash": ""
   },
   "digicars-theme/404.php": {
@@ -1240,13 +1240,8 @@
     "semantic_hash": ""
   },
   "tests/cove-premium-refresh.test.ps1": {
-    "mtime": 1783427706.1710358,
-    "ast_hash": "60b16b0aba151fbd0a5b90918a49fb49",
-    "semantic_hash": ""
-  },
-  "cove-theme/DESIGN.md": {
-    "mtime": 1783427743.4644215,
-    "ast_hash": "8fcbe3f48ebab1ca48b9a906ab0b0c96",
+    "mtime": 1783448048.2345164,
+    "ast_hash": "41b17a3cc4d1b19a394365e56fd54327",
     "semantic_hash": ""
   },
   "tests/glow-png-logo-favicon.test.ps1": {
@@ -1332,6 +1327,71 @@
   "glow-theme/images/product brands/torriden.png": {
     "mtime": 1783431407.7486312,
     "ast_hash": "1ad20647c55c40a1f813af7f5b5caead",
+    "semantic_hash": ""
+  },
+  "cove-theme/COVE_Brand_Kit_Design.md": {
+    "mtime": 1783435266.8256624,
+    "ast_hash": "fab11f05fc30afb8f892851c9e3d6642",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-category-showroom.png": {
+    "mtime": 1783435616.1566443,
+    "ast_hash": "0546ec6e1fcfb4d8a7fb40aeea4086af",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-grade-trust-system.png": {
+    "mtime": 1783435686.5435283,
+    "ast_hash": "af907fbbf5e6353c7f221ecd8f23e91c",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-hero-clarity-portal.png": {
+    "mtime": 1783435530.706148,
+    "ast_hash": "a69479f09704262ec2e26b6c60c98efc",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-product-card-pdp-system.png": {
+    "mtime": 1783435755.857102,
+    "ast_hash": "c1cdd451ca8d069f9591250591eb3b84",
+    "semantic_hash": ""
+  },
+  "tests/cove-brand-kit-overhaul.test.ps1": {
+    "mtime": 1783449658.037442,
+    "ast_hash": "ea58a63a3f1e987307cc58384fc15f43",
+    "semantic_hash": ""
+  },
+  "tests/cove-mobile-imagery-typography.test.ps1": {
+    "mtime": 1783447654.1648078,
+    "ast_hash": "631dae87825587eb18dc07614b1eb18d",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-category-showroom-photo.png": {
+    "mtime": 1783447539.936061,
+    "ast_hash": "a98b390aabfdda682a672cdf828db0a1",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-grade-inspection-photo.png": {
+    "mtime": 1783447595.0347419,
+    "ast_hash": "e68f62be81a08e1c95fa82b48c5ef263",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-hero-showroom-photo.png": {
+    "mtime": 1783447494.348043,
+    "ast_hash": "68ae4bd9856ee53b81997e318a3a4cc2",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-product-proof-photo.png": {
+    "mtime": 1783447636.8426192,
+    "ast_hash": "e83a37eb67211612ccc1517a27e4c3b2",
+    "semantic_hash": ""
+  },
+  "cove-theme/js/hero-confidence.js": {
+    "mtime": 1783449404.904654,
+    "ast_hash": "0704f24bea4183db86a2f592716e7489",
+    "semantic_hash": ""
+  },
+  "tests/cove-hero-confidence-reveal.test.ps1": {
+    "mtime": 1783450602.137285,
+    "ast_hash": "1e3eae3d89c544153805ff3b09be7912",
     "semantic_hash": ""
   }
 }

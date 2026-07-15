@@ -12,6 +12,22 @@
   function qsa(sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); }
 
   /* ------------------------------------------------------------------
+   * Clarity Portal lens
+   * ------------------------------------------------------------------ */
+  var clarityHero = qs('[data-clarity-hero]');
+  var clarityVisual = qs('.cove-clarity-hero__visual', clarityHero);
+
+  if (clarityVisual && !REDUCED && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    clarityVisual.addEventListener('pointermove', function (event) {
+      var rect = clarityVisual.getBoundingClientRect();
+      var x = ((event.clientX - rect.left) / rect.width) * 100;
+      var y = ((event.clientY - rect.top) / rect.height) * 100;
+      clarityVisual.style.setProperty('--lens-x', x.toFixed(2) + '%');
+      clarityVisual.style.setProperty('--lens-y', y.toFixed(2) + '%');
+    });
+  }
+
+  /* ------------------------------------------------------------------
    * JS flag (enables CSS reveal transitions)
    * ------------------------------------------------------------------ */
   document.documentElement.classList.add('js');
@@ -67,8 +83,49 @@
   if (menuToggle) { menuToggle.addEventListener('click', openMenu); }
   if (menuClose)  { menuClose.addEventListener('click', closeMenu); }
 
+  /* ------------------------------------------------------------------
+   * Search overlay
+   * ------------------------------------------------------------------ */
+  var searchToggle = qs('[data-search-toggle]');
+  var searchClose = qs('[data-search-close]');
+  var searchOverlay = qs('[data-search-overlay]');
+  var searchInput = qs('[data-search-input]');
+
+  function openSearch() {
+    if (!searchOverlay) { return; }
+    searchOverlay.classList.add('is-open');
+    searchOverlay.setAttribute('aria-hidden', 'false');
+    if (searchToggle) { searchToggle.setAttribute('aria-expanded', 'true'); }
+    document.body.style.overflow = 'hidden';
+    window.setTimeout(function () {
+      if (searchInput) { searchInput.focus(); }
+    }, 90);
+  }
+
+  function closeSearch() {
+    if (!searchOverlay) { return; }
+    searchOverlay.classList.remove('is-open');
+    searchOverlay.setAttribute('aria-hidden', 'true');
+    if (searchToggle) {
+      searchToggle.setAttribute('aria-expanded', 'false');
+      searchToggle.focus();
+    }
+    document.body.style.overflow = '';
+  }
+
+  if (searchToggle) { searchToggle.addEventListener('click', openSearch); }
+  if (searchClose) { searchClose.addEventListener('click', closeSearch); }
+  if (searchOverlay) {
+    searchOverlay.addEventListener('click', function (event) {
+      if (event.target === searchOverlay) { closeSearch(); }
+    });
+  }
+
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { closeMenu(); }
+    if (e.key === 'Escape') {
+      closeMenu();
+      closeSearch();
+    }
   });
 
   /* ------------------------------------------------------------------

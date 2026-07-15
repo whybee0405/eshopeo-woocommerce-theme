@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Electric kettle">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="642" cy="210" r="190" fill="#a9d8f5" opacity=".32"/>
+  <path d="M344 318h212l42 276H302z" fill="#eef1f3" stroke="#d9dee3" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M364 300c36-72 136-72 172 0" fill="none" stroke="#102a43" stroke-width="20" stroke-linecap="round"/>
+  <path d="M596 378h56c56 0 56 132 0 132h-36" fill="none" stroke="#102a43" stroke-width="22" stroke-linecap="round"/>
+  <path d="M304 372l-82 34 82 34" fill="#102a43"/>
+  <circle cx="450" cy="456" r="46" fill="#a9d8f5" opacity=".72"/>
+  <ellipse cx="450" cy="650" rx="230" ry="28" fill="#102a43" opacity=".12"/>
+  <text x="450" y="724" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">KETTLE</text>
+</svg>

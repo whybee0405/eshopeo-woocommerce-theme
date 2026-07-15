@@ -1,0 +1,2628 @@
+[
+  {
+    "page": "home",
+    "url": "https://www.whybee.co.za/partsmall/",
+    "viewport": "desktop",
+    "title": "Parts Mall Corporation South Africa",
+    "h1s": [
+      "Korean vehicle parts across South Africa."
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 930,
+        "right": 1464,
+        "width": 534
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "width": 44,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Global Network",
+        "width": 114,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Brands",
+        "width": 53,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Branch Finder",
+        "width": 104,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Wholesale",
+        "width": 78,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 59,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 45,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 58,
+        "height": 28
+      },
+      {
+        "tag": "button",
+        "text": "Go to slide 1",
+        "width": 12,
+        "height": 12
+      },
+      {
+        "tag": "button",
+        "text": "Go to slide 2",
+        "width": 12,
+        "height": 12
+      },
+      {
+        "tag": "button",
+        "text": "Go to slide 3",
+        "width": 12,
+        "height": 12
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\home-desktop.png"
+  },
+  {
+    "page": "about",
+    "url": "https://www.whybee.co.za/partsmall/about",
+    "viewport": "desktop",
+    "title": "About - Parts Mall Corporation South Africa",
+    "h1s": [
+      "About"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 930,
+        "right": 1464,
+        "width": 534
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "width": 44,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Global Network",
+        "width": 114,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Brands",
+        "width": 53,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Branch Finder",
+        "width": 104,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Wholesale",
+        "width": 78,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 59,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 45,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 58,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\about-desktop.png"
+  },
+  {
+    "page": "contact",
+    "url": "https://www.whybee.co.za/partsmall/contact",
+    "viewport": "desktop",
+    "title": "Contact - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Contact"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 930,
+        "right": 1464,
+        "width": 534
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "width": 44,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Global Network",
+        "width": 114,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Brands",
+        "width": 53,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Branch Finder",
+        "width": 104,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Wholesale",
+        "width": 78,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 59,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 45,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 58,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "pma.sales1@parts-mall.com",
+        "width": 204,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\contact-desktop.png"
+  },
+  {
+    "page": "agent",
+    "url": "https://www.whybee.co.za/partsmall/become-an-agent",
+    "viewport": "desktop",
+    "title": "Become an Agent - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Become an Agent"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 930,
+        "right": 1464,
+        "width": 534
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "width": 44,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Global Network",
+        "width": 114,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Brands",
+        "width": 53,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Branch Finder",
+        "width": 104,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Wholesale",
+        "width": 78,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 59,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 45,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 58,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\agent-desktop.png"
+  },
+  {
+    "page": "branches",
+    "url": "https://www.whybee.co.za/partsmall/find-a-branch",
+    "viewport": "desktop",
+    "title": "Find a Branch - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Find a Branch"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 930,
+        "right": 1464,
+        "width": 534
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "width": 44,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Global Network",
+        "width": 114,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Brands",
+        "width": 53,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Branch Finder",
+        "width": 104,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Wholesale",
+        "width": 78,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 59,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 45,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 58,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "011 869 2044",
+        "width": 379,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "alberton@partsmall.co.za",
+        "width": 379,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 379,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\branches-desktop.png"
+  },
+  {
+    "page": "branch-alberton",
+    "url": "https://www.whybee.co.za/partsmall/branches/alberton/",
+    "viewport": "desktop",
+    "title": "Parts Mall Corporation South Africa",
+    "h1s": [
+      "Parts-Mall Alberton"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 930,
+        "right": 1464,
+        "width": 534
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "width": 44,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Global Network",
+        "width": 114,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Brands",
+        "width": 53,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Branch Finder",
+        "width": 104,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Wholesale",
+        "width": 78,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 59,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 45,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 58,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "011 869 2044",
+        "width": 96,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "alberton@partsmall.co.za",
+        "width": 183,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "Open in Google Maps ->",
+        "width": 177,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\branch-alberton-desktop.png"
+  },
+  {
+    "page": "post-hello-world",
+    "url": "https://www.whybee.co.za/partsmall/2026/07/13/hello-world/",
+    "viewport": "desktop",
+    "title": "Hello world! - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Editorial fallback"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 930,
+        "right": 1464,
+        "width": 534
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Home",
+        "width": 44,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Global Network",
+        "width": 114,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Brands",
+        "width": 53,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Branch Finder",
+        "width": 104,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Wholesale",
+        "width": 78,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 59,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 45,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 58,
+        "height": 28
+      },
+      {
+        "tag": "a",
+        "text": "Hello world!",
+        "width": 135,
+        "height": 38
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\post-hello-world-desktop.png"
+  },
+  {
+    "page": "home",
+    "url": "https://www.whybee.co.za/partsmall/",
+    "viewport": "tablet",
+    "title": "Parts Mall Corporation South Africa",
+    "h1s": [
+      "Korean vehicle parts across South Africa."
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 487,
+        "right": 858,
+        "width": 371
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "button",
+        "text": "Go to slide 1",
+        "width": 12,
+        "height": 12
+      },
+      {
+        "tag": "button",
+        "text": "Go to slide 2",
+        "width": 12,
+        "height": 12
+      },
+      {
+        "tag": "button",
+        "text": "Go to slide 3",
+        "width": 12,
+        "height": 12
+      },
+      {
+        "tag": "a",
+        "text": "View branch page",
+        "width": 131,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Call",
+        "width": 29,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch page",
+        "width": 131,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Call",
+        "width": 29,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch page",
+        "width": 131,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Call",
+        "width": 29,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch page",
+        "width": 131,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Call",
+        "width": 29,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\home-tablet.png"
+  },
+  {
+    "page": "about",
+    "url": "https://www.whybee.co.za/partsmall/about",
+    "viewport": "tablet",
+    "title": "About - Parts Mall Corporation South Africa",
+    "h1s": [
+      "About"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 487,
+        "right": 858,
+        "width": 371
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Branch finder",
+        "width": 750,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\about-tablet.png"
+  },
+  {
+    "page": "contact",
+    "url": "https://www.whybee.co.za/partsmall/contact",
+    "viewport": "tablet",
+    "title": "Contact - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Contact"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 487,
+        "right": 858,
+        "width": 371
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "pma.sales1@parts-mall.com",
+        "width": 204,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 750,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\contact-tablet.png"
+  },
+  {
+    "page": "agent",
+    "url": "https://www.whybee.co.za/partsmall/become-an-agent",
+    "viewport": "tablet",
+    "title": "Become an Agent - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Become an Agent"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 487,
+        "right": 858,
+        "width": 371
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Branch finder",
+        "width": 750,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\agent-tablet.png"
+  },
+  {
+    "page": "branches",
+    "url": "https://www.whybee.co.za/partsmall/find-a-branch",
+    "viewport": "tablet",
+    "title": "Find a Branch - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Find a Branch"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 487,
+        "right": 858,
+        "width": 371
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "011 869 2044",
+        "width": 347,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "alberton@partsmall.co.za",
+        "width": 347,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 347,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "011 421 8740",
+        "width": 347,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "benoni@partsmall.co.za",
+        "width": 347,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 347,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "011 826 5512",
+        "width": 347,
+        "height": 30
+      },
+      {
+        "tag": "a",
+        "text": "boksburg@partsmall.co.za",
+        "width": 347,
+        "height": 30
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 347,
+        "height": 30
+      },
+      {
+        "tag": "a",
+        "text": "011 452 1036",
+        "width": 347,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "edenvale@partsmall.co.za",
+        "width": 347,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\branches-tablet.png"
+  },
+  {
+    "page": "branch-alberton",
+    "url": "https://www.whybee.co.za/partsmall/branches/alberton/",
+    "viewport": "tablet",
+    "title": "Parts Mall Corporation South Africa",
+    "h1s": [
+      "Parts-Mall Alberton"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 487,
+        "right": 858,
+        "width": 371
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "011 869 2044",
+        "width": 96,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "alberton@partsmall.co.za",
+        "width": 183,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "Open in Google Maps ->",
+        "width": 177,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Open directions →",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 750,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\branch-alberton-tablet.png"
+  },
+  {
+    "page": "post-hello-world",
+    "url": "https://www.whybee.co.za/partsmall/2026/07/13/hello-world/",
+    "viewport": "tablet",
+    "title": "Hello world! - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Editorial fallback"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 487,
+        "right": 858,
+        "width": 371
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Hello world!",
+        "width": 106,
+        "height": 30
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 750,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 750,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\post-hello-world-tablet.png"
+  },
+  {
+    "page": "home",
+    "url": "https://www.whybee.co.za/partsmall/",
+    "viewport": "mobile",
+    "fatal": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://www.whybee.co.za/partsmall/\nCall log:\n\u001b[2m  - navigating to \"https://www.whybee.co.za/partsmall/\", waiting until \"networkidle\"\u001b[22m\n",
+    "errors": []
+  },
+  {
+    "page": "about",
+    "url": "https://www.whybee.co.za/partsmall/about",
+    "viewport": "mobile",
+    "title": "About - Parts Mall Corporation South Africa",
+    "h1s": [
+      "About"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 192,
+        "right": 414,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Branch finder",
+        "width": 320,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\about-mobile.png"
+  },
+  {
+    "page": "contact",
+    "url": "https://www.whybee.co.za/partsmall/contact",
+    "viewport": "mobile",
+    "title": "Contact - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Contact"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 192,
+        "right": 414,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "pma.sales1@parts-mall.com",
+        "width": 204,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 320,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\contact-mobile.png"
+  },
+  {
+    "page": "agent",
+    "url": "https://www.whybee.co.za/partsmall/become-an-agent",
+    "viewport": "mobile",
+    "title": "Become an Agent - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Become an Agent"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 192,
+        "right": 414,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Branch finder",
+        "width": 320,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\agent-mobile.png"
+  },
+  {
+    "page": "branches",
+    "url": "https://www.whybee.co.za/partsmall/find-a-branch",
+    "viewport": "mobile",
+    "title": "Find a Branch - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Find a Branch"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 192,
+        "right": 414,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "011 869 2044",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "alberton@partsmall.co.za",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "011 421 8740",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "benoni@partsmall.co.za",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "011 826 5512",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "boksburg@partsmall.co.za",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "011 452 1036",
+        "width": 317,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "edenvale@partsmall.co.za",
+        "width": 317,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\branches-mobile.png"
+  },
+  {
+    "page": "branch-alberton",
+    "url": "https://www.whybee.co.za/partsmall/branches/alberton/",
+    "viewport": "mobile",
+    "title": "Parts Mall Corporation South Africa",
+    "h1s": [
+      "Parts-Mall Alberton"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 192,
+        "right": 414,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "011 869 2044",
+        "width": 96,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "alberton@partsmall.co.za",
+        "width": 183,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "Open in Google Maps ->",
+        "width": 177,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Open directions →",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 320,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\branch-alberton-mobile.png"
+  },
+  {
+    "page": "post-hello-world",
+    "url": "https://www.whybee.co.za/partsmall/2026/07/13/hello-world/",
+    "viewport": "mobile",
+    "title": "Hello world! - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Editorial fallback"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 192,
+        "right": 414,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Hello world!",
+        "width": 106,
+        "height": 30
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 320,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 320,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\post-hello-world-mobile.png"
+  },
+  {
+    "page": "home",
+    "url": "https://www.whybee.co.za/partsmall/",
+    "viewport": "narrow",
+    "title": "Parts Mall Corporation South Africa",
+    "h1s": [
+      "Korean vehicle parts across South Africa."
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 122,
+        "right": 344,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "button",
+        "text": "Go to slide 1",
+        "width": 12,
+        "height": 12
+      },
+      {
+        "tag": "button",
+        "text": "Go to slide 2",
+        "width": 12,
+        "height": 12
+      },
+      {
+        "tag": "button",
+        "text": "Go to slide 3",
+        "width": 12,
+        "height": 12
+      },
+      {
+        "tag": "a",
+        "text": "View branch page",
+        "width": 131,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Call",
+        "width": 29,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch page",
+        "width": 131,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Call",
+        "width": 29,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch page",
+        "width": 131,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Call",
+        "width": 29,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch page",
+        "width": 131,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Call",
+        "width": 29,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\home-narrow.png"
+  },
+  {
+    "page": "about",
+    "url": "https://www.whybee.co.za/partsmall/about",
+    "viewport": "narrow",
+    "title": "About - Parts Mall Corporation South Africa",
+    "h1s": [
+      "About"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 122,
+        "right": 344,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Branch finder",
+        "width": 250,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\about-narrow.png"
+  },
+  {
+    "page": "contact",
+    "url": "https://www.whybee.co.za/partsmall/contact",
+    "viewport": "narrow",
+    "title": "Contact - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Contact"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 122,
+        "right": 344,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "pma.sales1@parts-mall.com",
+        "width": 191,
+        "height": 44
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 250,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\contact-narrow.png"
+  },
+  {
+    "page": "agent",
+    "url": "https://www.whybee.co.za/partsmall/become-an-agent",
+    "viewport": "narrow",
+    "title": "Become an Agent - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Become an Agent"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 122,
+        "right": 344,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Branch finder",
+        "width": 250,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\agent-narrow.png"
+  },
+  {
+    "page": "branches",
+    "url": "https://www.whybee.co.za/partsmall/find-a-branch",
+    "viewport": "narrow",
+    "title": "Find a Branch - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Find a Branch"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 122,
+        "right": 344,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "011 869 2044",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "alberton@partsmall.co.za",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "011 421 8740",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "benoni@partsmall.co.za",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "011 826 5512",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "boksburg@partsmall.co.za",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "View branch →",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "011 452 1036",
+        "width": 247,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "edenvale@partsmall.co.za",
+        "width": 247,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\branches-narrow.png"
+  },
+  {
+    "page": "branch-alberton",
+    "url": "https://www.whybee.co.za/partsmall/branches/alberton/",
+    "viewport": "narrow",
+    "title": "Parts Mall Corporation South Africa",
+    "h1s": [
+      "Parts-Mall Alberton"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 122,
+        "right": 344,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "011 869 2044",
+        "width": 96,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "alberton@partsmall.co.za",
+        "width": 183,
+        "height": 17
+      },
+      {
+        "tag": "a",
+        "text": "Open in Google Maps ->",
+        "width": 177,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Open directions →",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 250,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\branch-alberton-narrow.png"
+  },
+  {
+    "page": "post-hello-world",
+    "url": "https://www.whybee.co.za/partsmall/2026/07/13/hello-world/",
+    "viewport": "narrow",
+    "title": "Hello world! - Parts Mall Corporation South Africa",
+    "h1s": [
+      "Editorial fallback"
+    ],
+    "overflowX": 0,
+    "overflowEls": [
+      {
+        "tag": "div",
+        "cls": "footer-wordmark",
+        "left": 122,
+        "right": 344,
+        "width": 222
+      }
+    ],
+    "hiddenRevealCount": 0,
+    "smallTargetCount": 12,
+    "smallTargets": [
+      {
+        "tag": "a",
+        "text": "Parts-Mall home",
+        "width": 160,
+        "height": 42
+      },
+      {
+        "tag": "a",
+        "text": "Hello world!",
+        "width": 106,
+        "height": 30
+      },
+      {
+        "tag": "a",
+        "text": "FACEBOOK",
+        "width": 101,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "INSTAGRAM",
+        "width": 110,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "YOUTUBE",
+        "width": 92,
+        "height": 40
+      },
+      {
+        "tag": "a",
+        "text": "Global network",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Private brands",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Spare categories",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Insights",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "About",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Become an agent",
+        "width": 250,
+        "height": 27
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "width": 250,
+        "height": 27
+      }
+    ],
+    "errors": [],
+    "screenshot": "D:\\Dev Projects\\cosmetics-woocommerce-theme\\tests\\playwright-artifacts\\partsmall-live-audit-20260713\\post-hello-world-narrow.png"
+  }
+]

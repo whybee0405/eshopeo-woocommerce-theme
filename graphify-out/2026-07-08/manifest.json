@@ -1,0 +1,1472 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1783330350.058063,
+    "ast_hash": "598cb075410bcd95220ac90bbb60344a",
+    "semantic_hash": ""
+  },
+  ".codex/hooks.json": {
+    "mtime": 1783330335.4530072,
+    "ast_hash": "1c651772927138d6382a630253f0f0ad",
+    "semantic_hash": ""
+  },
+  "cove-theme/404.php": {
+    "mtime": 1783071977.9490604,
+    "ast_hash": "dc9a0c352ddf53c69035e70ce2b0c9b7",
+    "semantic_hash": ""
+  },
+  "cove-theme/archive-product.php": {
+    "mtime": 1783436674.5821917,
+    "ast_hash": "7db67452c1ee89c0f3d66999cf2de512",
+    "semantic_hash": ""
+  },
+  "cove-theme/archive.php": {
+    "mtime": 1783071977.9504292,
+    "ast_hash": "2aef9607c137000b2fccc1b59efc8259",
+    "semantic_hash": ""
+  },
+  "cove-theme/dummy-products.php": {
+    "mtime": 1783517463.4898849,
+    "ast_hash": "697c346651a0d7402740f316be1f889e",
+    "semantic_hash": ""
+  },
+  "cove-theme/footer.php": {
+    "mtime": 1783436264.6579294,
+    "ast_hash": "57a3076a67a7c64e0761caea6170a6f6",
+    "semantic_hash": ""
+  },
+  "cove-theme/front-page.php": {
+    "mtime": 1783529465.6219003,
+    "ast_hash": "c0731350f5756ca4b1a57477de15e695",
+    "semantic_hash": ""
+  },
+  "cove-theme/functions.php": {
+    "mtime": 1783517401.014428,
+    "ast_hash": "1017f5f22039e05e91da35bb136fd620",
+    "semantic_hash": ""
+  },
+  "cove-theme/header.php": {
+    "mtime": 1783529720.697227,
+    "ast_hash": "4af3b2aec1328bc63a810032b356fbcc",
+    "semantic_hash": ""
+  },
+  "cove-theme/inc/admin-import.php": {
+    "mtime": 1783071977.9633477,
+    "ast_hash": "ce60475c48cdc52aa5e4b5bd2b16c407",
+    "semantic_hash": ""
+  },
+  "cove-theme/inc/seo.php": {
+    "mtime": 1783071977.9646418,
+    "ast_hash": "867d40f332faeca17240f2e759ccaf5b",
+    "semantic_hash": ""
+  },
+  "cove-theme/index.php": {
+    "mtime": 1783071977.9646418,
+    "ast_hash": "df5bc5373d20de77212a614110cf805a",
+    "semantic_hash": ""
+  },
+  "cove-theme/js/filters.js": {
+    "mtime": 1783427896.435587,
+    "ast_hash": "c412757463681ea839190afe6de0eca5",
+    "semantic_hash": ""
+  },
+  "cove-theme/js/hero-room.js": {
+    "mtime": 1783071977.9677954,
+    "ast_hash": "05daf042abe08d6fccf9f3e51bff01dc",
+    "semantic_hash": ""
+  },
+  "cove-theme/js/main.js": {
+    "mtime": 1783529477.622726,
+    "ast_hash": "5818390a3c4c2a2c6bb157bfdc4e1e41",
+    "semantic_hash": ""
+  },
+  "cove-theme/js/pdp-3d.js": {
+    "mtime": 1783427896.4371645,
+    "ast_hash": "9a356b29ffeab07145fc2dd2ee171d0b",
+    "semantic_hash": ""
+  },
+  "cove-theme/js/scroll-animations.js": {
+    "mtime": 1783427896.43611,
+    "ast_hash": "efe0d3b9f9381ecb5277c67e3a054104",
+    "semantic_hash": ""
+  },
+  "cove-theme/page-about.php": {
+    "mtime": 1783436773.063517,
+    "ast_hash": "77b497351c231a2fd905deb89fa14143",
+    "semantic_hash": ""
+  },
+  "cove-theme/page-brand-kit.php": {
+    "mtime": 1783436773.0645201,
+    "ast_hash": "8ef1b3def70dfe6c3b3976420fe4834f",
+    "semantic_hash": ""
+  },
+  "cove-theme/page-contact.php": {
+    "mtime": 1783071977.9731896,
+    "ast_hash": "7781c5701f7cc15c83a7fc21b5933173",
+    "semantic_hash": ""
+  },
+  "cove-theme/page-faq.php": {
+    "mtime": 1783071977.9741971,
+    "ast_hash": "b765c550d61ac17400b3df09474da756",
+    "semantic_hash": ""
+  },
+  "cove-theme/page-grades.php": {
+    "mtime": 1783071977.9741971,
+    "ast_hash": "aec74988753e41f502b4da55a2b8a026",
+    "semantic_hash": ""
+  },
+  "cove-theme/page.php": {
+    "mtime": 1783071977.9757051,
+    "ast_hash": "483723227733705049771ad8cb1bf4e3",
+    "semantic_hash": ""
+  },
+  "cove-theme/searchform.php": {
+    "mtime": 1783071977.9777164,
+    "ast_hash": "0e41ac5445284dbac1ca64d1743e2dff",
+    "semantic_hash": ""
+  },
+  "cove-theme/single-product.php": {
+    "mtime": 1783436376.4060004,
+    "ast_hash": "06e25c7c9a1882acaf9e4d991ffcccce",
+    "semantic_hash": ""
+  },
+  "cove-theme/single.php": {
+    "mtime": 1783071977.9787147,
+    "ast_hash": "ef1be725b1da85d1d2f2e0c615a9b0c8",
+    "semantic_hash": ""
+  },
+  "cove-theme/woocommerce/content-product.php": {
+    "mtime": 1783517409.3771918,
+    "ast_hash": "7bb1478679a8c199fa488e135fba8e4f",
+    "semantic_hash": ""
+  },
+  "digicars-theme/404.php": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "573c188028ccdfdd0953f6d4b4a9c9c6",
+    "semantic_hash": ""
+  },
+  "digicars-theme/archive-product.php": {
+    "mtime": 1783071977.9839668,
+    "ast_hash": "fec2845f2e04a45cbd7470e8177eb6f4",
+    "semantic_hash": ""
+  },
+  "digicars-theme/archive.php": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "1c6e9d40cff530c07ba7dca143a50b14",
+    "semantic_hash": ""
+  },
+  "digicars-theme/dummy-posts.php": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "dd6644aa3e7fff93b3b202aabc1e84dc",
+    "semantic_hash": ""
+  },
+  "digicars-theme/dummy-products.php": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "d5bf5b52d05b1a317357063341e2dd68",
+    "semantic_hash": ""
+  },
+  "digicars-theme/footer.php": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "ec63dd5ec1254da0fa770189dff2a44a",
+    "semantic_hash": ""
+  },
+  "digicars-theme/front-page.php": {
+    "mtime": 1783071977.9846208,
+    "ast_hash": "82a4c51267b9bc5f662b742ffd8000f2",
+    "semantic_hash": ""
+  },
+  "digicars-theme/functions.php": {
+    "mtime": 1783071977.9867604,
+    "ast_hash": "a72e285f0ceda43f0cdde75ba1a0745a",
+    "semantic_hash": ""
+  },
+  "digicars-theme/header.php": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "07d055177d5662e952b999dd78879516",
+    "semantic_hash": ""
+  },
+  "digicars-theme/home.php": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "75faa0705b8ed4cd0dcd4c60a7c452c8",
+    "semantic_hash": ""
+  },
+  "digicars-theme/inc/admin-import.php": {
+    "mtime": 1782024029.2794337,
+    "ast_hash": "0540708170efb94fe0d7631a4c758d30",
+    "semantic_hash": ""
+  },
+  "digicars-theme/inc/seo.php": {
+    "mtime": 1782024029.2794337,
+    "ast_hash": "6f29244b06b8adaa72eb90c170247f31",
+    "semantic_hash": ""
+  },
+  "digicars-theme/index.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "9e6f81c64aa27a874fcd70774c192f61",
+    "semantic_hash": ""
+  },
+  "digicars-theme/js/affordability.js": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "aae66f7a7bb07c236b4cd36a6e2c274e",
+    "semantic_hash": ""
+  },
+  "digicars-theme/js/concierge.js": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "e5f28a0221446b2b5f2a7c0167ecb649",
+    "semantic_hash": ""
+  },
+  "digicars-theme/js/hero-canvas.js": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "7fac05ddcaceef560e7e08d08a3d5246",
+    "semantic_hash": ""
+  },
+  "digicars-theme/js/main.js": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "7d636431ed9337de450cef2889992e8c",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-about.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "13369d0fb870759715fb84a0781aae36",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-brand-kit.php": {
+    "mtime": 1783071977.9872656,
+    "ast_hash": "32961d90e4f1b299b41f39c2cda51393",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-compare.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "9cde8f152bbd2ee3a11fb824ad269669",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-concierge.php": {
+    "mtime": 1783071977.9882753,
+    "ast_hash": "5174c67c86bf310ef49d64f33860c716",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-contact.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "0e4945b20403952b65c4e94ded744355",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-dealers.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "698623f8c38a9c469b7981e3e56888c6",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-faq.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "fc96b02240a9349b8422f050cba5f35b",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-finance.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "9bb9f174065e3da44cdb1411a8126c02",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-find-a-dealer.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "db52921b185bef0a9ad008b07b3d6316",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-sell.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "affff53721b5976105ae90d551c5f67d",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page-service.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "d3290d55a739554dfcceffc6e238c278",
+    "semantic_hash": ""
+  },
+  "digicars-theme/page.php": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "96768a4ca1b61c0df1caee53dc602f99",
+    "semantic_hash": ""
+  },
+  "digicars-theme/searchform.php": {
+    "mtime": 1782024029.2931032,
+    "ast_hash": "66f99888639889a5297225404d4bfd95",
+    "semantic_hash": ""
+  },
+  "digicars-theme/single-product.php": {
+    "mtime": 1782024029.2941098,
+    "ast_hash": "ffc1bead7e9ca69fc45b8219f906acd7",
+    "semantic_hash": ""
+  },
+  "digicars-theme/single.php": {
+    "mtime": 1782024029.2946222,
+    "ast_hash": "99a8318c13e7a8d3e90fde0ae1ac457b",
+    "semantic_hash": ""
+  },
+  "digicars-theme/woocommerce/content-product.php": {
+    "mtime": 1782024029.2966368,
+    "ast_hash": "266920bfd4dda41f9a45c89fe135b7b3",
+    "semantic_hash": ""
+  },
+  "glow-theme/404.php": {
+    "mtime": 1783071977.9933114,
+    "ast_hash": "6226eb45b571a2b82e4580c54ebca243",
+    "semantic_hash": ""
+  },
+  "glow-theme/archive-product.php": {
+    "mtime": 1783366162.6810656,
+    "ast_hash": "891fd2870bebc11fffe352889d266b5a",
+    "semantic_hash": ""
+  },
+  "glow-theme/dummy-products.php": {
+    "mtime": 1783071977.9963088,
+    "ast_hash": "c12d535aaa748703df949fd26fbc4d00",
+    "semantic_hash": ""
+  },
+  "glow-theme/footer.php": {
+    "mtime": 1783071977.9978404,
+    "ast_hash": "c98b9c384125e40f5c3f2228fddea21d",
+    "semantic_hash": ""
+  },
+  "glow-theme/front-page.php": {
+    "mtime": 1783431714.8822267,
+    "ast_hash": "8d33be46f2081225098599bee0105b8b",
+    "semantic_hash": ""
+  },
+  "glow-theme/functions.php": {
+    "mtime": 1783429310.0862906,
+    "ast_hash": "daa4a51eae7a1510ca3707b97c4e1cc4",
+    "semantic_hash": ""
+  },
+  "glow-theme/header.php": {
+    "mtime": 1783429370.4261062,
+    "ast_hash": "5f35909d1c68ad753c76f01e12324ab1",
+    "semantic_hash": ""
+  },
+  "glow-theme/inc/admin-import.php": {
+    "mtime": 1783071978.0399444,
+    "ast_hash": "18c64a0bc22f1afcf782edaa13473795",
+    "semantic_hash": ""
+  },
+  "glow-theme/inc/admin-setup.php": {
+    "mtime": 1783071978.0399444,
+    "ast_hash": "7a4c79bd6d750b8a5d8ca776f3e0661b",
+    "semantic_hash": ""
+  },
+  "glow-theme/inc/customizer.php": {
+    "mtime": 1783362871.497716,
+    "ast_hash": "78a33d95a0dd7cff71920b019d59f9a3",
+    "semantic_hash": ""
+  },
+  "glow-theme/inc/elementor-widgets.php": {
+    "mtime": 1783364345.1990883,
+    "ast_hash": "0593f099bb628d08ddb36ca2e4cf4f9a",
+    "semantic_hash": ""
+  },
+  "glow-theme/inc/seo.php": {
+    "mtime": 1783429310.0882587,
+    "ast_hash": "1e0fbc10922643517816827afc8da1e7",
+    "semantic_hash": ""
+  },
+  "glow-theme/index.php": {
+    "mtime": 1783071978.0425076,
+    "ast_hash": "558319fa97e29555e1cd41c8abff507d",
+    "semantic_hash": ""
+  },
+  "glow-theme/js/cursor.js": {
+    "mtime": 1783071978.0425076,
+    "ast_hash": "52da628677686cc3b09e871aedc1f46b",
+    "semantic_hash": ""
+  },
+  "glow-theme/js/customizer-preview.js": {
+    "mtime": 1783071978.0425076,
+    "ast_hash": "f7d999e181d44e539713b98e61db1671",
+    "semantic_hash": ""
+  },
+  "glow-theme/js/hero-3d.js": {
+    "mtime": 1783071978.0425076,
+    "ast_hash": "d7f370fbc8b0901d901ea26a1111c945",
+    "semantic_hash": ""
+  },
+  "glow-theme/js/main.js": {
+    "mtime": 1783422120.0815108,
+    "ast_hash": "3685f5b7b9f06fd0f1a6aa6bc0bc8c3d",
+    "semantic_hash": ""
+  },
+  "glow-theme/js/particles.js": {
+    "mtime": 1783071978.0425076,
+    "ast_hash": "17d168128394d72fa7d72c92990bd1ab",
+    "semantic_hash": ""
+  },
+  "glow-theme/js/pdp-3d.js": {
+    "mtime": 1783071978.0425076,
+    "ast_hash": "8c6743d1c3d957b0b5a81a432f23caf9",
+    "semantic_hash": ""
+  },
+  "glow-theme/js/scroll-animations.js": {
+    "mtime": 1783071978.048906,
+    "ast_hash": "8fe970536642fe4caf7e895f32d4a921",
+    "semantic_hash": ""
+  },
+  "glow-theme/js/smooth-scroll.js": {
+    "mtime": 1783071978.048906,
+    "ast_hash": "5c407c431c83e8eb73f9d18e9a416be5",
+    "semantic_hash": ""
+  },
+  "glow-theme/page-about.php": {
+    "mtime": 1783071978.0504158,
+    "ast_hash": "f2f3d87807476f7b1b92cb6609f4d987",
+    "semantic_hash": ""
+  },
+  "glow-theme/page-brand-kit.php": {
+    "mtime": 1783363675.8628254,
+    "ast_hash": "1a6f574ff7401401f3037f6f21604322",
+    "semantic_hash": ""
+  },
+  "glow-theme/page-contact.php": {
+    "mtime": 1783071978.051985,
+    "ast_hash": "ba4e9bf5d449b805f8116698c9de95c4",
+    "semantic_hash": ""
+  },
+  "glow-theme/page-faq.php": {
+    "mtime": 1783071978.0534947,
+    "ast_hash": "d10bf1452f94bda7e25a8fe18c489435",
+    "semantic_hash": ""
+  },
+  "glow-theme/page.php": {
+    "mtime": 1783071978.0534947,
+    "ast_hash": "83f20a4cb256a9712999da1569043d2b",
+    "semantic_hash": ""
+  },
+  "glow-theme/search.php": {
+    "mtime": 1783071978.0555046,
+    "ast_hash": "c2ec409bb4868ca0bd5ee5aaa0692bb4",
+    "semantic_hash": ""
+  },
+  "glow-theme/single-product.php": {
+    "mtime": 1783366483.5539212,
+    "ast_hash": "dd0f988837d6e3df165a49e3ec295f98",
+    "semantic_hash": ""
+  },
+  "glow-theme/woocommerce/content-product.php": {
+    "mtime": 1783432384.5015018,
+    "ast_hash": "a852c17b710418cfcf7986c7d5505c8d",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1783071978.057696,
+    "ast_hash": "d5ab6ed19e5a015de89521b2014fe3d0",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1783330317.2667453,
+    "ast_hash": "817fe671013b35ae0bc9301dfe449a87",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/SKILL.md": {
+    "mtime": 1783330350.058063,
+    "ast_hash": "7f1539fb463bfad61a4a2cc0f060a68c",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/add-watch.md": {
+    "mtime": 1783330327.7610588,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/exports.md": {
+    "mtime": 1783330327.7630732,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1783330327.7646787,
+    "ast_hash": "42fef56a01698118f7fd722acdadea34",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1783330327.7646787,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/hooks.md": {
+    "mtime": 1783330327.7682226,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/query.md": {
+    "mtime": 1783330327.7692635,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/transcribe.md": {
+    "mtime": 1783330327.7707877,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/update.md": {
+    "mtime": 1783330327.7721286,
+    "ast_hash": "c698309979460d0f02ba616417844399",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/SKILL.md": {
+    "mtime": 1783330335.4489388,
+    "ast_hash": "21f78a7f96e2f9aecc0f7afc053bd3cc",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/add-watch.md": {
+    "mtime": 1783330327.640576,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/exports.md": {
+    "mtime": 1783330327.6416545,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1783330327.6427207,
+    "ast_hash": "bf895ec4d4e40f5f66f7d31c2a9bd4a7",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1783330327.6443486,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/hooks.md": {
+    "mtime": 1783330327.6448946,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/query.md": {
+    "mtime": 1783330327.6459682,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/transcribe.md": {
+    "mtime": 1783330327.6470318,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  ".codex/skills/graphify/references/update.md": {
+    "mtime": 1783330327.6480975,
+    "ast_hash": "c698309979460d0f02ba616417844399",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1783330449.439529,
+    "ast_hash": "f24bdb34e1e7b77aaf14f0f300fa05cd",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1783330449.439529,
+    "ast_hash": "b7c63995f90be1ba3b2cca37a865c1ea",
+    "semantic_hash": ""
+  },
+  "MASTER_PROMPT_digicars.md": {
+    "mtime": 1783071977.9467113,
+    "ast_hash": "15e715543d834fe3ccf8237586ba2a07",
+    "semantic_hash": ""
+  },
+  "MASTER_PROMPT_glow-kbeauty.md": {
+    "mtime": 1783071977.9478834,
+    "ast_hash": "d484ac7d414f2bbcce8c4bc1f8b5bbda",
+    "semantic_hash": ""
+  },
+  "PRODUCT.md": {
+    "mtime": 1781377046.7564425,
+    "ast_hash": "a9d4aceb2c04e9b5c95fdc50bfb49268",
+    "semantic_hash": ""
+  },
+  "digicars-theme/README.md": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "0d759543480add919640a6e0e5c1cadb",
+    "semantic_hash": ""
+  },
+  "glow-theme/README.md": {
+    "mtime": 1783071977.99431,
+    "ast_hash": "e1f4fb40741f217550eddf1392e5be97",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/favicon.svg": {
+    "mtime": 1783071977.9570742,
+    "ast_hash": "634151be43798fa092ace2b32925593c",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/hero/hero-room.svg": {
+    "mtime": 1783071977.9581676,
+    "ast_hash": "d83b8fe5cd72024671730e7e2464da38",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/icons/cat-climate.svg": {
+    "mtime": 1783071977.96034,
+    "ast_hash": "2d8270750784648ed97d54782a23735e",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/icons/cat-floorcare.svg": {
+    "mtime": 1783071977.96034,
+    "ast_hash": "fff2c7ef5c0efd43ed1376d46e510c41",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/icons/cat-kitchen.svg": {
+    "mtime": 1783071977.9613447,
+    "ast_hash": "90611e79f76421fcbbba98a1e41eab08",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/icons/cat-laundry.svg": {
+    "mtime": 1783071977.9613447,
+    "ast_hash": "618d642a10d4a32a0141bc151b727e38",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/icons/cat-personal.svg": {
+    "mtime": 1783071977.9623454,
+    "ast_hash": "6c75e19563f6e70509b092a306f23bdd",
+    "semantic_hash": ""
+  },
+  "cove-theme/screenshot.png": {
+    "mtime": 1783071977.9777164,
+    "ast_hash": "8ab232a63c7fbe77ec8ccfb36a1aeb2f",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/blog/ct-buying.svg": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "049ce228df36a697c872d5ed1bb68b7b",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/blog/ct-ev.svg": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "4e04c997ea26e4d55cb0c36aa8d866df",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/blog/ct-finance.svg": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "367d8747d33ca7faef01de36eca33f92",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/blog/ct-market.svg": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "60ac5107b3560fe7df8cd101bc1712b2",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/favicon.svg": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "88858e31bee803a64c38ac0cc0c6e33a",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/hero/hero-showroom.svg": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "7a1449cee0289da589083b5d4a7bd1ee",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/icons/body-convertible.svg": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "96cbc85a47f3f4fb060fe82a31834adc",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/icons/body-coupe.svg": {
+    "mtime": 1782024029.208596,
+    "ast_hash": "942de5a30322ec51b68cbef310b82337",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/icons/body-double-cab.svg": {
+    "mtime": 1782024029.2242424,
+    "ast_hash": "fc3c943eed56e1556f1d05f9611565cf",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/icons/body-hatch.svg": {
+    "mtime": 1782024029.2249188,
+    "ast_hash": "409950e4a9476643bc02b3b23097c312",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/icons/body-minibus.svg": {
+    "mtime": 1782024029.2249188,
+    "ast_hash": "b70d414a11e63de8b0cb2e5c95311dd2",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/icons/body-mpv.svg": {
+    "mtime": 1782024029.225641,
+    "ast_hash": "7c2c69e2750a738b557661a27068634d",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/icons/body-sedan.svg": {
+    "mtime": 1782024029.225641,
+    "ast_hash": "13ae7ce19d7c400f3be3999bc99768ee",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/icons/body-single-cab.svg": {
+    "mtime": 1782024029.226648,
+    "ast_hash": "618a2674f320dc6f64d527f52f15c9cf",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/icons/body-suv.svg": {
+    "mtime": 1782024029.2270758,
+    "ast_hash": "14828f66bcf9965b0ad5b47789469942",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/logo.svg": {
+    "mtime": 1782024029.2270758,
+    "ast_hash": "94b9c1f883c9cc1e0f37ea6a74e01ce3",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/texture-grid.svg": {
+    "mtime": 1782024029.228082,
+    "ast_hash": "44d65937fbe7eafa8e14df323347f90e",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/_default.jpg": {
+    "mtime": 1782024029.230082,
+    "ast_hash": "0e6fe7ff3d662014851285f6ae0a7b60",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/_default.svg": {
+    "mtime": 1782024029.230082,
+    "ast_hash": "91963c262decb79e7125f1fcc3db5b25",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/convertible-render.jpg": {
+    "mtime": 1782024029.230082,
+    "ast_hash": "0e6fe7ff3d662014851285f6ae0a7b60",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/coupe-render.jpg": {
+    "mtime": 1782024029.230082,
+    "ast_hash": "cd70680f246004bc52c6b671bfb71877",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/double-cab-render.jpg": {
+    "mtime": 1782024029.2458072,
+    "ast_hash": "41deb14832fc406ed5ca18b62ab43aab",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/hatch-render.jpg": {
+    "mtime": 1782024029.2526143,
+    "ast_hash": "2bf065e5eb4e7fd5032b5ed55f08586a",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/minibus-render.jpg": {
+    "mtime": 1782024029.2586277,
+    "ast_hash": "41deb14832fc406ed5ca18b62ab43aab",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/mpv-render.jpg": {
+    "mtime": 1782024029.2636416,
+    "ast_hash": "cd70680f246004bc52c6b671bfb71877",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/sedan-render.jpg": {
+    "mtime": 1782024029.2676506,
+    "ast_hash": "cd70680f246004bc52c6b671bfb71877",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/single-cab-render.jpg": {
+    "mtime": 1782024029.2736633,
+    "ast_hash": "41deb14832fc406ed5ca18b62ab43aab",
+    "semantic_hash": ""
+  },
+  "digicars-theme/images/vehicles/suv-render.jpg": {
+    "mtime": 1782024029.2794337,
+    "ast_hash": "0e6fe7ff3d662014851285f6ae0a7b60",
+    "semantic_hash": ""
+  },
+  "digicars-theme/screenshot.png": {
+    "mtime": 1782024029.2832088,
+    "ast_hash": "8ab232a63c7fbe77ec8ccfb36a1aeb2f",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/favicon.svg": {
+    "mtime": 1783071978.000618,
+    "ast_hash": "bc8f3640f755fd94e51d222ee4b60590",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/logo.svg": {
+    "mtime": 1783071978.000618,
+    "ast_hash": "0b0a850929494b1f81aee19dddf128f2",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/people/lifestyle.jpg": {
+    "mtime": 1783071978.000618,
+    "ast_hash": "b9c967886485dd70f64bd7b03e5d421e",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/people/naledi.jpg": {
+    "mtime": 1783071978.0064037,
+    "ast_hash": "c54c7c4eb06cb80effd9efade2abdef1",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/people/sourcing.jpg": {
+    "mtime": 1783071978.0091188,
+    "ast_hash": "a91039d2e40fcd2aed2149a38b83a16b",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/_default.svg": {
+    "mtime": 1783071978.0091188,
+    "ast_hash": "12eaeec0e592efa036eed5c83350e2e8",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/ahc-ageless-eye-cream.svg": {
+    "mtime": 1783071978.0091188,
+    "ast_hash": "847e8fa9c09abcc86234a06cdbb29645",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/ahc-hydra-b5-cream.svg": {
+    "mtime": 1783071978.0091188,
+    "ast_hash": "25cdb613c9d4378c3c10e5d03e8147d6",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/banila-clean-it-zero.svg": {
+    "mtime": 1783071978.0091188,
+    "ast_hash": "36352e8715ad9f9cf9a3174c859dff21",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/cosrx-bha-power-liquid.svg": {
+    "mtime": 1783071978.0091188,
+    "ast_hash": "4eb8e11546357469a6f91a95e95ef7d2",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/cosrx-low-ph-cleanser.svg": {
+    "mtime": 1783071978.0091188,
+    "ast_hash": "f0509589e4411c9144b599ce4d754f36",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/cosrx-snail-96-essence.svg": {
+    "mtime": 1783071978.0091188,
+    "ast_hash": "bb7886b2277df803a3da209d1b6757c3",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/drjart-cicapair-serum.svg": {
+    "mtime": 1783071978.014536,
+    "ast_hash": "7bdb8b91df836bf86e2649e7e9deb3a0",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/etude-soonjung-cream.svg": {
+    "mtime": 1783071978.015692,
+    "ast_hash": "dd8655bc1b7adeae19f9deba3dbf72de",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/innisfree-daily-uv-spf36.svg": {
+    "mtime": 1783071978.0172024,
+    "ast_hash": "29c2870d9d926c84bc08047e6d9464f9",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/innisfree-green-tea-cleanser.svg": {
+    "mtime": 1783071978.0172024,
+    "ast_hash": "c007545993d00bb3f569788fc88af295",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/klairs-eye-awakening-gel.svg": {
+    "mtime": 1783071978.0182116,
+    "ast_hash": "f8934ae490403ef96f6d9ff91ac57514",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/klairs-unscented-toner.svg": {
+    "mtime": 1783071978.0192108,
+    "ast_hash": "53aa51383cccbba26deb5ec2a692b7d5",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/klairs-vitamin-drop.svg": {
+    "mtime": 1783071978.020211,
+    "ast_hash": "ed69f5b6f65ab09038bd021826cf3db7",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/laneige-lip-sleeping-mask.svg": {
+    "mtime": 1783071978.020211,
+    "ast_hash": "f0b7f87f48e019f160b19b427d68c027",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/laneige-water-bank-cream.svg": {
+    "mtime": 1783071978.0212128,
+    "ast_hash": "72a53fa472cee2b5027ab834985aafef",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/mediheal-tea-tree-mask.svg": {
+    "mtime": 1783071978.0222118,
+    "ast_hash": "761a570e5d538faf84b56e2b3be3f699",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/missha-first-treatment-essence.svg": {
+    "mtime": 1783071978.0222118,
+    "ast_hash": "6a1e5d31fcd03f1884e0ea047a8a3c2d",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/missha-safe-block-sun-milk.svg": {
+    "mtime": 1783071978.0232146,
+    "ast_hash": "6b4c4ad8d91fd524cf29eed59b534249",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/product-step-01.jpg": {
+    "mtime": 1783071978.024252,
+    "ast_hash": "c7a9544c7671be160d688c4edab41348",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/product-step-02.jpg": {
+    "mtime": 1783071978.0267682,
+    "ast_hash": "e21558899f7d66d4c673ecb755654120",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/product-step-03.jpg": {
+    "mtime": 1783071978.0287714,
+    "ast_hash": "08f6bf3a57834757cda137da937dbd16",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/product-step-04.jpg": {
+    "mtime": 1783071978.03129,
+    "ast_hash": "75b60099cf821f1bba7bdc92011337cf",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/product-step-05.jpg": {
+    "mtime": 1783071978.0343149,
+    "ast_hash": "778b8f736e758067eb347eb608a4f1c0",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/product-step-06.jpg": {
+    "mtime": 1783071978.0343149,
+    "ast_hash": "756cadbd7627d47070e8c291bd56d187",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/product-step-07.jpg": {
+    "mtime": 1783071978.0343149,
+    "ast_hash": "0f02c447e72d98361033d59ecf882ee1",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/somebymi-miracle-toner.svg": {
+    "mtime": 1783071978.0343149,
+    "ast_hash": "c592e140476c5dd2e2044c41b7d69049",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/products/somebymi-yuja-niacin-serum.svg": {
+    "mtime": 1783071978.0343149,
+    "ast_hash": "8d35b5e876227a19dce9030859724218",
+    "semantic_hash": ""
+  },
+  "glow-theme/screenshot.png": {
+    "mtime": 1783071978.0555046,
+    "ast_hash": "e26b7ce27d493f21c09f35ff45afa806",
+    "semantic_hash": ""
+  },
+  "kbap-theme/404.php": {
+    "mtime": 1783333478.274621,
+    "ast_hash": "5a8ba5fc891bfb5626f4fef55353a046",
+    "semantic_hash": ""
+  },
+  "kbap-theme/archive-product.php": {
+    "mtime": 1783333655.0768142,
+    "ast_hash": "5ba39803d98ea3b1b527c7a8b96fbbaf",
+    "semantic_hash": ""
+  },
+  "kbap-theme/dummy-products.php": {
+    "mtime": 1783333795.8666534,
+    "ast_hash": "024614e9351365ba5b2db3600b26dbfb",
+    "semantic_hash": ""
+  },
+  "kbap-theme/footer.php": {
+    "mtime": 1783333478.272613,
+    "ast_hash": "41a761480396db23888064f2564b963a",
+    "semantic_hash": ""
+  },
+  "kbap-theme/front-page.php": {
+    "mtime": 1783340746.584109,
+    "ast_hash": "5995f3f2273e6cab88251fd314d3d642",
+    "semantic_hash": ""
+  },
+  "kbap-theme/functions.php": {
+    "mtime": 1783340624.9479208,
+    "ast_hash": "100d4fa718131edb0c0b71ddc847ab68",
+    "semantic_hash": ""
+  },
+  "kbap-theme/header.php": {
+    "mtime": 1783333478.272613,
+    "ast_hash": "106312b131189aaa8864c4381adef024",
+    "semantic_hash": ""
+  },
+  "kbap-theme/inc/admin-import.php": {
+    "mtime": 1783333795.8676527,
+    "ast_hash": "6c78d49df6e7f3ef0a1b6d36e47086d2",
+    "semantic_hash": ""
+  },
+  "kbap-theme/inc/seo.php": {
+    "mtime": 1783333795.8666534,
+    "ast_hash": "c2f0d989e61cc07331e036124f63167d",
+    "semantic_hash": ""
+  },
+  "kbap-theme/index.php": {
+    "mtime": 1783333478.272613,
+    "ast_hash": "823ac53b2c042b9646c3e013ef383eb2",
+    "semantic_hash": ""
+  },
+  "kbap-theme/js/main.js": {
+    "mtime": 1783340560.649707,
+    "ast_hash": "ea845777ae336783a33625250d653105",
+    "semantic_hash": ""
+  },
+  "kbap-theme/page-about.php": {
+    "mtime": 1783333583.151493,
+    "ast_hash": "a4d34c901b86128c850bae27ea1091b9",
+    "semantic_hash": ""
+  },
+  "kbap-theme/page-catering.php": {
+    "mtime": 1783333583.151493,
+    "ast_hash": "51902ebae50b021fa19aa37489d464e6",
+    "semantic_hash": ""
+  },
+  "kbap-theme/page-contact.php": {
+    "mtime": 1783333583.1528761,
+    "ast_hash": "c2029c3a77e611286def96a20dbfb505",
+    "semantic_hash": ""
+  },
+  "kbap-theme/page-faq.php": {
+    "mtime": 1783333583.1528761,
+    "ast_hash": "2f82e79beed56215e9c9e99970a1c74d",
+    "semantic_hash": ""
+  },
+  "kbap-theme/page-menu.php": {
+    "mtime": 1783333583.1504097,
+    "ast_hash": "3a1bae3c9f2155c0aa8f4fb046349f71",
+    "semantic_hash": ""
+  },
+  "kbap-theme/page.php": {
+    "mtime": 1783333478.272613,
+    "ast_hash": "9457dacaf4c30cd85a30321cba6a582c",
+    "semantic_hash": ""
+  },
+  "kbap-theme/single-product.php": {
+    "mtime": 1783333655.0778177,
+    "ast_hash": "8e25e86bcdeb8e8da397a3d76dd52c0b",
+    "semantic_hash": ""
+  },
+  "kbap-theme/template-parts/enquiry-form.php": {
+    "mtime": 1783333583.1528761,
+    "ast_hash": "570905f29d9a509fc469a755132f09df",
+    "semantic_hash": ""
+  },
+  "kbap-theme/woocommerce/content-product.php": {
+    "mtime": 1783333655.078812,
+    "ast_hash": "112ed4fc34916e2ee7ac85007cc879f5",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_093439_how_is_graphify_configured_as_shared_memory_for_th.md": {
+    "mtime": 1783330479.822079,
+    "ast_hash": "c8375b1a4c735837990c471594331ac9",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_094136_is_obra_superpowers_installed_for_this_machine_and.md": {
+    "mtime": 1783330896.5706265,
+    "ast_hash": "4f4d6c6663c0f97b2a1ae1cb5165362c",
+    "semantic_hash": ""
+  },
+  "kbap-theme/README.md": {
+    "mtime": 1783333795.8686526,
+    "ast_hash": "6765d3cc31307258dc518f9235dc92d2",
+    "semantic_hash": ""
+  },
+  "kbap-theme/images/event-table.png": {
+    "mtime": 1783333073.9262645,
+    "ast_hash": "5ac2811e416359170f48e1a9509bff9d",
+    "semantic_hash": ""
+  },
+  "kbap-theme/images/favicon.svg": {
+    "mtime": 1783337186.3240776,
+    "ast_hash": "88ba861c1584d1acb6b0c12560a81315",
+    "semantic_hash": ""
+  },
+  "kbap-theme/images/fried-chicken.png": {
+    "mtime": 1783332939.83842,
+    "ast_hash": "e812a71ade4a92eb463fd8de054508a2",
+    "semantic_hash": ""
+  },
+  "kbap-theme/images/hero-catering.png": {
+    "mtime": 1783332904.3049421,
+    "ast_hash": "a8dc515de030bda4c43bac0a5fa7da10",
+    "semantic_hash": ""
+  },
+  "kbap-theme/images/kimchi-product.png": {
+    "mtime": 1783333009.837987,
+    "ast_hash": "0e7fc6613fc57570162c7441b880b68f",
+    "semantic_hash": ""
+  },
+  "kbap-theme/images/logo.svg": {
+    "mtime": 1783337186.3240776,
+    "ast_hash": "7e6d89299f818d3097ccd7724d996576",
+    "semantic_hash": ""
+  },
+  "kbap-theme/screenshot.png": {
+    "mtime": 1783332904.3049421,
+    "ast_hash": "a8dc515de030bda4c43bac0a5fa7da10",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_103131_what_was_added_for_the_k_bap_woocommerce_theme.md": {
+    "mtime": 1783333891.9769957,
+    "ast_hash": "bc8892f7189200d5dde6663730f86866",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_111933_what_was_the_first_approved_k_bap_refactor_increme.md": {
+    "mtime": 1783336773.8036435,
+    "ast_hash": "354558b62105f7040120a74f85cb3712",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_113005_what_k_bap_refactor_implementation_was_completed_w.md": {
+    "mtime": 1783337405.5431147,
+    "ast_hash": "87c1e5b47e481f26972413e8fd04bf0d",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_115107_what_did_the_playwright_visual_review_find_for_the.md": {
+    "mtime": 1783338667.4278889,
+    "ast_hash": "46553d0dfd5bc5b43e40896d081f29fe",
+    "semantic_hash": ""
+  },
+  "kbap-theme/images/interactive-table.jpg": {
+    "mtime": 1783340601.8955965,
+    "ast_hash": "abf50a4b050189c7858f114a913fdb7a",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_123042_how_was_the_k_bap_interactive_homepage_hero_implem.md": {
+    "mtime": 1783341042.523476,
+    "ast_hash": "f5fbbaf21917f6ae4f7ff9994b9c833e",
+    "semantic_hash": ""
+  },
+  "tests/glow-brand-kit-route.test.ps1": {
+    "mtime": 1783410660.4494958,
+    "ast_hash": "4f6ef24c46aa3e2d24f0ed95da37d081",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_181903_why_did__brand_kit_404_in_glow_theme.md": {
+    "mtime": 1783361943.925779,
+    "ast_hash": "ef7eeb4dfc92b83b0ae79b600b9fcde5",
+    "semantic_hash": ""
+  },
+  "glow-theme/BRAND_GUIDELINES.md": {
+    "mtime": 1783429310.0902817,
+    "ast_hash": "c6da62dbe34b16692dd3281dc06ba6cf",
+    "semantic_hash": ""
+  },
+  "tests/glow-hero-search-background.test.ps1": {
+    "mtime": 1783369548.7939034,
+    "ast_hash": "95c9784892d5bebc373b87c2aec2f45d",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/hero/hero-skin-community.png": {
+    "mtime": 1783362809.5585513,
+    "ast_hash": "9656f160e651573090069b33a91bfc52",
+    "semantic_hash": ""
+  },
+  "tests/glow-brand-v2-guidelines.test.ps1": {
+    "mtime": 1783363837.4173088,
+    "ast_hash": "f7d59f7db25d4fb5cc80ce32e5b6f4c4",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/hero/hero-korean-beauty.png": {
+    "mtime": 1783363515.255272,
+    "ast_hash": "4152f29c98183f3f85179370a693e527",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_185834_what_is_the_glow_brand_refactor_v2_direction.md": {
+    "mtime": 1783364314.8659804,
+    "ast_hash": "f4c0ecfc7a1d6639c3c5d670a0872403",
+    "semantic_hash": ""
+  },
+  "tests/glow-shop-v2-cards.test.ps1": {
+    "mtime": 1783422060.5208333,
+    "ast_hash": "ea71066aa5ae3900e3d141eb21a7a749",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_193141_what_changed_in_the_glow_v2_product_card_and_shop.md": {
+    "mtime": 1783366301.5742486,
+    "ast_hash": "c8a6ca4aa0ba34325d5ba064c513b95c",
+    "semantic_hash": ""
+  },
+  "tests/glow-pdp-v2.test.ps1": {
+    "mtime": 1783422060.5285587,
+    "ast_hash": "81e64e4fc4c430885cdd4ccd123afb2b",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_194351_what_changed_in_the_glow_v2_pdp_increment.md": {
+    "mtime": 1783367031.3793738,
+    "ast_hash": "0a45a053aad132eacf9429e9de9210b7",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/hero/hero-korean-beauty-faces.png": {
+    "mtime": 1783368374.5079274,
+    "ast_hash": "5c312fdc641ebe19578f6e70095e39ba",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_201437_what_changed_in_the_glow_hero_correction_after_add.md": {
+    "mtime": 1783368877.0024931,
+    "ast_hash": "e40f157082a9d7a42a9b85c95550fe7a",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260706_202619_how_should_glow_hero_height_be_reduced_without_cha.md": {
+    "mtime": 1783369579.6856833,
+    "ast_hash": "23c19f5fc065e8dffd8ca802c0a01662",
+    "semantic_hash": ""
+  },
+  "glow-theme/page-privacy-policy.php": {
+    "mtime": 1783410612.4689212,
+    "ast_hash": "c26d485eb722196a407f9888971cdb07",
+    "semantic_hash": ""
+  },
+  "glow-theme/page-refunds-policy.php": {
+    "mtime": 1783410612.4694614,
+    "ast_hash": "4c614796df76cd87790baf85031f02d8",
+    "semantic_hash": ""
+  },
+  "glow-theme/page-terms-of-service.php": {
+    "mtime": 1783410612.470981,
+    "ast_hash": "8040e6e97b2b3694cf1d769c0a95b9b5",
+    "semantic_hash": ""
+  },
+  "tests/glow-home-logo-loop.test.ps1": {
+    "mtime": 1783432110.4616663,
+    "ast_hash": "dbf466c34a340bd6e4e63a0e253ff77d",
+    "semantic_hash": ""
+  },
+  "tests/glow-policy-pages.test.ps1": {
+    "mtime": 1783410726.9585588,
+    "ast_hash": "8cb7f02ed63df6f300ad06e749bb9711",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260707_075242_what_policy_pages_were_added_for_glow_ecommerce.md": {
+    "mtime": 1783410762.451552,
+    "ast_hash": "23e3a49a8cde80d55c77531260791092",
+    "semantic_hash": ""
+  },
+  "tests/glow-notice-ticker-loyalty.test.ps1": {
+    "mtime": 1783432201.045666,
+    "ast_hash": "97061da9d27edb7c63a99f0e23cca116",
+    "semantic_hash": ""
+  },
+  "glow-theme/page-loyalty-program.php": {
+    "mtime": 1783415413.786305,
+    "ast_hash": "75f52a7495ae6c58d8e0a7a9623a9e4d",
+    "semantic_hash": ""
+  },
+  "tests/glow-mobile-product-card-ui.test.ps1": {
+    "mtime": 1783432721.8968134,
+    "ast_hash": "43d6a34b7dc33c1d882744a69829d640",
+    "semantic_hash": ""
+  },
+  "tests/cove-premium-refresh.test.ps1": {
+    "mtime": 1783448048.2345164,
+    "ast_hash": "41b17a3cc4d1b19a394365e56fd54327",
+    "semantic_hash": ""
+  },
+  "tests/glow-png-logo-favicon.test.ps1": {
+    "mtime": 1783429370.4251072,
+    "ast_hash": "72848d443adc44316df6084dd573f4db",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/Glow K-Beauty - Favicon.png": {
+    "mtime": 1783429154.26477,
+    "ast_hash": "e0534c24cf7e8990d110d6d07b849f48",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/Glow K-Beauty - Logo.png": {
+    "mtime": 1783429129.326247,
+    "ast_hash": "2bd9c45dafe997b2e4d3ce386228e15e",
+    "semantic_hash": ""
+  },
+  "tests/glow-brand-loop-concern-images.test.ps1": {
+    "mtime": 1783432138.7060387,
+    "ast_hash": "7b827f599dd5120ee6c794722afeaa4b",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/anua.png": {
+    "mtime": 1783431186.5656066,
+    "ast_hash": "f64990af55fae94823652618cb279cc7",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/banila co.png": {
+    "mtime": 1783431488.112571,
+    "ast_hash": "cf78d436bed6b00fb65cc147a76038cc",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/beauty of joseon.png": {
+    "mtime": 1783431069.4234085,
+    "ast_hash": "ce5be592c61b130e468448c250ccbfe3",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/cosrx.png": {
+    "mtime": 1783430881.7819252,
+    "ast_hash": "47f083c968d37c83ac9f3807e217735b",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/etude.png": {
+    "mtime": 1783431273.650597,
+    "ast_hash": "b31e8c5556a5d44d3f71f54c28c4fa66",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/innisfree.png": {
+    "mtime": 1783431028.4310033,
+    "ast_hash": "74d832e23c668531f0a4577df9cba359",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/klairs.png": {
+    "mtime": 1783431253.3940823,
+    "ast_hash": "63d9ddcdd8069f96549a0e71746bd08b",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/laneige.png": {
+    "mtime": 1783430986.2582524,
+    "ast_hash": "9934d2b9dce9922a1ba44a264054c415",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/mediheal.png": {
+    "mtime": 1783431385.4230666,
+    "ast_hash": "24b3bad4723163fccfe9219e4dbfe7b6",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/missha.png": {
+    "mtime": 1783431293.1059966,
+    "ast_hash": "347468cfb71b29591130e4396434fad4",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/round lab.png": {
+    "mtime": 1783431208.5131266,
+    "ast_hash": "15b73aeaba0412ae91bbbe2b28431487",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/skin1004.png": {
+    "mtime": 1783431234.787276,
+    "ast_hash": "8701bf3438e1c815a913dbfa7331de0d",
+    "semantic_hash": ""
+  },
+  "glow-theme/images/product brands/torriden.png": {
+    "mtime": 1783431407.7486312,
+    "ast_hash": "1ad20647c55c40a1f813af7f5b5caead",
+    "semantic_hash": ""
+  },
+  "cove-theme/COVE_Brand_Kit_Design.md": {
+    "mtime": 1783435266.8256624,
+    "ast_hash": "fab11f05fc30afb8f892851c9e3d6642",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-category-showroom.png": {
+    "mtime": 1783435616.1566443,
+    "ast_hash": "0546ec6e1fcfb4d8a7fb40aeea4086af",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-grade-trust-system.png": {
+    "mtime": 1783435686.5435283,
+    "ast_hash": "af907fbbf5e6353c7f221ecd8f23e91c",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-hero-clarity-portal.png": {
+    "mtime": 1783435530.706148,
+    "ast_hash": "a69479f09704262ec2e26b6c60c98efc",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-product-card-pdp-system.png": {
+    "mtime": 1783435755.857102,
+    "ast_hash": "c1cdd451ca8d069f9591250591eb3b84",
+    "semantic_hash": ""
+  },
+  "tests/cove-brand-kit-overhaul.test.ps1": {
+    "mtime": 1783529658.5521154,
+    "ast_hash": "37975a406d0059dc378a85cd00a3de81",
+    "semantic_hash": ""
+  },
+  "tests/cove-mobile-imagery-typography.test.ps1": {
+    "mtime": 1783447654.1648078,
+    "ast_hash": "631dae87825587eb18dc07614b1eb18d",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-category-showroom-photo.png": {
+    "mtime": 1783447539.936061,
+    "ast_hash": "a98b390aabfdda682a672cdf828db0a1",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-grade-inspection-photo.png": {
+    "mtime": 1783447595.0347419,
+    "ast_hash": "e68f62be81a08e1c95fa82b48c5ef263",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-hero-showroom-photo.png": {
+    "mtime": 1783447494.348043,
+    "ast_hash": "68ae4bd9856ee53b81997e318a3a4cc2",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/brand/cove-product-proof-photo.png": {
+    "mtime": 1783447636.8426192,
+    "ast_hash": "e83a37eb67211612ccc1517a27e4c3b2",
+    "semantic_hash": ""
+  },
+  "cove-theme/js/hero-confidence.js": {
+    "mtime": 1783451684.3987,
+    "ast_hash": "34128f3002be381f840b9317c7014bb3",
+    "semantic_hash": ""
+  },
+  "tests/cove-hero-confidence-reveal.test.ps1": {
+    "mtime": 1783495388.1302264,
+    "ast_hash": "f9088053fad0ad504d34b0a4ccdc63ee",
+    "semantic_hash": ""
+  },
+  "cove-theme/js/cove-cursor.js": {
+    "mtime": 1783517347.4287727,
+    "ast_hash": "49268ee48e63381829c8d695f22cb215",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-air-conditioner.svg": {
+    "mtime": 1783517165.0253482,
+    "ast_hash": "865033977150494886d6f8ef2e0c993c",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-air-fryer.svg": {
+    "mtime": 1783517208.814211,
+    "ast_hash": "8cb90eb930ea558f17c5426d5c127493",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-blender.svg": {
+    "mtime": 1783517208.814211,
+    "ast_hash": "ae9ca6be27bbc7bfdb75007a7b676569",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-coffee-machine.svg": {
+    "mtime": 1783517165.026394,
+    "ast_hash": "f680d0611c39c721e94a3995cd911049",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-dishwasher.svg": {
+    "mtime": 1783517165.0081098,
+    "ast_hash": "8fad315676a30993b3db4b9da2eca22d",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-fan.svg": {
+    "mtime": 1783517208.814211,
+    "ast_hash": "b55237439102c67d89fc96d2a143bd74",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-kettle.svg": {
+    "mtime": 1783517208.8132112,
+    "ast_hash": "0ee3eb4e0bdcd9304d56035a4cd9f479",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-microwave.svg": {
+    "mtime": 1783517165.0125794,
+    "ast_hash": "ce5cc0d0b0b69a42136c982d22af4437",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-mixer.svg": {
+    "mtime": 1783517208.814211,
+    "ast_hash": "5e162dd9348b4bf1bef8d4f7bc7b5926",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-personal-care.svg": {
+    "mtime": 1783517208.814211,
+    "ast_hash": "1f974de6bf98570702d8322e6d71cbc8",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-refrigerator.svg": {
+    "mtime": 1783517165.0081098,
+    "ast_hash": "b9b0097821cb25ac012e8321b986f705",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-small.svg": {
+    "mtime": 1783517165.0274098,
+    "ast_hash": "462a9b446148ecc6ae6e22712336cd78",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-vacuum.svg": {
+    "mtime": 1783517165.026394,
+    "ast_hash": "5a1d4fe6997467acfb9fc61559fc4b6b",
+    "semantic_hash": ""
+  },
+  "cove-theme/images/fallback/appliance-washing-machine.svg": {
+    "mtime": 1783517165.0081098,
+    "ast_hash": "0a6b32dac7b11528ff44e6dffba9b824",
+    "semantic_hash": ""
+  }
+}

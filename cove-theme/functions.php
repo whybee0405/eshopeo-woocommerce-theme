@@ -49,10 +49,10 @@ add_action( 'after_setup_theme', 'cove_setup' );
  * 2. Enqueue assets
  * ---------------------------------------------------------------------- */
 function cove_enqueue() {
-	// Google Fonts — Geist and Geist Mono.
+	// Google Fonts — premium COVE display and body families.
 	wp_enqueue_style(
 		'cove-fonts',
-		'https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap',
+		'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap',
 		array(),
 		null
 	);
@@ -106,6 +106,24 @@ function cove_enqueue() {
 	) );
 
 	// Catalogue filters JS — archive only.
+	$cursor_path = get_theme_file_path( 'js/cove-cursor.js' );
+	wp_enqueue_script(
+		'cove-cursor',
+		get_theme_file_uri( 'js/cove-cursor.js' ),
+		array( 'cove-main' ),
+		file_exists( $cursor_path ) ? filemtime( $cursor_path ) : COVE_VERSION,
+		true
+	);
+
+	$hero_confidence_path = get_theme_file_path( 'js/hero-confidence.js' );
+	wp_enqueue_script(
+		'cove-hero-confidence',
+		get_theme_file_uri( 'js/hero-confidence.js' ),
+		array( 'cove-main' ),
+		file_exists( $hero_confidence_path ) ? filemtime( $hero_confidence_path ) : COVE_VERSION,
+		true
+	);
+
 	if ( is_post_type_archive( 'product' ) || is_product_category() || is_shop() ) {
 		$filters_path = get_theme_file_path( 'js/filters.js' );
 		wp_enqueue_script(
@@ -486,12 +504,82 @@ function cove_product_condition( int $id ): string {
  */
 function cove_categories(): array {
 	return array(
-		'kitchen'     => array( 'label' => __( 'Kitchen', 'cove' ),     'icon' => get_theme_file_uri( 'images/icons/cat-kitchen.svg' ) ),
-		'laundry'     => array( 'label' => __( 'Laundry', 'cove' ),     'icon' => get_theme_file_uri( 'images/icons/cat-laundry.svg' ) ),
-		'climate'     => array( 'label' => __( 'Climate', 'cove' ),     'icon' => get_theme_file_uri( 'images/icons/cat-climate.svg' ) ),
-		'floor-care'  => array( 'label' => __( 'Floor Care', 'cove' ),  'icon' => get_theme_file_uri( 'images/icons/cat-floorcare.svg' ) ),
-		'personal-care' => array( 'label' => __( 'Personal Care', 'cove' ), 'icon' => get_theme_file_uri( 'images/icons/cat-personal.svg' ) ),
+		'refrigerators'     => array( 'label' => __( 'Refrigerators', 'cove' ),     'icon' => get_theme_file_uri( 'images/icons/cat-kitchen.svg' ) ),
+		'washing-machines'  => array( 'label' => __( 'Washing Machines', 'cove' ),  'icon' => get_theme_file_uri( 'images/icons/cat-laundry.svg' ) ),
+		'dishwashers'      => array( 'label' => __( 'Dishwashers', 'cove' ),       'icon' => get_theme_file_uri( 'images/icons/cat-kitchen.svg' ) ),
+		'cooking'          => array( 'label' => __( 'Cooking', 'cove' ),           'icon' => get_theme_file_uri( 'images/icons/cat-kitchen.svg' ) ),
+		'tvs'              => array( 'label' => __( 'TVs', 'cove' ),               'icon' => get_theme_file_uri( 'images/icons/cat-climate.svg' ) ),
+		'air-conditioners' => array( 'label' => __( 'Air Conditioners', 'cove' ),  'icon' => get_theme_file_uri( 'images/icons/cat-climate.svg' ) ),
+		'small-appliances' => array( 'label' => __( 'Small Appliances', 'cove' ),  'icon' => get_theme_file_uri( 'images/icons/cat-personal.svg' ) ),
 	);
+}
+
+/**
+ * Return an appliance-aware fallback image for product cards without thumbnails.
+ */
+function cove_product_fallback_image_url( int $id ): string {
+	$terms = get_the_terms( $id, 'product_cat' );
+	$term_text = '';
+
+	if ( $terms && ! is_wp_error( $terms ) ) {
+		$term_text = implode(
+			' ',
+			array_map(
+				static function ( $term ) {
+					return $term->name . ' ' . $term->slug;
+				},
+				$terms
+			)
+		);
+	}
+
+	$haystack = strtolower(
+		wp_strip_all_tags(
+			get_the_title( $id ) . ' ' .
+			$term_text . ' ' .
+			(string) cove_meta( $id, '_cove_brand' )
+		)
+	);
+
+	$images = array(
+		'microwave|convection'                    => 'appliance-microwave.png',
+		'washing|washer|front loader|top loader|laundry' => 'appliance-washing-machine.png',
+		'dishwasher'                             => 'appliance-dishwasher.png',
+		'refrigerator|fridge'                    => 'appliance-refrigerator.png',
+		'air conditioner|air-conditioner'        => 'appliance-air-conditioner.png',
+		'air purifier|purifier|climate'          => 'appliance-air-conditioner.png',
+		'fan|tower fan'                          => 'appliance-fan.png',
+		'vacuum|mop|floor care|floor-care'       => 'appliance-vacuum.png',
+		'coffee|espresso'                        => 'appliance-coffee-machine.png',
+		'kettle'                                 => 'appliance-kettle.png',
+		'air fryer|fryer'                        => 'appliance-air-fryer.png',
+		'mixer|stand mixer'                      => 'appliance-mixer.png',
+		'blender'                                => 'appliance-blender.png',
+		'hair dryer|straightener|shaver|personal care|personal-care' => 'appliance-personal-care.png',
+	);
+
+	foreach ( $images as $pattern => $asset ) {
+		if ( preg_match( '/\b(' . $pattern . ')\b/i', $haystack ) ) {
+			return esc_url_raw( get_theme_file_uri( 'images/fallback/' . $asset ) );
+		}
+	}
+
+	return esc_url_raw( get_theme_file_uri( 'images/fallback/appliance-small.png' ) );
+}
+
+/**
+ * Detect old imported demo thumbnails that came from generic stock-photo URLs.
+ */
+function cove_product_has_demo_thumbnail( int $id ): bool {
+	$thumb_id = get_post_thumbnail_id( $id );
+	if ( ! $thumb_id ) {
+		return false;
+	}
+
+	$url  = (string) wp_get_attachment_image_url( $thumb_id, 'full' );
+	$file = (string) get_attached_file( $thumb_id );
+
+	return false !== stripos( $url . ' ' . $file, 'pexels-photo' );
 }
 
 /**
@@ -572,16 +660,27 @@ if ( file_exists( $cove_seo ) ) { require_once $cove_seo; }
 if ( is_admin() && file_exists( $cove_import ) ) { require_once $cove_import; }
 
 /* -------------------------------------------------------------------------
- * 11. Auto-create brand-kit page on theme activation
- *     page-brand-kit.php is auto-selected by WordPress slug matching.
+ * 11. Auto-create static pages on theme activation.
+ *     WordPress auto-selects matching page-{slug}.php templates.
  * ---------------------------------------------------------------------- */
 add_action( 'after_switch_theme', function () {
-	if ( ! get_page_by_path( 'brand-kit' ) ) {
-		wp_insert_post( array(
-			'post_title'  => 'Brand Kit',
-			'post_name'   => 'brand-kit',
-			'post_status' => 'publish',
-			'post_type'   => 'page',
-		) );
+	$pages = array(
+		'brand-kit'    => 'Brand Kit',
+		'promotions'   => 'Promotions',
+		'contact'      => 'Contact Us',
+		'about'        => 'About Us',
+		'buying-guide' => 'Buying Guide',
+		'rewards'      => 'Rewards',
+	);
+
+	foreach ( $pages as $slug => $title ) {
+		if ( ! get_page_by_path( $slug ) ) {
+			wp_insert_post( array(
+				'post_title'  => $title,
+				'post_name'   => $slug,
+				'post_status' => 'publish',
+				'post_type'   => 'page',
+			) );
+		}
 	}
 } );

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Front loader washing machine">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="220" cy="190" r="190" fill="#bfe5df" opacity=".34"/>
+  <rect x="260" y="160" width="380" height="560" rx="38" fill="#fefffe" stroke="#d9dee3" stroke-width="8"/>
+  <rect x="300" y="208" width="300" height="54" rx="16" fill="#eef1f3"/>
+  <circle cx="450" cy="466" r="142" fill="#102a43" opacity=".9"/>
+  <circle cx="450" cy="466" r="108" fill="#a9d8f5" opacity=".72"/>
+  <path d="M360 474c62-46 117 44 180 0" fill="none" stroke="#fefffe" stroke-width="14" stroke-linecap="round" opacity=".86"/>
+  <circle cx="550" cy="235" r="15" fill="#1e88c8"/>
+  <ellipse cx="450" cy="762" rx="250" ry="30" fill="#102a43" opacity=".12"/>
+  <text x="450" y="820" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">WASHING MACHINE</text>
+</svg>

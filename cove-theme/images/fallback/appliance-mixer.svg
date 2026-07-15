@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Stand mixer">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="648" cy="210" r="190" fill="#a9d8f5" opacity=".32"/>
+  <path d="M316 294c22-84 252-88 278 10 14 52-30 92-92 92H356c-42 0-54-48-40-102z" fill="#102a43"/>
+  <rect x="394" y="366" width="112" height="172" rx="26" fill="#102a43"/>
+  <path d="M334 502h232c-8 94-58 150-116 150s-108-56-116-150z" fill="#eef1f3" stroke="#d9dee3" stroke-width="8"/>
+  <rect x="300" y="654" width="300" height="42" rx="21" fill="#102a43"/>
+  <circle cx="540" cy="334" r="20" fill="#a9d8f5"/>
+  <ellipse cx="450" cy="732" rx="240" ry="28" fill="#102a43" opacity=".12"/>
+  <text x="450" y="804" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">STAND MIXER</text>
+</svg>

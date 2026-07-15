@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Coffee machine">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="640" cy="190" r="190" fill="#bfe5df" opacity=".32"/>
+  <rect x="300" y="160" width="300" height="460" rx="38" fill="#102a43"/>
+  <rect x="350" y="222" width="200" height="82" rx="20" fill="#eef1f3"/>
+  <path d="M390 366h120M450 366v92" stroke="#a9d8f5" stroke-width="16" stroke-linecap="round"/>
+  <rect x="374" y="470" width="152" height="92" rx="26" fill="#fefffe"/>
+  <path d="M526 496h34c24 0 24 42 0 42h-34" fill="none" stroke="#fefffe" stroke-width="15" stroke-linecap="round"/>
+  <ellipse cx="450" cy="666" rx="230" ry="28" fill="#102a43" opacity=".12"/>
+  <text x="450" y="738" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">COFFEE MACHINE</text>
+</svg>

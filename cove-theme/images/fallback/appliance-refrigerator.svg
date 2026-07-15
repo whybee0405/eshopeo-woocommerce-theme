@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Premium refrigerator">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="650" cy="170" r="210" fill="#a9d8f5" opacity=".32"/>
+  <rect x="318" y="114" width="264" height="640" rx="34" fill="#eef1f3" stroke="#d9dee3" stroke-width="7"/>
+  <path d="M450 120v626" stroke="#d9dee3" stroke-width="7"/>
+  <path d="M390 192v190M512 192v190" stroke="#102a43" stroke-width="12" stroke-linecap="round" opacity=".72"/>
+  <rect x="344" y="620" width="82" height="42" rx="16" fill="#a9d8f5" opacity=".72"/>
+  <rect x="474" y="620" width="82" height="42" rx="16" fill="#a9d8f5" opacity=".72"/>
+  <ellipse cx="450" cy="795" rx="220" ry="28" fill="#102a43" opacity=".12"/>
+  <text x="450" y="836" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">REFRIGERATOR</text>
+</svg>

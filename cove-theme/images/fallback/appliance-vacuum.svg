@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Cordless vacuum cleaner">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="246" cy="210" r="190" fill="#a9d8f5" opacity=".32"/>
+  <path d="M506 176l-116 424" stroke="#102a43" stroke-width="24" stroke-linecap="round"/>
+  <rect x="458" y="132" width="116" height="142" rx="38" fill="#102a43"/>
+  <circle cx="516" cy="204" r="34" fill="#a9d8f5"/>
+  <path d="M382 596h186c38 0 62 24 62 54v22H314v-18c0-36 28-58 68-58z" fill="#eef1f3" stroke="#d9dee3" stroke-width="8"/>
+  <path d="M362 654h218" stroke="#1e88c8" stroke-width="12" stroke-linecap="round"/>
+  <ellipse cx="450" cy="716" rx="260" ry="30" fill="#102a43" opacity=".12"/>
+  <text x="450" y="792" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">VACUUM</text>
+</svg>

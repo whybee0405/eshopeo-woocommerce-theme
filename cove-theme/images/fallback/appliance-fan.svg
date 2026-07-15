@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Tower fan">
+  <rect width="900" height="900" fill="#f7f6f2"/>
+  <circle cx="650" cy="210" r="190" fill="#bfe5df" opacity=".32"/>
+  <rect x="380" y="142" width="140" height="520" rx="70" fill="#102a43"/>
+  <path d="M450 218v344M410 278h80M410 348h80M410 418h80M410 488h80" stroke="#a9d8f5" stroke-width="12" stroke-linecap="round"/>
+  <rect x="330" y="662" width="240" height="46" rx="23" fill="#102a43"/>
+  <ellipse cx="450" cy="748" rx="230" ry="28" fill="#102a43" opacity=".12"/>
+  <text x="450" y="818" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-size="24" font-weight="800" fill="#102a43">TOWER FAN</text>
+</svg>
