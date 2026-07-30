@@ -1,16 +1,16 @@
-# Graph Report - cosmetics-woocommerce-theme  (2026-07-30)
+# Graph Report - cosmetics-woocommerce-theme  (2026-07-28)
 
 ## Corpus Check
-- 411 files · ~7,032,466 words
+- 410 files · ~7,032,373 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4789 nodes · 5962 edges · 498 communities (427 shown, 71 thin omitted)
-- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 708 edges (avg confidence: 0.79)
+- 4785 nodes · 5961 edges · 497 communities (426 shown, 71 thin omitted)
+- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 710 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b1f2b3bc`
+- Built from commit: `0cfa0b56`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -383,7 +383,6 @@
 - [[_COMMUNITY_.test_list_installed_empty|.test_list_installed_empty]]
 - [[_COMMUNITY_.test_get_installed_components_no_config|.test_get_installed_components_no_config]]
 - [[_COMMUNITY_.test_add_all_components_no_config|.test_add_all_components_no_config]]
-- [[_COMMUNITY_4|4]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `__()` - 115 edges
@@ -398,21 +397,21 @@
 10. `ShadcnInstaller` - 32 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `glow_register_elementor_widgets()` --calls--> `get_template_directory()`  [INFERRED]
-  glow-theme/functions.php → kms-branch-theme/_preview/render.php
-- `digicars_block_commerce_pages()` --calls--> `home_url()`  [INFERRED]
-  digicars-theme/functions.php → kms-branch-theme/_preview/render.php
-- `glow_cart_count_fragment()` --calls--> `esc_html()`  [INFERRED]
-  glow-theme/functions.php → kms-branch-theme/_preview/render.php
 - `cove_module_script_type()` --calls--> `esc_url()`  [INFERRED]
   cove-theme/functions.php → kms-branch-theme/_preview/render.php
-- `glow_module_script_type()` --calls--> `esc_url()`  [INFERRED]
-  glow-theme/functions.php → kms-branch-theme/_preview/render.php
+- `cove_register_taxonomies()` --calls--> `__()`  [INFERRED]
+  cove-theme/functions.php → kms-branch-theme/_preview/render.php
+- `cove_register_global_attributes()` --calls--> `__()`  [INFERRED]
+  cove-theme/functions.php → kms-branch-theme/_preview/render.php
+- `cove_condition_label()` --calls--> `__()`  [INFERRED]
+  cove-theme/functions.php → kms-branch-theme/_preview/render.php
+- `cove_admin_import_menu()` --calls--> `__()`  [INFERRED]
+  cove-theme/inc/admin-import.php → kms-branch-theme/_preview/render.php
 
 ## Import Cycles
 - None detected.
 
-## Communities (498 total, 71 thin omitted)
+## Communities (497 total, 71 thin omitted)
 
 ### Community 0 - "functions.php"
 Cohesion: 0.04
@@ -483,8 +482,8 @@ Cohesion: 0.25
 Nodes (7): Design system, Development notes, Digicars — WooCommerce theme, Installation, Integration seam (for a future AI layer), Replacing the placeholder imagery, What's included
 
 ### Community 18 - "cove_run_import"
-Cohesion: 0.33
-Nodes (4): cove_dummy_products(), cove_admin_import_menu(), cove_run_import(), WP_Error
+Cohesion: 0.15
+Nodes (20): cove_dummy_products(), cove_setup(), cove_admin_import_menu(), cove_run_import(), digicars_setup(), glow_ensure_static_page(), glow_ensure_theme_pages(), glow_setup() (+12 more)
 
 ### Community 19 - "filters.js"
 Cohesion: 0.38
@@ -507,8 +506,8 @@ Cohesion: 0.15
 Nodes (12): component, $type, $value, dark, semantic, $schema, $type, $value (+4 more)
 
 ### Community 24 - "Glow_Review_Cards_Widget"
-Cohesion: 0.20
-Nodes (12): padding-x, padding-y, input, $type, $value, focus-ring, padding-x, padding-y (+4 more)
+Cohesion: 0.29
+Nodes (8): padding-y, input, $type, $value, focus-ring, padding-y, $type, $value
 
 ### Community 25 - "Glow_Sourcing_Split_Widget"
 Cohesion: 0.05
@@ -571,8 +570,8 @@ Cohesion: 0.15
 Nodes (12): kms_branch_address(), kms_branch_directions_url(), kms_branch_hours_rows(), kms_branch_maps_url(), kms_branch_status(), kms_branches_raw(), kms_map_embed(), kms_now() (+4 more)
 
 ### Community 47 - "customizer.php"
-Cohesion: 0.07
-Nodes (35): cove_enqueue(), cove_setup(), digicars_enqueue_assets(), digicars_setup(), glow_enqueue(), glow_setup(), kbap_enqueue(), kbap_setup() (+27 more)
+Cohesion: 0.06
+Nodes (37): cove_enqueue(), digicars_enqueue_assets(), glow_enqueue(), glow_customizer_preview_js(), glow_customizer_register(), kbap_enqueue(), kms_assets(), kms_body_class() (+29 more)
 
 ### Community 55 - "header.php"
 Cohesion: 0.46
@@ -583,8 +582,8 @@ Cohesion: 0.60
 Nodes (5): $type, $value, border, border, border
 
 ### Community 117 - "functions.php"
-Cohesion: 0.11
-Nodes (24): kbap_ajax_enquiry(), kbap_catering_packages(), kbap_faq_items(), kbap_featured_dishes(), kbap_hero_table_dishes(), kbap_logo(), kbap_menu_sections(), kbap_meta_definitions() (+16 more)
+Cohesion: 0.09
+Nodes (30): glow_tax_url(), kbap_ajax_enquiry(), kbap_catering_packages(), kbap_faq_items(), kbap_featured_dishes(), kbap_hero_table_dishes(), kbap_logo(), kbap_menu_sections() (+22 more)
 
 ### Community 118 - "main.js"
 Cohesion: 0.50
@@ -864,11 +863,11 @@ Nodes (19): $type, $value, background, foreground, muted-foreground, primary, pr
 
 ### Community 238 - "design_system.py"
 Cohesion: 0.15
-Nodes (18): ansi_ljust(), format_ascii_box(), format_markdown(), format_master_md(), generate_design_system(), hex_to_ansi(), persist_design_system(), Convert hex color to ANSI True Color swatch (██) with fallback. (+10 more)
+Nodes (18): ansi_ljust(), format_ascii_box(), format_markdown(), format_master_md(), format_page_override_md(), generate_design_system(), hex_to_ansi(), persist_design_system() (+10 more)
 
 ### Community 239 - "DesignSystemGenerator"
-Cohesion: 0.16
-Nodes (9): DesignSystemGenerator, Find matching reasoning rule for a category., Apply reasoning rules to search results., Select best matching result based on priority keywords., Extract results list from search result dict., Generate complete design system recommendation.          variance/motion/density, Generates design system recommendations from aggregated searches., Load reasoning rules from CSV. (+1 more)
+Cohesion: 0.14
+Nodes (11): DesignSystemGenerator, Find matching reasoning rule for a category., Apply reasoning rules to search results., Select best matching result based on priority keywords., Extract results list from search result dict., Generate complete design system recommendation.          variance/motion/density, Bucket a 1-10 dial value into its tier config. Returns None if value is None., Generates design system recommendations from aggregated searches. (+3 more)
 
 ### Community 240 - "Brand Consistency Checklist"
 Cohesion: 0.11
@@ -925,10 +924,6 @@ Nodes (10): main(), Add custom font families.          Args:             fonts: 
 ### Community 253 - "glow_wc_active"
 Cohesion: 0.60
 Nodes (5): lg, $type, $value, lg, lg
-
-### Community 254 - "seo.php"
-Cohesion: 0.13
-Nodes (26): glow_footer_columns(), glow_logo_url(), glow_meta(), glow_step_url(), glow_tax_archive_template(), glow_tax_url(), glow_wc_active(), glow_breadcrumb_schema() (+18 more)
 
 ### Community 255 - "Banner Design - Multi-Format Creative Banner System"
 Cohesion: 0.14
@@ -991,8 +986,8 @@ Cohesion: 0.29
 Nodes (4): Generate TypeScript configuration., Generate JavaScript configuration., Format plugins array for config.          Validates each plugin name against a s, Add indentation to JSON string.
 
 ### Community 270 - "seo.php"
-Cohesion: 0.06
-Nodes (34): CHS_Post_Type, WP_Post, __(), glow_cart_count_fragment(), glow_contact_submit(), glow_elementor_category(), glow_ensure_static_page(), glow_ensure_theme_pages() (+26 more)
+Cohesion: 0.08
+Nodes (42): __(), glow_cart_count_fragment(), glow_contact_submit(), glow_elementor_category(), glow_flush_rewrites_on_switch(), glow_footer_columns(), glow_logo_url(), glow_loyalty_account_endpoint() (+34 more)
 
 ### Community 271 - "Core Visual Elements"
 Cohesion: 0.18
@@ -1039,8 +1034,8 @@ Cohesion: 0.20
 Nodes (9): Common Structures, Duarte Sparkline Pattern, Matching Strategy to Context, Product Demo (6 slides), Sales Pitch (9 slides), Search Commands, Slide Strategies, Strategy Selection (+1 more)
 
 ### Community 282 - "BM25"
-Cohesion: 0.28
-Nodes (5): BM25, BM25 ranking algorithm for text search, Lowercase, split, remove punctuation, filter short words, Build BM25 index from documents, Score all documents against query
+Cohesion: 0.67
+Nodes (4): $type, $value, none, none
 
 ### Community 283 - "partsmall_render_search_cards"
 Cohesion: 0.23
@@ -1084,7 +1079,7 @@ Nodes (22): author, bugs, url, description, devDependencies, playwright, @playwr
 
 ### Community 293 - "radius"
 Cohesion: 0.67
-Nodes (4): $type, $value, md, md
+Nodes (4): $type, $value, none, none
 
 ### Community 294 - "lg"
 Cohesion: 0.20
@@ -1095,16 +1090,16 @@ Cohesion: 0.25
 Nodes (10): detect_domain(), _load_csv(), Load CSV and return list of dicts, Core search function using BM25, Auto-detect the most relevant domain from query, Main search function with auto-domain detection, Search stack-specific guidelines, search() (+2 more)
 
 ### Community 296 - "default"
-Cohesion: 0.16
-Nodes (17): detect_domain(), get_cip_brief(), _load_csv(), Load CSV and return list of dicts, Core search function using BM25, Auto-detect the most relevant domain from query, Main search function with auto-domain detection, Search across all domains and combine results (+9 more)
+Cohesion: 0.13
+Nodes (17): BM25, detect_domain(), get_cip_brief(), _load_csv(), Load CSV and return list of dicts, Core search function using BM25, Auto-detect the most relevant domain from query, Main search function with auto-domain detection (+9 more)
 
 ### Community 297 - "md"
 Cohesion: 0.05
 Nodes (43): Arbitrary Values, Aspect Ratio, Background Colors, Border Color, Border Radius, Border Style, Border Width, Borders (+35 more)
 
 ### Community 298 - "none"
-Cohesion: 0.14
-Nodes (16): ansi_ljust(), format_ascii_box(), format_markdown(), generate_design_system(), hex_to_ansi(), Convert hex color to ANSI True Color swatch (██) with fallback., Like str.ljust but accounts for zero-width ANSI escape sequences., Create a Unicode section separator: ├─── NAME ───...┤ (+8 more)
+Cohesion: 0.25
+Nodes (8): ansi_ljust(), format_ascii_box(), hex_to_ansi(), Convert hex color to ANSI True Color swatch (██) with fallback., Like str.ljust but accounts for zero-width ANSI escape sequences., Create a Unicode section separator: ├─── NAME ───...┤, Format design system as Unicode box with ANSI color swatches., section_header()
 
 ### Community 299 - "_generate_intelligent_overrides"
 Cohesion: 0.08
@@ -1115,8 +1110,8 @@ Cohesion: 0.05
 Nodes (37): 1. Color Palette, 2. Typography, 3. Logo Usage, 4. Voice & Tone, 5. Imagery Guidelines, 6. Design Components, Accessibility, AI Image Generation (+29 more)
 
 ### Community 302 - "destructive"
-Cohesion: 0.07
-Nodes (39): CHS_Admin, WP_Post, cove_post_card(), cove_admin_import_page(), checked(), digicars_filter_val(), digicars_render_filters(), digicars_shop_base_url() (+31 more)
+Cohesion: 0.08
+Nodes (34): CHS_Admin, WP_Post, cove_post_card(), cove_admin_import_page(), checked(), digicars_filter_val(), digicars_render_filters(), digicars_shop_base_url() (+26 more)
 
 ### Community 303 - "destructive-foreground"
 Cohesion: 0.15
@@ -1127,12 +1122,16 @@ Cohesion: 0.67
 Nodes (3): $type, $value, 8
 
 ### Community 305 - "primary-foreground"
-Cohesion: 0.67
-Nodes (4): $type, $value, md, md
+Cohesion: 0.47
+Nodes (5): format_brief(), format_results(), main(), Format search results for display, Format CIP brief for display
 
 ### Community 306 - "ring"
 Cohesion: 0.67
 Nodes (3): destructive-foreground, $type, $value
+
+### Community 307 - "secondary-foreground"
+Cohesion: 0.12
+Nodes (4): Cloudia_Hero_Slider, cloudia_hero_slider_render(), CHS_Renderer, CHS_Seeder
 
 ### Community 308 - "shadcn_add.py"
 Cohesion: 0.06
@@ -1151,8 +1150,8 @@ Cohesion: 0.06
 Nodes (32): Accordion, Alert, Alert Dialog, Avatar, Badge, Button, Card, Checkbox (+24 more)
 
 ### Community 325 - ".test_add_plugins_no_duplicates"
-Cohesion: 0.09
-Nodes (12): CHS_Renderer, CHS_Seeder, cove_strip_wc_chrome(), digicars_strip_add_to_cart(), digicars_strip_default_loop_chrome(), glow_wc_adjustments(), kbap_woocommerce_setup(), add_action() (+4 more)
+Cohesion: 0.10
+Nodes (12): CHS_Post_Type, WP_Post, cove_strip_wc_chrome(), digicars_strip_add_to_cart(), digicars_strip_default_loop_chrome(), glow_wc_adjustments(), kbap_woocommerce_setup(), add_action() (+4 more)
 
 ### Community 328 - ".test_init_javascript"
 Cohesion: 0.67
@@ -1183,8 +1182,8 @@ Cohesion: 0.67
 Nodes (3): secondary-foreground, $type, $value
 
 ### Community 337 - "generate_html"
-Cohesion: 0.33
-Nodes (6): _detect_page_type(), format_page_override_md(), _generate_intelligent_overrides(), Format a page-specific override file with intelligent AI-generated content., Generate intelligent overrides based on page type using layered search., Detect page type from context and search results.
+Cohesion: 0.50
+Nodes (4): _detect_page_type(), _generate_intelligent_overrides(), Generate intelligent overrides based on page type using layered search., Detect page type from context and search results.
 
 ### Community 338 - "format_ascii_box"
 Cohesion: 0.07
@@ -1291,8 +1290,8 @@ Cohesion: 0.11
 Nodes (19): $type, $value, background, destructive, foreground, muted-foreground, primary-hover, secondary (+11 more)
 
 ### Community 364 - "DesignSystemGenerator"
-Cohesion: 0.16
-Nodes (9): DesignSystemGenerator, Find matching reasoning rule for a category., Apply reasoning rules to search results., Select best matching result based on priority keywords., Extract results list from search result dict., Generate complete design system recommendation.          variance/motion/density, Generates design system recommendations from aggregated searches., Load reasoning rules from CSV. (+1 more)
+Cohesion: 0.14
+Nodes (11): DesignSystemGenerator, Find matching reasoning rule for a category., Apply reasoning rules to search results., Select best matching result based on priority keywords., Extract results list from search result dict., Generate complete design system recommendation.          variance/motion/density, Bucket a 1-10 dial value into its tier config. Returns None if value is None., Generates design system recommendations from aggregated searches. (+3 more)
 
 ### Community 365 - "Brand Consistency Checklist"
 Cohesion: 0.11
@@ -1311,8 +1310,8 @@ Cohesion: 0.50
 Nodes (3): Answer, Outcome, Q: How does the Cloudia WhatsApp button support multi-location branch chats?
 
 ### Community 369 - "design_system.py"
-Cohesion: 0.20
-Nodes (10): _detect_page_type(), format_master_md(), format_page_override_md(), _generate_intelligent_overrides(), persist_design_system(), Format a page-specific override file with intelligent AI-generated content., Generate intelligent overrides based on page type using layered search., Detect page type from context and search results. (+2 more)
+Cohesion: 0.19
+Nodes (14): _detect_page_type(), format_markdown(), format_master_md(), format_page_override_md(), generate_design_system(), _generate_intelligent_overrides(), persist_design_system(), Format a page-specific override file with intelligent AI-generated content. (+6 more)
 
 ### Community 370 - "Design Principles"
 Cohesion: 0.12
@@ -1371,8 +1370,8 @@ Cohesion: 0.14
 Nodes (13): Card Styles, Component Variants, CSS Structures, Feature Grid (3 columns), Layout Decision Flow, Layout Patterns, Layout Selection by Use Case, Metric Styles (+5 more)
 
 ### Community 384 - "generate.py"
-Cohesion: 0.50
-Nodes (3): Answer, Outcome, Q: What visual refinements were made to the Cloudia WhatsApp button and branch shelf?
+Cohesion: 0.67
+Nodes (4): padding-x, padding-x, $type, $value
 
 ### Community 385 - "Tailwind Integration"
 Cohesion: 0.14
@@ -1579,8 +1578,8 @@ Cohesion: 0.67
 Nodes (4): xl, xl, $type, $value
 
 ### Community 480 - ".test_add_components_no_config"
-Cohesion: 0.83
-Nodes (3): kbap_dummy_products(), kbap_import_image(), kbap_run_import()
+Cohesion: 0.67
+Nodes (3): $type, $value, 6
 
 ### Community 481 - "8"
 Cohesion: 0.67
@@ -1602,12 +1601,8 @@ Nodes (3): ring, $type, $value
 Cohesion: 0.67
 Nodes (3): secondary-foreground, $type, $value
 
-### Community 497 - "4"
-Cohesion: 0.67
-Nodes (3): $type, $value, 4
-
 ## Knowledge Gaps
-- **2013 isolated node(s):** `Answer`, `Outcome`, `Source Nodes`, `Answer`, `Outcome` (+2008 more)
+- **2011 isolated node(s):** `$schema`, `$value`, `$type`, `$value`, `$type` (+2006 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **71 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -1619,12 +1614,12 @@ Nodes (3): $type, $value, 4
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `__()` connect `seo.php` to `functions.php`, `functions.php`, `COVE Design System`, `functions.php`, `destructive`, `customizer.php`, `admin-import.php`, `cove_run_import`, `elementor-widgets.php`, `functions.php`, `button`, `seo.php`?**
+- **Why does `__()` connect `seo.php` to `functions.php`, `functions.php`, `COVE Design System`, `.test_add_plugins_no_duplicates`, `functions.php`, `destructive`, `customizer.php`, `admin-import.php`, `cove_run_import`, `elementor-widgets.php`, `functions.php`, `button`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `TailwindConfigGenerator` connect `main` to `._base_config`, `design-tokens-starter.json`, `.test_write_config_invalid_path`, `TestTailwindConfigGenerator`, `.generate_config_string`, `test_tailwind_config_gen.py`, `.test_recommend_plugins`, `.test_validate_config_no_content`, `test_tailwind_config_gen.py`, `main`, `TestTailwindConfigGenerator`, `.test_generate_config_with_plugins`, `.test_add_color_palette`, `.test_add_colors`, `.test_init_javascript`, `.test_init_framework`, `.test_init_framework`, `.test_default_content_paths_vue`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `search()` connect `_search_csv` to `design_system.py`, `DesignSystemGenerator`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `glow_jsonld()` connect `seo.php` to `functions.php`, `functions.php`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `primitive` connect `lg` to `spacing`, `fontSize`, `duration`, `Glow_Newsletter_Widget`, `Glow_Sourcing_Split_Widget`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Are the 114 inferred relationships involving `__()` (e.g. with `.meta_boxes()` and `.slide_panel()`) actually correct?**
   _`__()` has 114 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 38 inferred relationships involving `TailwindConfigGenerator` (e.g. with `TestGeneratedConfigIsValidJs` and `.test_node_check_parses_generated_config()`) actually correct?**

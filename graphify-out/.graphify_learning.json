@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T13:22:52.353686+00:00",
+  "generated_at": "2026-07-30T17:35:43.380551+00:00",
   "nodes": {
     "agents": {
       "code_fingerprint": "cf64c9c9ff4c189adbd97061d8e54a252149523fe16d00886024d04ce89562f4",
@@ -17,10 +17,26 @@
           "q": "How is Graphify configured as shared memory for this WooCommerce theme repo?"
         }
       ],
-      "score": 1.618657534,
+      "score": 1.139929626,
       "source_file": "AGENTS.md",
       "status": "preferred",
       "uses": 2
+    },
+    "parts_mall_theme_design_system_parts_mall_design_system": {
+      "code_fingerprint": "e73563368479644abbe973e8c0995c5d007a5cd3ad826902b25081a0cdb3db39",
+      "label": "Parts Mall Design System",
+      "last": "2026-07-15T14:09:39.426579+00:00",
+      "provenance": [
+        {
+          "date": "2026-07-15T14:09:39.426579+00:00",
+          "outcome": "useful",
+          "q": "What remaining production polish does the Parts Mall theme need after the July 15 2026 audit?"
+        }
+      ],
+      "score": 0.704772705,
+      "source_file": "parts-mall-theme/DESIGN_SYSTEM.md",
+      "status": "tentative",
+      "uses": 1
     }
   },
   "version": 1
