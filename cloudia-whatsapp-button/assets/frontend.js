@@ -2,6 +2,7 @@
   const config = window.cloudiaWhatsAppButton;
   const root = document.querySelector('[data-cwb-root]');
   const button = root ? root.querySelector('[data-cwb-button]') : null;
+  const locations = root ? root.querySelector('[data-cwb-locations]') : null;
 
   if (!config || !root || !button) {
     return;
@@ -35,7 +36,7 @@
     return 'Unknown';
   }
 
-  function track(eventType) {
+  function track(eventType, source) {
     const ua = navigator.userAgent || '';
     const payload = new URLSearchParams({
       action: 'cwb_track',
@@ -64,8 +65,8 @@
       viewport_height: String(window.innerHeight || 0),
       button_position: root.dataset.cwbPosition || config.position || '',
       click_target: 'whatsapp',
-      phone: button.dataset.cwbPhone || config.phone || '',
-      message: button.dataset.cwbMessage || config.message || '',
+      phone: (source && source.dataset.cwbPhone) || button.dataset.cwbPhone || config.phone || '',
+      message: (source && source.dataset.cwbMessage) || button.dataset.cwbMessage || config.message || '',
     });
 
     if (navigator.sendBeacon) {
@@ -103,7 +104,40 @@
 
   observer.observe(root);
 
-  button.addEventListener('click', function () {
-    track('click');
+  function closeLocations() {
+    if (!locations) return;
+    locations.hidden = true;
+    button.setAttribute('aria-expanded', 'false');
+  }
+
+  button.addEventListener('click', function (event) {
+    if (!locations) {
+      track('click', button);
+      return;
+    }
+
+    event.preventDefault();
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    locations.hidden = isOpen;
+    button.setAttribute('aria-expanded', String(!isOpen));
   });
+
+  if (locations) {
+    locations.addEventListener('click', function (event) {
+      const location = event.target.closest('[data-cwb-location]');
+      if (!location) return;
+      track('click', location);
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!root.contains(event.target)) closeLocations();
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeLocations();
+        button.focus();
+      }
+    });
+  }
 })();

@@ -1,0 +1,232 @@
+- generic [active] [ref=f85e1]:
+  - link "Skip to content" [ref=f85e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f85e3]:
+    - generic [ref=f85e4]:
+      - link "Korean Motor Spares, home" [ref=f85e5] [cursor=pointer]:
+        - /url: index.html
+        - img "Korean Motor Spares" [ref=f85e6]
+      - navigation "Branches" [ref=f85e7]:
+        - link "Lenasia" [ref=f85e8] [cursor=pointer]:
+          - /url: lenasia.html
+        - link "Vereeniging" [ref=f85e9] [cursor=pointer]:
+          - /url: vereeniging.html
+      - link "WhatsApp a branch Jump to the branch list" [ref=f85e11] [cursor=pointer]:
+        - /url: "#branches"
+        - generic [ref=f85e14]: WhatsApp a branch
+        - generic [ref=f85e15]: Jump to the branch list
+  - main [ref=f85e16]:
+    - generic [ref=f85e17]:
+      - img "A brake disc, a boxed air filter, a drive belt and four spark plugs laid out on a pale concrete counter" [ref=f85e20]
+      - generic [ref=f85e22]:
+        - paragraph [ref=f85e23]: Korean vehicle parts since 1996
+        - heading "The part you need, in stock in the south." [level=1] [ref=f85e24]
+        - paragraph [ref=f85e25]: Two Korean Motor Spares counters, in Lenasia and Vereeniging. Send us the year, the model and the part, and we will tell you there and then whether it is on the shelf.
+        - generic [ref=f85e26]:
+          - link "WhatsApp a branch" [ref=f85e27] [cursor=pointer]:
+            - /url: "#branches"
+          - link "See what we carry" [ref=f85e30] [cursor=pointer]:
+            - /url: "#parts"
+        - generic [ref=f85e31]:
+          - paragraph [ref=f85e32]:
+            - generic [ref=f85e33]: Lenasia
+            - generic [ref=f85e34]:
+              - generic [ref=f85e36]: Open now
+              - generic [ref=f85e37]: until 17:00
+          - paragraph [ref=f85e38]:
+            - generic [ref=f85e39]: Vereeniging
+            - generic [ref=f85e40]:
+              - generic [ref=f85e42]: Open now
+              - generic [ref=f85e43]: until 17:00
+    - list [ref=f85e45]:
+      - listitem [ref=f85e46]: We carry
+      - listitem [ref=f85e47]: Hyundai
+      - listitem [ref=f85e48]
+      - listitem [ref=f85e49]: Kia
+      - listitem [ref=f85e50]
+      - listitem [ref=f85e51]: Daewoo
+      - listitem [ref=f85e52]
+      - listitem [ref=f85e53]: SsangYong
+      - listitem [ref=f85e54]: Every model
+    - generic [ref=f85e56]:
+      - generic [ref=f85e57]:
+        - generic [ref=f85e58]:
+          - paragraph [ref=f85e59]: Your branch
+          - heading "Pick the counter closest to you" [level=2] [ref=f85e60]
+        - paragraph [ref=f85e61]: Both branches carry stock, both answer WhatsApp during trading hours, and both can pull from the wider group if something is not on the shelf.
+      - generic [ref=f85e62]:
+        - article [ref=f85e63]:
+          - generic [ref=f85e64]:
+            - heading "Lenasia" [level=3] [ref=f85e65]
+            - paragraph [ref=f85e66]: Newly open
+          - generic [ref=f85e67]:
+            - generic [ref=f85e69]: Open now
+            - generic [ref=f85e70]: until 17:00
+          - generic [ref=f85e71]:
+            - paragraph [ref=f85e72]:
+              - link "117 Robin Avenue, Lenasia, Johannesburg, 1827" [ref=f85e76] [cursor=pointer]:
+                - /url: https://www.google.com/maps?cid=16895247867629069469
+            - paragraph [ref=f85e77]:
+              - link "+27 63 423 6491" [ref=f85e80] [cursor=pointer]:
+                - /url: tel:+27634236491
+          - generic [ref=f85e81]:
+            - link "WhatsApp Lenasia" [ref=f85e82] [cursor=pointer]:
+              - /url: https://wa.me/27634236491?text=Hi%20Korean%20Motor%20Spares%20Lenasia%2C%20I%27m%20looking%20for%20a%20part.%0A%0AVehicle%3A%20%0AYear%3A%20%0APart%20needed%3A%20
+            - link "Branch details for Lenasia" [ref=f85e85] [cursor=pointer]:
+              - /url: lenasia.html
+              - text: Branch details
+              - generic [ref=f85e88]: for Lenasia
+        - article [ref=f85e89]:
+          - heading "Vereeniging" [level=3] [ref=f85e91]
+          - generic [ref=f85e92]:
+            - generic [ref=f85e94]: Open now
+            - generic [ref=f85e95]: until 17:00
+          - generic [ref=f85e96]:
+            - paragraph [ref=f85e97]:
+              - link "28 De Villiers Avenue, Vereeniging Central, Vereeniging, 1939" [ref=f85e101] [cursor=pointer]:
+                - /url: https://www.google.com/maps?cid=4891259578967332818
+            - paragraph [ref=f85e102]:
+              - link "+27 61 939 8617" [ref=f85e105] [cursor=pointer]:
+                - /url: tel:+27619398617
+          - generic [ref=f85e106]:
+            - link "WhatsApp Vereeniging" [ref=f85e107] [cursor=pointer]:
+              - /url: https://wa.me/27619398617?text=Hi%20Korean%20Motor%20Spares%20Vereeniging%2C%20I%27m%20looking%20for%20a%20part.%0A%0AVehicle%3A%20%0AYear%3A%20%0APart%20needed%3A%20
+            - link "Branch details for Vereeniging" [ref=f85e110] [cursor=pointer]:
+              - /url: vereeniging.html
+              - text: Branch details
+              - generic [ref=f85e113]: for Vereeniging
+    - generic [ref=f85e115]:
+      - generic [ref=f85e116]:
+        - generic [ref=f85e117]:
+          - paragraph [ref=f85e118]: What we carry
+          - heading "Everything that wears out" [level=2] [ref=f85e119]
+        - paragraph [ref=f85e120]: Service and repair parts for Hyundai, Kia, Daewoo and SsangYong. Trade prices, walk in or message ahead.
+      - generic [ref=f85e121]:
+        - article [ref=f85e122]:
+          - generic [ref=f85e124]:
+            - heading "Engine" [level=3] [ref=f85e125]
+            - paragraph [ref=f85e126]: Gaskets, water pumps, timing kits, mountings.
+        - article [ref=f85e127]:
+          - generic [ref=f85e129]:
+            - heading "Brakes" [level=3] [ref=f85e130]
+            - paragraph [ref=f85e131]: Discs, drums, pads, shoes, cylinders, hoses.
+        - article [ref=f85e132]:
+          - generic [ref=f85e134]:
+            - heading "Suspension" [level=3] [ref=f85e135]
+            - paragraph [ref=f85e136]: Shocks, struts, control arms, bushes, links.
+        - article [ref=f85e137]:
+          - generic [ref=f85e139]:
+            - heading "Service kits" [level=3] [ref=f85e140]
+            - paragraph [ref=f85e141]: Oil, air, fuel and cabin filters, plugs, in one box.
+        - article [ref=f85e142]:
+          - generic [ref=f85e144]:
+            - heading "Electrical" [level=3] [ref=f85e145]
+            - paragraph [ref=f85e146]: Alternators, starters, sensors, coils, switches.
+        - article [ref=f85e147]:
+          - generic [ref=f85e149]:
+            - heading "Transmission" [level=3] [ref=f85e150]
+            - paragraph [ref=f85e151]: Clutch kits, CV joints, driveshafts, mountings.
+        - article [ref=f85e152]:
+          - generic [ref=f85e154]:
+            - heading "Body & trim" [level=3] [ref=f85e155]
+            - paragraph [ref=f85e156]: Bumpers, grilles, lamps, mirrors, panels.
+        - article [ref=f85e157]:
+          - generic [ref=f85e158]:
+            - heading "Not listed?" [level=3] [ref=f85e159]
+            - paragraph [ref=f85e160]: The shelves hold far more than this. Send the year, model and part, and we will check.
+            - link "Ask a branch" [ref=f85e161] [cursor=pointer]:
+              - /url: "#branches"
+    - generic [ref=f85e166]:
+      - generic [ref=f85e167]:
+        - paragraph [ref=f85e168]: How it works
+        - heading "Three lines on WhatsApp and you have your answer" [level=2] [ref=f85e169]
+        - list [ref=f85e170]:
+          - listitem [ref=f85e171]:
+            - paragraph [ref=f85e172]:
+              - strong [ref=f85e173]: Tell us the car
+              - text: Make, model and year. An i10 2014 or a Picanto 2019 is plenty to go on.
+          - listitem [ref=f85e174]:
+            - paragraph [ref=f85e175]:
+              - strong [ref=f85e176]: Name the part, or photograph it
+              - text: A picture of the old one off the car works as well as a part number. Better, usually.
+          - listitem [ref=f85e177]:
+            - paragraph [ref=f85e178]:
+              - strong [ref=f85e179]: We check the shelf and price it
+              - text: If it is in, come fetch it. If it is not, we say so and tell you when it will be.
+        - generic [ref=f85e180]:
+          - link "Message Lenasia" [ref=f85e181] [cursor=pointer]:
+            - /url: https://wa.me/27634236491?text=Hi%20Korean%20Motor%20Spares%20Lenasia%2C%20I%27m%20looking%20for%20a%20part.%0A%0AVehicle%3A%20%0AYear%3A%20%0APart%20needed%3A%20
+          - link "Message Vereeniging" [ref=f85e184] [cursor=pointer]:
+            - /url: https://wa.me/27619398617?text=Hi%20Korean%20Motor%20Spares%20Vereeniging%2C%20I%27m%20looking%20for%20a%20part.%0A%0AVehicle%3A%20%0AYear%3A%20%0APart%20needed%3A%20
+      - figure [ref=f85e187]:
+        - img "A new alternator held in both hands over a workbench" [ref=f85e188]
+    - generic [ref=f85e189]:
+      - img "A Korean Motor Spares shopfront on a South African main road" [ref=f85e190]
+      - paragraph [ref=f85e193]: Seventeen Korean Motor Spares counters across South Africa stand behind these two.
+    - list [ref=f85e196]:
+      - listitem [ref=f85e197]:
+        - generic [ref=f85e198]: "1996"
+        - generic [ref=f85e199]: Supplying Korean parts in South Africa under the same name
+      - listitem [ref=f85e200]:
+        - generic [ref=f85e201]: "17"
+        - generic [ref=f85e202]: Branches nationwide, so stock can be moved between counters
+      - listitem [ref=f85e203]:
+        - generic [ref=f85e204]: "4"
+        - generic [ref=f85e205]: "Makes covered in depth: Hyundai, Kia, Daewoo, SsangYong"
+      - listitem [ref=f85e206]:
+        - generic [ref=f85e207]: Mon to Sat
+        - generic [ref=f85e208]: Both counters trade six days a week
+    - generic [ref=f85e210]:
+      - paragraph [ref=f85e211]: Get in touch
+      - heading "Tell us what you are looking for" [level=2] [ref=f85e212]
+      - paragraph [ref=f85e213]: Send a message to whichever branch is closer. If we are closed, we pick it up first thing.
+      - generic [ref=f85e214]:
+        - link "Lenasia on WhatsApp" [ref=f85e215] [cursor=pointer]:
+          - /url: https://wa.me/27634236491?text=Hi%20Korean%20Motor%20Spares%20Lenasia%2C%20I%27m%20looking%20for%20a%20part.%0A%0AVehicle%3A%20%0AYear%3A%20%0APart%20needed%3A%20
+          - text: Lenasia
+          - generic [ref=f85e218]: on WhatsApp
+        - link "Vereeniging on WhatsApp" [ref=f85e219] [cursor=pointer]:
+          - /url: https://wa.me/27619398617?text=Hi%20Korean%20Motor%20Spares%20Vereeniging%2C%20I%27m%20looking%20for%20a%20part.%0A%0AVehicle%3A%20%0AYear%3A%20%0APart%20needed%3A%20
+          - text: Vereeniging
+          - generic [ref=f85e222]: on WhatsApp
+  - contentinfo [ref=f85e223]:
+    - generic [ref=f85e224]:
+      - generic [ref=f85e225]:
+        - generic [ref=f85e226]:
+          - img "Korean Motor Spares" [ref=f85e228]
+          - paragraph [ref=f85e229]: Trusted spares distributors for Korean vehicles since 1996. Hyundai, Kia, Daewoo and SsangYong parts, held on the shelf and priced for the trade.
+        - generic [ref=f85e230]:
+          - heading "Korean Motor Spares Lenasia" [level=2] [ref=f85e231]
+          - list [ref=f85e232]:
+            - listitem [ref=f85e233]:
+              - link "117 Robin Avenue, Lenasia, Johannesburg, 1827" [ref=f85e234] [cursor=pointer]:
+                - /url: https://www.google.com/maps?cid=16895247867629069469
+            - listitem [ref=f85e235]:
+              - link "+27 63 423 6491" [ref=f85e236] [cursor=pointer]:
+                - /url: tel:+27634236491
+            - listitem [ref=f85e237]:
+              - link "WhatsApp this branch" [ref=f85e238] [cursor=pointer]:
+                - /url: https://wa.me/27634236491?text=Hi%20Korean%20Motor%20Spares%20Lenasia%2C%20I%27m%20looking%20for%20a%20part.%0A%0AVehicle%3A%20%0AYear%3A%20%0APart%20needed%3A%20
+            - listitem [ref=f85e239]:
+              - link "Lenasia branch page" [ref=f85e240] [cursor=pointer]:
+                - /url: lenasia.html
+        - generic [ref=f85e241]:
+          - heading "Korean Motor Spares Vereeniging" [level=2] [ref=f85e242]
+          - list [ref=f85e243]:
+            - listitem [ref=f85e244]:
+              - link "28 De Villiers Avenue, Vereeniging Central, Vereeniging, 1939" [ref=f85e245] [cursor=pointer]:
+                - /url: https://www.google.com/maps?cid=4891259578967332818
+            - listitem [ref=f85e246]:
+              - link "+27 61 939 8617" [ref=f85e247] [cursor=pointer]:
+                - /url: tel:+27619398617
+            - listitem [ref=f85e248]:
+              - link "WhatsApp this branch" [ref=f85e249] [cursor=pointer]:
+                - /url: https://wa.me/27619398617?text=Hi%20Korean%20Motor%20Spares%20Vereeniging%2C%20I%27m%20looking%20for%20a%20part.%0A%0AVehicle%3A%20%0AYear%3A%20%0APart%20needed%3A%20
+            - listitem [ref=f85e250]:
+              - link "Vereeniging branch page" [ref=f85e251] [cursor=pointer]:
+                - /url: vereeniging.html
+      - paragraph [ref=f85e252]:
+        - text: © 2026 Korean Motor Spares. Powered by Auto Korea CC. Part of the national Korean Motor Spares group,
+        - link "koreanmotor.co.za" [ref=f85e253] [cursor=pointer]:
+          - /url: https://www.koreanmotor.co.za/
+        - text: .

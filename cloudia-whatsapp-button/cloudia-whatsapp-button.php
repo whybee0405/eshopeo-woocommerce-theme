@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Cloudia WhatsApp Button
  * Description: Reusable WhatsApp button with admin controls, audience targeting, and business insight reporting.
- * Version: 0.1.0
+ * Version: 0.2.0
  * Author: Cloudia
  * Text Domain: cloudia-whatsapp-button
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'CWB_VERSION', '0.1.0' );
+define( 'CWB_VERSION', '0.2.0' );
 define( 'CWB_PLUGIN_FILE', __FILE__ );
 define( 'CWB_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'CWB_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -112,6 +112,9 @@ final class Cloudia_WhatsApp_Button {
 		return array(
 			'enabled'             => 1,
 			'phone_number'        => '',
+			'multi_location'      => 0,
+			'branches'            => array(),
+			'locations'           => '',
 			'button_label'        => __( 'Chat on WhatsApp', 'cloudia-whatsapp-button' ),
 			'default_message'     => __( 'Hello, I would like assistance from your team.', 'cloudia-whatsapp-button' ),
 			'position'            => 'bottom-right',
@@ -125,8 +128,8 @@ final class Cloudia_WhatsApp_Button {
 			'show_on_archives'    => 1,
 			'include_paths'       => '',
 			'exclude_paths'       => '',
-			'header_text'         => __( 'Need help? Start a WhatsApp chat.', 'cloudia-whatsapp-button' ),
-			'subtext'             => __( 'Fast support for enquiries, pricing, and directions.', 'cloudia-whatsapp-button' ),
+			'header_text'         => __( 'Click here for fast support', 'cloudia-whatsapp-button' ),
+			'subtext'             => __( 'Choose a branch to start a chat.', 'cloudia-whatsapp-button' ),
 		);
 	}
 
@@ -161,6 +164,9 @@ final class Cloudia_WhatsApp_Button {
 		return array(
 			'enabled'             => ! empty( $input['enabled'] ) ? 1 : 0,
 			'phone_number'        => sanitize_text_field( $input['phone_number'] ?? $defaults['phone_number'] ),
+			'multi_location'      => ! empty( $input['multi_location'] ) ? 1 : 0,
+			'branches'            => $this->sanitize_branches( $input['branches'] ?? array() ),
+			'locations'           => sanitize_textarea_field( $input['locations'] ?? '' ),
 			'button_label'        => sanitize_text_field( $input['button_label'] ?? $defaults['button_label'] ),
 			'default_message'     => sanitize_textarea_field( $input['default_message'] ?? $defaults['default_message'] ),
 			'position'            => in_array( $input['position'] ?? '', array( 'bottom-right', 'bottom-left' ), true ) ? $input['position'] : $defaults['position'],
@@ -181,6 +187,70 @@ final class Cloudia_WhatsApp_Button {
 
 	private function settings(): array {
 		return wp_parse_args( (array) get_option( self::OPTION_KEY, array() ), self::default_settings() );
+	}
+
+	/**
+	 * Parse one location per line in the format: Branch name | WhatsApp number.
+	 */
+	private function normalize_whatsapp_phone( string $value ): string {
+		$phone = preg_replace( '/[^0-9]/', '', $value );
+		if ( 0 === strpos( $phone, '0' ) ) {
+			$phone = '27' . substr( $phone, 1 );
+		}
+
+		return $phone;
+	}
+
+	private function sanitize_branches( $branches ): array {
+		$clean = array();
+		if ( ! is_array( $branches ) ) {
+			return $clean;
+		}
+
+		foreach ( $branches as $branch ) {
+			if ( ! is_array( $branch ) ) {
+				continue;
+			}
+
+			$name  = sanitize_text_field( $branch['name'] ?? '' );
+			$phone = $this->normalize_whatsapp_phone( (string) ( $branch['phone'] ?? '' ) );
+			if ( '' === $name || '' === $phone ) {
+				continue;
+			}
+
+			$clean[] = array( 'name' => $name, 'phone' => $phone );
+		}
+
+		return $clean;
+	}
+
+	private function locations( string $value ): array {
+		$locations = array();
+		$lines     = preg_split( '/\r\n|\r|\n/', $value );
+
+		foreach ( $lines as $line ) {
+			$parts = array_map( 'trim', explode( '|', (string) $line, 2 ) );
+			if ( 2 !== count( $parts ) || '' === $parts[0] ) {
+				continue;
+			}
+
+			$phone = $this->normalize_whatsapp_phone( $parts[1] );
+			if ( '' === $phone ) {
+				continue;
+			}
+
+			$locations[] = array(
+				'name'  => sanitize_text_field( $parts[0] ),
+				'phone' => $phone,
+			);
+		}
+
+		return $locations;
+	}
+
+	private function branches( array $settings ): array {
+		$branches = $this->sanitize_branches( $settings['branches'] ?? array() );
+		return ! empty( $branches ) ? $branches : $this->locations( (string) ( $settings['locations'] ?? '' ) );
 	}
 
 	public function register_admin_menu(): void {
@@ -303,7 +373,9 @@ final class Cloudia_WhatsApp_Button {
 	private function button_markup( array $args = array() ): string {
 		$settings = $this->settings();
 		$phone    = preg_replace( '/[^0-9]/', '', $settings['phone_number'] );
-		if ( '' === $phone ) {
+		$locations = ! empty( $settings['multi_location'] ) ? $this->branches( $settings ) : array();
+		$has_locations = ! empty( $locations );
+		if ( '' === $phone && ! $has_locations ) {
 			return '';
 		}
 
@@ -311,30 +383,36 @@ final class Cloudia_WhatsApp_Button {
 		$message = ! empty( $args['custom_message'] ) ? $args['custom_message'] : $settings['default_message'];
 		$url     = 'https://wa.me/' . rawurlencode( $phone ) . '?text=' . rawurlencode( $message );
 		$inline  = ! empty( $args['inline'] );
+		$locations_id = wp_unique_id( 'cwb-locations-' );
 
 		ob_start();
 		?>
 		<div class="cwb-wrap cwb-wrap--<?php echo esc_attr( $settings['position'] ); ?> cwb-wrap--<?php echo esc_attr( $settings['theme'] ); ?><?php echo $inline ? ' cwb-wrap--inline' : ''; ?>" data-cwb-root data-cwb-position="<?php echo esc_attr( $settings['position'] ); ?>">
 			<div class="cwb-card" data-cwb-card>
-				<div class="cwb-copy">
+				<div class="cwb-copy" aria-hidden="true">
 					<strong><?php echo esc_html( $settings['header_text'] ); ?></strong>
 					<span><?php echo esc_html( $settings['subtext'] ); ?></span>
 				</div>
-				<a
-					class="cwb-button"
-					href="<?php echo esc_url( $url ); ?>"
-					target="_blank"
-					rel="noopener"
-					aria-label="<?php esc_attr_e( 'Open WhatsApp chat', 'cloudia-whatsapp-button' ); ?>"
-					data-cwb-button
-					data-cwb-phone="<?php echo esc_attr( $phone ); ?>"
-					data-cwb-message="<?php echo esc_attr( $message ); ?>"
-				>
+				<?php if ( $has_locations ) : ?>
+					<button class="cwb-button" type="button" aria-expanded="false" aria-controls="<?php echo esc_attr( $locations_id ); ?>" aria-label="<?php esc_attr_e( 'Choose a WhatsApp branch', 'cloudia-whatsapp-button' ); ?>" data-cwb-button>
+				<?php else : ?>
+					<a class="cwb-button" href="<?php echo esc_url( $url ); ?>" target="_blank" rel="noopener" aria-label="<?php esc_attr_e( 'Open WhatsApp chat', 'cloudia-whatsapp-button' ); ?>" data-cwb-button data-cwb-phone="<?php echo esc_attr( $phone ); ?>" data-cwb-message="<?php echo esc_attr( $message ); ?>">
+				<?php endif; ?>
 					<span class="cwb-button__icon" aria-hidden="true">
-						<svg viewBox="0 0 32 32" fill="currentColor" role="presentation"><path d="M19.11 17.44c-.29-.15-1.7-.84-1.96-.94-.26-.09-.45-.14-.64.15-.19.29-.74.94-.9 1.14-.17.2-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.44-.86-.76-1.43-1.71-1.6-2-.17-.29-.02-.44.13-.58.13-.13.29-.33.43-.49.14-.17.19-.29.29-.49.09-.2.05-.37-.02-.52-.08-.15-.64-1.54-.88-2.12-.23-.55-.47-.48-.64-.49h-.54c-.19 0-.49.07-.74.37-.25.29-.97.94-.97 2.29 0 1.34.99 2.64 1.12 2.82.14.19 1.94 2.96 4.71 4.15.66.29 1.18.46 1.58.59.66.21 1.26.18 1.74.11.53-.08 1.7-.69 1.94-1.36.24-.68.24-1.26.17-1.38-.07-.11-.26-.18-.55-.33Z"/><path d="M16.03 3.01c-7.18 0-13.01 5.82-13.01 13 0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.74a13 13 0 0 0 6.35 1.63h.01c7.17 0 12.99-5.82 12.99-13 0-3.48-1.36-6.75-3.82-9.21a12.93 12.93 0 0 0-9.18-3.67Zm0 23.68h-.01c-1.94 0-3.85-.52-5.52-1.5l-.4-.24-3.97 1.03 1.06-3.87-.26-.4a10.71 10.71 0 0 1-1.65-5.71c0-5.93 4.82-10.75 10.76-10.75 2.87 0 5.56 1.12 7.58 3.14a10.67 10.67 0 0 1 3.16 7.61c0 5.93-4.82 10.75-10.75 10.75Z"/></svg>
+						<svg viewBox="0 0 448 512" fill="currentColor" role="presentation"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-156.9zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.7-68-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.3-138c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.4 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.1 31.5 11.7 13.2 4.2 25.2 3.6 34.7 2.2 10.6-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
 					</span>
 					<span class="cwb-button__label"><?php echo esc_html( $label ); ?></span>
-				</a>
+				<?php echo $has_locations ? '</button>' : '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+				<?php if ( $has_locations ) : ?>
+					<div class="cwb-locations" id="<?php echo esc_attr( $locations_id ); ?>" data-cwb-locations hidden>
+						<span class="cwb-locations__title"><?php esc_html_e( 'Choose your branch', 'cloudia-whatsapp-button' ); ?></span>
+						<?php foreach ( $locations as $location ) : ?>
+							<a class="cwb-location" href="https://wa.me/<?php echo esc_attr( rawurlencode( $location['phone'] ) ); ?>?text=<?php echo esc_attr( rawurlencode( $message ) ); ?>" target="_blank" rel="noopener" data-cwb-location data-cwb-phone="<?php echo esc_attr( $location['phone'] ); ?>" data-cwb-message="<?php echo esc_attr( $message ); ?>">
+								<span><?php echo esc_html( $location['name'] ); ?></span><span aria-hidden="true">↗</span>
+							</a>
+						<?php endforeach; ?>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
 		<?php
@@ -653,6 +731,7 @@ final class Cloudia_WhatsApp_Button {
 
 	public function render_settings_page(): void {
 		$settings = $this->settings();
+		$branches = $this->branches( $settings );
 		?>
 		<div class="wrap cwb-admin">
 			<h1><?php esc_html_e( 'Cloudia WhatsApp Settings', 'cloudia-whatsapp-button' ); ?></h1>
@@ -664,6 +743,7 @@ final class Cloudia_WhatsApp_Button {
 						<table class="form-table" role="presentation">
 							<tr><th scope="row"><?php esc_html_e( 'Enable button', 'cloudia-whatsapp-button' ); ?></th><td><label><input type="checkbox" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[enabled]" value="1" <?php checked( ! empty( $settings['enabled'] ) ); ?>> <?php esc_html_e( 'Show the WhatsApp button on the frontend', 'cloudia-whatsapp-button' ); ?></label></td></tr>
 							<tr><th scope="row"><label for="cwb-phone"><?php esc_html_e( 'WhatsApp number', 'cloudia-whatsapp-button' ); ?></label></th><td><input class="regular-text" id="cwb-phone" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[phone_number]" value="<?php echo esc_attr( $settings['phone_number'] ); ?>" placeholder="27821234567"></td></tr>
+							<tr><th scope="row"><?php esc_html_e( 'Branch selector', 'cloudia-whatsapp-button' ); ?></th><td><label><input type="checkbox" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[multi_location]" value="1" <?php checked( ! empty( $settings['multi_location'] ) ); ?>> <?php esc_html_e( 'Let visitors choose a branch before opening WhatsApp', 'cloudia-whatsapp-button' ); ?></label><div class="cwb-branches" data-cwb-branches><div class="cwb-branches__head"><strong><?php esc_html_e( 'WhatsApp branches', 'cloudia-whatsapp-button' ); ?></strong><span><?php esc_html_e( 'Name and number', 'cloudia-whatsapp-button' ); ?></span></div><div data-cwb-branch-list><?php foreach ( $branches as $index => $branch ) : ?><div class="cwb-branch-row" data-cwb-branch-row><input type="text" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[branches][<?php echo esc_attr( $index ); ?>][name]" value="<?php echo esc_attr( $branch['name'] ); ?>" placeholder="Branch name"><input type="tel" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[branches][<?php echo esc_attr( $index ); ?>][phone]" value="<?php echo esc_attr( $branch['phone'] ); ?>" placeholder="27821234567"><button type="button" class="button-link-delete" data-cwb-remove-branch><?php esc_html_e( 'Remove', 'cloudia-whatsapp-button' ); ?></button></div><?php endforeach; ?></div><template data-cwb-branch-template><div class="cwb-branch-row" data-cwb-branch-row><input type="text" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[branches][__INDEX__][name]" placeholder="Branch name"><input type="tel" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[branches][__INDEX__][phone]" placeholder="27821234567"><button type="button" class="button-link-delete" data-cwb-remove-branch><?php esc_html_e( 'Remove', 'cloudia-whatsapp-button' ); ?></button></div></template><button type="button" class="button button-secondary" data-cwb-add-branch><?php esc_html_e( 'Add branch', 'cloudia-whatsapp-button' ); ?></button></div><p class="description"><?php esc_html_e( 'Each row creates one destination in the frontend branch selector. Numbers may include spaces or start with 0.', 'cloudia-whatsapp-button' ); ?></p></td></tr>
 							<tr><th scope="row"><label for="cwb-label"><?php esc_html_e( 'Button label', 'cloudia-whatsapp-button' ); ?></label></th><td><input class="regular-text" id="cwb-label" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[button_label]" value="<?php echo esc_attr( $settings['button_label'] ); ?>"></td></tr>
 							<tr><th scope="row"><label for="cwb-message"><?php esc_html_e( 'Default message', 'cloudia-whatsapp-button' ); ?></label></th><td><textarea class="large-text" rows="4" id="cwb-message" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[default_message]"><?php echo esc_textarea( $settings['default_message'] ); ?></textarea></td></tr>
 							<tr><th scope="row"><label for="cwb-header"><?php esc_html_e( 'Header text', 'cloudia-whatsapp-button' ); ?></label></th><td><input class="regular-text" id="cwb-header" name="<?php echo esc_attr( self::OPTION_KEY ); ?>[header_text]" value="<?php echo esc_attr( $settings['header_text'] ); ?>"></td></tr>

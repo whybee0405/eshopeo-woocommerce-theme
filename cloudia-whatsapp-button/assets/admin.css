@@ -80,10 +80,40 @@
   background: #f6f7f7;
 }
 
+.cwb-branches {
+  display: grid;
+  gap: 10px;
+  max-width: 680px;
+  margin-top: 14px;
+}
+
+.cwb-branches__head,
+.cwb-branch-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.cwb-branches__head {
+  color: #50575e;
+  font-size: 12px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+}
+
+.cwb-branch-row input {
+  width: 100%;
+}
+
 @media (max-width: 960px) {
   .cwb-kpis,
   .cwb-panels,
   .cwb-settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cwb-branches__head,
+  .cwb-branch-row {
     grid-template-columns: 1fr;
   }
 }

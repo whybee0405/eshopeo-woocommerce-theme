@@ -1,0 +1,4 @@
+dist/
+_preview/*.html
+.playwright-mcp/
+assets/img/source/*-preview.jpg

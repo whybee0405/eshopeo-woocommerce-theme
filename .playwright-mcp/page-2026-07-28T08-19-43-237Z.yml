@@ -1,0 +1,371 @@
+- generic [active] [ref=f53e1]:
+  - generic:
+    - generic:
+      - link "Skip to main content" [ref=f53e2] [cursor=pointer]
+      - link "Accessibility help" [ref=f53e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=en-ZA
+  - generic [ref=f53e8]:
+    - search [ref=f53e9]:
+      - generic [ref=f53e11]:
+        - link "Go to Google Home" [ref=f53e13] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQPAgI
+        - generic [ref=f53e16]:
+          - generic [ref=f53e17]:
+            - combobox "Search" [ref=f53e20]: Korean Motor Spares Lenasia Korean Motor Spares Lenasia
+            - generic [ref=f53e21]:
+              - button "Clear" [ref=f53e23] [cursor=pointer]
+              - generic [ref=f53e28]:
+                - button "Search by voice" [ref=f53e29] [cursor=pointer]
+                - button "Search by image" [ref=f53e32] [cursor=pointer]
+          - button "Search" [ref=f53e35] [cursor=pointer]
+    - generic [ref=f53e40]:
+      - button "Settings" [ref=f53e42] [cursor=pointer]
+      - button "Share" [ref=f53e48] [cursor=pointer]
+      - generic [ref=f53e54]:
+        - button "Google apps" [ref=f53e56] [cursor=pointer]
+        - link "Sign in" [ref=f53e61] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/search%3Fclient%3Dfirefox-b-d%26hs%3DijCp%26sa%3DX%26sca_esv%3D151c323f417ae83f%26biw%3D1639%26bih%3D807%26aic%3D0%26sxsrf%3DANbL-n4_LsvoH_YllWF53AFmlF5HrzKtGw:1768986626517%26kgmid%3D/g/11zkmgmfz1%26q%3DKorean%2BMotor%2BSpares%2BLenasia%26shem%3Dbdsle,ptotple,shrtsdl%26shndl%3D30%26source%3Dsh/x/loc/uni/m1/1%26kgs%3De2fe2c15261ce729%26utm_source%3Dbdsle,ptotple,shrtsdl,sh/x/loc/uni/m1/1&ec=futura_srp_og_si_72236_p
+  - generic [ref=f53e63]:
+    - navigation [ref=f53e69]:
+      - generic [ref=f53e75]:
+        - list [ref=f53e76]:
+          - listitem [ref=f53e77]:
+            - link "AI Mode" [ref=f53e80] [cursor=pointer]:
+              - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sa=X&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&udm=50&source=sh/x/loc/uni/m1/1&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cTs4PJElQ4Z4ROUfAdKhH1qg5TB28stPlxDJDVml8Zl1pw7Cnr1QMP2OgbQyelEBnXIMuDzLz8XzOY0iYRnzCxxDGvYv-JwoHC61R2CxC5OLsnsnnONFGgFseZcYa95Mw0g8hNWkKC4yCPgDv3OgoP21dUfq6zGEawjB0alCoYL-3LmMhPbqFcQ0suDBtHyRKHJB9TQ&vsint=&aep=1&ntc=1&cs=1&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ2J8OegQICRAD
+          - listitem [ref=f53e84]:
+            - link "All" [disabled] [ref=f53e85]
+          - listitem [ref=f53e88]:
+            - link "Maps" [ref=f53e89] [cursor=pointer]:
+              - /url: https://maps.google.com/maps?client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&output=search&q=Korean+Motor+Spares+Lenasia&source=lnms&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cTs4PJElQ4Z4ROUfAdKhH1qg5TB28stPlxDJDVml8Zl1pw7Cnr1QMP2OgbQyelEBnXIMuDzLz8XzOY0iYRnzCxxDGvYv-JwoHC61R2CxC5OLsnsnnONFGgFseZcYa95Mw0g8hNWkKC4yCPgDv3OgoP21dUfq6zGEawjB0alCoYL-3LmMhPbqFcQ0suDBtHyRKHJB9TQ&entry=mc&ved=1t:200715&ictx=111
+          - listitem [ref=f53e92]:
+            - link "Images" [ref=f53e93] [cursor=pointer]:
+              - /url: /search?client=firefox-b-d&sa=X&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&udm=2&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cTs4PJElQ4Z4ROUfAdKhH1qg5TB28stPlxDJDVml8Zl1pw7Cnr1QMP2OgbQyelEBnXIMuDzLz8XzOY0iYRnzCxxDGvYv-JwoHC61R2CxC5OLsnsnnONFGgFseZcYa95Mw0g8hNWkKC4yCPgDv3OgoP21dUfq6zGEawjB0alCoYL-3LmMhPbqFcQ0suDBtHyRKHJB9TQ&q=Korean+Motor+Spares+Lenasia&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQtKgLegQIDxAB
+          - listitem [ref=f53e96]:
+            - link "Short videos" [ref=f53e97] [cursor=pointer]:
+              - /url: /search?client=firefox-b-d&sa=X&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&udm=39&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cTs4PJElQ4Z4ROUfAdKhH1qg5TB28stPlxDJDVml8Zl1pw7Cnr1QMP2OgbQyelEBnXIMuDzLz8XzOY0iYRnzCxxDGvYv-JwoHC61R2CxC5OLsnsnnONFGgFseZcYa95Mw0g8hNWkKC4yCPgDv3OgoP21dUfq6zGEawjB0alCoYL-3LmMhPbqFcQ0suDBtHyRKHJB9TQ&q=Korean+Motor+Spares+Lenasia&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQs6gLegQIDhAB
+          - listitem [ref=f53e100]:
+            - link "Videos" [ref=f53e101] [cursor=pointer]:
+              - /url: /search?client=firefox-b-d&sa=X&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&udm=7&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cTs4PJElQ4Z4ROUfAdKhH1qg5TB28stPlxDJDVml8Zl1pw7Cnr1QMP2OgbQyelEBnXIMuDzLz8XzOY0iYRnzCxxDGvYv-JwoHC61R2CxC5OLsnsnnONFGgFseZcYa95Mw0g8hNWkKC4yCPgDv3OgoP21dUfq6zGEawjB0alCoYL-3LmMhPbqFcQ0suDBtHyRKHJB9TQ&q=Korean+Motor+Spares+Lenasia&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQtKgLegQIEBAB
+          - listitem [ref=f53e104]:
+            - link "Forums" [ref=f53e105] [cursor=pointer]:
+              - /url: /search?client=firefox-b-d&sa=X&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&udm=18&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8cTs4PJElQ4Z4ROUfAdKhH1qg5TB28stPlxDJDVml8Zl1pw7Cnr1QMP2OgbQyelEBnXIMuDzLz8XzOY0iYRnzCxxDGvYv-JwoHC61R2CxC5OLsnsnnONFGgFseZcYa95Mw0g8hNWkKC4yCPgDv3OgoP21dUfq6zGEawjB0alCoYL-3LmMhPbqFcQ0suDBtHyRKHJB9TQ&q=Korean+Motor+Spares+Lenasia&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQs6gLegQIERAB
+          - listitem [ref=f53e108]:
+            - button [ref=f53e109] [cursor=pointer]:
+              - generic "More filters" [ref=f53e110]: More
+        - button "Tools" [ref=f53e117] [cursor=pointer]
+    - heading "Search Results" [level=1] [ref=f53e124]
+    - main [ref=f53e130]:
+      - generic [ref=f53e136]:
+        - heading [level=2] [ref=f53e137]
+        - generic [ref=f53e146]:
+          - text: ∙
+          - button "Choose area" [ref=f53e147] [cursor=pointer]
+        - button "How location is used" [ref=f53e150] [cursor=pointer]
+      - tabpanel [ref=f53e167]:
+        - generic [ref=f53e171]:
+          - generic [ref=f53e176]:
+            - generic [ref=f53e183]:
+              - button "See photos" [ref=f53e187] [cursor=pointer]
+              - generic [ref=f53e191]:
+                - generic [ref=f53e192]:
+                  - link [ref=f53e194] [cursor=pointer]:
+                    - /url: /maps/place/Korean+Motor+Spares+Lenasia/data=!4m2!3m1!1s0x0:0xea77fa6bb634e49d?sa=X&ved=1t:2428&ictx=111
+                    - img "Map of Korean Motor Spares Lenasia" [ref=f53e196]
+                  - link [ref=f53e198] [cursor=pointer]:
+                    - /url: /maps/place/Korean+Motor+Spares+Lenasia/data=!4m2!3m1!1s0x0:0xea77fa6bb634e49d?sa=X&ved=1t:2428&ictx=111
+                    - img "Map of Korean Motor Spares Lenasia" [ref=f53e200]
+                - link "See outside" [ref=f53e208] [cursor=pointer]:
+                  - /url: /local/place/fid/0x1e95a5293ce30067:0xea77fa6bb634e49d/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3D4KliYmiI09i6ZqyxCd1iIA%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D161.62413%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFjRLbGlZbWlJMDlpNlpxeXhDZDFpSUE%3D&sa=X&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQpx96BAgaEBI
+            - generic [ref=f53e213]:
+              - heading "Korean Motor Spares Lenasia" [level=2] [ref=f53e216]
+              - generic [ref=f53e217]:
+                - generic [ref=f53e219]:
+                  - text: 4,9
+                  - img "Rated 4,9 out of 5," [ref=f53e220]
+                  - button "11 Google reviews" [ref=f53e225] [cursor=pointer]
+                  - text: Auto parts store in Lenasia
+                - button [ref=f53e232] [cursor=pointer]:
+                  - img "More options for Korean Motor Spares Lenasia" [ref=f53e233]
+          - generic [ref=f53e240]:
+            - generic [ref=f53e249]:
+              - link "Website" [ref=f53e251] [cursor=pointer]:
+                - /url: https://www.koreanmotor.co.za/
+              - link "Directions" [ref=f53e258]
+              - button "+4"
+            - separator [ref=f53e269]
+          - generic [ref=f53e273]:
+            - generic [ref=f53e275]:
+              - generic [ref=f53e277]:
+                - generic [ref=f53e278]:
+                  - link "Address" [ref=f53e279] [cursor=pointer]:
+                    - /url: /search?client=firefox-b-d&sa=X&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=korean+motor+spares+lenasia+address&ludocid=16895247867629069469&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ6BN6BAgfEAI
+                  - text: ":"
+                - text: Ext 1, 117 Robin Ave, Lenasia, 1827
+              - generic [ref=f53e282]:
+                - generic [ref=f53e283]: "Phone:"
+                - link "Call phone number 063 423 6491" [ref=f53e286] [cursor=pointer]:
+                  - /url: "#"
+                  - text: 063 423 6491
+              - generic [ref=f53e287]:
+                - generic [ref=f53e288]:
+                  - link "Hours" [ref=f53e289] [cursor=pointer]:
+                    - /url: /search?client=firefox-b-d&sa=X&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=korean+motor+spares+lenasia+hours&ludocid=16895247867629069469&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ6BN6BAggEAI
+                  - text: ":"
+                - button "Open · Closes 5 pm" [ref=f53e291]
+              - button "Suggest an edit" [ref=f53e305] [cursor=pointer]
+            - separator [ref=f53e306]
+          - generic [ref=f53e310]:
+            - heading "Reviews" [level=3] [ref=f53e313]
+            - generic [ref=f53e318]:
+              - generic [ref=f53e319]:
+                - heading "Google reviews" [level=3] [ref=f53e320]
+                - button "More info" [ref=f53e325] [cursor=pointer]
+                - generic [ref=f53e329]:
+                  - button "Write a review" [ref=f53e333] [cursor=pointer]
+                  - link "Add photos" [ref=f53e336] [cursor=pointer]:
+                    - /url: "#"
+              - generic [ref=f53e337]:
+                - text: 4,9
+                - img "Rated 4,9 out of 5," [ref=f53e338]
+                - button "11 Google reviews" [ref=f53e343] [cursor=pointer]
+            - separator [ref=f53e344]
+          - generic [ref=f53e353]:
+            - generic [ref=f53e354]:
+              - heading "From Korean Motor Spares Lenasia" [level=3] [ref=f53e355]
+              - button "Report description" [ref=f53e357]
+            - generic [ref=f53e360]: "\"Specialist in Korean Motor Spares. We have been South Africa's favourite supplier of good quality parts for almost 30 years! And our top quality spare parts are priced to be unbeatable and save you money\""
+          - generic [ref=f53e368]:
+            - generic [ref=f53e371]:
+              - link "Korean motor spares Lenasia korean-motor-spares.co.za https://korean-motor-spares.co.za › korean-motor-spare..." [ref=f53e373] [cursor=pointer]:
+                - /url: https://korean-motor-spares.co.za/korean-motor-spares-lenasia/
+                - heading "Korean motor spares Lenasia" [level=3] [ref=f53e374]
+                - generic [ref=f53e380]:
+                  - generic [ref=f53e381]: korean-motor-spares.co.za
+                  - generic [ref=f53e383]: https://korean-motor-spares.co.za › korean-motor-spare...
+              - button "About this result" [ref=f53e387] [cursor=pointer]
+            - generic [ref=f53e394]:
+              - text: We offer long-lasting quality
+              - emphasis [ref=f53e395]: motor spares, auto parts, engine parts, body parts, service parts, and accessories
+              - text: ". Whatsapp: 082 505 9074 011 970 1857"
+            - link [ref=f53e398] [cursor=pointer]:
+              - /url: https://korean-motor-spares.co.za/korean-motor-spares-lenasia/
+              - img "Korean Motor Spares Lenasia from korean-motor-spares.co.za" [ref=f53e400]
+          - generic [ref=f53e408]:
+            - generic [ref=f53e411]:
+              - link "NOW OPEN IN LENASIA! 🇰🇷 ✨ KOREAN MOTOR ... Facebook · lenasians 3 comments · 8 months ago" [ref=f53e413] [cursor=pointer]:
+                - /url: https://www.facebook.com/groups/lenasians/posts/1677855723270928/
+                - heading "NOW OPEN IN LENASIA! 🇰🇷 ✨ KOREAN MOTOR ..." [level=3] [ref=f53e414]
+                - generic [ref=f53e420]:
+                  - generic [ref=f53e421]: Facebook · lenasians
+                  - generic [ref=f53e423]: 3 comments · 8 months ago
+              - button "About this result" [ref=f53e427] [cursor=pointer]
+            - generic [ref=f53e433]:
+              - generic [ref=f53e434]:
+                - text: Visit us at
+                - emphasis [ref=f53e435]: 8 Neser Street, Welkom
+                - text: "Call now: 057 050 0316 Let us give your ride the care it needs — because your car deserves the BEST! ✔️ ..."
+              - link "Read more" [ref=f53e436] [cursor=pointer]:
+                - /url: https://www.facebook.com/groups/lenasians/posts/1677855723270928/#:~:text=%F0%9F%93%8D%20Visit%20us%20at%208,deserves%20the%20BEST!%20%F0%9F%92%AF%20%E2%9C%94%EF%B8%8F
+            - link [ref=f53e439] [cursor=pointer]:
+              - /url: https://www.facebook.com/groups/lenasians/posts/1677855723270928/
+              - img "Korean Motor Spares Lenasia from www.facebook.com" [ref=f53e441]
+          - generic [ref=f53e449]:
+            - generic [ref=f53e452]:
+              - link "Korean Motor Spares Korean Motor Spares https://www.koreanmotor.co.za" [ref=f53e454] [cursor=pointer]:
+                - /url: https://www.koreanmotor.co.za/
+                - heading "Korean Motor Spares" [level=3] [ref=f53e455]
+                - generic [ref=f53e461]:
+                  - generic [ref=f53e462]: Korean Motor Spares
+                  - generic [ref=f53e464]: https://www.koreanmotor.co.za
+              - button "About this result" [ref=f53e468] [cursor=pointer]
+            - generic [ref=f53e475]:
+              - text: Korean Motor Spares is South Africa&#39;s No.1 supplier of spare parts for all Kia and Hyundai makes and models. Lenasia
+              - emphasis [ref=f53e476]: 117 Robin Ave, Lenasia, 1827
+              - text: +27 63 ...
+            - link [ref=f53e479] [cursor=pointer]:
+              - /url: https://www.koreanmotor.co.za/
+              - img "Korean Motor Spares Lenasia from www.koreanmotor.co.za" [ref=f53e481]
+          - generic [ref=f53e489]:
+            - generic [ref=f53e492]:
+              - link "Photo by Korean Motor Spares Lenasia ... Instagram · koreanmotorspareslenasia 1 like · 6 months ago" [ref=f53e494] [cursor=pointer]:
+                - /url: https://www.instagram.com/p/DTwxpqtiIWa/
+                - heading "Photo by Korean Motor Spares Lenasia ..." [level=3] [ref=f53e495]
+                - generic [ref=f53e501]:
+                  - generic [ref=f53e502]: Instagram · koreanmotorspareslenasia
+                  - generic [ref=f53e504]: 1 like · 6 months ago
+              - button "About this result" [ref=f53e508] [cursor=pointer]
+            - generic [ref=f53e514]:
+              - generic [ref=f53e515]:
+                - emphasis [ref=f53e516]: 120A Nelson Mandela Drive, Westdene, Bloemfontein
+                - text: "Phone: 051 285 0640 WhatsApp: 076 060 3363. Visit us today and experience quality parts, ..."
+              - link "Read more" [ref=f53e517] [cursor=pointer]:
+                - /url: https://www.instagram.com/p/DTwxpqtiIWa/#:~:text=%F0%9F%93%8D%20120A%20Nelson%20Mandela%20Drive%2C,prices%2C%20and%20friendly%2C%20professional%20service.
+          - generic [ref=f53e525]:
+            - generic [ref=f53e528]:
+              - link "🚗💨 NOW OPEN IN LENASIA! 🇰🇷 Facebook · FREEDOM PARK/ DEVLAND News 8 months ago" [ref=f53e530] [cursor=pointer]:
+                - /url: https://www.facebook.com/groups/124789444384106/posts/2895683970627959/
+                - heading "🚗💨 NOW OPEN IN LENASIA! 🇰🇷" [level=3] [ref=f53e531]
+                - generic [ref=f53e537]:
+                  - generic [ref=f53e538]: Facebook · FREEDOM PARK/ DEVLAND News
+                  - generic [ref=f53e540]: 8 months ago
+              - button "About this result" [ref=f53e544] [cursor=pointer]
+            - generic [ref=f53e551]:
+              - text: KOREAN MOTOR SPARES ✨ Your trusted source for Hyundai &amp; Kia parts!!! 📍
+              - emphasis [ref=f53e552]: 117 Robin Avenue, Lenasia
+              - text: (Opposite 📞 063 423 6491 Come through or ...
+          - generic [ref=f53e560]:
+            - generic [ref=f53e563]:
+              - 'link "KParts Online: Korean Automotive Parts (Pty) Ltd KParts Online https://www.kparts.co.za" [ref=f53e565] [cursor=pointer]':
+                - /url: https://www.kparts.co.za/?srsltid=AfmBOorfOSt0rc1xti905AhQa1AAAqAKjEqyqBh6WhhuqRhY8yTCuGSI
+                - 'heading "KParts Online: Korean Automotive Parts (Pty) Ltd" [level=3] [ref=f53e566]'
+                - generic [ref=f53e572]:
+                  - generic [ref=f53e573]: KParts Online
+                  - generic [ref=f53e575]: https://www.kparts.co.za
+              - button "About this result" [ref=f53e579] [cursor=pointer]
+            - generic [ref=f53e586]:
+              - text: Direct importer & distributor of
+              - emphasis [ref=f53e587]: Korean Automotive Part's OEM & After-Market Parts
+              - text: From Korea. Speciallizing for Hyundai, Kia, Ssangyong & Daewoo Parts ...
+          - generic [ref=f53e595]:
+            - generic [ref=f53e598]:
+              - link "Korean Car Parts lenasia | Lenasia Ext 1 Facebook · Korean Car Parts lenasia 100+ followers" [ref=f53e600] [cursor=pointer]:
+                - /url: https://www.facebook.com/koreanpartslenasia/
+                - heading "Korean Car Parts lenasia | Lenasia Ext 1" [level=3] [ref=f53e601]
+                - generic [ref=f53e607]:
+                  - generic [ref=f53e608]: Facebook · Korean Car Parts lenasia
+                  - generic [ref=f53e610]: 100+ followers
+              - button "About this result" [ref=f53e614] [cursor=pointer]
+            - generic [ref=f53e620]:
+              - generic [ref=f53e621]:
+                - emphasis [ref=f53e622]: Korean parts lenasia
+                - text: is open for business for all Hyundai and Kia motors parts. We're selling good quality and genuine parts. We're based in 3 pelican street ...
+              - link "Read more" [ref=f53e623] [cursor=pointer]:
+                - /url: https://www.facebook.com/koreanpartslenasia/#:~:text=Korean%20parts%20lenasia%20is%20open,pharmacy%26%20next%20to%20shoe%20world)
+          - generic [ref=f53e631]:
+            - generic [ref=f53e634]:
+              - link "Korean Motor Spares | Kia & Hyundai Parts in South Africa koreanmotorspares.store https://koreanmotorspares.store" [ref=f53e636] [cursor=pointer]:
+                - /url: https://koreanmotorspares.store/
+                - heading "Korean Motor Spares | Kia & Hyundai Parts in South Africa" [level=3] [ref=f53e637]
+                - generic [ref=f53e643]:
+                  - generic [ref=f53e644]: koreanmotorspares.store
+                  - generic [ref=f53e646]: https://koreanmotorspares.store
+              - button "About this result" [ref=f53e650] [cursor=pointer]
+            - generic [ref=f53e657]:
+              - emphasis [ref=f53e658]: South Africa's trusted source for genuine Kia & Hyundai parts
+              - text: . Shop online with Korean Motor Spares for expert service and nationwide delivery.
+            - generic [ref=f53e660]:
+              - text: "Missing: Lenasia ‎| Show results with:"
+              - link "Lenasia" [ref=f53e661] [cursor=pointer]:
+                - /url: /search?client=firefox-b-d&sa=X&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+Motor+Spares+%22Lenasia%22&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ5t4CegQIYhAB
+          - generic [ref=f53e669]:
+            - generic [ref=f53e672]:
+              - link "Shop - Paraco Korean Motor Spares Store koreaspares.com https://koreaspares.com › shop" [ref=f53e674] [cursor=pointer]:
+                - /url: https://koreaspares.com/shop/
+                - heading "Shop - Paraco Korean Motor Spares Store" [level=3] [ref=f53e675]
+                - generic [ref=f53e681]:
+                  - generic [ref=f53e682]: koreaspares.com
+                  - generic [ref=f53e684]: https://koreaspares.com › shop
+              - button "About this result" [ref=f53e688] [cursor=pointer]
+            - generic [ref=f53e694]:
+              - generic [ref=f53e695]:
+                - emphasis [ref=f53e696]: Shop
+                - text: · Water Pump · Accessory · Brake Disc · Brake Pad · Car Mats · Car Replacement Key · Clutch Kit · Control Arm ...
+              - link "Read more" [ref=f53e697] [cursor=pointer]:
+                - /url: https://koreaspares.com/shop/#:~:text=Shop&text=Accessory&text=Accessory&text=Control%20Arm&text=Control%20Arm&text=Control%20Arm&text=Control%20Arm&text=Control%20Arm&text=Control%20Arm
+            - generic [ref=f53e699]:
+              - text: "Missing: Lenasia ‎| Show results with:"
+              - link "Lenasia" [ref=f53e700] [cursor=pointer]:
+                - /url: /search?client=firefox-b-d&sa=X&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+Motor+Spares+%22Lenasia%22&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ5t4CegQIYxAB
+          - generic [ref=f53e708]:
+            - generic [ref=f53e711]:
+              - link "Kia Lenasia - Korean Motor Spares koreanmotorsparesnearme.co.za https://koreanmotorsparesnearme.co.za › listings › kia-le..." [ref=f53e713] [cursor=pointer]:
+                - /url: https://koreanmotorsparesnearme.co.za/listings/kia-lenasia
+                - heading "Kia Lenasia - Korean Motor Spares" [level=3] [ref=f53e714]
+                - generic [ref=f53e720]:
+                  - generic [ref=f53e721]: koreanmotorsparesnearme.co.za
+                  - generic [ref=f53e723]: https://koreanmotorsparesnearme.co.za › listings › kia-le...
+              - button "About this result" [ref=f53e727] [cursor=pointer]
+            - generic [ref=f53e733]:
+              - generic [ref=f53e734]:
+                - text: It is located at
+                - emphasis [ref=f53e735]: Corner Nirvana Drive, Protea Ave, Lenasia
+                - text: ", 1827, South Africa. Customers can contact Kia Lenasia for vehicle parts, replacement spares, and ..."
+              - link "Read more" [ref=f53e736] [cursor=pointer]:
+                - /url: https://koreanmotorsparesnearme.co.za/listings/kia-lenasia#:~:text=It%20is%20located%20at%20Corner,replacement%20spares%2C%20and%20automotive%20accessories.
+          - generic [ref=f53e744]:
+            - heading "People also search for" [level=2] [ref=f53e746]
+            - generic [ref=f53e748]:
+              - generic [ref=f53e749]:
+                - link "Korean motor spares lenasia telephone number" [ref=f53e753] [cursor=pointer]:
+                  - /url: /search?client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+motor+spares+lenasia+telephone+number&sa=X&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ1QJ6BAhVEAE
+                - link "Korean motor spares lenasia contact number" [ref=f53e767] [cursor=pointer]:
+                  - /url: /search?client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+motor+spares+lenasia+contact+number&sa=X&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ1QJ6BAhuEAE
+                - link "Korean motor spares near me" [ref=f53e781] [cursor=pointer]:
+                  - /url: /search?client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+motor+spares+near+me&sa=X&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ1QJ6BAhpEAE
+                - link "Korean motor spares lenasia price list" [ref=f53e795] [cursor=pointer]:
+                  - /url: /search?client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+motor+spares+lenasia+price+list&sa=X&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ1QJ6BAhoEAE
+              - generic [ref=f53e806]:
+                - link "Korean Motor Spares Booysens" [ref=f53e810] [cursor=pointer]:
+                  - /url: /search?client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+Motor+Spares+Booysens&sa=X&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ1QJ6BAhtEAE
+                - link "Korean motor spares lenasia contact details" [ref=f53e824] [cursor=pointer]:
+                  - /url: /search?client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+motor+spares+lenasia+contact+details&sa=X&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ1QJ6BAhkEAE
+                - link "Korean motor spares Edenvale" [ref=f53e838] [cursor=pointer]:
+                  - /url: /search?client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+motor+spares+Edenvale&sa=X&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ1QJ6BAhbEAE
+                - link "Korean motor spares Roodepoort" [ref=f53e852] [cursor=pointer]:
+                  - /url: /search?client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&q=Korean+motor+spares+Roodepoort&sa=X&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ1QJ6BAhYEAE
+      - navigation [ref=f53e865]:
+        - heading "Page navigation" [level=1] [ref=f53e866]
+        - text: "1"
+        - link "Page 2" [ref=f53e869] [cursor=pointer]:
+          - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=10&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8tMDegQISxAE
+          - text: "2"
+        - link "Page 3" [ref=f53e871] [cursor=pointer]:
+          - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=20&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8tMDegQISxAG
+          - text: "3"
+        - link "Page 4" [ref=f53e873] [cursor=pointer]:
+          - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=30&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8tMDegQISxAI
+          - text: "4"
+        - link "Page 5" [ref=f53e875] [cursor=pointer]:
+          - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=40&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8tMDegQISxAK
+          - text: "5"
+        - link "Page 6" [ref=f53e877] [cursor=pointer]:
+          - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=50&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8tMDegQISxAM
+          - text: "6"
+        - link "Page 7" [ref=f53e879] [cursor=pointer]:
+          - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=60&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8tMDegQISxAO
+          - text: "7"
+        - link "Page 8" [ref=f53e881] [cursor=pointer]:
+          - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=70&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8tMDegQISxAQ
+          - text: "8"
+        - link "Page 9" [ref=f53e883] [cursor=pointer]:
+          - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=80&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8tMDegQISxAS
+          - text: "9"
+        - link "Page 10" [ref=f53e885] [cursor=pointer]:
+          - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=90&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8tMDegQISxAU
+          - text: "10"
+        - heading [level=2] [ref=f53e887]:
+          - link "Next" [ref=f53e888] [cursor=pointer]:
+            - /url: /search?q=Korean+Motor+Spares+Lenasia&client=firefox-b-d&sca_esv=151c323f417ae83f&biw=1639&bih=807&aic=0&ei=HWZoarK3C6qKi-gP2PCOuQU&kgmid=/g/11zkmgmfz1&start=10&sa=N&sstk=AU9db-AFtMiTKZT_ywREzyib1aBt8SCJraTy4bsfeBZwcc1jXC1Pfho0vBc5mM5aTPF3PJbmzjXERWyUH5ipewAG1-gE9T6ecgo9ww&ved=2ahUKEwjyuYuB-PSVAxUqxQIHHVi4I1cQ8NMDegQISxAW
+      - navigation
+    - contentinfo [ref=f53e892]:
+      - heading "Footer links" [level=1] [ref=f53e893]
+      - generic [ref=f53e897]:
+        - generic [ref=f53e899]:
+          - text: South Africa
+          - generic [ref=f53e901]:
+            - button "Fourways, Sandton - From your IP address" [ref=f53e903] [cursor=pointer]:
+              - generic [ref=f53e904]: Fourways, Sandton
+              - generic [ref=f53e906]:
+                - text: "-"
+                - generic [ref=f53e907]: From your IP address
+            - text: "-"
+            - button "Update location" [ref=f53e909] [cursor=pointer]
+        - generic [ref=f53e912]:
+          - link "Help" [ref=f53e913] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=en-ZA&fg=1
+          - link "Send feedback" [ref=f53e914] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacy" [ref=f53e915] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=en-ZA&fg=1
+          - link "Terms" [ref=f53e916] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=en-ZA&fg=1

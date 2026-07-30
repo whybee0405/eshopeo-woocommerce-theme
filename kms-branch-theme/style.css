@@ -1,0 +1,20 @@
+/*
+Theme Name: KMS Branch
+Theme URI: https://www.koreanmotor.co.za/
+Author: Korean Motor Spares
+Description: Landing site for Korean Motor Spares Lenasia and Vereeniging. Built for paid-search traffic: one routing landing page plus a dedicated, conversion-focused page per branch. Signage-led visual language taken from the physical shopfronts.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kms-branch
+Tags: landing-page, local-business, custom-colors, custom-logo, responsive
+*/
+
+/*
+ * The compiled stylesheet lives in assets/css/main.css and is enqueued from
+ * functions.php. This file exists to carry the theme header above, which is
+ * what WordPress reads to register the theme.
+ */
